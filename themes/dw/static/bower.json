@@ -17,7 +17,6 @@
   ],
   "dependencies": {
     "bootstrap": "v4.0.0-alpha.2",
-    "slick-carousel": "^1.6.0",
-    "jQuery.dotdotdot": "^1.8.2"
+    "slick-carousel": "^1.6.0"
   }
 }
