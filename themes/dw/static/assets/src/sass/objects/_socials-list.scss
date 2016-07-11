@@ -2,11 +2,11 @@
     $SOCIALS LIST
 \*------------------------------------*/
 .socials-list {
-	@include list-inline();
+	@include list-unstyled();
 	@include clearfix();
 	margin: 0;
 	> li {
-		//display: inline-block;
+		display: inline-block;
 		//float: left;
 	}
 
@@ -49,35 +49,15 @@
 	// Home/Site Footer
 	//=======================================
 	.home #site-footer & {
-		//a {
-		//	display: inline-block;
-		//	text-align: center;
-		//	color: $white;
-		//	@include square($height-nav-1);
-		//	@include font-size(14px,$height-nav-1);
-        //
-		//	// give the slanted appearence
-		//	position: relative;
-		//	z-index: 1;
-		//	&:after {
-		//		content: '';
-		//		position: absolute;
-		//		top: 11px;
-		//		right: 5px;
-		//		background-color: $red;
-		//		transform-origin: center;
-		//		transform: skew(-$skew);
-		//		z-index: -1;
-		//		@include size(33px, 21px);
-		//		@include media-breakpoint-up(lg) {
-		//			//1024px and up
-		//			top: 7px;
-		//			right: 3px;
-		//			@include size(33px, 27px);
-		//		}
-		//	}
-		//}
+		text-align: center;
+		a {
+			color: $white;
+			@include square(48px);
+			font-size: 25px;
+			line-height: 48px;
+			@include hover-focus {
+				color: $white;
+			}
+		}
 	}
-
-
 }
