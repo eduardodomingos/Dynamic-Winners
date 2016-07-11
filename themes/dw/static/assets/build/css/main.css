@@ -4721,6 +4721,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   content: '\e801'; }
 
 /* '' */
+.icon-twitter:before {
+  content: '\f099'; }
+
+/* '' */
 .icon-facebook:before {
   content: '\f09a'; }
 
@@ -4984,6 +4988,16 @@ html {
             right: 3px;
             width: 33px;
             height: 27px; } }
+  .home #site-footer .socials-list {
+    text-align: center; }
+    .home #site-footer .socials-list a {
+      color: #fff;
+      width: 48px;
+      height: 48px;
+      font-size: 25px;
+      line-height: 48px; }
+      .home #site-footer .socials-list a:focus, .home #site-footer .socials-list a:hover {
+        color: #fff; }
 
 /*------------------------------------*    $HEADLINES
 \*------------------------------------*/
@@ -5315,7 +5329,7 @@ html {
 /*------------------------------------*    $FOOTER
 \*------------------------------------*/
 .home #site-footer {
-  padding-top: 80px;
+  padding: 80px 0 150px;
   color: #fff;
   background: url("../../src/img/bg_footer_sm.jpg") center bottom no-repeat;
   background-size: cover; }
@@ -5379,3 +5393,15 @@ html {
     height: 100%; }
   .btn--skewed.btn--has-shadow:after {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8); }
+
+/*------------------------------------*    $INFO
+\*------------------------------------*/
+.info {
+  text-align: center; }
+
+.info__link {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300; }
+  .info__link:focus, .info__link:hover {
+    color: #fff; }
