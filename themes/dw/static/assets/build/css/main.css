@@ -4802,6 +4802,8 @@ html {
   line-height: 42px;
   width: 42px;
   height: 42px; }
+  .site-nav__toggle:focus, .site-nav__toggle:active, .site-nav__toggle:hover {
+    outline: 0; }
   @media (min-width: 1024px) {
     .site-nav__toggle {
       display: none; } }
@@ -4856,7 +4858,11 @@ html {
   background-color: #b40000;
   max-height: 0;
   transition: max-height 0.2s;
-  overflow: hidden; }
+  overflow: hidden;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0; }
   .site-nav__pocket.active {
     max-height: 1000px; }
   @media (min-width: 1024px) {
@@ -5144,13 +5150,12 @@ html {
   padding-left: 0;
   list-style: none; }
   .slick-dots li {
-    opacity: 0.5;
     display: inline-block;
     line-height: 0;
     width: 20px;
     height: 20px; }
-    .slick-dots li.slick-active {
-      opacity: 1; }
+    .slick-dots li.slick-active button:after {
+      background-color: white; }
   .slick-dots button {
     font-size: 0;
     border: none;
@@ -5165,10 +5170,9 @@ html {
       position: absolute;
       top: 5px;
       right: 5px;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.5);
       transform-origin: center;
       transform: skew(-25deg);
-      z-index: -1;
       width: 10px;
       height: 10px; }
 
@@ -5226,8 +5230,7 @@ html {
     position: absolute;
     bottom: 20px;
     left: 0;
-    right: 0;
-    z-index: 1; }
+    right: 0; }
   .home #headlines .carousel-wrapper .slick-dots {
     position: static;
     text-align: right; }
