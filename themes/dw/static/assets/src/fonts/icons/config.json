@@ -55,6 +55,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "code": 59394,
+      "src": "entypo"
+    },
+    {
       "uid": "fd6f6dd27af37119f288ab62a86f012d",
       "css": "whatsapp",
       "code": 59428,
