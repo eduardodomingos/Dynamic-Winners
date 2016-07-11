@@ -2,10 +2,15 @@
     $FORMS
 \*------------------------------------*/
 .contact-form {
-
+	.form-group:last-child {
+		margin-bottom: 0;
+	}
 	// Home / Footer
 	//=======================================
 	.home #site-footer & {
+
+		margin-bottom: 30px;
+
 		.form-control-label {
 			padding: 0;
 			text-transform: uppercase;
@@ -26,7 +31,12 @@
 		}
 		#inputMessage {
 			border: 1px solid $white;
+			padding: 5px;
 		}
-	}
 
+		button[type="submit"] {
+			margin-top: 4px;
+		}
+
+	}
 }
