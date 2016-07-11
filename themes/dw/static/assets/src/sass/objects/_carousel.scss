@@ -98,13 +98,19 @@
 
 // Home / Headlines
 //=======================================
-.home #headlines .carousel {
-	.slick-dots {
-		text-align: right;
+.home #headlines .carousel-wrapper {
+	position: relative;
+	.dots {
+		position: absolute;
 		bottom: 20px;
-		@include make-col-span(10, 12);
-		left: ($grid-gutter-width / 2);
-		right: ($grid-gutter-width / 2);
+		left: 0;
+		right: 0;
+		z-index: 1;
+	}
+
+	.slick-dots {
+		position: static;
+		text-align: right;
 	}
 }
 
@@ -112,7 +118,10 @@
 //=======================================
 .home #news .carousel-wrapper {
 	.arrows {
-		padding-top: 74.906367041%; /* 100*(200/267) */
+		padding-top: 75%; /* 4:3 */
+		@include media-breakpoint-up(md) {
+			padding-top: 37.5%;
+		}
 	}
 }
 

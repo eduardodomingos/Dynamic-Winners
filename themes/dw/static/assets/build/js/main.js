@@ -3665,7 +3665,7 @@ jQuery(window).on('load', function(){
 			autoplay: false,
 			dots: true,
 			arrows: false,
-			//appendDots: dom.$headlinesCarouselDotsContainer,
+			appendDots: $('.home #headlines .carousel-wrapper .dots .container'),
 			responsive: [
 				{
 					breakpoint: 1024,

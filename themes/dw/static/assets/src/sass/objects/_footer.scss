@@ -11,6 +11,8 @@
 		background: url('../../src/img/bg_footer_sm.jpg') center bottom no-repeat;
 		background-size: cover;
 
+
+
 		//@include media-breakpoint-up(md) {
 		//	//480px and up
 		//	background: url('../../src/img/bg_home_md.jpg') center top no-repeat;
@@ -20,5 +22,16 @@
 		//	//1024px and up
 		//	background: url('../../src/img/bg_home_lg.jpg') center top no-repeat;
 		//}
+	}
+}
+
+.site-footer__link {
+	.home & {
+		color: $white;
+		font-size: 13px;
+		font-weight: 300;
+		@include hover-focus {
+			color: $white;
+		}
 	}
 }

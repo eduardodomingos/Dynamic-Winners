@@ -66,6 +66,10 @@
 			font-size:  0.8125rem; //13px
 			text-transform: uppercase;
 		}
+
+		@include media-breakpoint-up(md) {
+			margin: 0 10px;
+		}
 	}
 
 	// Home / Services
