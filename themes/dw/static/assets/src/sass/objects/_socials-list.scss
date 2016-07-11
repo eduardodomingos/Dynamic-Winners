@@ -50,11 +50,10 @@
 	//=======================================
 	.home #site-footer & {
 		text-align: center;
+		margin-bottom: 20px;
 		a {
 			color: $white;
-			@include square(48px);
 			font-size: 25px;
-			line-height: 48px;
 			@include hover-focus {
 				color: $white;
 			}
