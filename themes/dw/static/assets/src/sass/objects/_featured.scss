@@ -46,6 +46,9 @@
 	// Home / News
 	//=======================================
 	.home #news & {
+		@include media-breakpoint-up(md) {
+			margin: 0 10px;
+		}
 
 		.date {
 			margin-bottom: 0;
@@ -66,16 +69,15 @@
 			font-size:  0.8125rem; //13px
 			text-transform: uppercase;
 		}
-
-		@include media-breakpoint-up(md) {
-			margin: 0 10px;
-		}
 	}
 
 	// Home / Services
 	//=======================================
 	.home #services & {
 		padding-top: 0;
+		@include media-breakpoint-up(md) {
+			margin: 0 15px;
+		}
 		.title-wrapper {
 			display: table;
 			width: 100%;
@@ -114,6 +116,9 @@
 	//=======================================
 	.home #athletes & {
 		text-align: center;
+		@include media-breakpoint-up(md) {
+			margin: 0 10px;
+		}
 
 		.img-wrapper {
 			position: relative;

@@ -112,6 +112,12 @@
 		position: static;
 		text-align: right;
 	}
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next {
+		right: 0;
+	}
 }
 
 // Home/News
@@ -149,7 +155,10 @@
 
 	.carousel-wrapper {
 		.arrows {
-			padding-top: 74.906367041%; /* 100*(200/267) */
+			padding-top: 75%; /* 4:3 */
+			@include media-breakpoint-up(md) {
+				padding-top: 37.5%;
+			}
 		}
 	}
 

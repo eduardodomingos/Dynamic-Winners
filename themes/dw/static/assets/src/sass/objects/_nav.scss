@@ -22,11 +22,19 @@
 .site-nav__top {
 	height: $height-nav-1;
 
+	//480px and up
+	@include media-breakpoint-up(md) {
+		>.container {
+			position: relative;
+		}
+	}
+
 	//1024px and up
 	@include media-breakpoint-up(lg) {
 		height: auto;
 		float: right;
 		>.container {
+			position: static;
 			max-width: none;
 			padding: 0;
 		}

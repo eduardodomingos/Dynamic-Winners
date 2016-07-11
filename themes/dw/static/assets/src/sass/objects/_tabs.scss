@@ -9,10 +9,21 @@
 		border-top: 1px solid $nav-tabs-border-color;
 		border-bottom: 0;
 		padding: 10px 0 25px;
+		@include media-breakpoint-up(md) {
+			text-align: center;
+		}
+
 		.nav-item {
 			float: none;
+			@include media-breakpoint-up(md) {
+				display: inline-block;
+			}
+
 			+ .nav-item {
 				margin-left: 0;
+				@include media-breakpoint-up(md) {
+					margin-left: 20px;
+				}
 			}
 		}
 		.nav-link {
