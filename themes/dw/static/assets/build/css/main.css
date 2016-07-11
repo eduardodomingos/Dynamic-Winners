@@ -4775,11 +4775,15 @@ html {
 
 .site-nav__top {
   height: 42px; }
+  @media (min-width: 480px) {
+    .site-nav__top > .container {
+      position: relative; } }
   @media (min-width: 1024px) {
     .site-nav__top {
       height: auto;
       float: right; }
       .site-nav__top > .container {
+        position: static;
         max-width: none;
         padding: 0; } }
 
@@ -4921,11 +4925,13 @@ html {
     z-index: -1; }
   @media (min-width: 480px) {
     .logo {
-      width: 240px;
+      left: -760px;
+      width: 1000px;
       height: 320px; } }
   @media (min-width: 1024px) {
     .logo {
       top: 70px;
+      left: 0;
       width: 380px;
       height: 580px; } }
   .logo a {
@@ -5040,6 +5046,10 @@ html {
       .home #headlines .featured .title {
         font-size: 1.813rem; } }
 
+@media (min-width: 480px) {
+  .home #news .featured {
+    margin: 0 10px; } }
+
 .home #news .featured .date {
   margin-bottom: 0; }
 
@@ -5056,12 +5066,11 @@ html {
   font-size: 0.8125rem;
   text-transform: uppercase; }
 
-@media (min-width: 480px) {
-  .home #news .featured {
-    margin: 0 10px; } }
-
 .home #services .featured {
   padding-top: 0; }
+  @media (min-width: 480px) {
+    .home #services .featured {
+      margin: 0 15px; } }
   .home #services .featured .title-wrapper {
     display: table;
     width: 100%;
@@ -5092,6 +5101,9 @@ html {
 
 .home #athletes .featured {
   text-align: center; }
+  @media (min-width: 480px) {
+    .home #athletes .featured {
+      margin: 0 10px; } }
   .home #athletes .featured .img-wrapper {
     position: relative; }
     .home #athletes .featured .img-wrapper:before {
@@ -5219,6 +5231,10 @@ html {
   .home #headlines .carousel-wrapper .slick-dots {
     position: static;
     text-align: right; }
+  .home #headlines .carousel-wrapper .slick-prev {
+    left: 0; }
+  .home #headlines .carousel-wrapper .slick-next {
+    right: 0; }
 
 .home #news .carousel-wrapper .arrows {
   padding-top: 75%;
@@ -5241,8 +5257,11 @@ html {
   padding-bottom: 85px; }
 
 .home #athletes .carousel-wrapper .arrows {
-  padding-top: 74.906367041%;
-  /* 100*(200/267) */ }
+  padding-top: 75%;
+  /* 4:3 */ }
+  @media (min-width: 480px) {
+    .home #athletes .carousel-wrapper .arrows {
+      padding-top: 37.5%; } }
 
 .home #athletes .slick-dots {
   bottom: 35px; }
@@ -5302,10 +5321,19 @@ html {
   border-top: 1px solid #fff;
   border-bottom: 0;
   padding: 10px 0 25px; }
+  @media (min-width: 480px) {
+    .home #athletes .nav-tabs {
+      text-align: center; } }
   .home #athletes .nav-tabs .nav-item {
     float: none; }
+    @media (min-width: 480px) {
+      .home #athletes .nav-tabs .nav-item {
+        display: inline-block; } }
     .home #athletes .nav-tabs .nav-item + .nav-item {
       margin-left: 0; }
+      @media (min-width: 480px) {
+        .home #athletes .nav-tabs .nav-item + .nav-item {
+          margin-left: 20px; } }
   .home #athletes .nav-tabs .nav-link {
     text-transform: uppercase;
     font-size: 1.125rem;
@@ -5347,10 +5375,16 @@ html {
 .home #site-footer {
   padding: 80px 0 150px;
   color: #fff;
-  background: url("../../src/img/bg_footer_sm.jpg") center bottom no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-image: url("../../src/img/bg_footer_sm.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom; }
+  @media (min-width: 480px) {
+    .home #site-footer {
+      background-image: url("../../src/img/bg_footer_md.jpg"); } }
 
 .home .site-footer__link {
+  display: block;
   color: #fff;
   font-size: 13px;
   font-weight: 300; }
