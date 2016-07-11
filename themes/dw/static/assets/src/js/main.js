@@ -4,17 +4,25 @@
 		// Cache references to DOM elements for performance
 		//=======================================
 		var dom = {
-			$window:            				$(window),
-			$body:              				$('body'),
-			$HomeHeadlinesCarousel: 				$('.home #headlines .carousel'),
-			$HomeNewsCarousel: 						$('.home #news .carousel'),
-			$HomeServicesCarousel: 					$('.home #services .carousel'),
-			$HomeAthletesCarousel: 					$('.home #athletes .carousel')
+			$window:            					$(window),
+			$body:              					$('body'),
+			$menuToggle: 							$('#site-header .site-nav__toggle'),
+			$navPocket: 							$('#site-header .site-nav__pocket'),
+			$homeHeadlinesCarousel: 				$('.home #headlines .carousel'),
+			$homeNewsCarousel: 						$('.home #news .carousel'),
+			$homeServicesCarousel: 					$('.home #services .carousel'),
+			$homeAthletesCarousel: 					$('.home #athletes .carousel')
 		};
+
+		// Toggle Mobile nav
+		//=======================================
+		dom.$menuToggle.click(function(e){
+			dom.$navPocket.toggleClass('active');
+		});
 
 		// Home / Headlines carousel
 		//=======================================
-		dom.$HomeHeadlinesCarousel.slick({
+		dom.$homeHeadlinesCarousel.slick({
 			mobileFirst: true,
 			autoplay: false,
 			dots: true,
@@ -32,7 +40,7 @@
 
 		// Home / News carousel
 		//=======================================
-		dom.$HomeNewsCarousel.slick({
+		dom.$homeNewsCarousel.slick({
 			mobileFirst: true,
 			appendArrows: $('.home #news .arrows'),
 			responsive: [
@@ -48,7 +56,7 @@
 
 		// Home / Services carousel
 		//=======================================
-		dom.$HomeServicesCarousel.slick({
+		dom.$homeServicesCarousel.slick({
 			mobileFirst: true,
 			dots: true,
 			responsive: [
@@ -71,7 +79,7 @@
 
 		// Home / Athletes carousel
 		//=======================================
-		dom.$HomeAthletesCarousel.slick({
+		dom.$homeAthletesCarousel.slick({
 			mobileFirst: true,
 			appendArrows: $('.home #athletes .arrows'),
 			dots: true,
