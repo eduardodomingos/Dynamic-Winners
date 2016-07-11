@@ -37,5 +37,16 @@
 			}
 		}
 	}
+}
 
+// The code bellow allows to have carousels inside tabs
+// https://github.com/kenwheeler/slick/issues/187
+.tab-content > .tab-pane {
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.tab-content > .active {
+	height: auto;
 }
