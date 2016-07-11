@@ -13,27 +13,39 @@
 			text-align: center;
 		}
 
+		@include media-breakpoint-up(lg) {
+			border-top: none;
+		}
+
 		.nav-item {
 			float: none;
 			@include media-breakpoint-up(md) {
 				display: inline-block;
 			}
 
+			@include media-breakpoint-up(lg) {
+				border-top: 1px solid $nav-tabs-border-color;
+			}
+
 			+ .nav-item {
 				margin-left: 0;
 				@include media-breakpoint-up(md) {
-					margin-left: 20px;
+					padding-left: 20px;
+					margin-left: -4px;
 				}
 			}
 		}
 		.nav-link {
 			text-transform: uppercase;
-			font-size: 1.125rem; //18px
+			font-size: 1rem; //16px
 			text-align: center;
 			padding: 5px 0;
 			color: rgba($nav-tabs-active-link-hover-color, 0.5);
 			&.active {
 				color: rgba($nav-tabs-active-link-hover-color, 1);
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 1.125rem; //18px
 			}
 		}
 	}

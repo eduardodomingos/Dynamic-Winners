@@ -5,6 +5,36 @@
 .section {
 	padding: 15px 0;
 	font-size: 0.875rem; //14px
+	@include media-breakpoint-up(lg) {
+		//1024px and up
+		padding: 25px 0;
+	}
+
+	&#news {
+		overflow: hidden;
+		>.container {
+			position: relative;
+		}
+
+		.paralelogram {
+			display: none;
+			width: 100%;
+			height: 90%;
+			background: $red-dark;
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			transform: translateX(-50%) skew(-26deg);
+			@include media-breakpoint-up(md) {
+				//480px and up
+				display: block;
+			}
+			@include media-breakpoint-up(lg) {
+				//1024px and up
+				bottom: -25px;
+			}
+		}
+	}
 }
 .section__header {
 	text-align: center;
