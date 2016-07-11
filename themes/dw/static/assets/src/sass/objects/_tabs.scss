@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    $TABS
+\*------------------------------------*/
+.nav-tabs {
+
+	// Home/Services
+	//=======================================
+	.home #athletes & {
+		border-top: 1px solid $nav-tabs-border-color;
+		border-bottom: 0;
+		padding: 10px 0 25px;
+		.nav-item {
+			float: none;
+			+ .nav-item {
+				margin-left: 0;
+			}
+		}
+		.nav-link {
+			text-transform: uppercase;
+			font-size: 1.125rem; //18px
+			text-align: center;
+			padding: 5px 0;
+			color: rgba($nav-tabs-active-link-hover-color, 0.5);
+			&.active {
+				color: rgba($nav-tabs-active-link-hover-color, 1);
+			}
+		}
+	}
+
+}

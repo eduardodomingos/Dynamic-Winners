@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    $SITE HEADER
+\*------------------------------------*/
+
+/**
+ * 1. So it stands on top of the hero section.
+ */
+#site-header {
+	position: relative; /* [1] */
+	z-index: 1; /* [1] */
+}

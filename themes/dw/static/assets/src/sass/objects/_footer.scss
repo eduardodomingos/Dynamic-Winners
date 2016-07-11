@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+#site-footer {
+	// Home footer
+	//=======================================
+	.home & {
+		padding-top: 80px;
+		color: $white;
+		background: url('../../src/img/bg_footer_sm.jpg') center bottom no-repeat;
+		background-size: cover;
+
+		//@include media-breakpoint-up(md) {
+		//	//480px and up
+		//	background: url('../../src/img/bg_home_md.jpg') center top no-repeat;
+		//}
+        //
+		//@include media-breakpoint-up(lg) {
+		//	//1024px and up
+		//	background: url('../../src/img/bg_home_lg.jpg') center top no-repeat;
+		//}
+	}
+}

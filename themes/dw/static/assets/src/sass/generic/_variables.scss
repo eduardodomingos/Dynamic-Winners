@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+// Paths
+$path-fonts: '../../src/fonts';
+
+//Colors
+$white: #fff;
+$black: #000;
+$red: #f00;
+$red-dark: #b40000;
+
+//Typography
+$font: 'montserrat', sans-serif;
+$font-icon: 'icons-dynamicwinners';
+
+//Layout
+$height-nav-1: 42px;
+$height-nav-2: 70px;
+$headline-height-1: 480px;
+$headline-height-2: 320px;
+$headline-height-3: 580px;
+
+//Defaults
+$skew: 25deg;
+
+//Transitions
+$transition-duration: 0.2s;
+
+//Breakpoints
+$sm: 320px;
+$md: 480px;
+$lg: 1024px;
+
+//BS overrides
+$brand-primary: $red-dark;
+$font-family-base: $font;
+$grid-breakpoints: (
+	// Extra small screen / phone
+	xs: 0,
+	// Small screen / phone
+	sm: $sm,
+	// Medium screen / tablet
+	md: $md,
+	// Large screen / desktop
+	lg: $lg,
+	// Extra large screen / wide desktop
+	xl: 1200px
+);
+$card-bg: transparent;
+$card-border-width: 0;
+$card-border-radius: 0;
+$nav-tabs-border-color: $white;
+$nav-tabs-active-link-hover-bg: transparent;
+$nav-tabs-link-border-width: 0;
+$nav-tabs-active-link-hover-color: $white;
+$btn-border-radius: 0;
+

@@ -1,0 +1,150 @@
+/*------------------------------------*\
+    $CAROUSEL
+\*------------------------------------*/
+
+
+// Global styles
+//=======================================
+.slick-dots {
+	line-height: 0;
+	margin-bottom: 0;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	@include list-unstyled();
+	li {
+		opacity: 0.5;
+		display: inline-block;
+		line-height: 0;
+		@include square(20px);
+		&.slick-active {
+			opacity: 1;
+		}
+	}
+	button {
+		font-size: 0;
+		border: none;
+		background: transparent;
+		padding: 0;
+		position: relative;
+		outline: none;
+		@include square(100%);
+		&:after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			background-color: $white;
+			transform-origin: center;
+			transform: skew(-$skew);
+			z-index: -1;
+			@include square(10px);
+		}
+	}
+}
+
+.slick-prev,
+.slick-next {
+	font-size: 0;
+	border: none;
+	background: transparent;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	z-index: 1;
+	@include hover-focus-active {
+		outline: none;
+	}
+	@include square(40px);
+	&:after {
+		font-family: $font-icon;
+		color: $white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+		@include font-size(30px, 40px);
+		@include square(100%);
+	}
+}
+
+.slick-prev {
+	left: -45px;
+	&:after {
+		content: '\e801';
+	}
+}
+
+.slick-next {
+	right: -45px;
+	&:after {
+		content: '\e800';
+	}
+}
+
+.carousel-wrapper {
+	position: relative;
+	.arrows {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+// Home / Headlines
+//=======================================
+.home #headlines .carousel {
+	.slick-dots {
+		text-align: right;
+		bottom: 20px;
+		@include make-col-span(10, 12);
+		left: ($grid-gutter-width / 2);
+		right: ($grid-gutter-width / 2);
+	}
+}
+
+// Home/News
+//=======================================
+.home #news .carousel-wrapper {
+	.arrows {
+		padding-top: 74.906367041%; /* 100*(200/267) */
+	}
+}
+
+// Home/Services
+//=======================================
+.home #services {
+	.carousel {
+		padding-bottom: 85px;
+	}
+	.slick-prev,
+	.slick-next {
+		top: 20px;
+	}
+	.slick-dots {
+		bottom: 35px;
+	}
+}
+
+// Home/Athletes
+//=======================================
+.home #athletes {
+	.carousel {
+		padding-bottom: 85px;
+	}
+
+	.carousel-wrapper {
+		.arrows {
+			padding-top: 74.906367041%; /* 100*(200/267) */
+		}
+	}
+
+	.slick-dots {
+		bottom: 35px;
+	}
+}

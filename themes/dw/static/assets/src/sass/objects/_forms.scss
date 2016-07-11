@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+.contact-form {
+
+	// Home / Footer
+	//=======================================
+	.home #site-footer & {
+		.form-control-label {
+			padding: 0;
+			text-transform: uppercase;
+			@include media-breakpoint-up(lg) {
+				//1024px and up
+				text-align: right;
+			}
+		}
+
+		.form-control {
+			background: transparent;
+			border: none;
+			border-bottom: 1px solid $white;
+			border-radius: 0;
+			color: $white;
+			font-size: 0.875rem; //14px
+			padding: 0;
+		}
+		#inputMessage {
+			border: 1px solid $white;
+		}
+	}
+
+}

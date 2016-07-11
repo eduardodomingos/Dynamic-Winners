@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    $SECTION
+\*------------------------------------*/
+
+.section {
+	padding: 15px 0;
+	font-size: 0.875rem; //14px
+}
+.section__header {
+	text-align: center;
+	h2 {
+		font-size: 1.25rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		margin-bottom: 20px;
+	}
+	// Home / Athletes
+	//=======================================
+	.home #athletes & {
+		h2 {
+			margin-bottom: 15px;
+		}
+	}
+}

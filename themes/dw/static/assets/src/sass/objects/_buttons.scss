@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+.btn {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.8125rem;
+}
+
+
+.btn--skewed {
+	border: 0;
+	background-color: transparent;
+	// give the slanted appearence
+	position: relative;
+	z-index: 1;
+	&.btn-primary {
+		@include button-variant($btn-primary-color, transparent, $btn-primary-border);
+		&:after {
+			background-color: $red-dark;
+		}
+		@include hover-focus-active() {
+			&:after {
+				background-color: darken($red-dark, 10%);
+			}
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform-origin: center;
+		transform: skew(-$skew);
+		z-index: -1;
+		@include square(100%);
+	}
+	&.btn--has-shadow:after {
+		box-shadow: 10px 10px 10px rgba(0,0,0,0.8);
+	}
+}

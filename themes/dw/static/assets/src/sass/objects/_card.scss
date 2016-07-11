@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    $CARD
+\*------------------------------------*/
+.card {
+	.carousel & {
+		margin-bottom: 0;
+	}
+}
+
+/**
+ * 1. No bottom padding when inside a carousel
+ */
+.card-block {
+	padding: $card-spacer-x 0;
+	.carousel & {
+		padding-bottom: 0; /* [1] */
+	}
+}

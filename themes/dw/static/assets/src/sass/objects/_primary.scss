@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    $PRIMARY
+\*------------------------------------*/
+
+#primary {
+	padding: 25px 0;
+
+	> .section {
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+
+	.home & {
+		&, a {
+			color: $white;
+		}
+		background: url('../../src/img/bg_home_sm.jpg') center -120px no-repeat;
+
+		@include media-breakpoint-up(md) {
+			//480px and up
+			background: url('../../src/img/bg_home_md.jpg') center top no-repeat;
+		}
+
+		@include media-breakpoint-up(lg) {
+			//1024px and up
+			background: url('../../src/img/bg_home_lg.jpg') center top no-repeat;
+		}
+
+	}
+}
