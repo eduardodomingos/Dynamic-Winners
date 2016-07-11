@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    $INFO
+\*------------------------------------*/
+.info {
+	text-align: center;
+}
+
+.info__link {
+	color: $white;
+	font-size: 13px;
+	font-weight: 300;
+	@include hover-focus {
+		color: $white;
+	}
+}
