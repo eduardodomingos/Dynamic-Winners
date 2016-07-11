@@ -2900,6 +2900,7 @@
 			$window:            					$(window),
 			$body:              					$('body'),
 			$menuToggle: 							$('#site-header .site-nav__toggle'),
+			$menuToggleIcon: 						$('#site-header .site-nav__toggle i'),
 			$navPocket: 							$('#site-header .site-nav__pocket'),
 			$homeHeadlinesCarousel: 				$('.home #headlines .carousel'),
 			$homeNewsCarousel: 						$('.home #news .carousel'),
@@ -2911,6 +2912,12 @@
 		//=======================================
 		dom.$menuToggle.click(function(e){
 			dom.$navPocket.toggleClass('active');
+			if(dom.$menuToggleIcon.hasClass('icon-menu')) {
+				dom.$menuToggleIcon.removeClass('icon-menu').addClass('icon-cancel');
+			}
+			else {
+				dom.$menuToggleIcon.removeClass('icon-cancel').addClass('icon-menu');
+			}
 		});
 
 		// Home / Headlines carousel
