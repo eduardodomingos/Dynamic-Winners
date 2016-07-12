@@ -168,3 +168,18 @@
 		bottom: 35px;
 	}
 }
+
+// Blog/ Latest Posts
+//=======================================
+.blog #latest-posts {
+	.slick-prev {
+		left: 0;
+		display: none!important;
+		@include media-breakpoint-up(md) {
+			display: block!important;
+		}
+	}
+	.slick-next {
+		right: 0;
+	}
+}

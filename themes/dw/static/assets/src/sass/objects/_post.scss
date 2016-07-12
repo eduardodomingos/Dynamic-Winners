@@ -28,3 +28,22 @@
 		margin-bottom: 0;
 	}
 }
+
+
+#latest-posts {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 6px;
+		background-color: $red-dark;
+		width: 120%;
+		height: 100%;
+		transform: skew(-$skew);
+		@include media-breakpoint-up(md) {
+			left: 50%;
+		}
+	}
+}

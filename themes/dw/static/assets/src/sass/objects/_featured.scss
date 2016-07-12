@@ -156,4 +156,17 @@
 			text-transform: uppercase;
 		}
 	}
+
+	// Blog / Latest Posts
+	//=======================================
+	.blog #latest-posts & {
+		padding: 10px 40px;
+		a {
+			color: $white;
+		}
+		.title {
+			font-size: 0.875rem;
+			margin-bottom: 0;
+		}
+	}
 }
