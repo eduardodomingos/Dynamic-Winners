@@ -5177,6 +5177,21 @@ html {
     font-size: 0.875rem;
     text-transform: uppercase; }
 
+.detail #athlete-details .featured a {
+  color: #000;
+  text-align: center; }
+
+.detail #athlete-details .featured .card-img-top {
+  width: 55px;
+  margin: 0 auto; }
+
+.detail #athlete-details .featured .card-block {
+  padding-top: 10px; }
+
+.detail #athlete-details .featured .card-text {
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
 /*------------------------------------*    $CAROUSEL
 \*------------------------------------*/
 .slick-dots {
@@ -5325,6 +5340,10 @@ html {
 
 .blog #latest-posts .slick-next {
   right: 0; }
+
+.slick-prev:after,
+.slick-next:after {
+  color: #b40000; }
 
 /*------------------------------------*    $PRIMARY
 \*------------------------------------*/

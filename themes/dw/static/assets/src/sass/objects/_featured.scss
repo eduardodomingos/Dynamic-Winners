@@ -173,4 +173,24 @@
 			text-transform: uppercase;
 		}
 	}
+
+	// Detail / Athlete Details
+	//=======================================
+	.detail #athlete-details & {
+		a {
+			color: $black;
+			text-align: center;
+		}
+		.card-img-top {
+			width: 55px;
+			margin: 0 auto;
+		}
+		.card-block {
+			padding-top: 10px;
+		}
+		.card-text {
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+	}
 }

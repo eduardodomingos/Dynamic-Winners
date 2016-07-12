@@ -189,3 +189,12 @@
 		right: 0;
 	}
 }
+
+// Detail/ Athletes Details
+//=======================================
+.slick-prev,
+.slick-next {
+	&:after {
+		color: $red-dark;
+	}
+}
