@@ -172,6 +172,12 @@
 // Blog/ Latest Posts
 //=======================================
 .blog #latest-posts {
+	.carousel {
+		padding-right: 40px;
+		@include media-breakpoint-up(md) {
+			padding-left: 40px;
+		}
+	}
 	.slick-prev {
 		left: 0;
 		display: none!important;

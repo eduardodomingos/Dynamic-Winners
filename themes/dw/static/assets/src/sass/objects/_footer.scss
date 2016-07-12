@@ -29,15 +29,33 @@
 	.blog & {
 		overflow: hidden;
 		padding: 0;
-		&:before {
+		.box-right {
+			background: $red-dark;
+			position: relative;
+		}
+		.box-right:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 999em;
+			top: 0;
+			bottom: 0;
+		}
+
+		.box-right:before {
+			right: -999em;
+			background: $red-dark;
+		}
+
+		.box-right:after {
 			content: '';
 			position: absolute;
 			top: 0;
-			left: 50px;
-			background: $red-dark;
-			transform-origin: 100% 0;
-			transform: skewX(-$skew);
-			@include size(100%, 50px);
+			bottom: 0;
+			left: 0;
+			width: 30px;
+			height: 100%;
+			background: linear-gradient(to right bottom, $white 49%, transparent 51%);
 		}
 	}
 }

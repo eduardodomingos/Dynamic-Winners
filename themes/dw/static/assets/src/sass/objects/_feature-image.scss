@@ -10,5 +10,9 @@
 		height: 320px;
 	}
 
-
+	@include media-breakpoint-up(lg) {
+		//1024px and up
+		margin-top: 0;
+		height: 355px;
+	}
 }

@@ -161,12 +161,16 @@
 	//=======================================
 	.blog #latest-posts & {
 		padding: 10px 40px;
+		font-size: 0.8125rem;
 		a {
 			color: $white;
 		}
+		.date {
+			margin-bottom: 5px;
+		}
 		.title {
 			font-size: 0.875rem;
-			margin-bottom: 0;
+			text-transform: uppercase;
 		}
 	}
 }

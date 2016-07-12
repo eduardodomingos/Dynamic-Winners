@@ -34,6 +34,9 @@
 		top: $height-nav-2;
 		left: 0;
 		@include size(380px, 580px);
+		.blog & {
+			height: 355px;
+		}
 	}
 
 	a {
@@ -58,3 +61,4 @@
 
 	}
 }
+
