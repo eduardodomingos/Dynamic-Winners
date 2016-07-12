@@ -5520,3 +5520,10 @@ html {
     height: 100%; }
   .btn--skewed.btn--has-shadow:after {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); }
+
+/*------------------------------------*    $FEATURE IMAGE
+\*------------------------------------*/
+.feature-image {
+  height: 195px;
+  background-size: cover;
+  margin-top: -42px; }
