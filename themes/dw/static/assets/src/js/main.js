@@ -13,7 +13,8 @@
 			$homeNewsCarousel: 						$('.home #news .carousel'),
 			$homeServicesCarousel: 					$('.home #services .carousel'),
 			$homeAthletesCarousel: 					$('.home #athletes .carousel'),
-			$latestPostsCarousel: 					$('.blog #latest-posts .carousel')
+			$latestPostsCarousel: 					$('.blog #latest-posts .carousel'),
+			$athleteDetailsCarousel: 					$('.detail #athlete-details .carousel')
 		};
 
 		// Toggle Mobile nav
@@ -121,6 +122,21 @@
 						slidesToScroll: 2
 					}
 				}
+			]
+		});
+
+		// Detail / Athlete details carousel
+		//=======================================
+		dom.$athleteDetailsCarousel.slick({
+			mobileFirst: true,
+			responsive: [
+				// {
+				// 	breakpoint: 1024,
+				// 	settings: {
+				// 		slidesToShow: 2,
+				// 		slidesToScroll: 2
+				// 	}
+				// }
 			]
 		});
 
