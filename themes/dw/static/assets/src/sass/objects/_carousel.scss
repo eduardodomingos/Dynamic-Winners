@@ -192,9 +192,23 @@
 
 // Detail/ Athletes Details
 //=======================================
-.slick-prev,
-.slick-next {
-	&:after {
-		color: $red-dark;
+.detail #athlete-details .carousel {
+	.slick-prev,
+	.slick-next {
+		&:after {
+			color: $red-dark;
+		}
 	}
+}
+
+.detail #athlete-details .carousel.slider-nav {
+	margin-bottom: 30px;
+}
+
+.detail #athlete-details .carousel.slider-for p {
+	margin-bottom: 0;
+}
+
+.detail #athlete-details .carousel.slider-for .media-object {
+	width: 25px;
 }

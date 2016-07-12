@@ -5185,6 +5185,7 @@ html {
   padding-top: 10px; }
 
 .detail #athlete-details .featured .card-text {
+  font-size: 1rem;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase; }
@@ -5338,9 +5339,18 @@ html {
 .blog #latest-posts .slick-next {
   right: 0; }
 
-.slick-prev:after,
-.slick-next:after {
+.detail #athlete-details .carousel .slick-prev:after,
+.detail #athlete-details .carousel .slick-next:after {
   color: #b40000; }
+
+.detail #athlete-details .carousel.slider-nav {
+  margin-bottom: 30px; }
+
+.detail #athlete-details .carousel.slider-for p {
+  margin-bottom: 0; }
+
+.detail #athlete-details .carousel.slider-for .media-object {
+  width: 25px; }
 
 /*------------------------------------*    $PRIMARY
 \*------------------------------------*/
