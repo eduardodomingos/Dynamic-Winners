@@ -2907,7 +2907,8 @@
 			$homeServicesCarousel: 					$('.home #services .carousel'),
 			$homeAthletesCarousel: 					$('.home #athletes .carousel'),
 			$latestPostsCarousel: 					$('.blog #latest-posts .carousel'),
-			$athleteDetailsCarousel: 					$('.detail #athlete-details .carousel')
+			$athleteDetailsCarouselImages: 			$('.detail #athlete-details .carousel.slider-nav'),
+			$athleteDetailsCarouselText: 			$('.detail #athlete-details .carousel.slider-for')
 		};
 
 		// Toggle Mobile nav
@@ -3020,17 +3021,36 @@
 
 		// Detail / Athlete details carousel
 		//=======================================
-		dom.$athleteDetailsCarousel.slick({
-			mobileFirst: true,
-			responsive: [
-				{
-					breakpoint: 480,
-					settings: {
-						slidesToShow: 3,
-						slidesToScroll: 1
-					}
-				}
-			]
+		dom.$athleteDetailsCarouselText.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'
 		});
+		dom.$athleteDetailsCarouselImages.slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			focusOnSelect: true
+		});
+
+
+
+
+
+
+		// dom.$athleteDetailsCarousel.slick({
+		// 	mobileFirst: true,
+		// 	responsive: [
+		// 		{
+		// 			breakpoint: 480,
+		// 			settings: {
+		// 				slidesToShow: 3,
+		// 				slidesToScroll: 1
+		// 			}
+		// 		}
+		// 	]
+		// });
 	});
 }(jQuery));

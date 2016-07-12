@@ -5177,10 +5177,6 @@ html {
     font-size: 0.875rem;
     text-transform: uppercase; }
 
-.detail #athlete-details .featured a {
-  color: #000;
-  text-align: center; }
-
 .detail #athlete-details .featured .card-img-top {
   width: 55px;
   margin: 0 auto; }
@@ -5189,6 +5185,7 @@ html {
   padding-top: 10px; }
 
 .detail #athlete-details .featured .card-text {
+  text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase; }
 

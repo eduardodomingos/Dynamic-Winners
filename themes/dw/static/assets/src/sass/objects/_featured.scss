@@ -177,10 +177,6 @@
 	// Detail / Athlete Details
 	//=======================================
 	.detail #athlete-details & {
-		a {
-			color: $black;
-			text-align: center;
-		}
 		.card-img-top {
 			width: 55px;
 			margin: 0 auto;
@@ -189,6 +185,7 @@
 			padding-top: 10px;
 		}
 		.card-text {
+			text-align: center;
 			letter-spacing: 1px;
 			text-transform: uppercase;
 		}
