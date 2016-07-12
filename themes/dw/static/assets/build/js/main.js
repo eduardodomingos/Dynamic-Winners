@@ -3759,6 +3759,15 @@ jQuery(window).on('load', function(){
 		//=======================================
 		dom.$latestPostsCarousel.slick({
 			mobileFirst: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}
+			]
 		});
 
 	});
