@@ -3658,7 +3658,8 @@ jQuery(window).on('load', function(){
 			$homeHeadlinesCarousel: 				$('.home #headlines .carousel'),
 			$homeNewsCarousel: 						$('.home #news .carousel'),
 			$homeServicesCarousel: 					$('.home #services .carousel'),
-			$homeAthletesCarousel: 					$('.home #athletes .carousel')
+			$homeAthletesCarousel: 					$('.home #athletes .carousel'),
+			$latestPostsCarousel: 					$('.blog #latest-posts .carousel')
 		};
 
 		// Toggle Mobile nav
@@ -3754,6 +3755,11 @@ jQuery(window).on('load', function(){
 			]
 		});
 
+		// Blog / Latest posts carousel
+		//=======================================
+		dom.$latestPostsCarousel.slick({
+			mobileFirst: true,
+		});
 
 	});
 }(jQuery));

@@ -5149,6 +5149,14 @@ html {
     font-size: 1.125rem;
     text-transform: uppercase; }
 
+.blog #latest-posts .featured {
+  padding: 10px 40px; }
+  .blog #latest-posts .featured a {
+    color: #fff; }
+  .blog #latest-posts .featured .title {
+    font-size: 0.875rem;
+    margin-bottom: 0; }
+
 /*------------------------------------*    $CAROUSEL
 \*------------------------------------*/
 .slick-dots {
@@ -5281,6 +5289,16 @@ html {
 
 .home #athletes .slick-dots {
   bottom: 35px; }
+
+.blog #latest-posts .slick-prev {
+  left: 0;
+  display: none !important; }
+  @media (min-width: 480px) {
+    .blog #latest-posts .slick-prev {
+      display: block !important; } }
+
+.blog #latest-posts .slick-next {
+  right: 0; }
 
 /*------------------------------------*    $PRIMARY
 \*------------------------------------*/
@@ -5554,3 +5572,19 @@ html {
   font-size: 0.875rem; }
   .post-body > *:last-child {
     margin-bottom: 0; }
+
+#latest-posts {
+  position: relative;
+  overflow: hidden; }
+  #latest-posts:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 6px;
+    background-color: #b40000;
+    width: 120%;
+    height: 100%;
+    transform: skew(-25deg); }
+    @media (min-width: 480px) {
+      #latest-posts:before {
+        left: 50%; } }
