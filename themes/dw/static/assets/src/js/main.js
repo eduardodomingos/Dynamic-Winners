@@ -12,7 +12,8 @@
 			$homeHeadlinesCarousel: 				$('.home #headlines .carousel'),
 			$homeNewsCarousel: 						$('.home #news .carousel'),
 			$homeServicesCarousel: 					$('.home #services .carousel'),
-			$homeAthletesCarousel: 					$('.home #athletes .carousel')
+			$homeAthletesCarousel: 					$('.home #athletes .carousel'),
+			$latestPostsCarousel: 					$('.blog #latest-posts .carousel')
 		};
 
 		// Toggle Mobile nav
@@ -108,6 +109,20 @@
 			]
 		});
 
+		// Blog / Latest posts carousel
+		//=======================================
+		dom.$latestPostsCarousel.slick({
+			mobileFirst: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}
+			]
+		});
 
 	});
 }(jQuery));
