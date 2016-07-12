@@ -62,7 +62,8 @@
 
 	// Blog/Site Footer
 	//=======================================
-	.blog #site-footer & {
+	.blog #site-footer &,
+	.detail #site-footer & {
 		text-align: right;
 		a {
 			color: $white;
@@ -73,4 +74,9 @@
 			}
 		}
 	}
+
+	.profile .athlete-intro & {
+
+	}
+
 }

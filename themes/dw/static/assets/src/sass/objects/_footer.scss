@@ -26,7 +26,8 @@
 
 	// Blog footer
 	//=======================================
-	.blog & {
+	.blog &,
+	.detail &{
 		overflow: hidden;
 		padding: 0;
 		.box-right {
