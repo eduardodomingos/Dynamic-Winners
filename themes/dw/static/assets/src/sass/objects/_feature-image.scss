@@ -3,7 +3,12 @@
 \*------------------------------------*/
 
 .feature-image {
-  height: 195px;
-  background-size: cover;
-  margin-top: -$height-nav-1;
+	height: 195px;
+	background-size: cover;
+	margin-top: -$height-nav-1;
+	@include media-breakpoint-up(md) {
+		height: 320px;
+	}
+
+
 }
