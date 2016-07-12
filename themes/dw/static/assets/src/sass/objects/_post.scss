@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    $POST
+\*------------------------------------*/
+.post {
+	margin-bottom: 70px;
+}
+
+.post-image {
+	margin-bottom: 20px;
+}
+
+.post-category {
+	text-transform: uppercase;
+	border-bottom: 1px solid $black;
+}
+.post-title {
+	font-size: 1.063rem;
+}
+
+.post-date {
+	font-size: 0.8125rem;
+	color: $red-dark;
+}
+
+.post-body {
+	font-size: 0.875rem;
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
