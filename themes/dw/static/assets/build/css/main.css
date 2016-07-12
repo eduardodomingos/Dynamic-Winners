@@ -4749,6 +4749,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   content: '\f167'; }
 
 /* '' */
+.icon-instagram:before {
+  content: '\f16d'; }
+
+/* '' */
 /*------------------------------------*    $MIXINS
 \*------------------------------------*/
 html {
@@ -4944,7 +4948,8 @@ html {
       left: 0;
       width: 380px;
       height: 580px; }
-      .blog .logo {
+      .blog .logo,
+      .detail .logo {
         height: 355px; } }
   .logo a {
     display: inline-block;
@@ -5014,13 +5019,17 @@ html {
       font-size: 25px; }
       .home #site-footer .socials-list a:focus, .home #site-footer .socials-list a:hover {
         color: #fff; }
-  .blog #site-footer .socials-list {
+  .blog #site-footer .socials-list,
+  .detail #site-footer .socials-list {
     text-align: right; }
-    .blog #site-footer .socials-list a {
+    .blog #site-footer .socials-list a,
+    .detail #site-footer .socials-list a {
       color: #fff;
       font-size: 25px;
       line-height: 50px; }
-      .blog #site-footer .socials-list a:focus, .blog #site-footer .socials-list a:hover {
+      .blog #site-footer .socials-list a:focus, .blog #site-footer .socials-list a:hover,
+      .detail #site-footer .socials-list a:focus,
+      .detail #site-footer .socials-list a:hover {
         color: #fff; }
 
 /*------------------------------------*    $HEADLINES
@@ -5468,23 +5477,28 @@ html {
     .home #site-footer {
       background-image: url("../../src/img/bg_footer_md.jpg"); } }
 
-.blog #site-footer {
+.blog #site-footer,
+.detail #site-footer {
   overflow: hidden;
   padding: 0; }
-  .blog #site-footer .box-right {
+  .blog #site-footer .box-right,
+  .detail #site-footer .box-right {
     background: #b40000;
     position: relative; }
-  .blog #site-footer .box-right:before {
+  .blog #site-footer .box-right:before,
+  .detail #site-footer .box-right:before {
     content: '';
     display: block;
     position: absolute;
     width: 999em;
     top: 0;
     bottom: 0; }
-  .blog #site-footer .box-right:before {
+  .blog #site-footer .box-right:before,
+  .detail #site-footer .box-right:before {
     right: -999em;
     background: #b40000; }
-  .blog #site-footer .box-right:after {
+  .blog #site-footer .box-right:after,
+  .detail #site-footer .box-right:after {
     content: '';
     position: absolute;
     top: 0;
@@ -5618,3 +5632,12 @@ html {
     @media (min-width: 480px) {
       #latest-posts:before {
         left: 50%; } }
+
+/*------------------------------------*    $ATHLETE
+\*------------------------------------*/
+.athlete-intro {
+  text-align: center;
+  font-size: 0.8125rem; }
+  .athlete-intro h1 {
+    font-size: 1.063rem;
+    text-transform: uppercase; }
