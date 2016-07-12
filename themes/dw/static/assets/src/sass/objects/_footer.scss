@@ -23,6 +23,23 @@
 		//	background: url('../../src/img/bg_home_lg.jpg') center top no-repeat;
 		//}
 	}
+
+	// Blog footer
+	//=======================================
+	.blog & {
+		overflow: hidden;
+		padding: 0;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50px;
+			background: $red-dark;
+			transform-origin: 100% 0;
+			transform: skewX(-$skew);
+			@include size(100%, 50px);
+		}
+	}
 }
 
 .site-footer__link {
