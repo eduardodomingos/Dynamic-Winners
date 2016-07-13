@@ -205,10 +205,19 @@
 	margin-bottom: 30px;
 }
 
+
 .detail #athlete-details .carousel.slider-for p {
 	margin-bottom: 0;
 }
 
 .detail #athlete-details .carousel.slider-for .media-object {
 	width: 25px;
+}
+
+// Detail/ Athletes Media
+//=======================================
+.detail #athlete-media .carousel {
+	.slick-slide img {
+		margin: 0 auto;
+	}
 }

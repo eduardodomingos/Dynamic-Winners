@@ -5352,6 +5352,9 @@ html {
 .detail #athlete-details .carousel.slider-for .media-object {
   width: 25px; }
 
+.detail #athlete-media .carousel .slick-slide img {
+  margin: 0 auto; }
+
 /*------------------------------------*    $PRIMARY
 \*------------------------------------*/
 #primary {
@@ -5423,6 +5426,37 @@ html {
   .home #athletes .section__header h2 {
     margin-bottom: 15px; }
 
+#athlete-media {
+  background: url("../../src/img/bg_profile_sm.jpg") center top no-repeat; }
+  @media (min-width: 480px) {
+    #athlete-media {
+      background: url("../../src/img/bg_profile_md.jpg") center top no-repeat; } }
+  @media (min-width: 1024px) {
+    #athlete-media {
+      background: url("../../src/img/bg_profile_lg.jpg") center top no-repeat; } }
+  @media (min-width: 480px) {
+    #athlete-media .tab-content-container {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; }
+      #athlete-media .tab-content-container::after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 480px) and (min-width: 320px) {
+    #athlete-media .tab-content-container {
+      max-width: 576px; } }
+  @media (min-width: 480px) and (min-width: 480px) {
+    #athlete-media .tab-content-container {
+      max-width: 720px; } }
+  @media (min-width: 480px) and (min-width: 1024px) {
+    #athlete-media .tab-content-container {
+      max-width: 940px; } }
+  @media (min-width: 480px) and (min-width: 1200px) {
+    #athlete-media .tab-content-container {
+      max-width: 1140px; } }
+
 /*------------------------------------*    $TABS
 \*------------------------------------*/
 .home #athletes .nav-tabs {
@@ -5460,6 +5494,28 @@ html {
     @media (min-width: 1024px) {
       .home #athletes .nav-tabs .nav-link {
         font-size: 1.125rem; } }
+
+.detail #athlete-media .nav-tabs {
+  text-align: center;
+  margin-bottom: 20px;
+  border: 0; }
+  .detail #athlete-media .nav-tabs .nav-item {
+    float: none;
+    display: inline-block; }
+    .detail #athlete-media .nav-tabs .nav-item + .nav-item {
+      margin-left: 0; }
+      .detail #athlete-media .nav-tabs .nav-item + .nav-item:before {
+        content: '\002F';
+        margin: 0 2px;
+        color: #fff; }
+  .detail #athlete-media .nav-tabs .nav-link {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.5); }
+    .detail #athlete-media .nav-tabs .nav-link.active {
+      color: white; }
 
 .tab-content > .tab-pane {
   display: block;

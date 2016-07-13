@@ -52,3 +52,23 @@
 		}
 	}
 }
+
+#athlete-media {
+	background: url('../../src/img/bg_profile_sm.jpg') center top no-repeat;
+	@include media-breakpoint-up(md) {
+		//480px and up
+		background: url('../../src/img/bg_profile_md.jpg') center top no-repeat;
+	}
+
+	@include media-breakpoint-up(lg) {
+		//1024px and up
+		background: url('../../src/img/bg_profile_lg.jpg') center top no-repeat;
+	}
+
+	.tab-content-container {
+		@include media-breakpoint-up(md) {
+			@include make-container();
+			@include make-container-max-widths();
+		}
+	}
+}
