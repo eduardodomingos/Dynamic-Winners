@@ -22,11 +22,19 @@
 .site-nav__top {
 	height: $height-nav-1;
 
+	//480px and up
+	@include media-breakpoint-up(md) {
+		>.container {
+			position: relative;
+		}
+	}
+
 	//1024px and up
 	@include media-breakpoint-up(lg) {
 		height: auto;
 		float: right;
 		>.container {
+			position: static;
 			max-width: none;
 			padding: 0;
 		}
@@ -49,6 +57,9 @@
 	float: left;
 	@include font-size(20px, $height-nav-1);
 	@include square($height-nav-1);
+	@include hover-focus-active {
+		outline: 0;
+	}
 	@include media-breakpoint-up(lg) {
 		//1024px and up
 		display: none;
@@ -110,6 +121,10 @@
 	max-height: 0;
 	transition: max-height $transition-duration;
 	overflow: hidden;
+	position: absolute;
+	top: $height-nav-1;
+	left: 0;
+	right:0;
 	&.active {
 		max-height: 1000px;
 	}

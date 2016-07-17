@@ -39,6 +39,7 @@
 			margin-bottom: 0;
 			@include media-breakpoint-up(lg) {
 				font-size: 1.813rem; //29px
+				line-height: 37px;
 			}
 		}
 	}
@@ -46,6 +47,9 @@
 	// Home / News
 	//=======================================
 	.home #news & {
+		@include media-breakpoint-up(md) {
+			margin: 0 10px;
+		}
 
 		.date {
 			margin-bottom: 0;
@@ -72,6 +76,9 @@
 	//=======================================
 	.home #services & {
 		padding-top: 0;
+		@include media-breakpoint-up(md) {
+			margin: 0 15px;
+		}
 		.title-wrapper {
 			display: table;
 			width: 100%;
@@ -110,6 +117,9 @@
 	//=======================================
 	.home #athletes & {
 		text-align: center;
+		@include media-breakpoint-up(md) {
+			margin: 0 10px;
+		}
 
 		.img-wrapper {
 			position: relative;
@@ -143,6 +153,41 @@
 
 		.title {
 			font-size: 1.125rem;
+			text-transform: uppercase;
+		}
+	}
+
+	// Blog / Latest Posts
+	//=======================================
+	.blog #latest-posts & {
+		padding: 10px 40px;
+		font-size: 0.8125rem;
+		a {
+			color: $white;
+		}
+		.date {
+			margin-bottom: 5px;
+		}
+		.title {
+			font-size: 0.875rem;
+			text-transform: uppercase;
+		}
+	}
+
+	// Detail / Athlete Details
+	//=======================================
+	.detail #athlete-details & {
+		.card-img-top {
+			width: 55px;
+			margin: 0 auto;
+		}
+		.card-block {
+			padding-top: 10px;
+		}
+		.card-text {
+			font-size: 1rem;
+			text-align: center;
+			letter-spacing: 1px;
 			text-transform: uppercase;
 		}
 	}

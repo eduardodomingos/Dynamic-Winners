@@ -16,12 +16,14 @@
 	z-index: 1;
 	@include list-unstyled();
 	li {
-		opacity: 0.5;
+		//opacity: 0.5;
 		display: inline-block;
 		line-height: 0;
 		@include square(20px);
 		&.slick-active {
-			opacity: 1;
+			button:after {
+				background-color: rgba($white, 1);
+			}
 		}
 	}
 	button {
@@ -37,10 +39,10 @@
 			position: absolute;
 			top: 5px;
 			right: 5px;
-			background-color: $white;
+			background-color: rgba($white, 0.5);
 			transform-origin: center;
 			transform: skew(-$skew);
-			z-index: -1;
+			//z-index: -1;
 			@include square(10px);
 		}
 	}
@@ -98,13 +100,25 @@
 
 // Home / Headlines
 //=======================================
-.home #headlines .carousel {
-	.slick-dots {
-		text-align: right;
+.home #headlines .carousel-wrapper {
+	position: relative;
+	.dots {
+		position: absolute;
 		bottom: 20px;
-		@include make-col-span(10, 12);
-		left: ($grid-gutter-width / 2);
-		right: ($grid-gutter-width / 2);
+		left: 0;
+		right: 0;
+		//z-index: 1;
+	}
+
+	.slick-dots {
+		position: static;
+		text-align: right;
+	}
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next {
+		right: 0;
 	}
 }
 
@@ -112,7 +126,10 @@
 //=======================================
 .home #news .carousel-wrapper {
 	.arrows {
-		padding-top: 74.906367041%; /* 100*(200/267) */
+		padding-top: 75%; /* 4:3 */
+		@include media-breakpoint-up(md) {
+			padding-top: 37.5%;
+		}
 	}
 }
 
@@ -140,11 +157,67 @@
 
 	.carousel-wrapper {
 		.arrows {
-			padding-top: 74.906367041%; /* 100*(200/267) */
+			padding-top: 75%; /* 4:3 */
+			@include media-breakpoint-up(md) {
+				padding-top: 37.5%;
+			}
 		}
 	}
 
 	.slick-dots {
 		bottom: 35px;
+	}
+}
+
+// Blog/ Latest Posts
+//=======================================
+.blog #latest-posts {
+	.carousel {
+		padding-right: 40px;
+		@include media-breakpoint-up(md) {
+			padding-left: 40px;
+		}
+	}
+	.slick-prev {
+		left: 0;
+		display: none!important;
+		@include media-breakpoint-up(md) {
+			display: block!important;
+		}
+	}
+	.slick-next {
+		right: 0;
+	}
+}
+
+// Detail/ Athletes Details
+//=======================================
+.detail #athlete-details .carousel {
+	.slick-prev,
+	.slick-next {
+		&:after {
+			color: $red-dark;
+		}
+	}
+}
+
+.detail #athlete-details .carousel.slider-nav {
+	margin-bottom: 30px;
+}
+
+
+.detail #athlete-details .carousel.slider-for p {
+	margin-bottom: 0;
+}
+
+.detail #athlete-details .carousel.slider-for .media-object {
+	width: 25px;
+}
+
+// Detail/ Athletes Media
+//=======================================
+.detail #athlete-media .carousel {
+	.slick-slide img {
+		margin: 0 auto;
 	}
 }

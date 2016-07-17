@@ -24,13 +24,20 @@
 
 	@include media-breakpoint-up(md) {
 		//480px and up
-		@include size(240px, 320px);
+		//@include size(240px, 320px);
+		left: -760px; // 1000-240
+		@include size(1000px, 320px);
 	}
 
 	@include media-breakpoint-up(lg) {
 		//1024px and up
 		top: $height-nav-2;
+		left: 0;
 		@include size(380px, 580px);
+		.blog &,
+		.detail & {
+			height: 355px;
+		}
 	}
 
 	a {
@@ -55,3 +62,4 @@
 
 	}
 }
+

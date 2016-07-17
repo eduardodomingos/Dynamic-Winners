@@ -4,22 +4,41 @@
 		// Cache references to DOM elements for performance
 		//=======================================
 		var dom = {
-			$window:            				$(window),
-			$body:              				$('body'),
-			$HomeHeadlinesCarousel: 				$('.home #headlines .carousel'),
-			$HomeNewsCarousel: 						$('.home #news .carousel'),
-			$HomeServicesCarousel: 					$('.home #services .carousel'),
-			$HomeAthletesCarousel: 					$('.home #athletes .carousel')
+			$window:            					$(window),
+			$body:              					$('body'),
+			$menuToggle: 							$('#site-header .site-nav__toggle'),
+			$menuToggleIcon: 						$('#site-header .site-nav__toggle i'),
+			$navPocket: 							$('#site-header .site-nav__pocket'),
+			$homeHeadlinesCarousel: 				$('.home #headlines .carousel'),
+			$homeNewsCarousel: 						$('.home #news .carousel'),
+			$homeServicesCarousel: 					$('.home #services .carousel'),
+			$homeAthletesCarousel: 					$('.home #athletes .carousel'),
+			$latestPostsCarousel: 					$('.blog #latest-posts .carousel'),
+			$athleteDetailsCarouselImages: 			$('.detail #athlete-details .carousel.slider-nav'),
+			$athleteDetailsCarouselText: 			$('.detail #athlete-details .carousel.slider-for'),
+			$athleteMediaCarousel:					$('.detail #athlete-media .carousel')
 		};
+
+		// Toggle Mobile nav
+		//=======================================
+		dom.$menuToggle.click(function(e){
+			dom.$navPocket.toggleClass('active');
+			if(dom.$menuToggleIcon.hasClass('icon-menu')) {
+				dom.$menuToggleIcon.removeClass('icon-menu').addClass('icon-cancel');
+			}
+			else {
+				dom.$menuToggleIcon.removeClass('icon-cancel').addClass('icon-menu');
+			}
+		});
 
 		// Home / Headlines carousel
 		//=======================================
-		dom.$HomeHeadlinesCarousel.slick({
+		dom.$homeHeadlinesCarousel.slick({
 			mobileFirst: true,
 			autoplay: false,
 			dots: true,
 			arrows: false,
-			//appendDots: dom.$headlinesCarouselDotsContainer,
+			appendDots: $('.home #headlines .carousel-wrapper .dots .container'),
 			responsive: [
 				{
 					breakpoint: 1024,
@@ -32,7 +51,7 @@
 
 		// Home / News carousel
 		//=======================================
-		dom.$HomeNewsCarousel.slick({
+		dom.$homeNewsCarousel.slick({
 			mobileFirst: true,
 			appendArrows: $('.home #news .arrows'),
 			responsive: [
@@ -48,7 +67,7 @@
 
 		// Home / Services carousel
 		//=======================================
-		dom.$HomeServicesCarousel.slick({
+		dom.$homeServicesCarousel.slick({
 			mobileFirst: true,
 			dots: true,
 			responsive: [
@@ -71,7 +90,7 @@
 
 		// Home / Athletes carousel
 		//=======================================
-		dom.$HomeAthletesCarousel.slick({
+		dom.$homeAthletesCarousel.slick({
 			mobileFirst: true,
 			appendArrows: $('.home #athletes .arrows'),
 			dots: true,
@@ -93,6 +112,65 @@
 			]
 		});
 
+		// Blog / Latest posts carousel
+		//=======================================
+		dom.$latestPostsCarousel.slick({
+			mobileFirst: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}
+			]
+		});
 
+		// Detail / Athlete details carousel
+		//=======================================
+		dom.$athleteDetailsCarouselText.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'
+		});
+		dom.$athleteDetailsCarouselImages.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			focusOnSelect: true,
+			mobileFirst: true,
+			responsive: [
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 5
+					}
+				}
+			]
+		});
+
+		// Detail / Athlete media carousel
+		//=======================================
+		dom.$athleteMediaCarousel.slick({
+			mobileFirst: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}
+			]
+		});
 	});
 }(jQuery));

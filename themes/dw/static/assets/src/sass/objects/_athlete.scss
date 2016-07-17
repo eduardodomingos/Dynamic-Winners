@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    $ATHLETE
+\*------------------------------------*/
+.athlete {}
+
+
+.box-intro {
+	background: $red-dark;
+	position: relative;
+}
+.box-intro:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 999em;
+	top: 0;
+	bottom: 0;
+}
+
+.box-intro:before {
+	right: -999em;
+	background: $red-dark;
+}
+
+.box-intro:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -60px;
+	width: 60px;
+	height: 100%;
+	background: linear-gradient(to left top, $red-dark 49%, transparent 51%);
+}
+
+.athlete-intro {
+	text-align: center;
+	font-size: 0.8125rem;
+	padding: 10px 0;
+	&,
+	a {
+		color: $white;
+	}
+	h1 {
+		font-size: 1.063rem;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	.position {
+		text-transform: uppercase;
+		font-size: 0.75rem;
+		margin-bottom: 0;
+	}
+}

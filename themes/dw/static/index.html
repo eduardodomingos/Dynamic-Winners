@@ -1,188 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Required meta tags always come first -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="assets/build/css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.min.css">
+
+	<!-- This style tag should be injected vai PHP -->
+	<style>
+		.headline1 {
+			background-image: url('http://placehold.it/479x719?text=2:3');
+		}
+
+		.headline2 {
+			background-image: url('http://placehold.it/479x719?text=2:3');
+		}
+
+		@media (min-width: 480px) {
+			.headline1 {
+				background-image: url('http://placehold.it/1023x682?text=3:2');
+			}
+
+			.headline2 {
+				background-image: url('http://placehold.it/1023x682?text=3:2');
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.headline1 {
+				background-image: url('http://placehold.it/2000x1000?text=2:1');
+			}
+
+			.headline2 {
+				background-image: url('http://placehold.it/2000x1000?text=2:1');
+			}
+		}
+	</style>
+
 </head>
 <body class="home">
-
-	<!-- HEADER
+	<!-- PAGE HEAD
 	========================================================= -->
-	<header id="site-header" role="banner">
-		<nav class="site-nav">
-			<div class="container mastcontainer">
-				<div class="site-nav__top">
-					<div class="container">
-						<h1 class="logo">
-							<a href="/"><span class="sr-only">Dynamic Winners</span></a>
-						</h1>
+	<header class="page-head">
+		<div class="wrapper clearfix">
+			<a href="/" class="logo">
+				<img src="img/logo-dw.svg" alt="Dynamic Winners" class="logo__img">
+			</a><!-- logo -->
+			<div class="pull-lg-right clearfix">
+				<nav class="site-nav">
+					<button class="site-nav__toggle"><span class="sr-only">Menu</span></button>
+					<ul class="site-nav__list">
+						<li class="site-nav__item">
+							<a href="" class="site-nav__link">Home</a>
+						</li>
+						<li class="site-nav__item">
+							<a href="" class="site-nav__link">Notícias</a>
+						</li>
+						<li class="site-nav__item">
+							<a href="" class="site-nav__link">Sobre</a>
+						</li>
+						<li class="site-nav__item">
+							<a href="" class="site-nav__link">Serviços</a>
+						</li>
+						<li class="site-nav__item">
+							<a href="" class="site-nav__link">Atletas</a>
+						</li>
+						<li class="site-nav__item">
+							<a href="" class="site-nav__link">Contactos</a>
+						</li>
+					</ul><!-- site-nav__list-->
+				</nav><!-- site-nav-->
 
-						<button class="site-nav__toggle"><i class="icon-menu"></i></button>
+				<ul class="social">
+					<li class="social__item">
+						<a href="" class="social__link social__link--facebook btn btn--slanted"><span class="sr-only">Linkedin</span></a>
+					</li>
+					<li class="social__item">
+						<a href="" class="social__link social__link--linkedin btn btn--slanted"><span class="sr-only">Linkedin</span></a>
+					</li>
+				</ul><!-- social -->
 
-						<ul class="site-nav__lang-list">
-							<li><a href="" class="active">pt</a></li>
-							<li><a href="">en</a></li>
-						</ul><!-- site-nav__lang-list -->
+				<nav class="languages-nav">
+					<ul class="languages-nav__list">
+						<li class="languages-nav__item">
+							<a href="" class="languages-nav__link languages-nav__link--current">pt</a>
+						</li>
+						<li class="languages-nav__item">
+							<a href="" class="languages-nav__link">en</a>
+						</li>
+					</ul><!-- languages-nav__list-->
+				</nav><!-- languages-nav -->
+			</div><!-- pull -->
 
-						<ul class="socials-list">
-							<li><a href=""><i class="icon-facebook"></i></a></li>
-							<li><a href=""><i class="icon-linkedin"></i></a></li>
-						</ul><!-- socials-list-->
-					</div><!-- container -->
-				</div><!-- site-nav__top -->
-
-				<div class="site-nav__pocket">
-					<div class="container">
-						<ul class="site-nav__menu-list">
-							<li>
-								<a href="/" class="current">Home</a>
-							</li>
-							<li>
-								<a href="">Notícias</a>
-							</li>
-							<li>
-								<a href="">Sobre</a>
-							</li>
-							<li>
-								<a href="">Serviços</a>
-							</li>
-							<li>
-								<a href="">Atletas</a>
-							</li>
-							<li>
-								<a href="">Contactos</a>
-							</li>
-						</ul>
-					</div>
-				</div><!-- site-nav__pocket -->
-
-			</div><!-- master-container -->
-		</nav><!-- site-nav -->
-	</header><!-- site-header -->
+		</div><!-- wrapper -->
+	</header><!-- page-head -->
 
 	<!-- HEADLINES
 	========================================================= -->
 	<section id="headlines">
-		<div class="carousel">
-			<article class="featured" style="background-image: url('assets/src/img/relva_2x3.jpg')">
-				<div>
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-								<p class="title">Agenciamento desportivo e gestão de carreiras</p>
-							</div><!-- col -->
-						</div><!-- row -->
-					</div><!-- container -->
-				</div>
-			</article><!-- featured -->
-			<article class="featured" style="background-image: url('assets/src/img/relva_2x3.jpg')">
-				<div>
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-								<p class="title">Agenciamento desportivo e gestão de carreiras</p>
-							</div><!-- col -->
-						</div><!-- row -->
-					</div><!-- container -->
-				</div>
-			</article><!-- featured -->
-		</div>
+		<div class="headlines__overlay"></div>
+		<div class="slider slider--headlines">
+			<div class="slider__item">
+				<article class="headline headline2">
+					<div class="headline__text">
+						<h1>Agenciamento desportivo e gestão de carreiras</h1>
+					</div><!-- headline__text -->
+				</article><!-- headline -->
+			</div><!-- slider__item -->
+			<div class="slider__item">
+				<article class="headline headline2">
+					<div class="headline__text">
+						<h1>Agenciamento desportivo e gestão de carreiras</h1>
+					</div><!-- headline__text -->
+				</article><!-- headline -->
+			</div><!-- slider__item -->
+		</div><!-- slider-headlines -->
 	</section><!-- headlines -->
 
-	<!-- PRIMARY
-	========================================================= -->
-	<div id="primary">
 
+	<!-- PRIMARY SECTION
+	========================================================= -->
+	<div class="band band--primary">
 		<!-- NEWS
 		========================================================= -->
-		<section id="news" class="section">
+		<section id="news" class="band section">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1">
-						<div class="carousel-wrapper">
-							<div class="arrows"></div>
-							<div class="carousel">
-							<article class="featured card">
-								<a href="">
-								<img class="card-img-top img-fluid" src="assets/src/img/noticia1.jpg" alt="">
-								</a>
-								<div class="card-block">
-									<p class="date card-text">27 jun 2016</p>
-									<p class="title card-title"><a href="">Campeões da taça sub' 21</a></p>
-									<div class="dot-ellipsis dot-load-update dot-timer-update dot-height-63">
-										<p class="excerpt class-text">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus
-										</p>
-									</div><!-- dot-ellipsis -->
-									<a href="" class="read-more">Ver mais</a>
-								</div><!-- card-block -->
-							</article><!-- featured -->
+					<div class="col-sm-12 col-lg-8 col-lg-offset-2">
+						<div class="section__header">
+							<h2 class="heading sr-only">Notícias</h2>
+						</div><!-- section__header -->
+						<div class="slider slider--entries">
 
-							<article class="featured card">
-								<a href="">
-								<img class="card-img-top img-fluid" src="assets/src/img/noticia2.jpg" alt=""></a>
-								<div class="card-block">
-									<p class="date card-text">12 out 2016</p>
-									<p class="title card-title"><a href="">Mais um avançado dw</a></p>
-									<div class="dot-ellipsis dot-load-update dot-timer-update dot-height-63">
-										<p class="excerpt class-text">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus
-										</p>
-									</div><!-- dot-ellipsis -->
-									<a href="" class="read-more">Ver mais</a>
-								</div><!-- card-block -->
-							</article><!-- featured -->
+							<div class="slider__item">
+								<article class="card entry m-b-0">
+									<a href=""><img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/263x197?text=4:3 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>
+									<div class="card-block p-l-0 p-r-0 p-b-0">
+										<p class="entry__date">27 Jun 2016</p>
+										<h2 class="entry__title"><a href="">Campeões da taça sub’21 2016</a></h2>
+										<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ex facilis in quisquam.</p>
+										<a href="" class="entry__read-more">Ver mais</a>
+									</div><!-- card-block -->
+								</article><!-- card -->
+							</div><!-- slider__item -->
 
-							<article class="featured card">
-								<a href=""><img class="card-img-top img-fluid" src="assets/src/img/noticia1.jpg" alt=""></a>
-								<div class="card-block">
-									<p class="date card-text">27 jun 2016</p>
-									<p class="title card-title"><a href="">Campeões da taça sub' 21</a></p>
-									<div class="dot-ellipsis dot-load-update dot-timer-update dot-height-63">
-										<p class="excerpt class-text">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus
-										</p>
-									</div><!-- dot-ellipsis -->
-									<a href="" class="read-more">Ver mais</a>
-								</div><!-- card-block -->
-							</article><!-- featured -->
+							<div class="slider__item">
+								<article class="card entry m-b-0">
+									<a href=""><img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/263x197?text=4:3 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>
+									<div class="card-block p-l-0 p-r-0 p-b-0">
+										<p class="entry__date">27 Jun 2016</p>
+										<h2 class="entry__title"><a href="">Campeões da taça sub’21 2016</a></h2>
+										<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ex facilis in quisquam.</p>
+										<a href="" class="entry__read-more">Ver mais</a>
+									</div><!-- card-block -->
+								</article><!-- card -->
+							</div><!-- slider__item -->
 
-							<article class="featured card">
-								<a href=""><img class="card-img-top img-fluid" src="assets/src/img/noticia2.jpg" alt=""></a>
-								<div class="card-block">
-									<p class="date card-text">12 out 2016</p>
-									<p class="title card-title"><a href="">Mais um avançado dw</a></p>
-									<div class="dot-ellipsis dot-load-update dot-timer-update dot-height-63">
-										<p class="excerpt class-text">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.
-										</p>
-									</div><!-- dot-ellipsis -->
-									<a href="" class="read-more">Ver mais</a>
-								</div><!-- card-block -->
-							</article><!-- featured -->
-						</div><!-- carousel -->
-						</div><!-- carousel-wrapper -->
+							<div class="slider__item">
+								<article class="card entry m-b-0">
+									<a href=""><img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/263x197?text=4:3 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>
+									<div class="card-block p-l-0 p-r-0 p-b-0">
+										<p class="entry__date">27 Jun 2016</p>
+										<h2 class="entry__title"><a href="">Campeões da taça sub’21 2016</a></h2>
+										<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ex facilis in quisquam.</p>
+										<a href="" class="entry__read-more">Ver mais</a>
+									</div><!-- card-block -->
+								</article><!-- card -->
+							</div><!-- slider__item -->
+						</div><!-- slider -->
 					</div><!-- col -->
-				</div><!-- container -->
-
+				</div><!-- row -->
 			</div><!-- container -->
 		</section><!-- news -->
 
 		<!-- ABOUT
 		========================================================= -->
-		<section id="about" class="section">
+		<section id="about" class="band section">
 			<div class="container">
-				<div class="section__header">
-					<h2>Sobre nós</h2>
-				</div><!-- section-header -->
 				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1">
-						<p class="text-xs-center m-b-0">Fundada pelos sócios João Caculo e Ricardo Oliveira em 2016, a DYNAMIC WINNERS é uma empresa especializada em gestão de carreiras de jogadores e treinadores de futebol.</p>
+					<div class="col-sm-12 col-lg-6 col-lg-offset-3">
+						<div class="section__header">
+							<h2 class="heading">Sobre nós</h2>
+						</div><!-- section__header -->
+						<p class="text-xs-center m-b-0">
+							Fundada pelos sócios João Caculo e Ricardo Oliveira em 2016,
+							a DYNAMIC WINNERS é uma empresa especializada em gestão de carreiras de jogadores
+							e treinadores de futebol.
+						</p>
 					</div><!-- col -->
 				</div><!-- row -->
 			</div><!-- container -->
@@ -190,50 +197,72 @@
 
 		<!-- SERVICES
 		========================================================= -->
-		<section id="services" class="section">
+		<section id="services" class="band section">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1">
-						<div class="carousel">
-							<article class="featured card card-block text-xs-center">
-								<div class="title-wrapper">
-									<h4 class="title card-title" data-order="1"><a href="">Agenciamento desportivo</a></h4>
-								</div>
-								<p class="card-text">Vitaesaert veciegast nveriti vaseas asety kertya aset aplicaboserde miuas nerafae kertyerauas vitaesa eniptaiad esertas.</p>
-								<a href="" class="read-more">Ver mais</a>
-							</article><!-- featured -->
+					<div class="col-sm-12">
+						<div class="section__header">
+							<h2 class="heading sr-only">Serviços</h2>
+						</div><!-- section__header -->
+						<div class="slider slider--entries">
 
-							<article class="featured card card-block text-xs-center">
-								<div class="title-wrapper">
-									<h4 class="title card-title" data-order="2"><a href="">Imagem e comunicação</a></h4>
-								</div>
-								<p class="card-text">Vitaesaert veciegast nveriti vaseas asety kertya aset aplicaboserde miuas nerafae kertyerauas vitaesa eniptaiad esertas.</p>
-								<a href="" class="read-more">Ver mais</a>
-							</article><!-- featured -->
+							<div class="slider__item">
+								<article class="card entry entry--service text-xs-center m-b-0">
+									<div class="card-block p-t-0 p-l-0 p-r-0">
+										<h4 class="entry__title" data-order="1">Assessoria Pessoal</h4>
+										<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit vitae.</p>
+										<a href="" class="entry__read-more">Ver mais</a>
+									</div><!-- card-block -->
+								</article><!-- card -->
+							</div><!-- slider__item -->
 
-							<article class="featured card card-block text-xs-center">
-								<div class="title-wrapper">
-									<h4 class="title card-title" data-order="3"><a href="">Assessoria Pessoal</a></h4>
-								</div>
-								<p class="card-text">Vitaesaert veciegast nveriti vaseas asety kertya aset aplicaboserde miuas nerafae kertyerauas vitaesa eniptaiad esertas.</p>
-								<a href="" class="read-more">Ver mais</a>
-							</article><!-- featured -->
-						</div><!-- carousel-->
+							<div class="slider__item">
+								<article class="card entry entry--service text-xs-center m-b-0">
+									<div class="card-block p-t-0 p-l-0 p-r-0">
+										<h4 class="entry__title" data-order="2">Assessoria Pessoal</h4>
+										<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit vitae.</p>
+										<a href="" class="entry__read-more">Ver mais</a>
+									</div><!-- card-block -->
+								</article><!-- card -->
+							</div><!-- slider__item -->
+
+							<div class="slider__item">
+								<article class="card entry entry--service text-xs-cente m-b-0">
+									<div class="card-block p-t-0 p-l-0 p-r-0">
+										<h4 class="entry__title" data-order="3">Assessoria Pessoal</h4>
+										<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit vitae.</p>
+										<a href="" class="entry__read-more">Ver mais</a>
+									</div><!-- card-block -->
+								</article><!-- card -->
+							</div><!-- slider__item -->
+
+							<div class="slider__item">
+								<article class="card entry entry--service text-xs-center m-b-0">
+									<div class="card-block p-t-0 p-l-0 p-r-0">
+										<h4 class="entry__title" data-order="4">Assessoria Pessoal</h4>
+										<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit vitae.</p>
+										<a href="" class="entry__read-more">Ver mais</a>
+									</div><!-- card-block -->
+								</article><!-- card -->
+							</div><!-- slider__item -->
+
+						</div><!-- slider -->
 					</div><!-- col -->
 				</div><!-- row -->
 			</div><!-- container -->
-		</section><!-- services -->
+		</section><!-- about -->
 
-		<!-- ATHLETES
+		<!-- ATHELETES
 		========================================================= -->
-		<section id="athletes" class="section">
+		<section id="athletes" class="band section">
 			<div class="container">
-				<div class="section__header">
-					<h2>Atletas</h2>
-				</div><!-- section-header -->
 				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1">
-						<!-- Nav tabs -->
+					<div class="col-sm-12">
+						<div class="section__header">
+							<h2 class="heading">Atletas</h2>
+						</div><!-- section__header -->
+					</div><!-- col -->
+					<div class="col-sm-12 col-lg-6 col-lg-offset-3">
 						<ul class="nav nav-tabs" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" data-toggle="tab" href="#players" role="tab">Jogadores</a>
@@ -245,150 +274,70 @@
 								<a class="nav-link" data-toggle="tab" href="#teams" role="tab">Equipas</a>
 							</li>
 						</ul><!-- nav-tabs -->
-
-						<!-- Tab panes -->
-						<div class="tab-content">
-							<div class="tab-pane active" id="players" role="tabpanel">
-								<div class="carousel-wrapper">
-									<div class="arrows"></div>
-									<div class="carousel">
-										<article class="featured card">
-											<div class="img-wrapper">
-												<p class="category">Defesa</p>
-												<a href=""><img class="card-img-top img-fluid" src="assets/src/img/jogador1.jpg" alt=""></a>
-											</div><!-- img-wrapper -->
-											<div class="card-block">
-												<p class="title card-title"><a href="">Jorge Pinto</a></p>
-												<div class="dot-ellipsis dot-load-update dot-timer-update dot-height-63">
-													<p class="excerpt class-text">
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.
-													</p>
-												</div><!-- dot-ellipsis -->
-											</div><!-- card-block -->
-										</article><!-- featured -->
-										<article class="featured card">
-											<div class="img-wrapper">
-												<p class="category">Médio</p>
-												<a href=""><img class="card-img-top img-fluid" src="assets/src/img/jogador1.jpg" alt=""></a>
-											</div><!-- img-wrapper -->
-											<div class="card-block">
-												<p class="title card-title"><a href="">Jorge Pinto</a></p>
-												<div class="dot-ellipsis dot-load-update dot-timer-update dot-height-63">
-													<p class="excerpt class-text">
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.
-													</p>
-												</div><!-- dot-ellipsis -->
-											</div><!-- card-block -->
-										</article><!-- featured -->
-										<article class="featured card">
-											<div class="img-wrapper">
-												<p class="category">Avançado</p>
-												<a href=""><img class="card-img-top img-fluid" src="assets/src/img/jogador1.jpg" alt=""></a>
-											</div><!-- img-wrapper -->
-											<div class="card-block">
-												<p class="title card-title"><a href="">Jorge Pinto</a></p>
-												<div class="dot-ellipsis dot-load-update dot-timer-update dot-height-63">
-													<p class="excerpt class-text">
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.
-													</p>
-												</div><!-- dot-ellipsis -->
-											</div><!-- card-block -->
-										</article><!-- featured -->
-										<article class="featured card">
-											<div class="img-wrapper">
-												<p class="category">Defesa</p>
-												<a href=""><img class="card-img-top img-fluid" src="assets/src/img/jogador1.jpg" alt=""></a>
-											</div><!-- img-wrapper -->
-											<div class="card-block">
-												<p class="title card-title"><a href="">Jorge Pinto</a></p>
-												<div class="dot-ellipsis dot-load-update dot-timer-update dot-height-63">
-													<p class="excerpt class-text">
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi dicta dolores, enim explicabo facilis illum iste itaque libero, maiores molestias natus neque nostrum nulla numquam officiis perferendis reiciendis repellendus.
-													</p>
-												</div><!-- dot-ellipsis -->
-											</div><!-- card-block -->
-										</article><!-- featured -->
-									</div><!-- carousel -->
-								</div><!-- carousel-wrapper -->
-							</div><!-- tab-pane -->
-							<div class="tab-pane" id="managers" role="tabpanel">treinadores</div>
-							<div class="tab-pane" id="teams" role="tabpanel">equipas</div>
-						</div><!-- tab-content -->
 					</div><!-- col -->
 				</div><!-- row -->
 			</div><!-- container -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="players" role="tabpanel">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="slider slider--entries">
+									<div class="slider__item">
+										<article class="card entry entry--athlete text-xs-center  m-b-0">
+											<div class="img-wrapper">
+												<p class="category">Defesa</p>
+												<a href=""><img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/263x197?text=4:3 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>
+											</div><!-- img-wrapper -->
+											<div class="card-block">
+												<h2 class="entry__title"><a href="">Jogador</a></h2>
+												<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+											</div><!-- card-block -->
+										</article><!-- card -->
+									</div><!-- slider__item -->
+
+									<div class="slider__item">
+										<article class="card entry entry--athlete text-xs-center  m-b-0">
+											<div class="img-wrapper">
+												<p class="category">Defesa</p>
+												<a href=""><img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/263x197?text=4:3 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>
+											</div><!-- img-wrapper -->
+											<div class="card-block">
+												<h2 class="entry__title"><a href="">Jogador</a></h2>
+												<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+											</div><!-- card-block -->
+										</article><!-- card -->
+									</div><!-- slider__item -->
+
+									<div class="slider__item">
+										<article class="card entry entry--athlete text-xs-center  m-b-0">
+											<div class="img-wrapper">
+												<p class="category">Defesa</p>
+												<a href=""><img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/263x197?text=4:3 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>
+											</div><!-- img-wrapper -->
+											<div class="card-block">
+												<h2 class="entry__title"><a href="">Jogador</a></h2>
+												<p class="entry__text card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+											</div><!-- card-block -->
+										</article><!-- card -->
+									</div><!-- slider__item -->
+
+								</div><!-- slider -->
+							</div><!-- col -->
+						</div><!-- row -->
+					</div><!-- container -->
+				</div><!-- tab-pane -->
+			</div><!-- tab-content -->
 		</section><!-- athletes -->
-	</div><!-- primary -->
 
-	<!-- FOOTER
-	========================================================= -->
-	<footer id="site-footer" class="section">
-		<div class="container">
-			<div class="section__header">
-				<h2>Contacte-nos</h2>
-			</div><!-- section-header -->
-			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1">
-					<form class="contact-form">
-						<div class="form-group row">
-							<div class="col-lg-2">
-								<label for="inputName" class="form-control-label">Nome</label>
-							</div>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" id="inputName">
-							</div>
-						</div>
-						<div class="form-group row">
-							<div class="col-lg-2">
-								<label for="inputEmail" class="form-control-label">Email</label>
-							</div>
-							<div class="col-lg-10">
-								<input type="email" class="form-control" id="inputEmail">
-							</div>
-						</div>
-						<div class="form-group row">
-							<div class="col-lg-2">
-								<label for="inputPhone" class="form-control-label">Telefone</label>
-							</div>
-							<div class="col-lg-10">
-								<input type="tel" class="form-control" id="inputPhone">
-							</div>
-						</div>
-						<div class="form-group row">
-							<div class="col-lg-2">
-								<label for="inputMessage" class="form-control-label">Mensagem</label>
-							</div>
-							<div class="col-lg-10">
-								<textarea class="form-control" rows="5" id="inputMessage"></textarea>
-							</div>
-						</div>
-						<div class="form-group text-xs-center">
-							<button type="submit" class="btn btn-primary btn--skewed btn--has-shadow">Enviar</button>
-						</div>
-					</form><!-- contact-form -->
 
-					<ul class="socials-list">
-						<li><a href=""><i class="icon-facebook"></i></a></li>
-						<li><a href=""><i class="icon-twitter"></i></a></li>
-						<li><a href=""><i class="icon-gplus"></i></a></li>
-						<li><a href=""><i class="icon-linkedin"></i></a></li>
-						<li><a href=""><i class="icon-youtube"></i></a></li>
-					</ul><!-- socials-list-->
+	</div><!-- band--primary -->
 
-					<div class="info">
-						<a href="tel:+24493792432" class="info__link">+244 937 924 432</a>
-						<a href="mailto:geral@dynamicwinners.com" class="info__link">geral@dynamicwinners.com</a>
-					</div>
 
-				</div><!-- col -->
-			</div><!-- row -->
-		</div><!-- container -->
-	</footer><!-- site-footer -->
 
-	<!-- jQuery first, then Bootstrap JS. -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- JS -->
 	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-	<script src="assets/build/js/main.js"></script>
+	<script src="js/main.min.js"></script>
 </body>
 </html>
