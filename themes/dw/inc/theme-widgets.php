@@ -60,6 +60,25 @@ class Dynamic_Widget_Home_Services extends WP_Widget {
 
 		$services = dynamic_get_homepage_services( $home_id );
 
+		?>
+		<div class="col-sm-12">
+			<div class="section__header">
+				<h2 class="heading sr-only">Serviços</h2>
+			</div><!-- section__header -->
+			<div class="slider slider--entries">
+
+		<?php 
+			while( $services->have_posts() ) : $services->the_post();
+				error_log( get_the_ID() );
+				get_template_part( 'template-parts/home-grid', 'service' );
+			endwhile;
+			wp_reset_postdata();
+		?>
+			
+			</div>
+		</div>
+		<?php 
+
 		echo $args['after_widget'];
 
 	}
@@ -113,6 +132,13 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 		?>
 
 		<?php echo $args['before_widget']; ?>
+		
+		<div class="col-sm-12 col-lg-6 col-lg-offset-3">
+			<div class="section__header">
+				<h2 class="heading"><?php echo $title ?></h2>
+			</div><!-- section__header -->
+			<p class="text-xs-center m-b-0"><?php echo $description ?></p>
+		</div><!-- col -->
 		
 		
 

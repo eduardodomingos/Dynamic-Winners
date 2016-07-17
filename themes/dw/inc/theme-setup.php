@@ -13,10 +13,10 @@ function dynamic_widgets_init() {
 	// Homepage sections
 	register_sidebar( array(
 		'name'          => __( 'Homepage sections', 'dynamic' ),
-		'id'            => 'dinamic-homepage-sections',
+		'id'            => 'dynamic-homepage-sections',
 		'description'	=> '',
-		'before_widget' => '<section id="%1$s" class="%2$s"><div class="container">',
-		'after_widget'  => '</div></section>',
+		'before_widget' => '<section id="%2$s" class="band section"><div class="container"><div class="row">',
+		'after_widget'  => '</div><!-- row --></div><!-- container --></section><!-- section -->',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );

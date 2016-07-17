@@ -28,12 +28,28 @@ function dynamic_get_homepage_services( $home_id ){
 	
 	//get homepage highlight services
 	$highlight_services = get_field('home_services', (int)$home_id);
-	//get one page services
-	$more_services = dynamic_get_posts_to_widgets('service', $highlight_services, 1 );
-	//merge services 
-	$all_services = array_merge( $highlight_services, $more_services );
+
+	$highlight_services_ids = [];
+	foreach ($highlight_services as $highlight_service) {
+		$highlight_services_ids[] = $highlight_service->ID;
+	}
+
+	$args = [
+		'post_type' => 'service',
+		'post_status' => 'publish',
+		'posts_per_page' => -1,
+		'post__not_in' => $highlight_services_ids,
+		'ignore_sticky_posts' => false
+	];
 	
-	return $services_field;
+	$more_services = new WP_Query($args);
+	
+	$all_services = new WP_Query();
+	$all_services->posts = array_merge( $highlight_services, $more_services->posts );
+	
+	// we also need to set post count correctly so as to enable the looping
+	$all_services->post_count = count( $all_services->posts );
+	return $all_services;
 }
 
 
@@ -152,24 +168,29 @@ function dynamic_get_published_manchetes(){
 }
 
 
-function dynamic_get_posts_to_widgets( $post_type, $posts_to_exclude = array(), $tax_query = '', $page = 1 ){
+function dynamic_get_posts_to_widgets( $post_type, $posts_to_exclude = array(), $posts_per_page = 12, $tax_query = array(), $page = 1 ){
 
-	$nb_posts = 12;
-	
 	$args = [
 		'post_type' => $post_type,
 		'post_status' => 'publish',
-		'posts__not_in' => $posts_to_exclude,
-		'posts_per_page' => $nb_posts,
-		'page' => $page,
+		'post__not_in' => $posts_to_exclude,
+		'posts_per_page' => $posts_per_page,
 		'fields' => 'ids'
 	];
 
 
+	if( $posts_per_page > 0 ){
+		$args['page'] = $page;
+	}
+
+	if( !empty( $tax_query ) ){
+		$args['tax_query'] = $tax_query;
+	}
+	
 	$posts = new WP_Query( $args );
+	
 	$posts_ids = $posts->posts;
 
-	
 	return $posts_ids;
 
 

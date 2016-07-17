@@ -12,7 +12,11 @@
  * @package Dynamic_Winners
  */
 
-get_header();
+get_header(); ?>
 
+<?php echo dynamic_get_headline_manchetes(); ?>
 
-echo dynamic_get_headline_manchetes();
+<?php dynamic_sidebar( 'dynamic-homepage-sections' ); ?>
+
+<?php get_footer(); ?>	
+
