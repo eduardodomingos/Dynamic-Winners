@@ -26,3 +26,29 @@ function dynamic_widgets_init() {
 
 add_action( 'widgets_init', 'dynamic_widgets_init' );
 
+function dynamic_theme_setup() {
+	/*
+	 * Make theme available for translation.
+	 * Translations can be filed in the /languages/ directory.
+	 */
+	load_theme_textdomain( 'dynamic', get_template_directory() . '/languages' );
+
+	
+	add_image_size( 'grid-small', 224, 168, true );
+	add_image_size( 'grid-medium', 263, 197, true );
+
+
+	/**
+	 * Register the site menus
+	 * @see inc/theme-menus.php for other template tags functions related with Menus
+	 */
+	register_nav_menus( array(
+		'main'  => __( 'Main Menu', 'dynamic' ),
+	) );
+
+}
+
+add_action( 'after_setup_theme', 'dynamic_theme_setup' );
+
+
+
