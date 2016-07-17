@@ -1,4 +1,9 @@
 <?php
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
 /**
  * Dynamic Winners functions and definitions.
  *
@@ -64,6 +69,9 @@ function dw_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+
+	
 }
 endif;
 add_action( 'after_setup_theme', 'dw_setup' );
@@ -149,6 +157,8 @@ require get_template_directory() . '/inc/theme-setup.php';
 require get_template_directory() . '/inc/theme-widgets.php';
 
 require get_template_directory() . '/inc/theme-functions.php';
+
+require get_template_directory() . '/inc/theme-menus.php';
 
 
 

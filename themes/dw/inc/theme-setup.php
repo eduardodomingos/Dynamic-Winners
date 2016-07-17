@@ -43,7 +43,7 @@ function dynamic_theme_setup() {
 	 * @see inc/theme-menus.php for other template tags functions related with Menus
 	 */
 	register_nav_menus( array(
-		'main'  => __( 'Main Menu', 'dynamic' ),
+		'primary'  => __( 'Primary Menu', 'dynamic' ),
 	) );
 
 }

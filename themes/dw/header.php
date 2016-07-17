@@ -1,50 +1,60 @@
 <?php
 /**
- * The header for our theme.
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Dynamic_Winners
+ * Header
+ * @package globalway
  */
+?>
 
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--[if lt IE 9]>
+		<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+		<![endif]-->
+		
+		<?php wp_head(); ?>
+	</head>
+	<body>
+		
+		<div class="wrapper">
+			<header class="page-head">
+		<div class="wrapper clearfix">
+			<a href="/" class="logo">
+				<img src="img/logo-dw.svg" alt="Dynamic Winners" class="logo__img">
+			</a><!-- logo -->
+			<div class="pull-lg-right clearfix">
+				<nav class="site-nav">
+					<button class="site-nav__toggle"><span class="sr-only">Menu</span></button>
+					<ul class="site-nav__list">
+						<?php echo dynamic_get_nav_menu_main(); ?>
+					</ul><!-- site-nav__list-->
+				</nav><!-- site-nav-->
 
-<?php wp_head(); ?>
-</head>
+				<ul class="social">
+					<li class="social__item">
+						<a href="" class="social__link social__link--facebook btn btn--slanted"><span class="sr-only">Facebook</span></a>
+					</li>
+					<li class="social__item">
+						<a href="" class="social__link social__link--linkedin btn btn--slanted"><span class="sr-only">Linkedin</span></a>
+					</li>
+				</ul><!-- social -->
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'dw' ); ?></a>
+				<nav class="languages-nav">
+					<ul class="languages-nav__list">
+						<li class="languages-nav__item">
+							<a href="" class="languages-nav__link languages-nav__link--current">pt</a>
+						</li>
+						<li class="languages-nav__item">
+							<a href="" class="languages-nav__link">en</a>
+						</li>
+					</ul><!-- languages-nav__list-->
+				</nav><!-- languages-nav -->
+			</div><!-- pull -->
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dw' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+		</div><!-- wrapper -->
+	</header><!-- page-head -->

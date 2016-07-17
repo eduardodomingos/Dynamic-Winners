@@ -56,9 +56,106 @@ function dynamic_get_homepage_athletes( $home_id ){
 }
 
 
+add_filter('wp_head', 'dynamic_add_manchetes_css_to_header');
+
+function dynamic_add_manchetes_css_to_header(){
+
+	$css = '';
+
+	if( is_home() ){
+		$css = '<style>';
+		$manchetes = dynamic_get_published_manchetes();
+		
+		foreach( $manchetes as $key => $manchete ){
+			
+			$fullscreen_image = get_field('fullscreen_photo', $manchete);
+			error_log($fullscreen_image);
+			$css .= ".headline$key {
+				background-image: url('$fullscreen_image');
+			} ";
+		}
+		
+		$css .= '@media (min-width: 480px) { ';
+		
+		foreach( $manchetes as $key => $manchete ){
+			$mobile_image = get_field('mobile_photo', $manchete);
+			$css .= ".headline$key {
+				background-image: url('$mobile_image');
+			} ";
+		}
+
+		$css .= '} @media (min-width: 1024px) { ';
+
+		foreach( $manchetes as $key => $manchete ){
+			$tablet_image = get_field('mobile_photo', $manchete);
+			$css .= ".headline$key {
+				background-image: url('$tablet_image');
+			} ";
+		}
+
+		$css .= '} </style>';
+		
+	}
+
+	echo $css;
+
+
+}
+
+
+
+
+
+function dynamic_get_latest_news(){
+	return true;
+}
+
+function dynamic_get_headline_manchetes(){
+
+	$before_headline = '<section id="headlines">
+		<div class="headlines__overlay"></div>
+		<div class="slider slider--headlines">';
+
+	$after_headline = '<div></section>';
+
+	$manchetes = dynamic_get_published_manchetes();
+	
+	foreach( $manchetes as $key => $manchete ){
+
+		$title = get_the_title($manchete);
+		$headline_html = '<div class="slider__item">
+				<article class="headline headline' . $key . '">
+					<div class="headline__text">
+						<h1>' . get_the_title($manchete) . '</h1>
+					</div><!-- headline__text -->
+				</article><!-- headline -->
+			</div>';
+	}
+
+	return $before_headline . $headline_html .  $after_headline;
+
+
+}
+
+function dynamic_get_published_manchetes(){
+	
+	$args = [
+		'post_type' => 'highlight',
+		'post_status' => 'publish',
+		'posts_per_page' => -1,
+		'fields' => 'ids',
+	];
+
+	$manchetes = new WP_Query($args);
+
+	return $manchetes->posts;
+}
+
+
 function dynamic_get_posts_to_widgets( $post_type, $posts_to_exclude = array(), $tax_query = '', $page = 1 ){
 
 	$nb_posts = 12;
+	
 	$args = [
 		'post_type' => $post_type,
 		'post_status' => 'publish',
