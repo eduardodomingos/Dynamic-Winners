@@ -50,7 +50,9 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<?php $home_id = dynamic_get_active_homepage();
 
+		$services = dynamic_get_homepage_services($home_id ); ?>
 <?php
 get_sidebar();
 get_footer();

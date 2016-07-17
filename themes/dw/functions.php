@@ -137,9 +137,18 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/theme-setup.php';
+
 
 /**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+require get_template_directory() . '/inc/theme-setup.php';
+
+require get_template_directory() . '/inc/theme-widgets.php';
+
+require get_template_directory() . '/inc/theme-functions.php';
+
+
+
