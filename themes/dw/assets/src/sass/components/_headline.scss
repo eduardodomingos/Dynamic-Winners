@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    $HEADLINE
+\*------------------------------------*/
+.headline {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	height: 480px;
+	@include media-breakpoint-up(md) {
+		height: 320px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		height: 512px;
+	}
+}
+
+	.headline__text {
+		text-align: right;
+		position: absolute;
+		right: 0;
+		left: 0;
+		@include make-container();
+		max-width: map-get($container-max-widths, lg);
+		@include rem(bottom, 80px);
+
+		h1 {
+			color: #fff;
+			@include rem(font-size, 20px);
+		}
+	}

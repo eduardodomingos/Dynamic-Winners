@@ -1,9 +1,10 @@
 module.exports = {
 	js: {
 		src: [
-			'assets/src/js/bootstrap.js',
-			'assets/src/js/slick.js',
-			'assets/src/js/autosize.js',
+			'assets/src/js/vendors/tether.js',
+			'assets/src/js/vendors/bootstrap.js',
+			'assets/src/js/vendors/slick.js',
+			'assets/src/js/vendors/autosize.js',
 			'assets/src/js/main.js'
 		],
 		dest: 'assets/build/js/main.js',

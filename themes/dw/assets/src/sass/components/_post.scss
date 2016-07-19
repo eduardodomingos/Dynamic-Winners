@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $POST
+\*------------------------------------*/
+.post {}
+
+	.post__main-photo {
+		@include rem(margin-bottom, 15px);
+	}
+
+	.post__header {}
+
+		.post__category {
+			@include rem((
+				font-size: 16px,
+				margin-bottom: 8px,
+				padding-bottom: 5px
+			));
+			text-transform: uppercase;
+			border-bottom: 1px solid #000;
+		}
+
+		.post__title {
+			@include rem((
+				font-size: 17px,
+				letter-spacing: 0.5px,
+				margin-bottom: 2px
+			));
+			@include media-breakpoint-up(lg) {
+				@include rem(font-size, 25px);
+			}
+		}
+
+		.post__date {
+			color: $red;
+			opacity: 0.5;
+			@include rem(font-size, 15px);
+		}
+
+
+	.post__body {
+		font-weight: 300;
+	}

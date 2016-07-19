@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+body {
+	-moz-osx-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/**
+ * A generic heading style which can be applied to any headings.
+ */
+.heading {
+	text-transform: uppercase;
+	@include rem((
+		font-size: 20px,
+		letter-spacing: 0.5px,
+		margin-bottom: 20px
+	));
+}

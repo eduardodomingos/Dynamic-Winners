@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    $LOGO
+\*------------------------------------*/
+
+.logo {
+	.page-head & {
+		position: absolute;
+		@include rem(top, 50px);
+		left: $grid-gutter-width/2;
+		//@include media-breakpoint-up(md) {
+		//	@include rem(top, 50px);
+		//}
+		@include media-breakpoint-up(lg) {
+			@include rem((
+				top: 100px,
+				left: 100px
+			));
+		}
+		img {
+			@include rem(width, 130px);
+			@include media-breakpoint-up(lg) {
+				@include rem(width, 160px);
+			}
+		}
+	}
+}

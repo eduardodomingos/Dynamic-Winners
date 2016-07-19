@@ -1,0 +1,254 @@
+/*------------------------------------*\
+    $SLIDER
+\*------------------------------------*/
+
+/**
+* Internal variables
+*
+*/
+$arrow-size: 40px;
+
+
+.slider {}
+
+	/**
+	* Arrows / Global Styling
+	*
+	*/
+	.slick-next,
+	.slick-prev {
+		padding: 0;
+		margin: 0;
+		font-size: 0;
+		line-height: 0;
+		border: 0;
+		background-color: transparent;
+		color: transparent;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 1;
+		@include rem((
+			width: $arrow-size,
+			height: $arrow-size,
+			margin-top: -$arrow-size/2
+		));
+		&:before {
+			content: '\e801';
+			font-family: $font-family-icons;
+			display: block;
+			color: #fff;
+			line-height: 1.6; // 40px/25px
+			@include square(100%);
+			@include rem((
+				font-size: 25px
+			));
+		}
+	}
+
+	.slick-next {
+		left: auto;
+		right: 0;
+		//@include rem(right,-$arrow-size);
+		&:before {
+			content: '\e800';
+		}
+	}
+
+
+
+
+
+	/**
+	* Dots / Global Styling
+	*
+	*/
+	.slick-dots {
+		@include list-unstyled;
+		@include make-container();
+		max-width: map-get($container-max-widths, lg);
+		margin-bottom: 0;
+		line-height: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			&.slick-active button {
+				opacity: 1;
+			}
+		}
+
+		button {
+			opacity: 0.5;
+			font-size: 0;
+			line-height: 0;
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+			display: block;
+			color: transparent;
+			@include rem((
+				width: 20px,
+				height: 20px
+			));
+			position: relative;
+
+			/**
+			 * 1 .give some room around the slated bg, but keeping the 20px tapping area
+			 */
+			&:before {
+				content: '';
+				position: absolute;
+				background-color: $brand-primary;
+				transform: skew(-25deg);
+				@include size(70%, 70%); /* [1] */
+				position: absolute; /* [1] */
+				top: 15%; /* [1] */
+				left: 15%; /* [1] */
+			}
+		}
+
+	}
+
+
+
+
+
+	/**
+	* Graceful loading of slides
+ 	* https://github.com/kenwheeler/slick/issues/1741
+ 	*/
+	.slider__item {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+
+		.slick-initialized & {
+			display: block;
+		}
+	}
+
+
+
+
+
+/**
+* Headlines Slider specific styles
+*
+*/
+.slider--headlines {
+	.slick-dots {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: right;
+		@include rem(bottom, 20px);
+	}
+}
+
+
+
+
+/**
+* Entries Slider specific styles
+*
+*/
+
+.slider--entries {
+	.slick-prev,
+	.slick-next {
+		display: none!important;
+	}
+
+	@include media-breakpoint-up(sm) {
+		.slick-prev,
+		.slick-next {
+			display: block!important;
+		}
+		.slick-prev {
+			@include rem(left, -40px);
+		}
+
+		.slick-next {
+			@include rem(right, -40px);
+		}
+
+	}
+
+	@include media-breakpoint-up(md) {
+		.slick-slide {
+			@include rem((
+				margin-left: 12px,
+				margin-right: 12px
+			));
+		}
+		.slick-list {
+			@include rem((
+				margin-left: -12px,
+				margin-right: -12px
+			));
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.slick-slide {
+			@include rem((
+				margin-left: 33px,
+				margin-right: 33px
+			));
+		}
+		.slick-list {
+			@include rem((
+				margin-left: -33px,
+				margin-right: -33px
+			));
+		}
+	}
+}
+
+/**
+* Athlete slider specific style
+* This slider appears on the athlete's single page
+*/
+.slider--athlete {
+	.slick-prev,
+	.slick-next {
+		&:before {
+			color: $red;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		.slick-slide {
+			@include rem((
+				margin-left: 12px,
+				margin-right: 12px
+			));
+		}
+		.slick-list {
+			@include rem((
+				margin-left: -12px,
+				margin-right: -12px
+			));
+		}
+	}
+
+	//@include media-breakpoint-up(lg) {
+	//	.slick-slide {
+	//		@include rem((
+	//			margin-left: 33px,
+	//			margin-right: 33px
+	//		));
+	//	}
+	//	.slick-list {
+	//		@include rem((
+	//			margin-left: -33px,
+	//			margin-right: -33px
+	//		));
+	//	}
+	//}
+
+
+}
