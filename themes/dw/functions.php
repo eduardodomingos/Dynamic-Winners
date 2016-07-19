@@ -1,4 +1,9 @@
 <?php
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
 /**
  * Dynamic Winners functions and definitions.
  *
@@ -64,6 +69,9 @@ function dw_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+
+	
 }
 endif;
 add_action( 'after_setup_theme', 'dw_setup' );
@@ -114,6 +122,14 @@ function dw_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dw_scripts' );
 
+
+
+if ( 'localhost' == $_SERVER['SERVER_NAME'] ) {
+	define( 'ACF_LITE', true );
+	require_once get_template_directory() . '/custom-fields.php';
+}
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -135,6 +151,22 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Customizer additions.
+ */
+
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+require get_template_directory() . '/inc/theme-setup.php';
+
+require get_template_directory() . '/inc/theme-widgets.php';
+
+require get_template_directory() . '/inc/theme-functions.php';
+
+require get_template_directory() . '/inc/theme-menus.php';
+
+
+
