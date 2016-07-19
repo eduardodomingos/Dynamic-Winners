@@ -15,8 +15,8 @@
 get_header(); ?>
 
 <?php echo dynamic_get_headline_manchetes(); ?>
-
-<?php dynamic_sidebar( 'dynamic-homepage-sections' ); ?>
-
+<div class="band band--primary">
+	<?php dynamic_sidebar( 'dynamic-homepage-sections' ); ?>
+</div>
 <?php get_template_part( 'template-parts/home-grid', 'contacts' ); ?>	
 

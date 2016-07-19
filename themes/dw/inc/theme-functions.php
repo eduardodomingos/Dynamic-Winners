@@ -187,10 +187,13 @@ function dynamic_add_manchetes_css_to_header(){
 
 function dynamic_get_latest_news(){
 	
+	$home_id = dynamic_get_active_homepage();
+	$nb_posts = get_field('news_count', $home_id);
+
 	$args = [
 		'post_type' => 'post',
 		'post_status' => 'publish',
-		'posts_per_page' => 1,
+		'posts_per_page' => $nb_posts,
 		'orderby' => 'date',
 	];
 
@@ -203,25 +206,27 @@ function dynamic_get_headline_manchetes(){
 	$home_id = dynamic_get_active_homepage();
 
 	$manchetes = get_field('highlights_manager', $home_id);
-
+	
 	$before_headline = '<section id="headlines">
-		<div class="headlines__overlay"></div>
-		<div class="slider slider--headlines">';
+							<div class="headlines__overlay"></div>
+								<div class="slider slider--headlines">';
 
-	$after_headline = '<div></section>';
+	$after_headline = '<div>
+					</section>';
 
 	foreach( $manchetes as $key => $manchete ){
 
 		$title = get_the_title($manchete);
-		$headline_html = '<div class="slider__item">
-				<article class="headline headline' . $key . '">
-					<div class="headline__text">
-						<h1>' . get_the_title($manchete) . '</h1>
-					</div><!-- headline__text -->
-				</article><!-- headline -->
-			</div>';
+		$headline_html .= 	'<div class="slider__item">
+						   		<article class="headline headline' . $key . '">
+									<div class="headline__text">
+										<h1>' . get_the_title($manchete) . '</h1>
+									</div><!-- headline__text -->
+								</article><!-- headline -->
+							</div>
+							';
 	}
-
+	
 	return $before_headline . $headline_html .  $after_headline;
 
 

@@ -4,7 +4,14 @@
  * @package globalway
  */
 ?>
+<?php 
+	
+	$body_class = '';
+	if( is_home() || is_front_page() ){
+		$body_class = 'home';
+	}
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -19,42 +26,40 @@
 		
 		<?php wp_head(); ?>
 	</head>
-	<body>
-		
-		<div class="wrapper">
-			<header class="page-head">
-		<div class="wrapper clearfix">
-			<a href="/" class="logo">
-				<img src="img/logo-dw.svg" alt="Dynamic Winners" class="logo__img">
-			</a><!-- logo -->
-			<div class="pull-lg-right clearfix">
-				<nav class="site-nav">
-					<button class="site-nav__toggle"><span class="sr-only">Menu</span></button>
-					<ul class="site-nav__list">
-						<?php echo dynamic_get_nav_menu_main(); ?>
-					</ul><!-- site-nav__list-->
-				</nav><!-- site-nav-->
+	<body <?php body_class($body_class); ?>>
+		<header class="page-head">
+			<div class="wrapper clearfix">
+				<a href="/" class="logo">
+					<img src="img/logo-dw.svg" alt="Dynamic Winners" class="logo__img">
+				</a><!-- logo -->
+				<div class="pull-lg-right clearfix">
+					<nav class="site-nav">
+						<button class="site-nav__toggle"><span class="sr-only">Menu</span></button>
+						<ul class="site-nav__list">
+							<?php echo dynamic_get_nav_menu_main(); ?>
+						</ul><!-- site-nav__list-->
+					</nav><!-- site-nav-->
 
-				<ul class="social">
-					<li class="social__item">
-						<a href="" class="social__link social__link--facebook btn btn--slanted"><span class="sr-only">Facebook</span></a>
-					</li>
-					<li class="social__item">
-						<a href="" class="social__link social__link--linkedin btn btn--slanted"><span class="sr-only">Linkedin</span></a>
-					</li>
-				</ul><!-- social -->
-
-				<nav class="languages-nav">
-					<ul class="languages-nav__list">
-						<li class="languages-nav__item">
-							<a href="" class="languages-nav__link languages-nav__link--current">pt</a>
+					<ul class="social">
+						<li class="social__item">
+							<a href="" class="social__link social__link--facebook btn btn--slanted"><span class="sr-only">Facebook</span></a>
 						</li>
-						<li class="languages-nav__item">
-							<a href="" class="languages-nav__link">en</a>
+						<li class="social__item">
+							<a href="" class="social__link social__link--linkedin btn btn--slanted"><span class="sr-only">Linkedin</span></a>
 						</li>
-					</ul><!-- languages-nav__list-->
-				</nav><!-- languages-nav -->
-			</div><!-- pull -->
+					</ul><!-- social -->
 
-		</div><!-- wrapper -->
+					<nav class="languages-nav">
+						<ul class="languages-nav__list">
+							<li class="languages-nav__item">
+								<a href="" class="languages-nav__link languages-nav__link--current">pt</a>
+							</li>
+							<li class="languages-nav__item">
+								<a href="" class="languages-nav__link">en</a>
+							</li>
+						</ul><!-- languages-nav__list-->
+					</nav><!-- languages-nav -->
+				</div><!-- pull -->
+
+			</div><!-- wrapper -->
 	</header><!-- page-head -->

@@ -122,6 +122,14 @@ function dw_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dw_scripts' );
 
+
+
+if ( 'localhost' == $_SERVER['SERVER_NAME'] ) {
+	define( 'ACF_LITE', true );
+	require_once get_template_directory() . '/custom-fields.php';
+}
+
+
 /**
  * Implement the Custom Header feature.
  */
