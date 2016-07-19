@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    $SECTION
+\*------------------------------------*/
+
+.section {
+	@include rem(font-size, 14px);
+}
+
+.section__header {
+	text-align: center;
+}

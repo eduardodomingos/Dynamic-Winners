@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    $TABS
+\*------------------------------------*/
+
+/**
+ * These rules extend `.nav-tabs {}` in bootstrap's _nav.scss.
+ */
+
+/**
+ * The following two rules allow to sliders to live
+ * happy inside tabs.
+ * https://github.com/kenwheeler/slick/issues/187
+ */
+.tab-content > .tab-pane {
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.tab-content > .active {
+	height: auto;
+}
+
+
+

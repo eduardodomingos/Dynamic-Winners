@@ -1,0 +1,126 @@
+/*------------------------------------*\
+    $ENTRY
+\*------------------------------------*/
+.entry {}
+
+	.entry__date {
+		@include rem(margin-bottom, 6px);
+	}
+
+	.entry__title {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		@include rem(font-size, 16px);
+		@include rem(margin-bottom, 12px);
+	}
+
+	.entry__text {
+		@include rem(margin-bottom, 12px);
+	}
+
+	.entry__read-more{
+		text-transform: uppercase;
+	}
+
+
+
+
+
+
+.entry--service {
+	.entry__title {
+		@include clearfix();
+		@include rem((
+			padding-left: 45px,
+			padding-right: 45px
+		));
+		@include media-breakpoint-only(md) {
+			@include rem((
+				font-size: 14px,
+				padding-left: 30px,
+				padding-right: 30px
+			));
+		}
+		@include media-breakpoint-up(lg) {
+			@include rem((
+				font-size: 19px
+			));
+		}
+
+		&:before {
+			content: attr(data-order);
+			position: absolute;
+			left: 0;
+			right: 0;
+			background-image: svg-url('<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.7 30.7"><style>.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style><path class="st0" d="M1.5 29.2h26.4L41.2 6.1"/></svg>');
+			background-repeat: no-repeat;
+			background-position-y: 1px;
+			@include rem((
+				font-size: 23px,
+				width: 40px,
+				height: 40px
+			));
+			@include media-breakpoint-only(md) {
+				@include rem((
+					font-size: 15px,
+					width: 26px,
+					height: 26px
+				));
+			}
+
+
+		}
+	}
+}
+
+
+.entry--athlete {
+	.img-wrapper {
+		position: relative;
+	}
+	.category {
+		position: absolute;
+		top: 0px;
+		bottom: 0;
+		margin: 0;
+		@include rem((
+			padding-top: 10px,
+			padding-right: 25px,
+			padding-left: 10px,
+			font-size: 13px
+		));
+		z-index: 1;
+		text-transform: uppercase;
+
+		&:before {
+			content: '';
+			@include position(absolute, 0,0,0,0);
+			background: linear-gradient(to right bottom, rgba($red, 0.8) 49%, transparent 50%);
+			z-index: -1;
+		}
+	}
+}
+
+
+.entry--latest {
+	@include rem((
+		padding-top: 5px,
+		padding-bottom: 5px,
+		padding-right: 40px,
+	));
+	@include media-breakpoint-up(md) {
+		@include rem((
+			padding-top: 20px,
+			padding-bottom: 20px,
+			padding-left: 40px,
+		));
+	}
+	.entry__title {
+		@include rem(margin-bottom, 6px);
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.entry__read-more {}
+}

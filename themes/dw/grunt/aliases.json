@@ -1,0 +1,11 @@
+{
+	"default": [
+		"copy",
+		"concat:fonts",
+		"string-replace",
+		"sass",
+		"postcss",
+		"concat:js",
+		"watch"
+	]
+}

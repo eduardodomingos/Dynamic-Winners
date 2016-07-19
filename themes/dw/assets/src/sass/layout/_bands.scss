@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $BANDS
+\*------------------------------------*/
+
+/**
+ * 1. The first band inside a primary band should not have top padding.
+ * 2. The last band inside a primary band should not have bottom padding.
+ */
+.band {
+	@include rem((
+		padding-top: 15px,
+		padding-bottom: 15px
+	));
+
+	@include media-breakpoint-up(md) {
+		@include rem((
+			padding-top: 20px,
+			padding-bottom: 20px
+		));
+	}
+
+	.band--primary & {
+		&:first-child {
+			padding-top: 0;/* [1] */
+		}
+		&:last-child {
+			padding-bottom: 0;/* [2] */
+		}
+	}
+}
+
+
+
+
+
+
+.band--primary {
+	@include rem((
+		padding-top: 30px,
+		padding-bottom: 30px
+	));
+}

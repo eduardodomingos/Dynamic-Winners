@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    $FEATURED IMAGE
+\*------------------------------------*/
+.featured-image {
+	background-size: cover;
+	background-position: center;
+	@include rem(height, 190px);
+	margin-top: -$height-page-header - 10px;
+	position: relative;
+
+	@include media-breakpoint-up(md) {
+		@include rem(height, 212px);
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-top: 0;
+		@include rem(height, 355px);
+	}
+}
+
+
+	.featured-image__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 1;
+		overflow: hidden;
+		@include rem(width, 242px);
+		@include media-breakpoint-up(lg) {
+			@include rem(width, 380px);
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			@include size(100%, 100%);
+			background-color: rgba($red, 0.8);
+			transform-origin: 100% 0;
+			transform: skewX(-20deg);
+		}
+	}

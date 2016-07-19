@@ -1,0 +1,301 @@
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+
+.home {
+
+	// The hp has a narrower container
+	.container {
+		@include make-container-max-widths($hp-container-max-widths);
+	}
+
+	/**
+	 * Headlines.
+	 *
+	 */
+	#headlines {
+		margin-top: -$height-page-header - 10px;
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			margin-top: 0;
+		}
+	}
+
+	.headlines__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		overflow: hidden;
+		@include rem((
+			width: 242px,
+			height:200px
+		));
+
+		@include media-breakpoint-up(md) {
+			height: auto;
+			bottom: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			@include rem(width, 380px);
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			@include size(100%, 100%);
+			background-color: rgba($red, 0.8);
+			transform-origin: 100% 0;
+			transform: skewX(-20deg);
+		}
+	}
+
+
+	/**
+ 	* Primary Band.
+ 	* 1. White typography
+ 	* 2. Dark background with 3 different resolutions
+ 	* 3. White slider dots
+ 	*/
+
+	.band--primary {
+		* {
+			color: #fff; /* [1] */
+		}
+
+		.slick-dots button:before {
+			background-color: #fff; /* [3] */
+		}
+
+		background-image: url('../img/bg-home--sm.jpg');  /* [2] */
+		background-color:  #db000f;
+		background-position: center -120px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: 100%;
+
+		@include media-breakpoint-up(md) {
+			// Medium screens
+			background-image: url('../img/bg-home--md.jpg');  /* [2] */
+			background-position: center top;
+			background-color:  #db000f;
+		}
+		@include media-breakpoint-up(lg) {
+			// Large screens
+			background-image: url('../img/bg-home--lg.jpg');  /* [2] */
+		}
+	}
+
+
+	/**
+	 * News.
+	 * 1. CSS Paralelogram
+	 * 2. So the paralelogram doesn´t overflow
+	 */
+	#news {
+		overflow: hidden;  /* [2] */
+		>.container {
+			@include media-breakpoint-up(md) {
+				@include rem(padding-bottom, 30px);
+				position: relative;  /* [1] */
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					@include rem((
+						top: 50px,
+						right: -60px,
+						left: -60px,
+						bottom: 0
+					));
+					background-color: $red;
+					transform: skewX(-25deg);
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				&:before {
+					@include rem((
+						right: 80px,
+						left: 60px,
+					));
+				}
+			}
+		}
+	}
+
+
+
+
+	/**
+	 * Athletes
+	 *
+	 */
+	#athletes {
+		.nav-tabs {
+			border-bottom: 0;
+			border-top: 1px solid #fff;
+			@include rem((
+				padding-top: 10px,
+				padding-bottom: 20px
+			));
+			@include media-breakpoint-up(md) {
+				text-align: center;
+			}
+
+			.nav-item {
+				float: none;
+				+ .nav-item {
+					margin-left: 0;
+				}
+				@include media-breakpoint-up(md) {
+					display: inline-block;
+					+ .nav-item {
+						margin-left: 10px;
+					}
+				}
+			}
+
+			.nav-link {
+				border: none;
+				padding: 0;
+				text-align: center;
+				text-transform: uppercase;
+				line-height: 1.7647058824; // 30px/17px
+				opacity: 0.5;
+				@include rem((
+					height: 30px,
+					font-size: 17px,
+					letter-spacing: 0.5px
+				));
+				@include media-breakpoint-up(md) {
+					@include rem(font-size, 14px);
+					line-height: 2.1428571429; // 30px/14px
+				}
+
+				@include media-breakpoint-up(lg) {
+					@include rem(font-size, 19px);
+					line-height: 1.5789473684; // 30px/19px
+				}
+
+				&.active {
+					color: #fff;
+					opacity: 1;
+					background-color: transparent;
+				}
+			}
+		}
+
+		.tab-content {
+			@include rem(margin-bottom, 20px);
+		}
+	}
+
+
+
+
+
+	/**
+	 * Contacts
+	 *
+	 */
+
+	#contacts {
+		@include rem((
+			padding-top: 80px,
+			padding-bottom: 180px
+		));
+
+		background: url('../img/bg-contacts--sm.jpg') #061524 center bottom no-repeat fixed;
+		background-size: cover;
+
+		@include media-breakpoint-up(md) {
+			background: url('../img/bg-contacts--md.jpg') #061524 center bottom no-repeat fixed;
+		}
+		@include media-breakpoint-up(lg) {
+			background: url('../img/bg-contacts--lg.jpg') #061524 center bottom no-repeat fixed;
+		}
+		&,
+		a {
+			color: #fff;
+		}
+	}
+}
+
+
+
+//.home {
+//
+//	#headlines {
+//		margin-top: -$height-page-header - 10px;
+//		position: relative;
+//		@include media-breakpoint-up(lg) {
+//			margin-top: 0;
+//		}
+//	}
+//
+//	#news {
+//		position: relative;
+//		overflow: hidden;
+//		.paralelogram {
+//			@include make-container-max-widths();
+//			position: absolute;
+//			bottom: 0;
+//			width: 100%;
+//			left: 50%;
+//			@include rem(top, 50px);
+//			background-color: $red;
+//			transform: skewX(-20deg) translateX(-50%);
+//			display: none;
+//			@include media-breakpoint-up(sm) {
+//				display: block;
+//			}
+//		}
+//	}
+//
+//	#contacts {
+//		@include rem((
+//			padding-top: 80px,
+//			padding-bottom: 160px,
+//		));
+//		background: url('../img/bg-contactos--phone.jpg') #061524 center bottom no-repeat;
+//		background-size: cover;
+//		@include media-breakpoint-up(md) {
+//			background: url('../img/bg-contactos--tablet.jpg') #061524 center bottom no-repeat;
+//		}
+//		@include media-breakpoint-up(lg) {
+//			background: url('../img/bg-contactos--desktop.jpg') #061524 center bottom no-repeat;
+//		}
+//		&,
+//		a {
+//			color: #fff;
+//		}
+//	}
+//
+//	.band--primary {
+//		background: url('../img/bg-home--phone.jpg') #ca0000 center top no-repeat;
+//		background-size: 100%;
+//		@include media-breakpoint-up(md) {
+//			background: url('../img/bg-home--tablet.jpg') #db000f center top no-repeat;
+//			background-size: 100%;
+//		}
+//		@include media-breakpoint-up(lg) {
+//			background: url('../img/bg-home--desktop.jpg') #db000f center top repeat-x;
+//			background-size: 100%;
+//		}
+//
+//		&,
+//		a {
+//			color: #fff;
+//		}
+//
+//		.nav-tabs .nav-link.active {
+//			color: #fff;
+//			background-color: transparent;
+//		}
+//
+//		.slick-dots button:before {
+//			background-color: #fff;
+//		}
+//	}
+//}

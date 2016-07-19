@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+
+/**
+ * These rules extend `.btn {}` in bootstrap's _buttons.scss.
+ */
+
+.btn--slanted {
+	position: relative;
+	background-color: transparent;
+	color: #fff;
+	z-index: 1;
+	&:after {
+		content: '';
+		background-color: $brand-primary;
+		@include size(100%, 100%);
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		z-index: -1;
+		transform: skew(-20deg);
+	}
+}
+
+
+
+
+.btn--load-more {
+	background-color: transparent;
+	position: relative;
+	text-transform: uppercase;
+	@include rem((
+		font-size: 12px,
+		padding-bottom: 20px
+	));
+
+	&:after {
+		content: '\e803';
+		font-family: $font-family-icons;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@include rem((
+			font-size: 23px,
+		));
+		line-height: 0.7;
+	}
+}

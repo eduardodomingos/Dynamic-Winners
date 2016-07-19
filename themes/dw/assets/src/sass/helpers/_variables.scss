@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+/**
+ * Colors.
+ */
+$red: #ad0000;
+$brand-primary: $red;
+
+
+
+
+
+/**
+ * Fonts.
+ */
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-icons: 'icons-dynamicwinners';
+
+
+
+
+
+/**
+ * Cards.
+ */
+$card-bg: transparent;
+$card-border-width: 0;
+$card-border-radius: 0;
+
+
+
+
+
+/**
+ * Layout.
+ */
+$grid-breakpoints: (
+	// Extra small screen / phone
+	xs: 0,
+	// Small screen / phone
+	sm: 320px,
+	// Medium screen / tablet
+	md: 480px,
+	// Large screen / desktop
+	lg: 1024px,
+	// Extra large screen / wide desktop
+	xl: 1024px
+);
+
+$container-max-widths: (
+	sm: 290px,
+	md: 920px,
+	lg: 1100px,
+	xl: 1100px
+);
+
+// The hp has a narrower container
+$hp-container-max-widths: (
+	sm: 254px,
+	md: 384px,
+	lg: 870px,
+	xl: 870px
+);
+
+$height-page-header: 38px;

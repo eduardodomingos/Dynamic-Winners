@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    $LANGUAGES-NAV
+\*------------------------------------*/
+
+.languages-nav {
+	/**
+     * If the languages nav exists in a page head, we absolutely position it,
+     * 10px to the left of the menu toggle.
+     */
+	.page-head & {
+		position: absolute;
+		@include rem((
+			top: 5px,
+			left: 63px //15px + 38px + 10px
+		));
+
+		@include media-breakpoint-up(lg) {
+			position: static;
+			float: left;
+		}
+	}
+}
+
+	.languages-nav__list {
+		margin-bottom: 0;
+		@include list-unstyled();
+		@include clearfix();
+	}
+
+		.languages-nav__item {
+			float: left;
+			text-transform: uppercase;
+			color: #fff;
+			@include rem(font-size, 13px);
+			line-height: 2.9230769231;
+			font-weight: 300;
+			+ .languages-nav__item:before {
+				content: '\002F';
+			}
+			@include media-breakpoint-up(lg) {
+				color: #000;
+			}
+		}
+
+			.languages-nav__link {
+				float: right;
+				color: rgba(#fff, 0.5);
+				display: block;
+				text-align: center;
+				@include rem(width, $height-page-header);
+				@include rem(height, $height-page-header);
+				line-height: inherit;
+				@include media-breakpoint-up(lg) {
+					color: rgba(#000, 0.5);
+				}
+			}
+
+			.languages-nav__link--current {
+				color: #fff;
+				@include media-breakpoint-up(lg) {
+					color: #000;
+				}
+			}

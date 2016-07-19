@@ -4,8 +4,8 @@
  * @package globalway
  */
 ?>
-<?php 
-	
+<?php
+
 	$body_class = '';
 	if( is_home() || is_front_page() ){
 		$body_class = 'home';
@@ -23,18 +23,18 @@
 		<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 		<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
 		<![endif]-->
-		
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class($body_class); ?>>
 		<header class="page-head">
 			<div class="wrapper clearfix">
-				<a href="/" class="logo">
-					<img src="img/logo-dw.svg" alt="Dynamic Winners" class="logo__img">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
+					<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/logo-dw.svg" alt="Dynamic Winners" class="logo__img">
 				</a><!-- logo -->
 				<div class="pull-lg-right clearfix">
 					<nav class="site-nav">
-						<button class="site-nav__toggle"><span class="sr-only">Menu</span></button>
+						<button class="site-nav__toggle"><span class="sr-only"><?php esc_html_e( 'Menu', 'dw' ); ?></span></button>
 						<ul class="site-nav__list">
 							<?php echo dynamic_get_nav_menu_main(); ?>
 						</ul><!-- site-nav__list-->

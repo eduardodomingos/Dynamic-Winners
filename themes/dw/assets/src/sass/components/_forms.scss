@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+.contact-form {
+	@include rem(margin-bottom, 20px);
+	.form-control-label {
+		padding-left: $grid-gutter-width/2;
+		padding-right: $grid-gutter-width/2;
+		text-transform: uppercase;
+		@include media-breakpoint-up(lg) {
+			text-align: right;
+		}
+	}
+	.form-control {
+		border-radius: 0;
+		border: none;
+		border-bottom: 1px solid #fff;
+		padding: 0;
+		background-color: transparent;
+		@include rem(font-size, 14px);
+		color: #fff;
+
+		//&#inputMessage {
+		//	border: none;
+		//	background-image: linear-gradient(white, white 40px, #000 40px, #000 41px, white 41px);
+		//	background-size: 100% 41px;
+		//	line-height: 41px;
+		//}
+	}
+
+	button[type="submit"] {
+		@include rem((
+			margin-top: 10px,
+			font-size: 13px
+		));
+		text-transform: uppercase;
+		&:after {
+			box-shadow: 5px 5px 7px rgba(0,0,0,0.5);
+		}
+
+	}
+}
