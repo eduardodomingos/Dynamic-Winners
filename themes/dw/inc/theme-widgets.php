@@ -130,8 +130,7 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 			</div><!-- section__header -->
 		</div><!-- col -->
 				<div class="col-sm-12 col-lg-6 col-lg-offset-3">
-					<ul class="nav nav-tabs" role="tablist">
-		
+					
 						<ul class="nav nav-tabs" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" data-toggle="tab" href="#players" role="tab">Jogadores</a>
