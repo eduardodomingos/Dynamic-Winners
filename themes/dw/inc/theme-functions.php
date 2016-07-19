@@ -28,8 +28,8 @@ function dynamic_get_homepage_services( $home_id ){
 	
 	//get homepage highlight services
 	$highlight_services = get_field('home_services', (int)$home_id);
-
 	$highlight_services_ids = [];
+	
 	foreach ($highlight_services as $highlight_service) {
 		$highlight_services_ids[] = $highlight_service->ID;
 	}
@@ -53,20 +53,69 @@ function dynamic_get_homepage_services( $home_id ){
 }
 
 
-function dynamic_get_homepage_athletes( $home_id ){
+function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 
-	$athletes = [ 'player' => 'players', 'coach' => 'coaches', 'team' => 'teams'];
+	$athletes = [ 
+		'player' => 
+			[
+				'cf' => 'players', 
+				'posts' => array(), 
+				
+			],  
+		'coach' => 
+			[
+				'cf' =>'managers',
+				'posts' => array(),
+				
+			],
+		'team' => 
+			[ 
+				'cf' => 'teams',
+				'posts' => array(),
+				
+			]
+	];
+	
 	$tax_query = ['field' => 'slug', 'taxonommy' => 'athlete_type'];
+	$nb_posts = 12;
 
-	foreach( $athletes  as $tax => $cf_athlete ){
+	$args = [
+		'post_type' => 'athlete',
+		'post_status' => 'publish',
+		'ignore_sticky_posts' => true,
+		'page' => 1
+	];
+
+
+	foreach( $athletes  as $tax => $athlete_vars ){
 		
-		$highlight_athlets = get_field( $cf_athlete, $home_id);
+		$highlight_athletes = get_field( $athlete_vars['cf'], $home_id);
+		
+		if( $page = 1 ){
+			$nb_posts = $nb_posts - count($highlight_athletes);
+		}
+
 		$tax_query['term'] = $tax;
-		$more_athletes = dynamic_get_posts_to_widgets('athlete', $highlight_athlets, $tax_query );
-		$athletes[$tax] = array_merge($highlight_athlets, $more_athletes);
+		$athlete_type_ids = [];
+		
+		foreach( $highlight_athletes  as $highlight_athlete){
+			$athlete_type_ids[] = $highlight_athlete->ID;
+		}
+
+		$args['post__not_in'] = $athlete_type_ids;
+		$args['tax_query'] = array( $tax_query );
+		$args['posts_per_page'] = $nb_posts;
+		
+		$more_athletes = new WP_Query($args);
+		$all_athletes  = new WP_Query();
+
+		$all_athletes->posts      = array_merge( $highlight_athletes, $more_athletes->posts);
+		$all_athletes->post_count = count( $all_athletes->posts );
+		
+		$athletes[$tax]['posts'] = $all_athletes;
 	
 	}
-
+	
 	return $athletes;
 	
 }
@@ -120,10 +169,17 @@ function dynamic_add_manchetes_css_to_header(){
 
 
 
-
-
 function dynamic_get_latest_news(){
-	return true;
+	
+	$args = [
+		'post_type' => 'post',
+		'post_status' => 'publish',
+		'posts_per_page' => 12,
+		'orderby' => 'date',
+	];
+
+	return new WP_Query($args);
+
 }
 
 function dynamic_get_headline_manchetes(){

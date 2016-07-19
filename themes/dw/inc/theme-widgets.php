@@ -29,10 +29,28 @@ class Dynamic_Widget_Home_Last_News extends WP_Widget {
 			$args['widget_id'] = $this->id;
 		}
 
-		echo $args['before_widget'];
-		
 		$news = dynamic_get_latest_news();
 
+		echo $args['before_widget'];
+		?>
+		
+		<div class="col-sm-12 col-lg-8 col-lg-offset-2">
+			<div class="section__header">
+				<h2 class="heading sr-only">Notícias</h2>
+			</div><!-- section__header -->
+			<div class="slider slider--entries">
+		<?php 
+		
+			while( $news->have_posts() ) : $news->the_post();
+				get_template_part( 'template-parts/home-grid', 'post' );
+			endwhile;
+			wp_reset_postdata();
+		?>
+
+			</div>
+		</div>
+
+		<?php
 		echo $args['after_widget'];
 
 	}
@@ -69,7 +87,6 @@ class Dynamic_Widget_Home_Services extends WP_Widget {
 
 		<?php 
 			while( $services->have_posts() ) : $services->the_post();
-				error_log( get_the_ID() );
 				get_template_part( 'template-parts/home-grid', 'service' );
 			endwhile;
 			wp_reset_postdata();
@@ -104,11 +121,65 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 		echo $args['before_widget'];
 		
 		$home_id = dynamic_get_active_homepage();
-
 		$athletes = dynamic_get_homepage_athletes( $home_id );
 
-		echo $args['after_widget'];
+		?>
+		<div class="col-sm-12">
+			<div class="section__header">
+				<h2 class="heading">Atletas</h2>
+			</div><!-- section__header -->
+		</div><!-- col -->
+				<div class="col-sm-12 col-lg-6 col-lg-offset-3">
+					<ul class="nav nav-tabs" role="tablist">
+		
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#players" role="tab">Jogadores</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#managers" role="tab">Treinadores</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#teams" role="tab">Equipas</a>
+							</li>
+						</ul><!-- nav-tabs -->
+		
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+		<?php 
 
+		foreach( $athletes as $athlete ){ ?>
+
+			<div class="tab-pane <?php if( $athlete['cf'] == 'players') : echo 'active'; endif; ?> " id="<?php echo $athlete['cf'] ?>" role="tabpanel">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="slider slider--entries">
+							<?php 
+							while( $athlete['posts']->have_posts() ) : $athlete['posts']->the_post();
+								get_template_part( 'template-parts/home-grid', 'athlete' );
+							endwhile;
+							wp_reset_postdata();
+							?>
+							</div>
+						</div>		
+					</div>
+				</div>
+			</div>			
+
+		<?php 
+		}
+
+		?>
+
+
+		</div>
+	</section>
+
+	<?php
 	}
 
 }

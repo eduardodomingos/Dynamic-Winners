@@ -44,6 +44,7 @@ function dynamic_theme_setup() {
 	 */
 	register_nav_menus( array(
 		'primary'  => __( 'Primary Menu', 'dynamic' ),
+		'athletes_widget' => __('Athletes Menu', 'dynamic'),
 	) );
 
 }
