@@ -175,7 +175,9 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 
 		?>
 
-
+			<div class="text-xs-center">
+				<button class="btn btn--load-more js-load-more-athletes">Carregar mais</button>
+			</div>
 		</div>
 	</section>
 

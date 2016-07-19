@@ -1,5 +1,18 @@
 <?php
 
+
+function dynamic_get_template_part( $slug, $name = null, $data=array() ) {
+	
+	extract( $data );
+
+	if ( $name )
+		$file = "{$slug}-{$name}.php";
+	else
+		$file = "{$slug}.php";
+
+	include locate_template( $file );
+}
+
 function dynamic_get_active_homepage(){
 
 	$home_active_id = 0;
@@ -128,13 +141,16 @@ function dynamic_add_manchetes_css_to_header(){
 	$css = '';
 
 	if( is_home() ){
+		
 		$css = '<style>';
-		$manchetes = dynamic_get_published_manchetes();
+		$home_id = dynamic_get_active_homepage();
+
+		$manchetes = get_field('highlights_manager', $home_id);
 		
 		foreach( $manchetes as $key => $manchete ){
 			
 			$fullscreen_image = get_field('fullscreen_photo', $manchete);
-			error_log($fullscreen_image);
+			
 			$css .= ".headline$key {
 				background-image: url('$fullscreen_image');
 			} ";
@@ -184,14 +200,16 @@ function dynamic_get_latest_news(){
 
 function dynamic_get_headline_manchetes(){
 
+	$home_id = dynamic_get_active_homepage();
+
+	$manchetes = get_field('highlights_manager', $home_id);
+
 	$before_headline = '<section id="headlines">
 		<div class="headlines__overlay"></div>
 		<div class="slider slider--headlines">';
 
 	$after_headline = '<div></section>';
 
-	$manchetes = dynamic_get_published_manchetes();
-	
 	foreach( $manchetes as $key => $manchete ){
 
 		$title = get_the_title($manchete);
@@ -209,24 +227,11 @@ function dynamic_get_headline_manchetes(){
 
 }
 
-function dynamic_get_published_manchetes(){
-	
-	$args = [
-		'post_type' => 'highlight',
-		'post_status' => 'publish',
-		'posts_per_page' => -1,
-		'fields' => 'ids',
-	];
-
-	$manchetes = new WP_Query($args);
-
-	return $manchetes->posts;
-}
-
 
 function dynamic_get_posts_to_widgets( $post_type, $posts_to_exclude = array(), $posts_per_page = 12, $tax_query = array(), $page = 1 ){
 
 	$args = [
+		
 		'post_type' => $post_type,
 		'post_status' => 'publish',
 		'post__not_in' => $posts_to_exclude,
@@ -244,7 +249,6 @@ function dynamic_get_posts_to_widgets( $post_type, $posts_to_exclude = array(), 
 	}
 	
 	$posts = new WP_Query( $args );
-	
 	$posts_ids = $posts->posts;
 
 	return $posts_ids;
