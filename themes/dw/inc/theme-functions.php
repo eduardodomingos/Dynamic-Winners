@@ -174,7 +174,7 @@ function dynamic_get_latest_news(){
 	$args = [
 		'post_type' => 'post',
 		'post_status' => 'publish',
-		'posts_per_page' => 12,
+		'posts_per_page' => 1,
 		'orderby' => 'date',
 	];
 

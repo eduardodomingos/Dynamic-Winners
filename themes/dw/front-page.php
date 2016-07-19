@@ -18,5 +18,5 @@ get_header(); ?>
 
 <?php dynamic_sidebar( 'dynamic-homepage-sections' ); ?>
 
-<?php get_footer(); ?>	
+<?php get_template_part( 'template-parts/home-grid', 'contacts' ); ?>	
 
