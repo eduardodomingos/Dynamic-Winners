@@ -1,5 +1,8 @@
 themes/dw/.idea
 .idea/
 
-themes/dw/static/bower_components
-themes/dw/static/node_modules
+themes/dw/bower_components
+themes/dw/node_modules
+uploads
+
+themes/dw/assets/build
