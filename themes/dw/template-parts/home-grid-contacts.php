@@ -4,7 +4,7 @@ $home_id = dynamic_get_active_homepage();
 $phone = get_field('phone', $home_id );
 $email = get_field('email', $home_id );
 ?>
-<section id="contacts" class="band section teste">
+<section id="contacts" class="band section">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-lg-8 col-lg-offset-2">

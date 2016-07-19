@@ -35,9 +35,11 @@
 				<div class="pull-lg-right clearfix">
 					<nav class="site-nav">
 						<button class="site-nav__toggle"><span class="sr-only"><?php esc_html_e( 'Menu', 'dw' ); ?></span></button>
-						<ul class="site-nav__list">
-							<?php echo dynamic_get_nav_menu_main(); ?>
-						</ul><!-- site-nav__list-->
+						<div class="site-nav__list">
+							<ul>
+								<?php echo dynamic_get_nav_menu_main(); ?>
+							</ul>
+						</div><!-- site-nav__list-->
 					</nav><!-- site-nav-->
 
 					<ul class="social">

@@ -40,11 +40,11 @@
 			 * Sliders
 			 */
 			// Headlines slider
-			// $('#headlines .slider').slick({
-			// 	mobileFirst: true,
-			// 	autoplay: false,
-			// 	dots: true,
-			// });
+			$('#headlines .slider').slick({
+				mobileFirst: true,
+				autoplay: false,
+				dots: true,
+			});
 
 			// Services Slider
 			$('#services .slider').slick({
