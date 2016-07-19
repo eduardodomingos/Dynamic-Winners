@@ -148,29 +148,28 @@ function dynamic_add_manchetes_css_to_header(){
 		$manchetes = get_field('highlights_manager', $home_id);
 		
 		foreach( $manchetes as $key => $manchete ){
-			
-			$fullscreen_image = get_field('fullscreen_photo', $manchete);
+			$mobile_photo = get_field('mobile_photo', $manchete);
 			
 			$css .= ".headline$key {
-				background-image: url('$fullscreen_image');
+				background-image: url('$mobile_photo');
 			} ";
 		}
 		
 		$css .= '@media (min-width: 480px) { ';
 		
 		foreach( $manchetes as $key => $manchete ){
-			$mobile_image = get_field('mobile_photo', $manchete);
+			$tablet_photo = get_field('tablet_photo', $manchete);
 			$css .= ".headline$key {
-				background-image: url('$mobile_image');
+				background-image: url('$tablet_photo');
 			} ";
 		}
 
 		$css .= '} @media (min-width: 1024px) { ';
 
 		foreach( $manchetes as $key => $manchete ){
-			$tablet_image = get_field('mobile_photo', $manchete);
+			$fullscreen_photo = get_field('fullscreen_photo', $manchete);
 			$css .= ".headline$key {
-				background-image: url('$tablet_image');
+				background-image: url('$fullscreen_photo');
 			} ";
 		}
 
@@ -207,28 +206,7 @@ function dynamic_get_headline_manchetes(){
 
 	$manchetes = get_field('highlights_manager', $home_id);
 	
-	$before_headline = '<section id="headlines">
-							<div class="headlines__overlay"></div>
-								<div class="slider slider--headlines">';
-
-	$after_headline = '<div>
-					</section>';
-
-	foreach( $manchetes as $key => $manchete ){
-
-		$title = get_the_title($manchete);
-		$headline_html .= 	'<div class="slider__item">
-						   		<article class="headline headline' . $key . '">
-									<div class="headline__text">
-										<h1>' . get_the_title($manchete) . '</h1>
-									</div><!-- headline__text -->
-								</article><!-- headline -->
-							</div>
-							';
-	}
-	
-	return $before_headline . $headline_html .  $after_headline;
-
+	dynamic_get_template_part('template-parts/home', 'headline', array('manchetes' => $manchetes));
 
 }
 

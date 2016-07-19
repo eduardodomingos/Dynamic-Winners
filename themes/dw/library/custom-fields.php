@@ -344,7 +344,7 @@ if(function_exists("register_field_group"))
 				'type' => 'image_crop',
 				'required' => 1,
 				'crop_type' => 'hard',
-				'target_size' => 'thumbnail',
+				'target_size' => 'custom',
 				'width' => 479,
 				'height' => 719,
 				'preview_size' => 'thumbnail',
@@ -367,7 +367,7 @@ if(function_exists("register_field_group"))
 				'force_crop' => 'yes',
 				'save_in_media_library' => 'yes',
 				'retina_mode' => 'no',
-				'save_format' => 'id',
+				'save_format' => 'url',
 			),
 			array (
 				'key' => 'field_578b92c73d9fc',
