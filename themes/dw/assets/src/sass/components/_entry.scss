@@ -1,12 +1,16 @@
 /*------------------------------------*\
     $ENTRY
 \*------------------------------------*/
-.entry {}
-
-	.entry__date {
-		@include rem(margin-bottom, 6px);
+.entry {
+	.updated:not(.published) {
+		display: none;
 	}
 
+	.posted-on {
+		display: block;
+		@include rem(margin-bottom, 6px);
+	}
+}
 	.entry__title {
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -106,13 +110,11 @@
 	@include rem((
 		padding-top: 5px,
 		padding-bottom: 5px,
-		padding-right: 40px,
 	));
 	@include media-breakpoint-up(md) {
 		@include rem((
 			padding-top: 20px,
 			padding-bottom: 20px,
-			padding-left: 40px,
 		));
 	}
 	.entry__title {
@@ -123,4 +125,43 @@
 		text-overflow: ellipsis;
 	}
 	.entry__read-more {}
+
+	//&.prev {
+	//	@include rem(padding-left, 25px);
+	//}
+    //
+	//&.next {
+	//	@include rem(padding-right, 25px);
+	//}
+    //
+	//.slick-prev {
+	//	left: -$grid-gutter-width/2;
+	//}
+	//.slick-next {
+	//	right: -$grid-gutter-width/2;
+	//}
+
+	//.arrow {
+	//	position: absolute;
+	//	@include rem((
+	//		font-size: 25px,
+	//		margin-top: -20px,
+	//		height: 40px,
+	//		width: 40px
+	//	));
+	//	top: 50%;
+	//	position: absolute;
+	//	top: 50%;
+	//	display: block;
+	//	line-height: 1.6; // 40/25
+    //
+	//	&.arrow-prev {
+	//		left: 0;
+	//	}
+	//	&.arrow-next {
+	//		right: 0;
+	//		text-align: right;
+	//	}
+	//}
+
 }

@@ -14,20 +14,7 @@ $email = get_field('email', $home_id );
 
 					<?php echo do_shortcode('[contact-form-7 id="393" title="Contact form 1" html_class="contact-form"]');?>
 
-					<ul class="social text-xs-center">
-						<li class="social__item">
-							<a href="" class="social__link social__link--twitter"><span class="sr-only">Twitter</span></a>
-						</li>
-						<li class="social__item">
-							<a href="" class="social__link social__link--gplus"><span class="sr-only">Google+</span></a>
-						</li>
-						<li class="social__item">
-							<a href="" class="social__link social__link--linkedin"><span class="sr-only">Linkedin</span></a>
-						</li>
-						<li class="social__item">
-							<a href="" class="social__link social__link--youtube"><span class="sr-only">Youtube</span></a>
-						</li>
-					</ul><!-- social -->
+					<?php wp_nav_menu( array( 'theme_location' => 'social_footer', 'container'=> false, 'menu_id' => 'social-menu', 'menu_class' => 'social text-xs-center', 'link_before' => '<span class="sr-only">', 'link_after' => '</span>' ) ); ?>
 
 					<div class="text-xs-center">
 						<p><a href="tel:+<?php echo str_replace(' ', '', $phone); ?>" class="contacts__link">+<?php echo $phone; ?></a></p>

@@ -1,7 +1,22 @@
 /*------------------------------------*\
     $POST
 \*------------------------------------*/
-.post {}
+.post {
+	.updated:not(.published) {
+		display: none;
+	}
+
+	.posted-on {
+		display: block;
+		color: $red;
+		opacity: 0.5;
+		@include rem((
+			font-size:15px,
+			margin-bottom: 16px
+		));
+	}
+
+}
 
 	.post__main-photo {
 		@include rem(margin-bottom, 15px);
@@ -23,19 +38,12 @@
 			@include rem((
 				font-size: 17px,
 				letter-spacing: 0.5px,
-				margin-bottom: 2px
+				margin-bottom: 5px
 			));
 			@include media-breakpoint-up(lg) {
 				@include rem(font-size, 25px);
 			}
 		}
-
-		.post__date {
-			color: $red;
-			opacity: 0.5;
-			@include rem(font-size, 15px);
-		}
-
 
 	.post__body {
 		font-weight: 300;

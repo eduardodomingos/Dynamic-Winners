@@ -5,7 +5,7 @@ function dynamic_get_nav_menu_main() {
 
 	$args = array(
 		'menu' => 'primary',
-		
+
 		'container'       => false,
 		'menu_class'      => '',
 		'echo'            => false,
@@ -16,7 +16,7 @@ function dynamic_get_nav_menu_main() {
 
 
 	$main = wp_nav_menu( $args );
-	
+
 	return $main;
 }
 
@@ -33,21 +33,21 @@ function dynamic_get_nav_menu_athletes(){
 
 
 	$main = wp_nav_menu( $args );
-	
+
 	return $main;
 }
 
 add_filter( 'nav_menu_link_attributes', 'dynamic_menu_link_class', 10, 3);
 
 function dynamic_menu_link_class($atts, $item, $args){
-	
+
 	if( $args->menu == 'primary' ) {
 		$atts['class'] = 'site-nav__link';
 	}
 	elseif( $args->menu == 'athletes_widget' ){
 		$atts['class'] = 'nav-link';
 	}
-	
+
 	return $atts;
 }
 

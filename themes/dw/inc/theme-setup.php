@@ -1,8 +1,9 @@
-<?php 
+<?php
 
 function dynamic_remove_home_post_type_support() {
-    
+
     remove_post_type_support(  'home', 'editor' );
+    remove_post_type_support(  'post', 'thumbnail' );
 }
 
 add_action( 'init', 'dynamic_remove_home_post_type_support' );
@@ -21,7 +22,7 @@ function dynamic_widgets_init() {
 		'after_title'   => '',
 	) );
 
-	
+
 }
 
 add_action( 'widgets_init', 'dynamic_widgets_init' );
@@ -33,7 +34,7 @@ function dynamic_theme_setup() {
 	 */
 	load_theme_textdomain( 'dynamic', get_template_directory() . '/languages' );
 
-	
+
 	add_image_size( 'grid-small', 224, 168, true );
 	add_image_size( 'grid-medium', 263, 197, true );
 
@@ -45,6 +46,8 @@ function dynamic_theme_setup() {
 	register_nav_menus( array(
 		'primary'  => __( 'Primary Menu', 'dynamic' ),
 		'athletes_widget' => __('Athletes Menu', 'dynamic'),
+		'social_header' => __('Social Header Menu', 'dynamic'),
+		'social_footer' => __('Social Footer Menu', 'dynamic')
 	) );
 
 }

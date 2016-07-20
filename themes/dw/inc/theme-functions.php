@@ -139,23 +139,23 @@ add_filter('wp_head', 'dynamic_add_manchetes_css_to_header');
 function dynamic_add_manchetes_css_to_header(){
 
 	$css = '<style>';
-	
+
 	if( is_home() ){
-		
-		
+
+
 		$home_id = dynamic_get_active_homepage();
 		$manchetes = get_field('highlights_manager', $home_id);
-		
+
 		foreach( $manchetes as $key => $manchete ){
 			$mobile_photo = get_field('mobile_photo', $manchete);
-			
+
 			$css .= ".headline$key {
 				background-image: url('$mobile_photo');
 			} ";
 		}
-		
+
 		$css .= '@media (min-width: 480px) { ';
-		
+
 		foreach( $manchetes as $key => $manchete ){
 			$tablet_photo = get_field('tablet_photo', $manchete);
 			$css .= ".headline$key {
@@ -173,30 +173,30 @@ function dynamic_add_manchetes_css_to_header(){
 
 	}
 	elseif( is_single() ){
-		
+
 		global $post;
 
 		$background_single_photos = array(
 
 			'post' => array(
-					'mobile' => 'http://placehold.it/479x269?text=16:9',
-					'tablet' => 'http://placehold.it/1023x448?text=16:7',
-					'fullscreen' => 'http://placehold.it/2000x667?text=3:1',
+					'mobile' =>  get_template_directory_uri() . '/assets/build/img/bg-blog--sm.jpg',
+					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-blog--md.jpg',
+					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-blog--lg.jpg',
 				),
 			'service' => array(
-					'mobile' => 'http://placehold.it/479x269?text=16:9',
-					'tablet' => 'http://placehold.it/1023x448?text=16:7',
-					'fullscreen' => 'http://placehold.it/2000x667?text=3:1',
+					'mobile' => get_template_directory_uri() . '/assets/build/img/bg-services--sm.jpg',
+					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-services--sm.jpg',
+					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-services--sm.jpg',
 				)
 
 		);
-		
+
 		$post_type = $post->post_type;
-	
+
 		$mobile_photo = $background_single_photos[$post_type]['mobile'];
 		$tablet_photo = $background_single_photos[$post_type]['tablet'];
 		$fullscreen_photo = $background_single_photos[$post_type]['fullscreen'];
-		
+
 		$css .= ".featured-image {
 					background-image: url('$mobile_photo');
 					}
@@ -213,8 +213,8 @@ function dynamic_add_manchetes_css_to_header(){
 					}
 				}";
 
-		
-		
+
+
 	}
 	$css .=  '</style>';
 	echo $css;
@@ -222,33 +222,33 @@ function dynamic_add_manchetes_css_to_header(){
 
 }
 
-function dynamic_get_before_and_after_posts( $date ){
-	
-	$args = array(
-					'post_type' => 'post',
-					'post_status' => 'publish',
-					'posts_per_page' => 1,
-					'inclusive' => false,
-					'orderby' => 'date'
-				);
+function dynamic_get_before_and_after_posts(){
 
-	$args_before = $args;
-	$args_before['date_query'] = array( array('before' =>  $date) );
-	$args_before['order'] = 'DESC';
+	$previous = get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false ); 
 	
-	$args_after = $args;
-	$args_after['date_query'] = array( array('after' => $date ) );
-	$args_after['order'] = 'ASC';
-	
-	$post_before = new WP_Query($args_before);
-	$post_after  = new WP_Query($args_after);
-	
-	$join_posts = new WP_Query();
-	$join_posts->posts      = array_merge( $post_before->posts, $post_after->posts);
-	$join_posts->post_count = count( $join_posts->posts );
-	
-	return $join_posts;
+	$html = '';
 
+
+	if( !empty( $previous ) ){
+		
+		$to_show = empty( $next ) ? 'show' : '';
+		
+		$html .= '<article class="entry entry--latest prev ' . $to_show . '">' . dw_posted_on($previous->ID)
+					. '<h2 class="entry__title">' . $previous->post_title . '</h2>
+					<a href="' . get_the_permalink($previous->ID) . '" class="entry__read-more">Ver notícia</a>
+				</article><!-- entry -->';
+	}
+
+	if( !empty( $next ) ){
+		$html .=  '<article class="entry entry--latest next show">' . dw_posted_on($next->ID)
+					. '<h2 class="entry__title">' . $next->post_title . '</h2>
+					<a href="' . get_the_permalink($next->ID) . '" class="entry__read-more">Ver notícia</a>
+				</article><!-- entry -->';
+	}
+	
+
+	return $html;
 
 }
 
@@ -273,7 +273,7 @@ function dynamic_get_latest_news(){
 function dynamic_get_headline_manchetes(){
 
 	$home_id = dynamic_get_active_homepage();
-	
+
 	$manchetes = get_field('highlights_manager', $home_id);
 
 	dynamic_get_template_part('template-parts/home', 'headline', array('manchetes' => $manchetes));
@@ -290,11 +290,11 @@ function dynamic_get_all_services( $posts_to_exclude = array() ){
 		'post__not_in' => $posts_to_exclude,
 		'posts_per_page' => -1,
 		'orderby' => 'date'
-		
+
 	];
 
 	$services = new WP_Query( $args );
-	
+
 	return $services;
 
 

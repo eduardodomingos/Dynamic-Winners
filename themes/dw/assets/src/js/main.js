@@ -8,6 +8,7 @@
 			$window: 					$(window),
 			$body:	 					$('body'),
 			$homeNewsSlider:			$('.home #news .slider'),
+			$homeServicesSlider:		$('.home #services .slider'),
 			$homeAthletesSlider:		$('.home #athletes .slider'),
 			$menuToggle:				$('.site-nav__toggle'),
 			$menuToggleIcon:			$('.site-nav__toggle'),
@@ -35,7 +36,6 @@
 		 * Homepage Code
 		 */
 		if(dom.$body.hasClass('home')) {
-
 			/*
 			 * Sliders
 			 */
@@ -43,11 +43,19 @@
 			$('#headlines .slider').slick({
 				mobileFirst: true,
 				autoplay: false,
-				dots: true,
+				dots: true
+			});
+
+			// Services Slider DotDotDot
+			dom.$homeServicesSlider.on('init', function(event, slick){
+				dom.$homeServicesSlider.find('.dotdotdot').dotdotdot({
+					height: 63,
+					watch: true
+				});
 			});
 
 			// Services Slider
-			$('#services .slider').slick({
+			dom.$homeServicesSlider.slick({
 				mobileFirst: true,
 				dots: true,
 				responsive: [
@@ -69,6 +77,15 @@
 			});
 
 			dom.$window.load(function(){
+
+				// News Slider DotDotDot
+				dom.$homeNewsSlider.on('init', function(event, slick){
+					dom.$homeNewsSlider.find('.dotdotdot').dotdotdot({
+						height: 63,
+						watch: true
+					});
+				});
+
 				// News Slider
 				dom.$homeNewsSlider.slick({
 					mobileFirst: true,
@@ -85,6 +102,13 @@
 					fixVerticalArrows(event);
 				}).trigger('afterChange');
 
+				// Athletes Slider DotDotDot
+				dom.$homeAthletesSlider.on('init', function(event, slick){
+					dom.$homeAthletesSlider.find('.dotdotdot').dotdotdot({
+						height: 63,
+						watch: true
+					});
+				});
 				// Athletes Slider
 				dom.$homeAthletesSlider.slick({
 					mobileFirst: true,
@@ -113,7 +137,6 @@
 			// Autosize contact form textarea
 			autosize($('.contact-form #inputMessage'));
 
-
 			// On window resize:
 			$(window).resize(function(event){
 				dom.$homeNewsSlider.trigger('afterChange');
@@ -122,49 +145,61 @@
 
 		} // end Homepage JS
 
+
 		/*
-		 * Blog Page Code
+		 * Single Services
 		 */
-		if(dom.$body.hasClass('blog')) {
+		if(dom.$body.hasClass('single-service')) {
 			// Latest posts slider
 			$('#latest-posts .slider').slick({
 				mobileFirst: true
 			});
+		}
+
+
+
+		/*
+		 * Single Pages
+		 */
+		if(dom.$body.hasClass('single-post')) {
+			// Latest posts slider
+			// $('#latest-posts .slider').slick({
+			// 	mobileFirst: true
+			// });
 
 			// Athlete slider
-			$('.athlete__slider .slider-for').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				fade: true,
-				asNavFor: '.athlete__slider .slider-nav'
-			});
-			$('.athlete__slider .slider-nav').slick({
-				mobileFirst: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				asNavFor: '.athlete__slider .slider-for',
-				centerMode: false,
-				focusOnSelect: true,
-				responsive: [
-					{
-						breakpoint: 479,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 1
-						}
-					},
-					{
-						breakpoint: 1023,
-						settings: {
-							slidesToShow: 5,
-							slidesToScroll: 1
-						}
-					}
-				]
-			});
+			// $('.athlete__slider .slider-for').slick({
+			// 	slidesToShow: 1,
+			// 	slidesToScroll: 1,
+			// 	arrows: false,
+			// 	fade: true,
+			// 	asNavFor: '.athlete__slider .slider-nav'
+			// });
 
-
+			// $('.athlete__slider .slider-nav').slick({
+			// 	mobileFirst: true,
+			// 	slidesToShow: 1,
+			// 	slidesToScroll: 1,
+			// 	asNavFor: '.athlete__slider .slider-for',
+			// 	centerMode: false,
+			// 	focusOnSelect: true,
+			// 	responsive: [
+			// 		{
+			// 			breakpoint: 479,
+			// 			settings: {
+			// 				slidesToShow: 3,
+			// 				slidesToScroll: 1
+			// 			}
+			// 		},
+			// 		{
+			// 			breakpoint: 1023,
+			// 			settings: {
+			// 				slidesToShow: 5,
+			// 				slidesToScroll: 1
+			// 			}
+			// 		}
+			// 	]
+			// });
 
 		} // end Blog JS
 
@@ -174,18 +209,18 @@
 		 */
 		if(dom.$body.hasClass('athlete')) {
 			// Gallery
-			$('.athlete__media .slider').slick({
-				mobileFirst: true,
-				responsive: [
-					{
-						breakpoint: 1023,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 2
-						}
-					}
-				]
-			});
+			// $('.athlete__media .slider').slick({
+			// 	mobileFirst: true,
+			// 	responsive: [
+			// 		{
+			// 			breakpoint: 1023,
+			// 			settings: {
+			// 				slidesToShow: 2,
+			// 				slidesToScroll: 2
+			// 			}
+			// 		}
+			// 	]
+			// });
 		}
 	});
 
