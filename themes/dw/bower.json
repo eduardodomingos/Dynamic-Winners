@@ -3,7 +3,8 @@
   "dependencies": {
     "bootstrap": "v4.0.0-alpha.2",
     "slick-carousel": "^1.6.0",
-    "autosize": "^3.0.16"
+    "autosize": "^3.0.16",
+    "jQuery.dotdotdot": "dotdotdot#^1.8.3"
   },
   "devDependencies": {
     "sass-rem": "^1.2.2",
