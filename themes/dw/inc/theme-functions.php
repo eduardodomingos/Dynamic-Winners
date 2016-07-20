@@ -138,10 +138,11 @@ add_filter('wp_head', 'dynamic_add_manchetes_css_to_header');
 
 function dynamic_add_manchetes_css_to_header(){
 
-	$css = '';
+	$css = '<style>';
+	
 	if( is_home() ){
 		
-		$css = '<style>';
+		
 		$home_id = dynamic_get_active_homepage();
 		$manchetes = get_field('highlights_manager', $home_id);
 		
@@ -168,11 +169,85 @@ function dynamic_add_manchetes_css_to_header(){
 				background-image: url('$fullscreen_photo');
 			} ";
 		}
-		$css .= '} </style>';
+		$css .= '}';
 
 	}
+	elseif( is_single() ){
+		
+		global $post;
 
+		$background_single_photos = array(
+
+			'post' => array(
+					'mobile' => 'http://placehold.it/479x269?text=16:9',
+					'tablet' => 'http://placehold.it/1023x448?text=16:7',
+					'fullscreen' => 'http://placehold.it/2000x667?text=3:1',
+				),
+			'service' => array(
+					'mobile' => 'http://placehold.it/479x269?text=16:9',
+					'tablet' => 'http://placehold.it/1023x448?text=16:7',
+					'fullscreen' => 'http://placehold.it/2000x667?text=3:1',
+				)
+
+		);
+		
+		$post_type = $post->post_type;
+	
+		$mobile_photo = $background_single_photos[$post_type]['mobile'];
+		$tablet_photo = $background_single_photos[$post_type]['tablet'];
+		$fullscreen_photo = $background_single_photos[$post_type]['fullscreen'];
+		
+		$css .= ".featured-image {
+					background-image: url('$mobile_photo');
+					}
+
+				@media (min-width: 480px) {
+					.featured-image {
+						background-image: url('$tablet_photo');
+					}
+				}
+
+				@media (min-width: 1024px) {
+					.featured-image {
+						background-image: url('$fullscreen_photo');
+					}
+				}";
+
+		
+		
+	}
+	$css .=  '</style>';
 	echo $css;
+
+
+}
+
+function dynamic_get_before_and_after_posts( $date ){
+	
+	$args = array(
+					'post_type' => 'post',
+					'post_status' => 'publish',
+					'posts_per_page' => 1,
+					'inclusive' => false,
+					'orderby' => 'date'
+				);
+
+	$args_before = $args;
+	$args_before['date_query'] = array( array('before' =>  $date) );
+	$args_before['order'] = 'DESC';
+	
+	$args_after = $args;
+	$args_after['date_query'] = array( array('after' => $date ) );
+	$args_after['order'] = 'ASC';
+	
+	$post_before = new WP_Query($args_before);
+	$post_after  = new WP_Query($args_after);
+	
+	$join_posts = new WP_Query();
+	$join_posts->posts      = array_merge( $post_before->posts, $post_after->posts);
+	$join_posts->post_count = count( $join_posts->posts );
+	
+	return $join_posts;
 
 
 }
@@ -206,30 +281,21 @@ function dynamic_get_headline_manchetes(){
 }
 
 
-function dynamic_get_posts_to_widgets( $post_type, $posts_to_exclude = array(), $posts_per_page = 12, $tax_query = array(), $page = 1 ){
+function dynamic_get_all_services( $posts_to_exclude = array() ){
 
 	$args = [
 
-		'post_type' => $post_type,
+		'post_type' => 'service',
 		'post_status' => 'publish',
 		'post__not_in' => $posts_to_exclude,
-		'posts_per_page' => $posts_per_page,
-		'fields' => 'ids'
+		'posts_per_page' => -1,
+		'orderby' => 'date'
+		
 	];
 
-
-	if( $posts_per_page > 0 ){
-		$args['page'] = $page;
-	}
-
-	if( !empty( $tax_query ) ){
-		$args['tax_query'] = $tax_query;
-	}
-
-	$posts = new WP_Query( $args );
-	$posts_ids = $posts->posts;
-
-	return $posts_ids;
+	$services = new WP_Query( $args );
+	
+	return $services;
 
 
 }
