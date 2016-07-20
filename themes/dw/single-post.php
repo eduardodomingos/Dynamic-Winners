@@ -26,6 +26,7 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 
 			<!-- POST
 			========================================================= -->
+			<?php while ( have_posts() ) : the_post(); ?>
 			<article class="post">
 				<div class="container">
 					<div class="row">
@@ -46,7 +47,7 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 					</div><!-- row -->
 				</div><!-- container -->
 			</article><!-- post -->
-
+			<?php endwhile; ?>
 			<?php  $latest_posts = dynamic_get_before_and_after_posts(get_the_date('Y-m-d h:i:s')); ?>
 			<!-- LATEST POSTS
 			========================================================= -->

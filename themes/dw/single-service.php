@@ -26,11 +26,12 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 
 			<!-- POST
 			========================================================= -->
+			<?php while ( have_posts() ) : the_post(); ?>
 			<article class="post">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<img alt="" srcset="http://placehold.it/260x195?text=4:3 260w, http://placehold.it/240x180?text=4:3 240w, , http://placehold.it/1000x750?text=4:3 1000w" sizes="(min-width: 480px) 50vw, 100vw" class="post__main-photo img-fluid">
+							<img alt="" srcset="echo $thumbnail_small[0]; ?> 224w, <?php echo $thumbnail_medium[0]; ?> 263w" sizes="(min-width: 480px) 50vw, 100vw" class="post__main-photo img-fluid">
 						</div><!-- col -->
 						<div class="col-md-6">
 							<header class="post__header">
@@ -43,7 +44,7 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 					</div><!-- row -->
 				</div><!-- container -->
 			</article><!-- post -->
-
+			<?php endwhile; ?>
 			<?php  $all_services = dynamic_get_all_services(array(get_the_ID())); 
 
 			?>
