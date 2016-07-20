@@ -229,8 +229,7 @@ function dynamic_get_before_and_after_posts(){
 	
 	$html = '';
 
-	$to_show = empty($next) 
-	
+
 	if( !empty( $previous ) ){
 		
 		$to_show = empty( $next ) ? 'show' : '';
