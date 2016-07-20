@@ -6,7 +6,7 @@
  *
  * @package Dynamic_Winners
  */
- 
+
 get_header();
 
 $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
@@ -36,8 +36,8 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 						<div class="col-md-6">
 							<header class="post__header">
 								<p class="post__category">/ SERVIÇOS</p>
-								<h3 class="post__title"><?php the_title(); ?></h3>
-								<p class="post__date"><?php the_date('j F Y'); ?></p>
+								<h3 class="post__title"><?php echo get_the_title(); ?></h3>
+								<?php echo dw_posted_on(); ?>
 							</header><!-- post-header -->
 							<div class="post__body"><?php the_content(); ?></div><!-- post-body -->
 						</div><!-- col -->
@@ -45,7 +45,7 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 				</div><!-- container -->
 			</article><!-- post -->
 			<?php endwhile; ?>
-			<?php  $all_services = dynamic_get_all_services(array(get_the_ID())); 
+			<?php  $all_services = dynamic_get_all_services(array(get_the_ID()));
 
 			?>
 			<!-- LATEST POSTS
@@ -56,19 +56,18 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 						<div class="col-sm-12 col-md-9 col-md-offset-2 col-lg-6 col-lg-offset-6 box-right">
 							<div class="slider">
 								<?php while( $all_services->have_posts() ) : $all_services->the_post(); ?>
-									
+
 									<div class="slider__item">
 										<article class="entry entry--latest">
-											<p class="entry__date"><?php the_date('j F Y'); ?></p>
-											<h2 class="entry__title"><?php the_title(); ?></h2>
-											<a href="" class="entry__read-more">Ver mais</a>
+											<h2 class="entry__title"><a href="<?php echo  get_the_permalink(); ?>"><?php the_title(); ?></a></h2>
+											<a href="<?php echo  get_the_permalink(); ?>" class="entry__read-more">Ver mais</a>
 										</article><!-- entry -->
 									</div><!-- slider__item -->
 								<?php
 								endwhile;
 								wp_reset_postdata();
-								?>		
-			
+								?>
+
 							</div><!-- slider -->
 						</div><!-- col -->
 					</div><!-- row -->

@@ -145,8 +145,21 @@
 
 		} // end Homepage JS
 
+
 		/*
-		 * Blog Page Code
+		 * Single Services
+		 */
+		if(dom.$body.hasClass('single-service')) {
+			// Latest posts slider
+			$('#latest-posts .slider').slick({
+				mobileFirst: true
+			});
+		}
+
+
+
+		/*
+		 * Single Pages
 		 */
 		if(dom.$body.hasClass('single-post')) {
 			// Latest posts slider
