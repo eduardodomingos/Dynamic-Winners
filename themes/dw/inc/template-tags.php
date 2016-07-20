@@ -28,7 +28,7 @@ function dw_posted_on() {
 		'</span>',
 		$time_string
 	);
-	return '<span class="posted-on post__date">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	return '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
