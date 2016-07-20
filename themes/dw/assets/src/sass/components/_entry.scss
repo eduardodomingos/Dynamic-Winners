@@ -3,7 +3,8 @@
 \*------------------------------------*/
 .entry {}
 
-	.entry__date {
+	.entry__date,
+	.posted-on {
 		@include rem(margin-bottom, 6px);
 	}
 

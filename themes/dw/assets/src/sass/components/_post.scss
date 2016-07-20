@@ -30,7 +30,8 @@
 			}
 		}
 
-		.post__date {
+		.post__date,
+		.posted-on {
 			color: $red;
 			opacity: 0.5;
 			@include rem(font-size, 15px);
