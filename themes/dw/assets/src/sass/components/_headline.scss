@@ -14,11 +14,17 @@
 		height: 512px;
 	}
 }
+	.headline__overlay {
+		@include position(absolute, 0, 0, 0, 0);
+		background: linear-gradient(to top, rgba(#000, 0.9), transparent 55%);
+	}
+
 
 	.headline__text {
 		text-align: right;
 		position: absolute;
 		right: 0;
+		text-shadow: 1px 1px 1px rgba(#000, 0.5);
 		@include rem((
 			bottom: 50px,
 			padding-right: 15px
