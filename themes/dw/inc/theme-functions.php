@@ -229,16 +229,20 @@ function dynamic_get_before_and_after_posts(){
 	
 	$html = '';
 
+	$to_show = empty($next) 
 	
 	if( !empty( $previous ) ){
-		$html .= '<article class="entry entry--latest prev">' . dw_posted_on($previous->ID)
+		
+		$to_show = empty( $next ) ? 'show' : '';
+		
+		$html .= '<article class="entry entry--latest prev ' . $to_show . '">' . dw_posted_on($previous->ID)
 					. '<h2 class="entry__title">' . $previous->post_title . '</h2>
 					<a href="' . get_the_permalink($previous->ID) . '" class="entry__read-more">Ver notícia</a>
 				</article><!-- entry -->';
 	}
 
 	if( !empty( $next ) ){
-		$html .=  '<article class="entry entry--latest next">' . dw_posted_on($next->ID)
+		$html .=  '<article class="entry entry--latest next show">' . dw_posted_on($next->ID)
 					. '<h2 class="entry__title">' . $next->post_title . '</h2>
 					<a href="' . get_the_permalink($next->ID) . '" class="entry__read-more">Ver notícia</a>
 				</article><!-- entry -->';
