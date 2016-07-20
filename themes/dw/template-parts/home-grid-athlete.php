@@ -12,11 +12,13 @@ $position = get_field('position', $post->ID );
 			<?php if( !empty( $position ) ): ?>
 				<p class="category"><?php echo $position; ?></p>
 			<?php endif; ?>
-			<a href=""><img alt="" srcset="<?php echo $thumbnail_small[0]; ?> 224w, <?php echo $thumbnail_medium[0]; ?> 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>
+			<a href="<?php echo get_the_permalink();?>"><img alt="" srcset="<?php echo $thumbnail_small[0]; ?> 224w, <?php echo $thumbnail_medium[0]; ?> 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>
 		</div><!-- img-wrapper -->
 		<div class="card-block">
-			<h2 class="entry__title"><a href=""><?php the_title(); ?></a></h2>
-			<p class="entry__text card-text"><?php the_excerpt(); ?></p>
+			<h2 class="entry__title"><a href="<?php echo get_the_permalink();?>"><?php echo get_the_title(); ?></a></h2>
+			<div class="dotdotdot">
+				<p class="entry__text card-text"><?php echo get_the_excerpt(); ?></p>
+			</div><!-- dotdotdot -->
 		</div><!-- card-block -->
 	</article><!-- card -->
 </div><!-- slider__item -->

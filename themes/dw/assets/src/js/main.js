@@ -102,6 +102,13 @@
 					fixVerticalArrows(event);
 				}).trigger('afterChange');
 
+				// Athletes Slider DotDotDot
+				dom.$homeAthletesSlider.on('init', function(event, slick){
+					dom.$homeAthletesSlider.find('.dotdotdot').dotdotdot({
+						height: 63,
+						watch: true
+					});
+				});
 				// Athletes Slider
 				dom.$homeAthletesSlider.slick({
 					mobileFirst: true,
