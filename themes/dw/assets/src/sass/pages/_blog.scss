@@ -2,7 +2,7 @@
     $BLOG
 \*------------------------------------*/
 
-.single-post {
+.single {
 	/**
 	 * Latest posts.
 	 *
@@ -43,11 +43,20 @@
 			}
 		}
 
-		.slick-prev {
-			display: none!important;
-			@include media-breakpoint-up(md) {
-				display: block!important;
-			}
+		//.slick-prev {
+		//	display: none!important;
+		//	@include media-breakpoint-up(md) {
+		//		display: block!important;
+		//	}
+		//}
+	}
+}
+
+.single-service {
+	.slick-prev {
+		display: none!important;
+		@include media-breakpoint-up(md) {
+			display: block!important;
 		}
 	}
 }
