@@ -86,8 +86,10 @@ class Dynamic_Widget_Home_Services extends WP_Widget {
 			<div class="slider slider--entries">
 
 		<?php 
+			$i = 1;
 			while( $services->have_posts() ) : $services->the_post();
-				get_template_part( 'template-parts/home-grid', 'service' );
+				dynamic_get_template_part( 'template-parts/home-grid', 'service', array('order' => $i) );
+				++$i;
 			endwhile;
 			wp_reset_postdata();
 		?>
