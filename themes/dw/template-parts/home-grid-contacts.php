@@ -11,38 +11,8 @@ $email = get_field('email', $home_id );
 					<div class="section__header">
 						<h2 class="heading">Contacte-nos</h2>
 					</div><!-- section__header -->
-					<form action="" class="contact-form">
-						<div class="form-group row">
-							<label for="inputName" class="col-lg-3 form-control-label">Nome</label>
-							<div class="col-lg-9">
-								<input type="text" class="form-control" id="inputName">
-							</div><!-- col -->
-						</div><!-- form-group -->
 
-						<div class="form-group row">
-							<label for="inputEmail" class="col-lg-3 form-control-label">Email</label>
-							<div class="col-lg-9">
-								<input type="text" class="form-control" id="inputEmail">
-							</div><!-- col -->
-						</div><!-- form-group -->
-
-						<div class="form-group row">
-							<label for="inputPhone" class="col-lg-3 form-control-label">Tel.:</label>
-							<div class="col-lg-9">
-								<input type="tel" class="form-control" id="inputPhone">
-							</div><!-- col -->
-						</div><!-- form-group -->
-
-						<div class="form-group row">
-							<label for="inputMessage" class="col-lg-3 form-control-label">Mensagem</label>
-							<div class="col-lg-9">
-								<textarea class="form-control" id="inputMessage" rows="3"></textarea>
-							</div><!-- col -->
-						</div><!-- form-group -->
-						<div class="text-xs-center">
-							<button type="submit" class="btn btn--slanted">Enviar</button>
-						</div>
-					</form><!-- contact-form -->
+					<?php echo do_shortcode('[contact-form-7 id="393" title="Contact form 1" html_class="contact-form"]');?>
 
 					<ul class="social text-xs-center">
 						<li class="social__item">
