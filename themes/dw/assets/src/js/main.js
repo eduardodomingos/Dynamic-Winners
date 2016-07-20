@@ -43,13 +43,14 @@
 			$('#headlines .slider').slick({
 				mobileFirst: true,
 				autoplay: false,
-				dots: true,
+				dots: true
 			});
 
 			// Services Slider DotDotDot
 			dom.$homeServicesSlider.on('init', function(event, slick){
 				dom.$homeServicesSlider.find('.dotdotdot').dotdotdot({
-					height: 63
+					height: 63,
+					watch: true
 				});
 			});
 
@@ -80,7 +81,8 @@
 				// News Slider DotDotDot
 				dom.$homeNewsSlider.on('init', function(event, slick){
 					dom.$homeNewsSlider.find('.dotdotdot').dotdotdot({
-						height: 63
+						height: 63,
+						watch: true
 					});
 				});
 
@@ -127,16 +129,6 @@
 
 			// Autosize contact form textarea
 			autosize($('.contact-form #inputMessage'));
-
-			// // DotDotDot
-			// $("#news .dotdotdot").dotdotdot({
-			// 	height: 63 // 3 lines: this value should be the same as in sass/base/_typography.scss
-			// });
-            //
-			// $("#services .dotdotdot").dotdotdot({
-			// 	height: 63 // 3 lines: this value should be the same as in sass/base/_typography.scss
-			// });
-
 
 			// On window resize:
 			$(window).resize(function(event){
