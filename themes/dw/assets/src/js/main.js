@@ -8,6 +8,7 @@
 			$window: 					$(window),
 			$body:	 					$('body'),
 			$homeNewsSlider:			$('.home #news .slider'),
+			$homeServicesSlider:		$('.home #services .slider'),
 			$homeAthletesSlider:		$('.home #athletes .slider'),
 			$menuToggle:				$('.site-nav__toggle'),
 			$menuToggleIcon:			$('.site-nav__toggle'),
@@ -35,7 +36,6 @@
 		 * Homepage Code
 		 */
 		if(dom.$body.hasClass('home')) {
-
 			/*
 			 * Sliders
 			 */
@@ -46,8 +46,15 @@
 				dots: true,
 			});
 
+			// Services Slider DotDotDot
+			dom.$homeServicesSlider.on('init', function(event, slick){
+				dom.$homeServicesSlider.find('.dotdotdot').dotdotdot({
+					height: 63
+				});
+			});
+
 			// Services Slider
-			$('#services .slider').slick({
+			dom.$homeServicesSlider.slick({
 				mobileFirst: true,
 				dots: true,
 				responsive: [
@@ -69,6 +76,14 @@
 			});
 
 			dom.$window.load(function(){
+
+				// News Slider DotDotDot
+				dom.$homeNewsSlider.on('init', function(event, slick){
+					dom.$homeNewsSlider.find('.dotdotdot').dotdotdot({
+						height: 63
+					});
+				});
+
 				// News Slider
 				dom.$homeNewsSlider.slick({
 					mobileFirst: true,
@@ -112,6 +127,15 @@
 
 			// Autosize contact form textarea
 			autosize($('.contact-form #inputMessage'));
+
+			// // DotDotDot
+			// $("#news .dotdotdot").dotdotdot({
+			// 	height: 63 // 3 lines: this value should be the same as in sass/base/_typography.scss
+			// });
+            //
+			// $("#services .dotdotdot").dotdotdot({
+			// 	height: 63 // 3 lines: this value should be the same as in sass/base/_typography.scss
+			// });
 
 
 			// On window resize:
