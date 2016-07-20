@@ -3,12 +3,12 @@
 \*------------------------------------*/
 
 //Contact Form 7 Styles
-.wpcf7-validation-errors {
+div.wpcf7-validation-errors {
 	@extend .alert;
 	@extend .alert-danger;
 }
 
-.wpcf7-mail-sent-ok {
+div.wpcf7-mail-sent-ok {
 	@extend .alert;
 	@extend .alert-success;
 }
@@ -32,12 +32,14 @@
 		@include rem(font-size, 14px);
 		color: #fff;
 
-		//&#inputMessage {
+		&#inputMessage {
+			border: 1px solid #fff;
+			padding: 5px;
 		//	border: none;
-		//	background-image: linear-gradient(white, white 40px, #000 40px, #000 41px, white 41px);
+		//	background-image: linear-gradient(transparent, transparent 40px, white 40px, white 41px, white 41px);
 		//	background-size: 100% 41px;
 		//	line-height: 41px;
-		//}
+		}
 	}
 
 	button[type="submit"] {
