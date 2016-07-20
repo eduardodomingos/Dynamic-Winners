@@ -148,7 +148,7 @@
 		/*
 		 * Blog Page Code
 		 */
-		if(dom.$body.hasClass('blog')) {
+		if(dom.$body.hasClass('single-post')) {
 			// Latest posts slider
 			$('#latest-posts .slider').slick({
 				mobileFirst: true

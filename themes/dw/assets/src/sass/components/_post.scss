@@ -5,6 +5,14 @@
 	.updated:not(.published) {
 		display: none;
 	}
+
+	.posted-on {
+		display: block;
+		color: $red;
+		opacity: 0.5;
+		@include rem(font-size, 15px);
+	}
+
 }
 
 	.post__main-photo {
@@ -33,15 +41,6 @@
 				@include rem(font-size, 25px);
 			}
 		}
-
-		.post__date,
-		.posted-on {
-			display: block;
-			color: $red;
-			opacity: 0.5;
-			@include rem(font-size, 15px);
-		}
-
 
 	.post__body {
 		font-weight: 300;
