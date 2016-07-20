@@ -16,7 +16,7 @@
 }
 	.headline__overlay {
 		@include position(absolute, 0, 0, 0, 0);
-		background: linear-gradient(to top, rgba(#000, 0.9), transparent 55%);
+		background: linear-gradient(to top, rgba(#000, 0.75), transparent 55%);
 	}
 
 

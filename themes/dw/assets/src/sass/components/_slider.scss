@@ -99,7 +99,7 @@ $arrow-size: 40px;
 			&:before {
 				content: '';
 				position: absolute;
-				background-color: $brand-primary;
+				background-color: #fff;
 				transform: skew(-25deg);
 				@include size(70%, 70%); /* [1] */
 				position: absolute; /* [1] */
