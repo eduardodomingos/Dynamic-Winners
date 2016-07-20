@@ -222,33 +222,16 @@ function dynamic_add_manchetes_css_to_header(){
 
 }
 
-function dynamic_get_before_and_after_posts( $date ){
+function dynamic_get_before_and_after_posts(){
 
-	$args = array(
-					'post_type' => 'post',
-					'post_status' => 'publish',
-					'posts_per_page' => 1,
-					'inclusive' => false,
-					'orderby' => 'date'
-				);
-
-	$args_before = $args;
-	$args_before['date_query'] = array( array('before' =>  $date) );
-	$args_before['order'] = 'DESC';
-
-	$args_after = $args;
-	$args_after['date_query'] = array( array('after' => $date ) );
-	$args_after['order'] = 'ASC';
-
-	$post_before = new WP_Query($args_before);
-	$post_after  = new WP_Query($args_after);
-
-	$join_posts = new WP_Query();
-	$join_posts->posts      = array_merge( $post_before->posts, $post_after->posts);
-	$join_posts->post_count = count( $join_posts->posts );
-
-	return $join_posts;
-
+	$previous = get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false ); 
+	$adjacent_posts = new WP_Query();
+	
+	$adjacent_posts->posts = array( 0 => $previous, 1 => $next);
+	$adjacent_posts->post_count = count($adjacent_posts->posts);
+	
+	return $adjacent_posts;
 
 }
 

@@ -39,8 +39,6 @@ $nav_classes = array('prev', 'next');
 							<header class="post__header">
 								<p class="post__category">Regionais 2016</p>
 								<h3 class="post__title"><?php echo get_the_title(); ?></h3>
-
-
 								<?php echo dw_posted_on(); ?>
 
 							</header><!-- post-header -->
@@ -50,20 +48,24 @@ $nav_classes = array('prev', 'next');
 				</div><!-- container -->
 			</article><!-- post -->
 			<?php endwhile; ?>
-			<?php  $latest_posts = dynamic_get_before_and_after_posts(get_the_date('Y-m-d h:i:s')); ?>
+			<?php  
+				
+				$adjacent_posts = dynamic_get_before_and_after_posts();
+				
+			?>
 			<!-- LATEST POSTS
 			========================================================= -->
 			<section id="latest-posts" class="band section">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 col-md-9 col-md-offset-2 col-lg-6 col-lg-offset-6 box-right">
-							<?php $i = 0; ?>
-							<?php while( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
+								<?php $i = 0; ?>
+								<?php while( $adjacent_posts->have_posts() ) : $adjacent_posts->the_post(); ?>
 
 								<article class="entry entry--latest <?php echo $nav_classes[$i]; ?>">
 									<?php echo dw_posted_on(); ?>
 									<h2 class="entry__title"><?php echo get_the_title(); ?></h2>
-									<a href="" class="entry__read-more">Ver notícia</a>
+									<a href="<?php the_permalink(); ?>" class="entry__read-more">Ver notícia</a>
 								</article><!-- entry -->
 
 							<?php
