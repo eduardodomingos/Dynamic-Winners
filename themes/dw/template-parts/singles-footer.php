@@ -2,20 +2,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-11 col-sm-offset-1 col-md-7 col-md-offset-5 col-lg-3 col-lg-offset-9 box-right">
-					<ul class="social text-xs-right">
-						<li class="social__item">
-							<a href="" class="social__link social__link--twitter"><span class="sr-only">Twitter</span></a>
-						</li>
-						<li class="social__item">
-							<a href="" class="social__link social__link--gplus"><span class="sr-only">Google+</span></a>
-						</li>
-						<li class="social__item">
-							<a href="" class="social__link social__link--linkedin"><span class="sr-only">Linkedin</span></a>
-						</li>
-						<li class="social__item">
-							<a href="" class="social__link social__link--youtube"><span class="sr-only">Youtube</span></a>
-						</li>
-					</ul><!-- social -->
+					<?php wp_nav_menu( array( 'theme_location' => 'social_footer', 'container'=> false, 'menu_id' => 'social-menu', 'menu_class' => 'social text-xs-center', 'link_before' => '<span class="sr-only">', 'link_after' => '</span>' ) ); ?>
 				</div>
 			</div>
 		</div><!-- container -->
