@@ -2,7 +2,7 @@
     $BLOG
 \*------------------------------------*/
 
-.blog {
+.single-post {
 	/**
 	 * Latest posts.
 	 *
@@ -50,43 +50,4 @@
 			}
 		}
 	}
-
-	//#latest-posts {
-	//	&,
-	//	a {
-	//		color: #fff;
-	//	}
-    //
-	//	.wrapper {
-	//		position: relative;
-	//		background-color: $red;
-	//		@include rem((
-	//			padding-left: 40px,
-	//			padding-top: 8px,
-	//			padding-bottom: 8px,
-	//		));
-	//	}
-    //
-	//	.edge {
-	//		position: absolute;
-	//		top: 0;
-	//		left: 0;
-	//		bottom: 0;
-	//		@include rem(width, 30px);
-	//		overflow: hidden;
-	//		&:before {
-	//			content: '';
-	//			position: absolute;
-	//			top: 0;
-	//			right: 0;
-	//			width: 100%;
-	//			height: 100%;
-	//			background-color: #fff;
-	//			transform-origin: 100% 0;
-	//			transform: skew(-18deg);
-	//		}
-	//	}
-    //
-	//}
-
 }
