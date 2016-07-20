@@ -59,8 +59,8 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 
 									<div class="slider__item">
 										<article class="entry entry--latest">
-											<h2 class="entry__title"><?php the_title(); ?></h2>
-											<a href="" class="entry__read-more">Ver mais</a>
+											<h2 class="entry__title"><a href="<?php echo  get_the_permalink(); ?>"><?php the_title(); ?></a></h2>
+											<a href="<?php echo  get_the_permalink(); ?>" class="entry__read-more">Ver mais</a>
 										</article><!-- entry -->
 									</div><!-- slider__item -->
 								<?php
