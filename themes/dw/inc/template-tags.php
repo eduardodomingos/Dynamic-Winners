@@ -11,16 +11,18 @@ if ( ! function_exists( 'dw_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function dw_posted_on() {
+function dw_posted_on( $post_id = 0 ) {
+	
+	$post_id = empty($post_id) ? get_the_ID() : $post_id;
 	$time_string = '<time class="entry-date published updated timeago" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+	if ( get_the_time( 'U', $post_id ) !== get_the_modified_time( 'U', $post_id ) ) {
 		$time_string = '<time class="entry-date published timeago" datetime="%1$s">%2$s</time><time class="updated timeago" datetime="%3$s">%4$s</time>';
 	}
 	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
+		esc_attr( get_the_date( 'c', $post_id ) ),
+		esc_html( get_the_date(get_option('date_format', $post_id)) ),
 		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		esc_html( get_the_modified_date(get_option('date_format', $post_id) ) )
 	);
 	$posted_on = sprintf(
 		esc_html_x( '%1$sPosted on%2$s %3$s', 'post date', 'dw' ),

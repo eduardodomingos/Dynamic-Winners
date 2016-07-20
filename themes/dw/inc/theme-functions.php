@@ -226,12 +226,26 @@ function dynamic_get_before_and_after_posts(){
 
 	$previous = get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false ); 
-	$adjacent_posts = new WP_Query();
 	
-	$adjacent_posts->posts = array( 0 => $previous, 1 => $next);
-	$adjacent_posts->post_count = count($adjacent_posts->posts);
+	$html = '';
+
 	
-	return $adjacent_posts;
+	if( !empty( $previous ) ){
+		$html .= '<article class="entry entry--latest prev">' . dw_posted_on($previous->ID)
+					. '<h2 class="entry__title">' . $previous->post_title . '</h2>
+					<a href="' . get_the_permalink($previous->ID) . '" class="entry__read-more">Ver notícia</a>
+				</article><!-- entry -->';
+	}
+
+	if( !empty( $next ) ){
+		$html .=  '<article class="entry entry--latest next">' . dw_posted_on($next->ID)
+					. '<h2 class="entry__title">' . $next->post_title . '</h2>
+					<a href="' . get_the_permalink($next->ID) . '" class="entry__read-more">Ver notícia</a>
+				</article><!-- entry -->';
+	}
+	
+
+	return $html;
 
 }
 

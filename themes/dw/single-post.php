@@ -48,31 +48,14 @@ $nav_classes = array('prev', 'next');
 				</div><!-- container -->
 			</article><!-- post -->
 			<?php endwhile; ?>
-			<?php  
-				
-				$adjacent_posts = dynamic_get_before_and_after_posts();
-				
-			?>
+			
 			<!-- LATEST POSTS
 			========================================================= -->
 			<section id="latest-posts" class="band section">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 col-md-9 col-md-offset-2 col-lg-6 col-lg-offset-6 box-right">
-								<?php $i = 0; ?>
-								<?php while( $adjacent_posts->have_posts() ) : $adjacent_posts->the_post(); ?>
-
-								<article class="entry entry--latest <?php echo $nav_classes[$i]; ?>">
-									<?php echo dw_posted_on(); ?>
-									<h2 class="entry__title"><?php echo get_the_title(); ?></h2>
-									<a href="<?php the_permalink(); ?>" class="entry__read-more">Ver notícia</a>
-								</article><!-- entry -->
-
-							<?php
-							++$i;
-							endwhile;
-							wp_reset_postdata();
-							?>
+								<?php echo dynamic_get_before_and_after_posts(); ?>
 
 						</div><!-- col -->
 					</div><!-- row -->
