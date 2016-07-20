@@ -30,7 +30,7 @@ $email = get_field('email', $home_id );
 					</ul><!-- social -->
 
 					<div class="text-xs-center">
-						<p><a href="tel:+244937924432" class="contacts__link">+<?php echo $phone; ?></a></p>
+						<p><a href="tel:+<?php echo str_replace(' ', '', $phone); ?>" class="contacts__link">+<?php echo $phone; ?></a></p>
 						<p><a href="mailto:geral@dynamicwinners.com" class="contacts__link"><?php echo $email; ?></a></p>
 					</div>
 				</div><!-- col -->
