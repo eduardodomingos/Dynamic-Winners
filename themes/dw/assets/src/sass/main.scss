@@ -102,8 +102,9 @@ $rem-baseline: $font-size-root;
 @import "layout/page-head";
 @import "components/site-nav";
 @import "components/languages-nav";
-@import "components/social";
 @import "components/buttons";
+@import "components/social";
+
 @import "components/forms";
 @import "components/athletes-grid";
 @import "components/post";
