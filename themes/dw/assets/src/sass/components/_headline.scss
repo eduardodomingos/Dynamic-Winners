@@ -19,13 +19,31 @@
 		text-align: right;
 		position: absolute;
 		right: 0;
-		left: 0;
-		@include make-container();
-		max-width: map-get($container-max-widths, lg);
-		@include rem(bottom, 80px);
+		@include rem((
+			bottom: 50px,
+			padding-right: 15px
+		));
+		@include make-col-span(10, 12);
+
+		@include media-breakpoint-up(md) {
+			@include rem((
+				padding-right: 40px,
+			));
+			@include make-col-span(7, 12);
+		}
+
+		@include media-breakpoint-up(lg) {
+			@include rem(bottom, 70px);
+		}
 
 		h1 {
 			color: #fff;
 			@include rem(font-size, 20px);
+			@include media-breakpoint-up(md) {
+				@include rem(font-size, 25px);
+			}
+			@include media-breakpoint-up(lg) {
+				@include rem(font-size, 29px);
+			}
 		}
 	}

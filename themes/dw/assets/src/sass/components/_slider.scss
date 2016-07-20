@@ -145,6 +145,9 @@ $arrow-size: 40px;
 		right: 0;
 		text-align: right;
 		@include rem(bottom, 20px);
+		@include media-breakpoint-up(lg) {
+			text-align: center;
+		}
 	}
 }
 
