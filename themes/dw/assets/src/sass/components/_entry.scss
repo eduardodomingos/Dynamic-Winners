@@ -1,7 +1,11 @@
 /*------------------------------------*\
     $ENTRY
 \*------------------------------------*/
-.entry {}
+.entry {
+	.updated:not(.published) {
+		display: none;
+	}
+}
 
 	.entry__date,
 	.posted-on {

@@ -1,7 +1,11 @@
 /*------------------------------------*\
     $POST
 \*------------------------------------*/
-.post {}
+.post {
+	.updated:not(.published) {
+		display: none;
+	}
+}
 
 	.post__main-photo {
 		@include rem(margin-bottom, 15px);
