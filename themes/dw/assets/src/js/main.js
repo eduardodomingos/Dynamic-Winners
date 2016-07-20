@@ -150,44 +150,43 @@
 		 */
 		if(dom.$body.hasClass('single-post')) {
 			// Latest posts slider
-			$('#latest-posts .slider').slick({
-				mobileFirst: true
-			});
+			// $('#latest-posts .slider').slick({
+			// 	mobileFirst: true
+			// });
 
 			// Athlete slider
-			$('.athlete__slider .slider-for').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				fade: true,
-				asNavFor: '.athlete__slider .slider-nav'
-			});
-			$('.athlete__slider .slider-nav').slick({
-				mobileFirst: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				asNavFor: '.athlete__slider .slider-for',
-				centerMode: false,
-				focusOnSelect: true,
-				responsive: [
-					{
-						breakpoint: 479,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 1
-						}
-					},
-					{
-						breakpoint: 1023,
-						settings: {
-							slidesToShow: 5,
-							slidesToScroll: 1
-						}
-					}
-				]
-			});
+			// $('.athlete__slider .slider-for').slick({
+			// 	slidesToShow: 1,
+			// 	slidesToScroll: 1,
+			// 	arrows: false,
+			// 	fade: true,
+			// 	asNavFor: '.athlete__slider .slider-nav'
+			// });
 
-
+			// $('.athlete__slider .slider-nav').slick({
+			// 	mobileFirst: true,
+			// 	slidesToShow: 1,
+			// 	slidesToScroll: 1,
+			// 	asNavFor: '.athlete__slider .slider-for',
+			// 	centerMode: false,
+			// 	focusOnSelect: true,
+			// 	responsive: [
+			// 		{
+			// 			breakpoint: 479,
+			// 			settings: {
+			// 				slidesToShow: 3,
+			// 				slidesToScroll: 1
+			// 			}
+			// 		},
+			// 		{
+			// 			breakpoint: 1023,
+			// 			settings: {
+			// 				slidesToShow: 5,
+			// 				slidesToScroll: 1
+			// 			}
+			// 		}
+			// 	]
+			// });
 
 		} // end Blog JS
 
@@ -197,18 +196,18 @@
 		 */
 		if(dom.$body.hasClass('athlete')) {
 			// Gallery
-			$('.athlete__media .slider').slick({
-				mobileFirst: true,
-				responsive: [
-					{
-						breakpoint: 1023,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 2
-						}
-					}
-				]
-			});
+			// $('.athlete__media .slider').slick({
+			// 	mobileFirst: true,
+			// 	responsive: [
+			// 		{
+			// 			breakpoint: 1023,
+			// 			settings: {
+			// 				slidesToShow: 2,
+			// 				slidesToScroll: 2
+			// 			}
+			// 		}
+			// 	]
+			// });
 		}
 	});
 
