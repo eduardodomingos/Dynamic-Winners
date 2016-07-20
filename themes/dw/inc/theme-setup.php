@@ -3,6 +3,7 @@
 function dynamic_remove_home_post_type_support() {
 
     remove_post_type_support(  'home', 'editor' );
+    remove_post_type_support(  'post', 'thumbnail' );
 }
 
 add_action( 'init', 'dynamic_remove_home_post_type_support' );
