@@ -8,6 +8,7 @@
 			$window: 					$(window),
 			$body:	 					$('body'),
 			$homeNewsSlider:			$('.home #news .slider'),
+			$homeServicesSlider:		$('.home #services .slider'),
 			$homeAthletesSlider:		$('.home #athletes .slider'),
 			$menuToggle:				$('.site-nav__toggle'),
 			$menuToggleIcon:			$('.site-nav__toggle'),
@@ -35,7 +36,6 @@
 		 * Homepage Code
 		 */
 		if(dom.$body.hasClass('home')) {
-
 			/*
 			 * Sliders
 			 */
@@ -43,11 +43,19 @@
 			$('#headlines .slider').slick({
 				mobileFirst: true,
 				autoplay: false,
-				dots: true,
+				dots: true
+			});
+
+			// Services Slider DotDotDot
+			dom.$homeServicesSlider.on('init', function(event, slick){
+				dom.$homeServicesSlider.find('.dotdotdot').dotdotdot({
+					height: 63,
+					watch: true
+				});
 			});
 
 			// Services Slider
-			$('#services .slider').slick({
+			dom.$homeServicesSlider.slick({
 				mobileFirst: true,
 				dots: true,
 				responsive: [
@@ -69,6 +77,15 @@
 			});
 
 			dom.$window.load(function(){
+
+				// News Slider DotDotDot
+				dom.$homeNewsSlider.on('init', function(event, slick){
+					dom.$homeNewsSlider.find('.dotdotdot').dotdotdot({
+						height: 63,
+						watch: true
+					});
+				});
+
 				// News Slider
 				dom.$homeNewsSlider.slick({
 					mobileFirst: true,
@@ -112,7 +129,6 @@
 
 			// Autosize contact form textarea
 			autosize($('.contact-form #inputMessage'));
-
 
 			// On window resize:
 			$(window).resize(function(event){

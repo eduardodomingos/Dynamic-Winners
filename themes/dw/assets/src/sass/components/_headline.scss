@@ -14,18 +14,42 @@
 		height: 512px;
 	}
 }
+	.headline__overlay {
+		@include position(absolute, 0, 0, 0, 0);
+		background: linear-gradient(to top, rgba(#000, 0.75), transparent 55%);
+	}
+
 
 	.headline__text {
 		text-align: right;
 		position: absolute;
 		right: 0;
-		left: 0;
-		@include make-container();
-		max-width: map-get($container-max-widths, lg);
-		@include rem(bottom, 80px);
+		text-shadow: 1px 1px 1px rgba(#000, 0.5);
+		@include rem((
+			bottom: 50px,
+			padding-right: 15px
+		));
+		@include make-col-span(10, 12);
+
+		@include media-breakpoint-up(md) {
+			@include rem((
+				padding-right: 40px,
+			));
+			@include make-col-span(7, 12);
+		}
+
+		@include media-breakpoint-up(lg) {
+			@include rem(bottom, 70px);
+		}
 
 		h1 {
 			color: #fff;
 			@include rem(font-size, 20px);
+			@include media-breakpoint-up(md) {
+				@include rem(font-size, 25px);
+			}
+			@include media-breakpoint-up(lg) {
+				@include rem(font-size, 29px);
+			}
 		}
 	}

@@ -6,6 +6,7 @@ module.exports = {
 			'bower_components/bootstrap/dist/js/bootstrap.js',
 			'bower_components/slick-carousel/slick/slick.js',
 			'bower_components/autosize/dist/autosize.js',
+			'bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.js',
 			'bower_components/tether/dist/js/tether.js'
 		],
 		dest: 'assets/src/js/vendors/'

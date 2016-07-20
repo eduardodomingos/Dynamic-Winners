@@ -35,7 +35,10 @@
 	.social__item {
 		display: inline-block;
 	}
-		.social__link {
+
+
+
+		.social__item a {
 			color: #fff;
 			text-align: center;
 			padding: 0;
@@ -57,6 +60,7 @@
      		* If the social nav exists in a page head, the buttons cosmetic changes.
      		*/
 			.page-head & {
+				@extend %btn--slanted;
 				@include rem((
 					width: 38px,
 					height: 38px,
@@ -76,7 +80,7 @@
 			}
 
 			/**
-     		* If the social nav exists in a page head, the buttons cosmetic changes.
+     		* If the social nav exists in a page foot, the buttons cosmetic changes.
      		*/
 			.page-foot & {
 				@include rem((
@@ -89,43 +93,43 @@
 
 		}
 
-		.social__link--facebook {
+		.social__item--facebook a {
 			&:before {
 				content: '\f09a';
 			}
 		}
 
-		.social__link--linkedin {
+		.social__item--linkedin a {
 			&:before {
 				content: '\f0e1';
 			}
 		}
 
-		.social__link--twitter {
+		.social__item--twitter a {
 			&:before {
 				content: '\f099';
 			}
 		}
 
-		.social__link--gplus {
+		.social__item--gplus a {
 			&:before {
 				content: '\f0d5';
 			}
 		}
 
-		.social__link--youtube {
+		.social__item--youtube a {
 			&:before {
 				content: '\f167';
 			}
 		}
 
-		.social__link--instagram {
+		.social__item--instagram a {
 			&:before {
 				content: '\f16d';
 			}
 		}
 
-		.social__link--facebook-squared {
+		.social__item--facebook-squared a {
 			&:before {
 				content: '\f308';
 			}

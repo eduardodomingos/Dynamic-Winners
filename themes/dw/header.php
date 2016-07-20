@@ -42,14 +42,7 @@
 						</div><!-- site-nav__list-->
 					</nav><!-- site-nav-->
 
-					<ul class="social">
-						<li class="social__item">
-							<a href="" class="social__link social__link--facebook btn btn--slanted"><span class="sr-only">Facebook</span></a>
-						</li>
-						<li class="social__item">
-							<a href="" class="social__link social__link--linkedin btn btn--slanted"><span class="sr-only">Linkedin</span></a>
-						</li>
-					</ul><!-- social -->
+					<?php wp_nav_menu( array( 'theme_location' => 'social_header', 'container'=> false, 'menu_id' => 'social-menu', 'menu_class' => 'social', 'link_before' => '<span class="sr-only">', 'link_after' => '</span>' ) ); ?>
 
 					<nav class="languages-nav">
 						<ul class="languages-nav__list">
