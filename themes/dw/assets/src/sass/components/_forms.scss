@@ -2,6 +2,17 @@
     $FORMS
 \*------------------------------------*/
 
+//Contact Form 7 Styles
+.wpcf7-validation-errors {
+	@extend .alert;
+	@extend .alert-danger;
+}
+
+.wpcf7-mail-sent-ok {
+	@extend .alert;
+	@extend .alert-success;
+}
+
 .contact-form {
 	@include rem(margin-bottom, 20px);
 	.form-control-label {
