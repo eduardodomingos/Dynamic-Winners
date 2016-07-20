@@ -55,22 +55,20 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 col-md-9 col-md-offset-2 col-lg-6 col-lg-offset-6 box-right">
-							<div class="slider">
-								<?php while( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
+							
+							<?php while( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
 
-									<div class="slider__item">
-										<article class="entry entry--latest">
-											<p class="entry__date"><?php the_date('j F Y'); ?></p>
-											<h2 class="entry__title"><?php the_title(); ?></h2>
-											<a href="" class="entry__read-more">Ver notícia</a>
-										</article><!-- entry -->
-									</div><!-- slider__item -->
-								<?php
-								endwhile;
-								wp_reset_postdata();
-								?>
+								<article class="entry entry--latest">
+									<?php echo dw_posted_on(); ?>
+									<h2 class="entry__title"><?php echo get_the_title(); ?></h2>
+									<a href="" class="entry__read-more">Ver notícia</a>
+								</article><!-- entry -->
 
-							</div><!-- slider -->
+							<?php
+							endwhile;
+							wp_reset_postdata();
+							?>
+
 						</div><!-- col -->
 					</div><!-- row -->
 				</div><!-- container -->
