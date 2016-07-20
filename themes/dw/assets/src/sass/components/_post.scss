@@ -32,6 +32,7 @@
 
 		.post__date,
 		.posted-on {
+			display: block;
 			color: $red;
 			opacity: 0.5;
 			@include rem(font-size, 15px);
