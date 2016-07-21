@@ -23,6 +23,18 @@ function dynamic_widgets_init() {
 	) );
 
 
+	// Custom widget area.
+	register_sidebar( array(
+		'name' => __( 'Custom Widget Area'),
+		'id' => 'custom-widget-area',
+		'description' => __( 'An optional custom widget area for your site', 'dw' ),
+		'before_widget' => '<nav id="%1$s" class="languages-nav %2$s">',
+		'after_widget' => '</nav>'
+	) );
+
+
+
+
 }
 
 add_action( 'widgets_init', 'dynamic_widgets_init' );

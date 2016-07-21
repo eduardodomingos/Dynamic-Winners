@@ -44,16 +44,11 @@
 
 					<?php wp_nav_menu( array( 'theme_location' => 'social_header', 'container'=> false, 'menu_id' => 'social-menu', 'menu_class' => 'social', 'link_before' => '<span class="sr-only">', 'link_after' => '</span>' ) ); ?>
 
-					<nav class="languages-nav">
-						<ul class="languages-nav__list">
-							<li class="languages-nav__item">
-								<a href="" class="languages-nav__link languages-nav__link--current">pt</a>
-							</li>
-							<li class="languages-nav__item">
-								<a href="" class="languages-nav__link">en</a>
-							</li>
-						</ul><!-- languages-nav__list-->
-					</nav><!-- languages-nav -->
+
+					<?php
+					if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Custom Widget Area') ) : ?>
+					<?php endif; ?>
+
 				</div><!-- pull -->
 
 			</div><!-- wrapper -->
