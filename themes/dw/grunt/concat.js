@@ -1,6 +1,7 @@
 module.exports = {
 	js: {
 		src: [
+			'assets/src/js/vendors/modernizr-custom.js',
 			'assets/src/js/vendors/tether.js',
 			'assets/src/js/vendors/bootstrap.js',
 			'assets/src/js/vendors/slick.js',
