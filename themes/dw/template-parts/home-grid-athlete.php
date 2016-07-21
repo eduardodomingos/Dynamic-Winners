@@ -1,7 +1,8 @@
 <?php
-$thumbnail_id = get_post_thumbnail_id( $post->ID );
-$thumbnail_small = wp_get_attachment_image_src($thumbnail_id, 'grid-small');
-$thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
+$main_image_id = get_field('main_image');
+
+$thumbnail_small = wp_get_attachment_image_src($main_image_id, 'grid-small');
+$thumbnail_medium = wp_get_attachment_image_src($main_image_id, 'grid-medium');
 
 $position = get_field('position', $post->ID );
 ?>
