@@ -58,6 +58,7 @@ $nav_classes = array('prev', 'next');
 							<div class="clearfix">
 								<?php echo dynamic_get_before_and_after_posts(); ?>
 							</div>
+
 						</div><!-- col -->
 					</div><!-- row -->
 				</div><!-- container -->

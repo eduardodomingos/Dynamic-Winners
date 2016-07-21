@@ -189,6 +189,12 @@ function dynamic_add_manchetes_css_to_header(){
 					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-services--lg.jpg',
 				)
 
+
+			'athlete' => array(
+					'mobile' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
+					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
+					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
+				)
 		);
 
 		$post_type = $post->post_type;
@@ -269,6 +275,28 @@ function dynamic_get_latest_news(){
 	];
 
 	return new WP_Query($args);
+
+}
+
+
+function dw_get_athlete_positions( $athlete_id = 0 ){
+
+	$athlete_id = empty( $athlete_id ) ? get_the_ID() : $athlete_id;
+	
+	if( empty($athlete_id) ){
+		return false;
+	}
+	$field_obj = get_field_object('position');
+	$choices = $field_obj['choices'];
+
+	$positions = get_field('position', $athlete_id);
+
+	foreach( $positions as $key => $position ){
+		$positions[$key] = $choices[$position];
+	}
+
+	return $positions;
+	 
 
 }
 

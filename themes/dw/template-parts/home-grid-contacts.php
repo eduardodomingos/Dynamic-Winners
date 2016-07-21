@@ -17,7 +17,7 @@ $email = get_field('email', $home_id );
 					<?php wp_nav_menu( array( 'theme_location' => 'social_footer', 'container'=> false, 'menu_id' => 'social-menu', 'menu_class' => 'social text-xs-center', 'link_before' => '<span class="sr-only">', 'link_after' => '</span>' ) ); ?>
 
 					<div class="text-xs-center">
-						<p><a href="tel:+244937924432" class="contacts__link">+<?php echo $phone; ?></a></p>
+						<p><a href="tel:+<?php echo str_replace(' ', '', $phone); ?>" class="contacts__link">+<?php echo $phone; ?></a></p>
 						<p><a href="mailto:geral@dynamicwinners.com" class="contacts__link"><?php echo $email; ?></a></p>
 					</div>
 				</div><!-- col -->

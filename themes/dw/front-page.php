@@ -15,9 +15,13 @@
 get_header(); ?>
 
 <?php dynamic_get_headline_manchetes(); ?>
+
 <div class="band band--primary">
+	
 	<?php dynamic_sidebar( 'dynamic-homepage-sections' ); ?>
+
 </div>
+
 <?php get_template_part( 'template-parts/home-grid', 'contacts' ); ?>
 
 <?php get_footer(); ?>
