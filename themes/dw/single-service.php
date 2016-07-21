@@ -9,9 +9,10 @@
 
 get_header();
 
-$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
-$thumbnail_small = wp_get_attachment_image_src($thumbnail_id, 'grid-small');
-$thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
+$main_image__id = get_field('main_image');
+$thumbnail_small = wp_get_attachment_image_src($main_image__id, 'grid-small');
+$thumbnail_medium = wp_get_attachment_image_src($main_image__id, 'grid-medium');
+$thumbnail_large = wp_get_attachment_image_src($main_image__id, 'full');
 ?>
 
 
@@ -31,7 +32,7 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<img alt="" srcset="echo $thumbnail_small[0]; ?> 224w, <?php echo $thumbnail_medium[0]; ?> 263w" sizes="(min-width: 480px) 50vw, 100vw" class="post__main-photo img-fluid">
+							<img alt="" srcset="echo $thumbnail_small[0]; ?> 224w, <?php echo $thumbnail_medium[0]; ?> 263w, <?php echo $thumbnail_large[0]; ?> 520w" sizes="(min-width: 480px) 50vw, 100vw" class="post__main-photo img-fluid">
 						</div><!-- col -->
 						<div class="col-md-6">
 							<header class="post__header">
