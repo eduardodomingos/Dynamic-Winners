@@ -9,10 +9,10 @@
 
 get_header();
 
-$main_image__id = get_field('main_image');
-$thumbnail_small = wp_get_attachment_image_src($main_image__id, 'grid-small');
-$thumbnail_medium = wp_get_attachment_image_src($main_image__id, 'grid-medium');
-$thumbnail_large = wp_get_attachment_image_src($main_image__id, 'full');
+$main_image_id = get_field('main_image');
+$thumbnail_small = wp_get_attachment_image_src($main_image_id, 'grid-small');
+$thumbnail_medium = wp_get_attachment_image_src($main_image_id, 'grid-medium');
+$thumbnail_large = wp_get_attachment_image_src($main_image_id, 'full');
 
 $nav_classes = array('prev', 'next');
 ?>
