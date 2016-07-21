@@ -230,6 +230,13 @@
 	 */
 
 	#contacts {
+		position: relative;
+		&:before {
+			content: '';
+			@include position(absolute, 0,0,0,0);
+			background-color: rgba(0,0,0,0.5);
+		}
+
 		@include rem((
 			padding-top: 80px,
 			padding-bottom: 180px
