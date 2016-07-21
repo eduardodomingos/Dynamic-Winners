@@ -21,28 +21,34 @@
 	}
 }
 
-	.languages-nav__list {
+	.language-chooser {
 		margin-bottom: 0;
 		@include list-unstyled();
 		@include clearfix();
-	}
-
-		.languages-nav__item {
+		> li {
 			float: left;
 			text-transform: uppercase;
 			color: #fff;
 			@include rem(font-size, 13px);
 			line-height: 2.9230769231;
 			font-weight: 300;
-			+ .languages-nav__item:before {
+			+ li:before {
 				content: '\002F';
 			}
 			@include media-breakpoint-up(lg) {
 				color: #000;
 			}
-		}
 
-			.languages-nav__link {
+			&.active {
+				a {
+					color: #fff;
+					@include media-breakpoint-up(lg) {
+						color: #000;
+					}
+				}
+			}
+
+			a {
 				float: right;
 				color: rgba(#fff, 0.5);
 				display: block;
@@ -54,10 +60,5 @@
 					color: rgba(#000, 0.5);
 				}
 			}
-
-			.languages-nav__link--current {
-				color: #fff;
-				@include media-breakpoint-up(lg) {
-					color: #000;
-				}
-			}
+		}
+	}
