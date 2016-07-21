@@ -73,6 +73,13 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 					</div><!-- row -->
 				</div><!-- container -->
 			</section><!-- latest-posts -->
+
+			<div class="band">
+				<div class="container text-xs-right">
+					<?php echo dw_share_buttons( esc_html__( 'Share', 'dw' ), get_permalink(), get_the_title() ); ?>
+				</div><!-- container -->
+			</div><!-- band -->
+
 		</main><!-- content -->
 	</div><!-- band--primary -->
 
