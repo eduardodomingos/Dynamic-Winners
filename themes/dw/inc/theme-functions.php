@@ -300,6 +300,39 @@ function dw_get_athlete_positions( $athlete_id = 0 ){
 
 }
 
+
+function dw_get_athlete_biography(){
+
+	$fields = array( 'athlete' => array('name', 'birthday', 'weight', 'height', 'team', 'position', 'origin'),
+					  'coach' => array('name', 'birthday', 'weight', 'height', 'team', 'origin'),
+					  'team' => array('name', 'foundation', 'country') );
+
+
+	$athlete_biography = array();
+	
+	$terms = wp_get_post_terms(get_the_ID(), 'athlete_type');
+	$tax = $terms[0]->slug;
+	
+	foreach( $fields[$tax] as $field ){
+		
+		if( $field == 'position'){
+			$athlete_biography[$field] = dw_get_athlete_positions();
+		}
+		
+		else{
+			
+			$field_value= get_field($field);
+			if( ! empty($field_value) ){
+				$athlete_biography[$field] = $field_value;
+			}
+		}	
+		
+	}
+	
+	return $athlete_biography;
+
+}
+
 function dynamic_get_headline_manchetes(){
 
 	$home_id = dynamic_get_active_homepage();
