@@ -8,7 +8,7 @@ $position = get_field('position', $post->ID );
 ?>
 
 <div class="slider__item">
-	<article class="card entry entry--athlete text-xs-center  m-b-0">
+	<article class="card entry entry--athlete text-xs-center m-b-0">
 		<div class="img-wrapper">
 			<?php if( !empty( $position ) ): ?>
 				<p class="category"><?php echo $position; ?></p>

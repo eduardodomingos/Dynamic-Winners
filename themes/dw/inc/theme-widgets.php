@@ -3,9 +3,9 @@
 function dynamic_register_widgets() {
 
 	register_widget( 'Dynamic_Widget_Home_Last_News' );
-	
+
 	register_widget( 'Dynamic_Widget_Home_Services' );
-	
+
 	register_widget( 'Dynamic_Widget_Home_Athletes' );
 
 	register_widget( 'Dynamic_Widget_Home_About' );
@@ -17,10 +17,10 @@ add_action( 'widgets_init', 'dynamic_register_widgets' );
 class Dynamic_Widget_Home_Last_News extends WP_Widget {
 
 	function __construct() {
-		
+
 		$widget_ops = array( 'classname' => 'news', 'description' => __( 'Display the latest Dynamic Winners news', 'dynamic' ) );
 		parent::__construct( 'news', __('Dynamic Latest Posts','dynamic' ), $widget_ops );
-	
+
 	}
 
 	function widget( $args, $instance ) {
@@ -33,14 +33,14 @@ class Dynamic_Widget_Home_Last_News extends WP_Widget {
 
 		echo $args['before_widget'];
 		?>
-		
+
 		<div class="col-sm-12 col-lg-8 col-lg-offset-2">
 			<div class="section__header">
 				<h2 class="heading sr-only">Notícias</h2>
 			</div><!-- section__header -->
 			<div class="slider slider--entries">
-		<?php 
-		
+		<?php
+
 			while( $news->have_posts() ) : $news->the_post();
 				get_template_part( 'template-parts/home-grid', 'post' );
 			endwhile;
@@ -60,10 +60,10 @@ class Dynamic_Widget_Home_Last_News extends WP_Widget {
 class Dynamic_Widget_Home_Services extends WP_Widget {
 
 	function __construct() {
-		
+
 		$widget_ops = array( 'classname' => 'services', 'description' => __( 'Display the services widgets at homepage', 'dynamic' ) );
 		parent::__construct( 'services', __('Dynamic Services','dynamic' ), $widget_ops );
-	
+
 	}
 
 	function widget( $args, $instance ) {
@@ -73,7 +73,7 @@ class Dynamic_Widget_Home_Services extends WP_Widget {
 		}
 
 		echo $args['before_widget'];
-		
+
 		$home_id = dynamic_get_active_homepage();
 
 		$services = dynamic_get_homepage_services( $home_id );
@@ -85,7 +85,7 @@ class Dynamic_Widget_Home_Services extends WP_Widget {
 			</div><!-- section__header -->
 			<div class="slider slider--entries">
 
-		<?php 
+		<?php
 			$i = 1;
 			while( $services->have_posts() ) : $services->the_post();
 				dynamic_get_template_part( 'template-parts/home-grid', 'service', array('order' => $i) );
@@ -93,10 +93,10 @@ class Dynamic_Widget_Home_Services extends WP_Widget {
 			endwhile;
 			wp_reset_postdata();
 		?>
-			
+
 			</div>
 		</div>
-		<?php 
+		<?php
 
 		echo $args['after_widget'];
 
@@ -108,10 +108,10 @@ class Dynamic_Widget_Home_Services extends WP_Widget {
 class Dynamic_Widget_Home_Athletes extends WP_Widget {
 
 	function __construct() {
-		
+
 		$widget_ops = array( 'classname' => 'athletes', 'description' => __( 'Display the athlets ( players, coaches ans teams ) inside a widget inside at homepage', 'dynamic' ) );
 		parent::__construct( 'athletes', __('Dynamic Athlets','dynamic' ), $widget_ops );
-	
+
 	}
 
 	function widget( $args, $instance ) {
@@ -121,7 +121,7 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 		}
 
 		echo $args['before_widget'];
-		
+
 		$home_id = dynamic_get_active_homepage();
 		$athletes = dynamic_get_homepage_athletes( $home_id );
 
@@ -132,7 +132,7 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 			</div><!-- section__header -->
 		</div><!-- col -->
 				<div class="col-sm-12 col-lg-6 col-lg-offset-3">
-					
+
 						<ul class="nav nav-tabs" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" data-toggle="tab" href="#players" role="tab">Jogadores</a>
@@ -144,13 +144,13 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 								<a class="nav-link" data-toggle="tab" href="#teams" role="tab">Equipas</a>
 							</li>
 						</ul><!-- nav-tabs -->
-		
+
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="tab-content">
-		<?php 
+		<?php
 
 		foreach( $athletes as $athlete ){ ?>
 
@@ -159,26 +159,26 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="slider slider--entries">
-							<?php 
+							<?php
 							while( $athlete['posts']->have_posts() ) : $athlete['posts']->the_post();
 								get_template_part( 'template-parts/home-grid', 'athlete' );
 							endwhile;
 							wp_reset_postdata();
 							?>
 							</div>
-						</div>		
+							<div class="loadMoreContainer clearfix"></div>
+							<div class="text-xs-center">
+								<button class="btn btn--load-more js-load-more-athletes">Carregar mais</button>
+								<div class="loading js-loader" style="display: none; margin-bottom:40px"><span class="sr-only">A carregar...</span></div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>			
-
-		<?php 
-		}
-
-		?>
-
-			<div class="text-xs-center">
-				<button class="btn btn--load-more js-load-more-athletes">Carregar mais</button>
 			</div>
+
+		<?php
+		}
+		?>
 		</div>
 	</section>
 
@@ -202,28 +202,28 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 
 		$title = $instance['title'];
 		$description = empty( $instance['description'] ) ? '' : $instance['description'];
-		
+
 		?>
 
 		<?php echo $args['before_widget']; ?>
-		
+
 		<div class="col-sm-12 col-lg-6 col-lg-offset-3">
 			<div class="section__header">
 				<h2 class="heading"><?php echo $title ?></h2>
 			</div><!-- section__header -->
 			<p class="text-xs-center m-b-0"><?php echo $description ?></p>
 		</div><!-- col -->
-		
-		
+
+
 
 		<?php echo $args['after_widget'];
 
 	}
 
 	function update( $new_instance, $old_instance ) {
-		
+
 		$instance = $old_instance;
-		
+
 		$instance['description'] =  $new_instance['description'];
 		$instance['title'] = !empty( $new_instance['title'] ) ? $new_instance['title'] : '';
 
@@ -244,8 +244,8 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 			<textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>"><?php echo esc_textarea( $instance['description'] ); ?></textarea>
 		</p>
 
-		
-		
+
+
 		<?php
 	}
 }
