@@ -185,8 +185,8 @@ function dynamic_add_manchetes_css_to_header(){
 				),
 			'service' => array(
 					'mobile' => get_template_directory_uri() . '/assets/build/img/bg-services--sm.jpg',
-					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-services--sm.jpg',
-					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-services--sm.jpg',
+					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-services--md.jpg',
+					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-services--lg.jpg',
 				)
 
 		);
