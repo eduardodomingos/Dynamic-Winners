@@ -4,7 +4,8 @@
     "bootstrap": "v4.0.0-alpha.2",
     "slick-carousel": "^1.6.0",
     "autosize": "^3.0.16",
-    "jQuery.dotdotdot": "dotdotdot#^1.8.3"
+    "jQuery.dotdotdot": "dotdotdot#^1.8.3",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.1.4"
   },
   "devDependencies": {
     "sass-rem": "^1.2.2",

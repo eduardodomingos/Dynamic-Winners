@@ -3,7 +3,6 @@
 \*------------------------------------*/
 
 .home {
-
 	// The hp has a narrower container
 	.container {
 		@include make-container-max-widths($hp-container-max-widths);

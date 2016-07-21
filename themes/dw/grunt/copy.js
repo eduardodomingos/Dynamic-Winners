@@ -7,7 +7,8 @@ module.exports = {
 			'bower_components/slick-carousel/slick/slick.js',
 			'bower_components/autosize/dist/autosize.js',
 			'bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.js',
-			'bower_components/tether/dist/js/tether.js'
+			'bower_components/tether/dist/js/tether.js',
+			'bower_components/smooth-scroll/dist/js/smooth-scroll.js'
 		],
 		dest: 'assets/src/js/vendors/'
 	},

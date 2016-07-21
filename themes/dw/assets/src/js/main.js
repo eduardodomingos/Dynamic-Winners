@@ -1,12 +1,18 @@
 (function($) {
-	$(document).ready(function(){
 
+	$(window).load(function(){
+		// Fade body in
+		$('body.home').addClass('active');
+	});
+
+	$(document).ready(function(){
 		/*
 		 * Cache references for DOM elements
 		 */
 		var dom = {
 			$window: 					$(window),
 			$body:	 					$('body'),
+			$navLinks:					$('a.site-nav__link[href^=#]'),
 			$homeNewsSlider:			$('.home #news .slider'),
 			$homeServicesSlider:		$('.home #services .slider'),
 			$homeAthletesSlider:		$('.home #athletes .slider'),
@@ -32,10 +38,28 @@
 			}
 		});
 
+
+
+
 		/*
 		 * Homepage Code
 		 */
 		if(dom.$body.hasClass('home')) {
+
+			/*
+			 * Smooth scroll
+			 */
+			$('.site-nav__link').attr('data-scroll', true);
+			smoothScroll.init();
+			if ( window.location.hash ) {
+				var hash = smoothScroll.escapeCharacters( window.location.hash ); // Escape the hash
+				var toggle = document.querySelector( 'a[href*="' + hash + '"]' ); // Get the toggle (if one exists)
+				var options = {
+					speed: 1000,
+				}; // Any custom options you want to use would go here
+				smoothScroll.animateScroll( hash, toggle, options );
+			}
+
 			/*
 			 * Sliders
 			 */
@@ -77,7 +101,6 @@
 			});
 
 			dom.$window.load(function(){
-
 				// News Slider DotDotDot
 				dom.$homeNewsSlider.on('init', function(event, slick){
 					dom.$homeNewsSlider.find('.dotdotdot').dotdotdot({
@@ -132,6 +155,7 @@
 				}).on('afterChange',function(event){
 					fixVerticalArrows(event);
 				}).trigger('afterChange');
+
 			});
 
 			// Autosize contact form textarea
@@ -165,7 +189,7 @@
 					$loadContainer.append(dummyHtml);
 					$loading.hide();
 				}, 2000);
-				
+
 			});
 
 
