@@ -189,6 +189,36 @@
 		.tab-content {
 			@include rem(margin-bottom, 20px);
 		}
+
+		.loadMoreContainer {
+			.entry--athlete {
+				@include media-breakpoint-up(md) {
+					width: 165px;
+					float: left;
+					@include rem((
+						margin-right: 24px,
+					));
+				}
+
+				&:nth-child(2n) {
+					@include media-breakpoint-only(md) {
+						margin-right: 0;
+					}
+				}
+
+				@include media-breakpoint-up(lg) {
+					width: 236px;
+					float: left;
+					@include rem((
+						margin-right: 66px,
+					));
+					&:nth-child(3n) {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
 	}
 
 
