@@ -35,14 +35,15 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-7 col-sm-offset-5 box-right">
-							<h1 class="athlete__name"><?php get_field('name', get_the_ID()); ?></h1>
-							<?php $positions = dw_get_athlete_positions(); ?>
 							
+							<h1 class="athlete__name"><?php echo get_field('name'); ?></h1>
+							<?php if( isset($biography['position']  ) ) : ?>
 							<ul class="athlete__main-features">
 								<?php foreach( $biography['position'] as $position ){ ?> 
 								<li><?php echo $position; ?></li>
 								<?php } ?>
 							</ul>
+							<?php endif; ?>
 							<ul class="social">
 								<li class="social__item">
 									<a href="" class="social__link social__link--facebook-squared"><span class="sr-only">Facebook</span></a>
@@ -118,8 +119,9 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 										<?php if( !empty( $biography['team'] ) ){ ?>
 												Equipa: <?php echo $biography['team']; ?><br>
 										<?php } ?>	
-										
-										Posição: <?php echo implode('/', $biography['position']); ?><br>
+										<?php if( isset( $biography['position'] ) ) : ?>
+											Posição: <?php echo implode('/', $biography['position']); ?><br>
+										<?php endif; ?>
 										<?php if( !empty( $biography['birthday'] ) ){ ?>
 											Data de nascimento: <?php echo $biography['birthday']; ?></p>
 										<?php } ?>
@@ -129,10 +131,10 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 											Nacionalidade: <?php echo $biography['origin']; ?><br>
 											<?php } 
 											if( !empty( $biography['height'] ) ){ ?>
-											Altura: <?php echo $biography['height']; ?>cm<br>
+											Altura: <?php echo $biography['height']; ?> cm<br>
 											<?php } 
 											if( !empty( $biography['weight'] ) ){ ?>
-											Peso: <?php echo $biography['weight']; ?>kg</p>
+											Peso: <?php echo $biography['weight']; ?> kg</p>
 											<?php } ?>
 									</div><!-- col -->
 								</div><!-- row -->
@@ -177,20 +179,7 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 				<div class="container">
 					<div class="tab-content">
 					<div class="tab-pane active" id="photos" role="tabpanel">
-						<div class="slider">
-							<div class="slider__item">
-								<img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/1023x767?text=4:3 263w" sizes="(min-width: 1024px) 50vw, 100vw" class="img-fluid">
-							</div>
-							<div class="slider__item">
-								<img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/1023x767?text=4:3 263w" sizes="(min-width: 1024px) 50vw, 100vw" class="img-fluid">
-							</div>
-							<div class="slider__item">
-								<img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/1023x767?text=4:3 263w" sizes="(min-width: 1024px) 50vw, 100vw" class="img-fluid">
-							</div>
-							<div class="slider__item">
-								<img alt="" srcset="http://placehold.it/224x168?text=4:3 224w, http://placehold.it/1023x767?text=4:3 263w" sizes="(min-width: 1024px) 50vw, 100vw" class="img-fluid">
-							</div>
-						</div>
+						<?php the_content(); ?>
 					</div>
 					<div class="tab-pane" id="video" role="tabpanel">
 						<img alt="" srcset="http://placehold.it/224x168?text=video4:3 224w, http://placehold.it/1023x767?text=video4:3 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid">
