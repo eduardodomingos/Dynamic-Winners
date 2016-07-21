@@ -225,18 +225,19 @@ function dynamic_add_manchetes_css_to_header(){
 function dynamic_get_before_and_after_posts(){
 
 	$previous = get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false ); 
-	
+	$next     = get_adjacent_post( false, '', false );
+
 	$html = '';
 
 
 	if( !empty( $previous ) ){
-		
+
 		$to_show = empty( $next ) ? 'show' : '';
-		
+
 		$html .= '<article class="entry entry--latest prev ' . $to_show . '">' . dw_posted_on($previous->ID)
-					. '<h2 class="entry__title">' . $previous->post_title . '</h2>
+					. '<h2 class="entry__title"><a href="'. get_the_permalink($previous->ID) .'">' . $previous->post_title . '</a></h2>
 					<a href="' . get_the_permalink($previous->ID) . '" class="entry__read-more">Ver notícia</a>
+					<a href="' . get_the_permalink($previous->ID) . '" class="arrow"><i class="icon-left-open-big"></i></a>
 				</article><!-- entry -->';
 	}
 
@@ -244,9 +245,10 @@ function dynamic_get_before_and_after_posts(){
 		$html .=  '<article class="entry entry--latest next show">' . dw_posted_on($next->ID)
 					. '<h2 class="entry__title">' . $next->post_title . '</h2>
 					<a href="' . get_the_permalink($next->ID) . '" class="entry__read-more">Ver notícia</a>
+					<a href="' . get_the_permalink($next->ID) . '" class="arrow"><i class="icon-right-open-big"></i></a>
 				</article><!-- entry -->';
 	}
-	
+
 
 	return $html;
 

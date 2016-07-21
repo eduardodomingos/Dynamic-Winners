@@ -107,6 +107,7 @@
 
 
 .entry--latest {
+	position: relative;
 	@include rem((
 		padding-top: 5px,
 		padding-bottom: 5px,
@@ -125,6 +126,36 @@
 		text-overflow: ellipsis;
 	}
 	.entry__read-more {}
+
+	&.prev,
+	&.next {
+		.arrow {
+			position: absolute;
+			top: 50%;
+			line-height: 1.6;
+			@include rem((
+				width: 40px,
+				height: 40px,
+				margin-top: -20px,
+				text-align: center,
+				font-size: 25px
+			));
+		}
+	}
+
+	&.prev {
+		@include rem((padding-left: 40px));
+		.arrow {
+			left: 0;
+		}
+	}
+	&.next {
+		@include rem((padding-right: 40px));
+		.arrow {
+			right: 0;
+		}
+	}
+
 
 	//&.prev {
 	//	@include rem(padding-left, 25px);

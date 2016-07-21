@@ -60,3 +60,22 @@
 		}
 	}
 }
+
+.single-post {
+	.entry--latest {
+		display: none;
+		&.show {
+			display: block;
+		}
+		@include media-breakpoint-up(md) {
+			display: block;
+			width: 45%;
+			float: left;
+			+ .entry--latest {
+				float: right;
+			}
+		}
+
+
+	}
+}

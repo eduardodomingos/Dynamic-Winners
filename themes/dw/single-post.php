@@ -48,15 +48,16 @@ $nav_classes = array('prev', 'next');
 				</div><!-- container -->
 			</article><!-- post -->
 			<?php endwhile; ?>
-			
+
 			<!-- LATEST POSTS
 			========================================================= -->
 			<section id="latest-posts" class="band section">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12 col-md-9 col-md-offset-2 col-lg-6 col-lg-offset-6 box-right">
+						<div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-6 box-right">
+							<div class="clearfix">
 								<?php echo dynamic_get_before_and_after_posts(); ?>
-
+							</div>
 						</div><!-- col -->
 					</div><!-- row -->
 				</div><!-- container -->

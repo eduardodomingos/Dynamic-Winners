@@ -53,7 +53,7 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 			<section id="latest-posts" class="band section">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12 col-md-9 col-md-offset-2 col-lg-6 col-lg-offset-6 box-right">
+						<div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-6 box-right">
 							<div class="slider">
 								<?php while( $all_services->have_posts() ) : $all_services->the_post(); ?>
 
