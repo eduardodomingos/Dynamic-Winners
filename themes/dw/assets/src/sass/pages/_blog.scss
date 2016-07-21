@@ -59,6 +59,18 @@
 			display: block!important;
 		}
 	}
+
+	.entry--latest {
+		@include rem((
+			padding-right: 50px
+		));
+		@include media-breakpoint-up(md) {
+			@include rem((
+				padding-left: 50px
+			));
+		}
+	}
+
 }
 
 .single-post {
