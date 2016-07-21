@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    $LOADING
+\*------------------------------------*/
+
+.loading {
+	@include rem((
+		width: 40px,
+		height: 40px,
+	));
+	margin: 0 auto;
+	//background: center center data-uri('@{pathGfx}/load.gif') no-repeat;
+
+	&.js-loader {
+		@include rem((
+		margin-top: 10px,
+		margin-bottom: 10px
+		));
+	}
+}
+
+.cssanimations .loading {
+	border: 9px solid transparent;
+	border-color: #ccc mix(#ccc, white, 50%) mix(#ccc, white, 25%) mix(#ccc, white, 10%);
+	border-color: #ccc fade-out(#ccc, 0.5) fade-out(#ccc, 0.25) fade-out(#ccc, 0.1);
+	border-radius: 50%;
+	background: transparent;
+	animation: rotation .5s infinite linear;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
