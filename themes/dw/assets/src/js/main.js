@@ -152,7 +152,16 @@
 		if(dom.$body.hasClass('single-service')) {
 			// Latest posts slider
 			$('#latest-posts .slider').slick({
-				mobileFirst: true
+				mobileFirst: true,
+				responsive: [
+					{
+						breakpoint: 1023,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1
+						}
+					}
+				]
 			});
 		}
 
