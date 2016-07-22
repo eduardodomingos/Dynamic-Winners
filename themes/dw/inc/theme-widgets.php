@@ -168,8 +168,8 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 							</div>
 							<div class="loadMoreContainer clearfix"></div>
 							<div class="text-xs-center">
-								<button class="btn btn--load-more js-load-more-athletes">Carregar mais</button>
-								<div class="loading js-loader" style="display: none; margin-bottom:40px"><span class="sr-only">A carregar...</span></div>
+								<button class="btn btn--load-more js-load-more-athletes"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
+								<div class="loading js-loader" style="display: none; margin-bottom:40px"><span class="sr-only"><?php esc_html_e( 'Loading...', 'dw' ); ?></span></div>
 							</div>
 						</div>
 					</div>

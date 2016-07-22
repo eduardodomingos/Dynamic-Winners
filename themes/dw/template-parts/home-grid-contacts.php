@@ -9,7 +9,7 @@ $email = get_field('email', $home_id );
 		<div class="row">
 			<div class="col-sm-12 col-lg-8 col-lg-offset-2">
 				<div class="section__header">
-					<h2 class="heading">Contacte-nos</h2>
+					<h2 class="heading"><?php esc_html_e( 'Contact us', 'dw' ); ?></h2>
 				</div><!-- section__header -->
 
 				<?php echo do_shortcode('[contact-form-7 id="393" title="Contact form 1" html_class="contact-form"]');?>
