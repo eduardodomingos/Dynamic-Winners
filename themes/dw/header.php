@@ -8,7 +8,16 @@
 
 	$body_class = '';
 	if( is_home() || is_front_page() ){
-		$body_class = 'home';
+		$body_class = 'page--home';
+	}
+	elseif(is_singular('post')) {
+		$body_class = 'page--news';
+	}
+	elseif(is_singular('service')) {
+		$body_class = 'page--services';
+	}
+	elseif(is_singular('athlete')) {
+		$body_class = 'page--athletes';
 	}
 
 ?>
