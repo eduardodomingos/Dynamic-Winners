@@ -8,6 +8,7 @@ module.exports = {
 			'assets/src/js/vendors/autosize.js',
 			'assets/src/js/vendors/jquery.dotdotdot.js',
 			'assets/src/js/vendors/smooth-scroll.js',
+			'assets/src/js/vendors/transformicons.js',
 			'assets/src/js/main.js'
 		],
 		dest: 'assets/build/js/main.js',
