@@ -49,8 +49,13 @@
 				height: 48px
 			));
 
+			@include hover-focus-active {
+				text-decoration: none;
+			}
+
 			line-height: 1.6; // 48px/30px
 			display: inline-block;
+
 			&:before {
 				font-family: $font-family-icons;
 				line-height: inherit;

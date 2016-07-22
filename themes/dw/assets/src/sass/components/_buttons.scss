@@ -21,6 +21,12 @@
 		display: block;
 		z-index: -1;
 		transform: skew(-20deg);
+		transition: all $links-duration;
+	}
+	@include hover-focus-active {
+		&:after {
+			background-color: darken($brand-primary, 10%);
+		}
 	}
 }
 
@@ -36,15 +42,22 @@
 		padding-bottom: 20px
 	));
 
+	@include hover-focus-active {
+		&:after {
+			bottom: 0;
+		}
+	}
+
 	&:after {
+		transition: bottom 0.2s;
 		content: '\e803';
 		font-family: $font-family-icons;
 		display: block;
 		position: absolute;
-		bottom: 0;
 		left: 0;
 		right: 0;
 		@include rem((
+			bottom: 3px,
 			font-size: 23px,
 		));
 		line-height: 0.7;

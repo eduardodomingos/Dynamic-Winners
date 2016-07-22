@@ -12,28 +12,9 @@
 	.site-nav__home {}
 
 	.site-nav__toggle {
-		border: 0;
-		padding: 0;
-		background-color: transparent;
 		@include rem((
-			font-size: 25px,
-			width: $height-page-header,
 			height: $height-page-header
 		));
-
-		&:before {
-			font-family: $font-family-icons;
-			content: '\f0c9';
-		}
-		/**
-     	* If the site nav toggle exists in a site nav modified with the class active,
-     	* we change it's icon.
-     	*/
-		.site-nav--active & {
-			&:before {
-				content: '\e802';
-			}
-		}
 		@include media-breakpoint-up(lg) {
 			display: none;
 		}
@@ -79,7 +60,7 @@
 			}
 		}
 
-			.site-nav__link {
+			a.site-nav__link {
 				display: block;
 				font-weight: 300;
 				color: #fff;
@@ -88,7 +69,7 @@
 				padding-left:  ($grid-gutter-width / 2);
 				padding-right: ($grid-gutter-width / 2);
 				opacity: 0.5;
-				text-decoration: none;
+				transition: opacity $links-duration;
 				@include rem((
 					width: 100%,
 					height: $height-page-header,
@@ -98,11 +79,12 @@
 				@include media-breakpoint-up(lg) {
 					color: #000;
 				}
+
 				@include hover-focus-active {
-					color: #000;
 					text-decoration: none;
 					opacity: 1;
 				}
+
 			}
 
 

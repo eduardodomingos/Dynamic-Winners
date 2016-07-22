@@ -73,13 +73,12 @@ $arrow-size: 40px;
 
 		li {
 			display: inline-block;
-			&.slick-active button {
+			&.slick-active button:before {
 				opacity: 1;
 			}
 		}
 
 		button {
-			opacity: 0.5;
 			font-size: 0;
 			line-height: 0;
 			padding: 0;
@@ -97,6 +96,8 @@ $arrow-size: 40px;
 			 * 1 .give some room around the slated bg, but keeping the 20px tapping area
 			 */
 			&:before {
+				opacity: 0.5;
+				transition: opacity $links-duration;
 				content: '';
 				position: absolute;
 				background-color: #fff;
@@ -105,6 +106,11 @@ $arrow-size: 40px;
 				position: absolute; /* [1] */
 				top: 15%; /* [1] */
 				left: 15%; /* [1] */
+			}
+			@include hover-focus-active {
+				&:before {
+					opacity: 1;
+				}
 			}
 		}
 
