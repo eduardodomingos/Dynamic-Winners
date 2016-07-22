@@ -46,6 +46,7 @@
 		h1 {
 			margin-bottom: 0;
 			a {
+				display: inline-block;
 				color: #fff;
 				text-decoration: none;
 				@include rem(font-size, 20px);
