@@ -34,6 +34,27 @@ $card-border-radius: 0;
 
 
 /**
+ * Transitions.
+ */
+$links-duration: 0.3s;
+
+
+
+
+
+/**
+ * Transformicons.
+ */
+$tcon-size: 25px;
+
+$tcon-menu-radius: ($tcon-size / 14);
+$tcon-menu-color: #fff;
+
+
+
+
+
+/**
  * Layout.
  */
 $grid-breakpoints: (
