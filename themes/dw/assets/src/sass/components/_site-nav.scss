@@ -77,6 +77,12 @@
 			@include media-breakpoint-up(lg) {
 				display: inline-block;
 			}
+			//&.current-menu-item {
+			//	.site-nav__link {
+			//		font-weight: normal;
+			//		opacity: 1;
+			//	}
+			//}
 		}
 
 			.site-nav__link {
@@ -100,7 +106,14 @@
 				}
 			}
 
-			.site-nav__link--current {
-				font-weight: normal;
-				opacity: 1;
+
+
+			@each $page in home, news, services, athletes {
+
+				.page--#{$page} .site-nav__item--#{$page} a {
+					font-weight: normal;
+					opacity: 1;
+				}
+
 			}
+
