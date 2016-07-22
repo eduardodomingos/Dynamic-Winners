@@ -90,6 +90,7 @@ $rem-baseline: $font-size-root;
 @import "helpers/functions";
 @import "components/fonts";
 @import "base/typography";
+@import "components/transformicons";
 @import "components/entry";
 @import "pages/home";
 @import "components/section";
@@ -113,3 +114,4 @@ $rem-baseline: $font-size-root;
 @import "layout/page-foot";
 @import "components/share";
 @import "components/loading";
+
