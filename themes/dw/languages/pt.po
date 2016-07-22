@@ -1,0 +1,300 @@
+# Copyright (C) 2016 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2016-07-22 12:47+0100\n"
+"PO-Revision-Date: 2016-07-22 12:49+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html_e;__;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bower_components\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: assets\n"
+
+# @ _s
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Esta página não foi encontrada."
+
+# @ _s
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Não encontramos nada nesta localização. Sugerimos que utilize um dos links "
+"abaixo ou que tente uma pesquisa."
+
+# @ _s
+#: 404.php:33
+msgid "Most Used Categories"
+msgstr "Categorias mais usadas"
+
+# @ _s
+#: comments.php:40 comments.php:61
+msgid "Comment navigation"
+msgstr "Navegação de comentários"
+
+# @ _s
+#: comments.php:78
+msgid "Comments are closed."
+msgstr "Comentários estão encerrados."
+
+#: header.php:37
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/template-tags.php:61
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/theme-setup.php:16
+msgid "Homepage sections"
+msgstr ""
+
+#: inc/theme-setup.php:28
+msgid "Custom Widget Area"
+msgstr ""
+
+#: inc/theme-setup.php:30
+msgid "An optional custom widget area for your site"
+msgstr ""
+
+# @ _s
+#: inc/theme-setup.php:59
+msgid "Primary Menu"
+msgstr "Menu Principal"
+
+#: inc/theme-setup.php:60
+msgid "Athletes Menu"
+msgstr ""
+
+#: inc/theme-setup.php:61
+msgid "Social Header Menu"
+msgstr ""
+
+#: inc/theme-setup.php:62
+msgid "Social Footer Menu"
+msgstr ""
+
+#: inc/theme-widgets.php:21
+msgid "Display the latest Dynamic Winners news"
+msgstr ""
+
+#: inc/theme-widgets.php:22
+msgid "Dynamic Latest Posts"
+msgstr ""
+
+#: inc/theme-widgets.php:64
+msgid "Display the services widgets at homepage"
+msgstr ""
+
+#: inc/theme-widgets.php:65
+msgid "Dynamic Services"
+msgstr ""
+
+#: inc/theme-widgets.php:112
+msgid ""
+"Display the athlets ( players, coaches ans teams ) inside a widget inside at "
+"homepage"
+msgstr ""
+
+#: inc/theme-widgets.php:113
+msgid "Dynamic Athlets"
+msgstr ""
+
+#: inc/theme-widgets.php:131
+msgid "Athletes"
+msgstr "Atletas"
+
+#: inc/theme-widgets.php:138
+msgid "Players"
+msgstr "Jogadores"
+
+#: inc/theme-widgets.php:141
+msgid "Coaches"
+msgstr "Treinadores"
+
+#: inc/theme-widgets.php:144
+msgid "Teams"
+msgstr "Equipas"
+
+#: inc/theme-widgets.php:171
+msgid "Load more"
+msgstr "Carregar mais"
+
+#: inc/theme-widgets.php:172
+msgid "Loading..."
+msgstr "A carregar…"
+
+#: inc/theme-widgets.php:193
+msgid "Display the about section at homepage"
+msgstr ""
+
+#: inc/theme-widgets.php:194
+msgid "Dynamic About section"
+msgstr ""
+
+#: inc/theme-widgets.php:238
+msgid "Título:"
+msgstr ""
+
+#: inc/theme-widgets.php:243
+msgid "Description:"
+msgstr ""
+
+# @ _s
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nada foi encontrado"
+
+# @ _s
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto para publicar o seu primeiro artigo? <a href=\"%1$s\">Comece aqui</a>."
+
+# @ _s
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Não foi possível encontrar resultados para a sua pesquisa. Tente de novo com "
+"alguma palavras-chave diferentes."
+
+# @ _s
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"N\ao foi possível encontrar o que procura. Talvez uma pesquisa possa ajudar."
+
+# @ _s
+#: template-parts/content.php:33
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continue a ler %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: template-parts/home-grid-contacts.php:12
+msgid "Contact us"
+msgstr "Contacte-nos"
+
+# @ _s
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Tente procurar nos arquivos mensais. %1$s"
+
+# @ _s
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Um comentário em &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s comentários em &ldquo;%2$s&rdquo;"
+
+# @ _s
+#~ msgid "Older Comments"
+#~ msgstr "Comentários Anteriores"
+
+# @ _s
+#~ msgid "Newer Comments"
+#~ msgstr "Comentários Recentes"
+
+# @ _s
+#~ msgid "https://wordpress.org/"
+#~ msgstr "https://wordpress.org/"
+
+# @ _s
+#~ msgid "Proudly powered by %s"
+#~ msgstr "Orgulhosamente desenvolvido em %s"
+
+# @ _s
+#~ msgid "Theme: %1$s by %2$s."
+#~ msgstr "Tema: %1$s por %2$s."
+
+# @ _s
+#~ msgid "Primary"
+#~ msgstr "Primário"
+
+# @ _s
+#~ msgid "Sidebar"
+#~ msgstr "Barra lateral"
+
+# @ _s
+#~ msgid "Skip to content"
+#~ msgstr "Saltar para o conteúdo"
+
+# @ _s
+#~ msgctxt "post date"
+#~ msgid "Posted on %s"
+#~ msgstr "Publicado em %s"
+
+# @ _s
+#~ msgctxt "post author"
+#~ msgid "by %s"
+#~ msgstr "por %s"
+
+# @ _s
+#~ msgid ", "
+#~ msgstr ","
+
+# @ _s
+#~ msgid "Posted in %1$s"
+#~ msgstr "Publicado em %1$s"
+
+# @ _s
+#~ msgid "Tagged %1$s"
+#~ msgstr "Etiquetado como %1$s"
+
+# @ _s
+#~ msgid "Leave a comment"
+#~ msgstr "Deixe um comentário"
+
+# @ _s
+#~ msgid "1 Comment"
+#~ msgstr "1 Comentário"
+
+# @ _s
+#~ msgid "% Comments"
+#~ msgstr "% Comentários"
+
+# @ _s
+#~ msgid "Edit %s"
+#~ msgstr "Editar%s"
+
+# @ _s
+#~ msgid "Search Results for: %s"
+#~ msgstr "Resultados da pesquisa para: %s"
+
+# @ _s
+#~ msgid "Pages:"
+#~ msgstr "Páginas:"
+
+#~ msgid "_s"
+#~ msgstr "_s"
+
+# @ _s
+#~ msgid "http://underscores.me/"
+#~ msgstr "http://underscores.me/"
+
+# @ _s
+#~ msgid "Automattic"
+#~ msgstr "Automattic"
+
+# @ _s
+#~ msgid "http://automattic.com/"
+#~ msgstr "http://automattic.com/"
