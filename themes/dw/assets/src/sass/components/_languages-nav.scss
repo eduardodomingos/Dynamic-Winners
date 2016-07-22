@@ -42,22 +42,29 @@
 			&.active {
 				a {
 					color: #fff;
+					opacity: 1;
 					@include media-breakpoint-up(lg) {
 						color: #000;
+						font-weight: normal;
 					}
 				}
 			}
 
 			a {
 				float: right;
-				color: rgba(#fff, 0.5);
+				color: #fff;
+				opacity: 0.5;
 				display: block;
 				text-align: center;
 				@include rem(width, $height-page-header);
 				@include rem(height, $height-page-header);
 				line-height: inherit;
 				@include media-breakpoint-up(lg) {
-					color: rgba(#000, 0.5);
+					color: #000;
+				}
+				@include hover-focus-active {
+					text-decoration: none;
+					opacity: 1;
 				}
 			}
 		}

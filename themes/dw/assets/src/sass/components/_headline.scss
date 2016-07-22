@@ -44,13 +44,17 @@
 		}
 
 		h1 {
-			color: #fff;
-			@include rem(font-size, 20px);
-			@include media-breakpoint-up(md) {
-				@include rem(font-size, 25px);
-			}
-			@include media-breakpoint-up(lg) {
-				@include rem(font-size, 29px);
+			margin-bottom: 0;
+			a {
+				color: #fff;
+				text-decoration: none;
+				@include rem(font-size, 20px);
+				@include media-breakpoint-up(md) {
+					@include rem(font-size, 25px);
+				}
+				@include media-breakpoint-up(lg) {
+					@include rem(font-size, 29px);
+				}
 			}
 		}
 	}

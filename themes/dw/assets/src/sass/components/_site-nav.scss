@@ -77,12 +77,6 @@
 			@include media-breakpoint-up(lg) {
 				display: inline-block;
 			}
-			//&.current-menu-item {
-			//	.site-nav__link {
-			//		font-weight: normal;
-			//		opacity: 1;
-			//	}
-			//}
 		}
 
 			.site-nav__link {
@@ -103,6 +97,11 @@
 
 				@include media-breakpoint-up(lg) {
 					color: #000;
+				}
+				@include hover-focus-active {
+					color: #000;
+					text-decoration: none;
+					opacity: 1;
 				}
 			}
 
