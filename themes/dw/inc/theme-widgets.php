@@ -61,8 +61,8 @@ class Dynamic_Widget_Home_Services extends WP_Widget {
 
 	function __construct() {
 
-		$widget_ops = array( 'classname' => 'services', 'description' => __( 'Display the services widgets at homepage', 'dynamic' ) );
-		parent::__construct( 'services', __('Dynamic Services','dynamic' ), $widget_ops );
+		$widget_ops = array( 'classname' => 'services', 'description' => __( 'Display the services widgets at homepage', 'dw' ) );
+		parent::__construct( 'services', __('Dynamic Services','dw' ), $widget_ops );
 
 	}
 
@@ -110,7 +110,7 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 	function __construct() {
 
 		$widget_ops = array( 'classname' => 'athletes', 'description' => __( 'Display the athlets ( players, coaches ans teams ) inside a widget inside at homepage', 'dynamic' ) );
-		parent::__construct( 'athletes', __('Dynamic Athlets','dynamic' ), $widget_ops );
+		parent::__construct( 'athletes', __('Dynamic Athlets','dw' ), $widget_ops );
 
 	}
 
@@ -128,20 +128,20 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 		?>
 		<div class="col-sm-12">
 			<div class="section__header">
-				<h2 class="heading">Atletas</h2>
+				<h2 class="heading"><?php esc_html_e( 'Athletes', 'dw' ); ?></h2>
 			</div><!-- section__header -->
 		</div><!-- col -->
 				<div class="col-sm-12 col-lg-6 col-lg-offset-3">
 
 						<ul class="nav nav-tabs" role="tablist">
 							<li class="nav-item">
-								<a class="nav-link active" data-toggle="tab" href="#players" role="tab">Jogadores</a>
+								<a class="nav-link active" data-toggle="tab" href="#players" role="tab"><?php esc_html_e( 'Players', 'dw' ); ?></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#managers" role="tab">Treinadores</a>
+								<a class="nav-link" data-toggle="tab" href="#managers" role="tab"><?php esc_html_e( 'Coaches', 'dw' ); ?></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#teams" role="tab">Equipas</a>
+								<a class="nav-link" data-toggle="tab" href="#teams" role="tab"><?php esc_html_e( 'Teams', 'dw' ); ?></a>
 							</li>
 						</ul><!-- nav-tabs -->
 
@@ -191,7 +191,7 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 
 	function __construct() {
 		$widget_ops = array( 'classname' => 'about', 'description' => __( 'Display the about section at homepage', 'dynamic' ) );
-		parent::__construct( 'hero', __('Dynamic About section','dynamic' ), $widget_ops );
+		parent::__construct( 'hero', __('Dynamic About section','dw' ), $widget_ops );
 	}
 
 	function widget( $args, $instance ) {
@@ -235,12 +235,12 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 
 		?>
 
-		<p><label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html_e( 'Título:', 'dynamic'); ?></label>
+		<p><label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html_e( 'Título:', 'dw'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_name( 'description' ); ?>"><?php esc_html_e( 'Description:', 'dynamic'); ?></label>
+			<label for="<?php echo $this->get_field_name( 'description' ); ?>"><?php esc_html_e( 'Description:', 'dw'); ?></label>
 			<textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>"><?php echo esc_textarea( $instance['description'] ); ?></textarea>
 		</p>
 
