@@ -43,7 +43,12 @@
 				</a><!-- logo -->
 				<div class="pull-lg-right clearfix">
 					<nav class="site-nav">
-						<button class="site-nav__toggle"><span class="sr-only"><?php esc_html_e( 'Menu', 'dw' ); ?></span></button>
+
+						<button type="button" class="site-nav__toggle tcon tcon-menu--xcross" aria-label="toggle menu">
+							<span class="tcon-menu__lines" aria-hidden="true"></span>
+							<span class="tcon-visuallyhidden"><?php esc_html_e( 'Menu', 'dw' ); ?></span>
+						</button>
+						
 						<div class="site-nav__list">
 							<ul>
 								<?php echo dynamic_get_nav_menu_main(); ?>
