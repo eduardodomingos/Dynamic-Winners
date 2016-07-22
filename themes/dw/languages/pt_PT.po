@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-07-22 12:24+0100\n"
-"PO-Revision-Date: 2016-07-22 12:26+0100\n"
+"POT-Creation-Date: 2016-07-22 12:47+0100\n"
+"PO-Revision-Date: 2016-07-22 12:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -131,6 +131,14 @@ msgstr "Treinadores"
 msgid "Teams"
 msgstr "Equipas"
 
+#: inc/theme-widgets.php:171
+msgid "Load more"
+msgstr "Carregar mais"
+
+#: inc/theme-widgets.php:172
+msgid "Loading..."
+msgstr "A carregar…"
+
 #: inc/theme-widgets.php:193
 msgid "Display the about section at homepage"
 msgstr ""
@@ -182,6 +190,10 @@ msgstr ""
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Continue a ler %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: template-parts/home-grid-contacts.php:12
+msgid "Contact us"
+msgstr "Contacte-nos"
 
 # @ _s
 #~ msgid "Try looking in the monthly archives. %1$s"
