@@ -27,8 +27,9 @@
 		 * Code that runs on all pages
 		 */
 		// Toggle mobile menu
-		var menuHeight = dom.$siteNavListList.outerHeight();
+
 		dom.$menuToggle.click(function(e){
+			var menuHeight = dom.$siteNavListList.outerHeight();
 			if(dom.$siteNav.hasClass('site-nav--active')) {
 				dom.$siteNav.removeClass('site-nav--active');
 				dom.$siteNavList.css('max-height', 0);
