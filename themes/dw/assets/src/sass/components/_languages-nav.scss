@@ -56,6 +56,7 @@
 				opacity: 0.5;
 				display: block;
 				text-align: center;
+				transition: opacity $links-duration;
 				@include rem(width, $height-page-header);
 				@include rem(height, $height-page-header);
 				line-height: inherit;
