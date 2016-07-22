@@ -6,7 +6,8 @@
 		   		<article class="headline headline<?php echo $key; ?>">
 					<div class="headline__overlay"></div>
 					<div class="headline__text">
-						<h1><?php echo get_the_title($manchete); ?></h1>
+						<?php $manchete_article = get_field('manchete_article', $manchete);?>
+						<h1><a href="<?php echo the_permalink($manchete_article[0]);?>"><?php echo get_the_title($manchete); ?></a></h1>
 					</div><!-- headline__text -->
 				</article><!-- headline -->
 			</div>
