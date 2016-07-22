@@ -11,8 +11,14 @@ $email = get_field('email', $home_id );
 				<div class="section__header">
 					<h2 class="heading"><?php esc_html_e( 'Contact us', 'dw' ); ?></h2>
 				</div><!-- section__header -->
-
-				<?php echo do_shortcode('[contact-form-7 id="393" title="Contact form 1" html_class="contact-form"]');?>
+				
+				<?php
+				if (qtranxf_getLanguage() == 'en') {
+					echo do_shortcode('[contact-form-7 id="4" title="Contact form EN" html_class="contact-form"]');
+				} elseif (qtranxf_getLanguage() == 'pt') {
+					echo do_shortcode('[contact-form-7 id="474" title="Contact form PT" html_class="contact-form"]');
+				}
+				?>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'social_footer', 'container'=> false, 'menu_id' => 'social-menu', 'menu_class' => 'social text-xs-center', 'link_before' => '<span class="sr-only">', 'link_after' => '</span>' ) ); ?>
 
