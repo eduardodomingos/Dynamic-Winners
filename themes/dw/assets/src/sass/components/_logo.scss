@@ -23,4 +23,8 @@
 			}
 		}
 	}
+
+	.page-head-is-fixed .page-head & {
+		display: none;
+	}
 }

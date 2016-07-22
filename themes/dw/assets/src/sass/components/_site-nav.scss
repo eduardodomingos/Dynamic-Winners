@@ -18,6 +18,20 @@
 		@include media-breakpoint-up(lg) {
 			display: none;
 		}
+
+		.page-head-is-fixed & {
+			.tcon-menu__lines {
+				&,
+				&:before,
+				&:after {
+					background: #2d2d2d;
+				}
+			}
+
+			&.tcon-menu--xcross.tcon-transform .tcon-menu__lines {
+				background: transparent;
+			}
+		}
 	}
 
 	.site-nav__list {

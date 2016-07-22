@@ -2,7 +2,7 @@
     $HOME
 \*------------------------------------*/
 
-.home {
+.page--home {
 	// The hp has a narrower container
 	.container {
 		@include make-container-max-widths($hp-container-max-widths);
@@ -19,6 +19,20 @@
 			margin-top: 0;
 		}
 	}
+
+	&.page-head-is-fixed #headlines {
+		@include media-breakpoint-up(lg) {
+			margin-top: $height-page-header + 10px;
+			//padding-top: $height-page-header + 10px;
+		}
+	}
+
+	//&.page-head-is-visible #headlines {
+	//	@include media-breakpoint-down(lg) {
+	//		margin-top: 0;
+	//		padding-top: 58px;
+	//	}
+	//}
 
 	.headlines__overlay {
 		position: absolute;
@@ -261,81 +275,3 @@
 		}
 	}
 }
-
-
-
-//.home {
-//
-//	#headlines {
-//		margin-top: -$height-page-header - 10px;
-//		position: relative;
-//		@include media-breakpoint-up(lg) {
-//			margin-top: 0;
-//		}
-//	}
-//
-//	#news {
-//		position: relative;
-//		overflow: hidden;
-//		.paralelogram {
-//			@include make-container-max-widths();
-//			position: absolute;
-//			bottom: 0;
-//			width: 100%;
-//			left: 50%;
-//			@include rem(top, 50px);
-//			background-color: $red;
-//			transform: skewX(-20deg) translateX(-50%);
-//			display: none;
-//			@include media-breakpoint-up(sm) {
-//				display: block;
-//			}
-//		}
-//	}
-//
-//	#contacts {
-//		@include rem((
-//			padding-top: 80px,
-//			padding-bottom: 160px,
-//		));
-//		background: url('../img/bg-contactos--phone.jpg') #061524 center bottom no-repeat;
-//		background-size: cover;
-//		@include media-breakpoint-up(md) {
-//			background: url('../img/bg-contactos--tablet.jpg') #061524 center bottom no-repeat;
-//		}
-//		@include media-breakpoint-up(lg) {
-//			background: url('../img/bg-contactos--desktop.jpg') #061524 center bottom no-repeat;
-//		}
-//		&,
-//		a {
-//			color: #fff;
-//		}
-//	}
-//
-//	.band--primary {
-//		background: url('../img/bg-home--phone.jpg') #ca0000 center top no-repeat;
-//		background-size: 100%;
-//		@include media-breakpoint-up(md) {
-//			background: url('../img/bg-home--tablet.jpg') #db000f center top no-repeat;
-//			background-size: 100%;
-//		}
-//		@include media-breakpoint-up(lg) {
-//			background: url('../img/bg-home--desktop.jpg') #db000f center top repeat-x;
-//			background-size: 100%;
-//		}
-//
-//		&,
-//		a {
-//			color: #fff;
-//		}
-//
-//		.nav-tabs .nav-link.active {
-//			color: #fff;
-//			background-color: transparent;
-//		}
-//
-//		.slick-dots button:before {
-//			background-color: #fff;
-//		}
-//	}
-//}
