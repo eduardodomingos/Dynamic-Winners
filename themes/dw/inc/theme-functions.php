@@ -69,7 +69,7 @@ function dynamic_get_homepage_services( $home_id ){
 function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 
 	$athletes = [
-		'player' =>
+		'athlete' =>
 			[
 				'cf' => 'players',
 				'posts' => array(),
@@ -282,7 +282,7 @@ function dynamic_get_latest_news(){
 function dw_get_athlete_positions( $athlete_id = 0 ){
 
 	$athlete_id = empty( $athlete_id ) ? get_the_ID() : $athlete_id;
-	
+
 	if( empty($athlete_id) ){
 		return false;
 	}
@@ -296,7 +296,7 @@ function dw_get_athlete_positions( $athlete_id = 0 ){
 	}
 
 	return $positions;
-	 
+
 
 }
 
