@@ -89,7 +89,7 @@ function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 			]
 	];
 
-	$tax_query = ['field' => 'slug', 'taxonommy' => 'athlete_type'];
+	$tax_query = ['field' => 'slug', 'taxonomy' => 'athlete_type'];
 	$nb_posts = 12;
 
 	$args = [
@@ -108,7 +108,7 @@ function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 			$nb_posts = $nb_posts - count($highlight_athletes);
 		}
 
-		$tax_query['term'] = $tax;
+		$tax_query['terms'] = $tax;
 		$athlete_type_ids = [];
 
 		foreach( $highlight_athletes  as $highlight_athlete){

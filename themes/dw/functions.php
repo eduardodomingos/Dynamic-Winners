@@ -134,12 +134,14 @@ add_action( 'wp_ajax_ajax_pagination', 'dw_ajax_pagination' );
 
 function dw_ajax_pagination() {
 	// Get posted variables
+
+	
 	$postType = (isset($_POST['postType'])) ? $_POST['postType'] : 'post';
 	$postTax = (isset($_POST['postTax'])) ? $_POST['postTax'] : 'tag';
 	$page = (isset($_POST['page'])) ? $_POST['page'] : 1;
 	$numPosts= (isset($_POST['numPosts'])) ? $_POST['numPosts'] : 1;
 
-	$tax_query = ['field' => 'slug', 'taxonomy' => 'athlete_type', 'term' => $postTax];
+	$tax_query = ['field' => 'slug', 'taxonomy' => 'athlete_type', 'terms' => $postTax];
 
 	$args = [
 		'post_type' => $postType,
@@ -151,7 +153,7 @@ function dw_ajax_pagination() {
 	];
 
 	//var_dump($args);
-	error_log(print_r($args, true));
+	
 
 	$posts = new WP_Query($args);
 

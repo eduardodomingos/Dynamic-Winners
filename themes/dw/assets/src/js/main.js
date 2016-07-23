@@ -252,7 +252,7 @@
 				console.log(postTax);
 				console.log(numPosts);
 				console.log(page);
-
+				console.log('FDSS');
 				$.ajax({
 					url: dwjs.ajaxurl,
 					type: 'post',
