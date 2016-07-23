@@ -142,7 +142,7 @@ function dw_ajax_pagination() {
 	$tax_query = ['field' => 'slug', 'taxonomy' => 'athlete_type', 'term' => $postTax];
 
 	$args = [
-		'post_type' => 'athlete',
+		'post_type' => $postType,
 		'page' => $page,
 		'posts_per_page' => $numPosts,
 		'tax_query' =>  array( $tax_query ),
@@ -152,7 +152,7 @@ function dw_ajax_pagination() {
 
 	//var_dump($args);
 	error_log(print_r($args, true));
-	
+
 	$posts = new WP_Query($args);
 
 	if( ! $posts->have_posts() ) {
