@@ -115,6 +115,10 @@ function dw_scripts() {
 
 	wp_enqueue_script( 'dw-js', get_template_directory_uri() . '/assets/build/js/main.js', array( 'jquery', 'underscore' ), '', true );
 
+	wp_localize_script( 'dw-js', 'dwjs', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' )
+	));
+
 	//wp_enqueue_script( 'dw-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	//wp_enqueue_script( 'dw-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -124,6 +128,39 @@ function dw_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dw_scripts' );
+
+add_action( 'wp_ajax_nopriv_ajax_pagination', 'dw_ajax_pagination' );
+add_action( 'wp_ajax_ajax_pagination', 'dw_ajax_pagination' );
+
+function dw_ajax_pagination() {
+	// Our variables
+	$postType = (isset($_POST['postType'])) ? $_POST['postType'] : 'post';
+	$numPosts = (isset($_POST['numPosts'])) ? $_POST['numPosts'] : 6;
+	$page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+
+	$args = array(
+		'post_type' => $postType,
+		'posts_per_page' => $numPosts,
+		'paged'          => $page,
+		'order'     => 'ASC',
+		'post_status' => 'publish',
+	);
+
+	$posts = new WP_Query( $args );
+
+	if( ! $posts->have_posts() ) {
+		get_template_part( 'template-parts/content', 'none' );
+	}
+	else {
+		while ( $posts->have_posts() ) {
+			$posts->the_post();
+			get_template_part( 'template-parts/content', get_post_format() );
+		}
+	}
+
+	//echo get_bloginfo( 'title' );
+	die();
+}
 
 
 

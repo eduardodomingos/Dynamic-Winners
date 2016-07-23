@@ -230,7 +230,93 @@
 			autosize($('.contact-form #inputMessage'));
 
 			// Load more athletes
-			$('#athletes .js-load-more-athletes').click(function (e) {
+			/*
+			 * LOAD POSTS AJAX
+			 */
+			var page = 0,
+				$loading = false,
+				$finished = false,
+				$el= $('#ajax-load-more'),
+				$content = $('#ajax-load-more ul'),
+				$button = $content.data('button-text');
+
+			$el.append('<p id="load-more" class="more"><span class="loader"></span><span class="load-more-link">'+$button+'</span></p>');
+
+			//Load posts function
+			var load_posts = function(){
+				$('#load-more').addClass('loading');
+				$('#load-more span.text').text("Loading...");
+
+				$.ajax({
+					url: dwjs.ajaxurl,
+					type: 'post',
+					data: {
+						action: 'ajax_pagination',
+						postType: $content.data('post-type'),
+						numPosts: $content.data('display-posts'),
+						pageNumber: page
+					},
+					dataType: 'html',
+					success: function( data ) {
+						$data = $('<span>'+data+'</span>');// Convert data to an object
+						//alert(data);
+						if(data.length > 1){
+							//$data.hide();
+							$content.append($data);
+							$data.fadeIn(500, function(){
+								$('#load-more').removeClass('loading');
+								$('#load-more span.text').text($button);
+								$loading = false;
+							});
+						} else {
+							$('#load-more').addClass('done');
+							$('#load-more span.text').text($button);
+							$loading = false;
+							$finished = true;
+						}
+					}
+				})
+
+
+
+
+
+
+			};
+
+			$('#load-more').click(function() {
+				if(!$loading && !$finished && !$(this).hasClass('done')) {
+					$loading = true;
+					page++;
+					load_posts();
+				}
+			});
+
+
+
+
+
+
+
+
+			// $(document).on( 'click', '#athletes .js-load-more-athletes', function( event ) {
+			// 	event.preventDefault();
+			// 	$.ajax({
+			// 		url: dwjs.ajaxurl,
+			// 		type: 'post',
+			// 		data: {
+			// 			action: 'ajax_pagination'
+			// 		},
+			// 		success: function( result ) {
+			// 			alert( result );
+			// 		}
+			// 	})
+			// });
+
+
+
+
+			$('#_athletes .js-load-more-athletes').click(function (e) {
 				e.preventDefault();
 				//dom.$loadingAnimation.show();
 

@@ -166,11 +166,32 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 							wp_reset_postdata();
 							?>
 							</div>
-							<div class="loadMoreContainer clearfix"></div>
-							<div class="text-xs-center">
-								<button class="btn btn--load-more js-load-more-athletes"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
-								<div class="loading js-loader" style="display: none; margin-bottom:40px"><span class="sr-only"><?php esc_html_e( 'Loading...', 'dw' ); ?></span></div>
-							</div>
+<!--							<div class="loadMoreContainer clearfix"></div>-->
+<!--							<div class="text-xs-center">-->
+<!--								<button class="btn btn--load-more js-load-more-athletes">--><?php //esc_html_e( 'Load more', 'dw' ); ?><!--</button>-->
+<!--								<div class="loading js-loader" style="display: none; margin-bottom:40px"><span class="sr-only">--><?php //esc_html_e( 'Loading...', 'dw' ); ?><!--</span></div>-->
+<!--							</div>-->
+
+
+
+
+							<!-- Ajax Load More script block -->
+							<section id="ajax-load-more">
+								<ul class="listing" data-path="<?php echo get_template_directory_uri(); ?>" data-post-type="post" data-display-posts="10" data-post-not-in="" data-button-text="More Posts" >
+									<!-- Load Ajax Posts Here -->
+								</ul>
+							</section>
+							<!-- /Ajax Load More -->
+
+
+
+
+
+
+
+
+
+
 						</div>
 					</div>
 				</div>
