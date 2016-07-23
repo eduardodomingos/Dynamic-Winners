@@ -134,8 +134,6 @@ add_action( 'wp_ajax_ajax_pagination', 'dw_ajax_pagination' );
 
 function dw_ajax_pagination() {
 	// Get posted variables
-
-
 	$postType = (isset($_POST['postType'])) ? $_POST['postType'] : 'post';
 	$postTax = (isset($_POST['postTax'])) ? $_POST['postTax'] : 'tag';
 	$page = (isset($_POST['page'])) ? $_POST['page'] : 1;
@@ -145,32 +143,30 @@ function dw_ajax_pagination() {
 
 	$args = [
 		'post_type' => $postType,
-		'page' => $page,
+		'paged' => $page,
+		'pagination'             => true,
 		'posts_per_page' => $numPosts,
 		'tax_query' =>  array( $tax_query ),
 		'post_status' => 'publish',
-		'ignore_sticky_posts' => true
+		'ignore_sticky_posts' => true,
+		'post__not_in' => []
 	];
 
-	error_log(print_r($args, true));
-
+	//error_log(print_r($args, true));
+	$is_last = false;
 	$posts = new WP_Query($args);
 	if( $posts->have_posts() ) {
+
+		if($page == $posts->max_num_pages) {
+			$is_last = true;
+		}
+
 		while ( $posts->have_posts() ) {
 			$posts->the_post();
-			dynamic_get_template_part( 'template-parts/home-grid', 'athlete', array('is_slider' => false) );
+			dynamic_get_template_part( 'template-parts/home-grid', 'athlete', array('is_slider' => false, 'is_last' => $is_last ) );
 		}
 	}
-
-//	if( ! $posts->have_posts() ) {
-//		get_template_part( 'template-parts/content', 'none' );
-//	}
-//	else {
-//		while ( $posts->have_posts() ) {
-//			$posts->the_post();
-//			get_template_part( 'template-parts/content', get_post_format() );
-//		}
-//	}
+	wp_reset_query();
 
 	die();
 }

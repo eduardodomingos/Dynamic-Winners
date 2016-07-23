@@ -260,16 +260,21 @@
 						numPosts: numPosts,
 						page: page
 					},
-					dataType   : "html",
+					//dataType   : "html",
 					beforeSend : function(){
 						// Fancy loading goes here
 					},
 					success: function( data ) {
-						console.log('xxxx');
-						console.log($content);
+
+						//console.log(data);
 						$data = $(data);
 						$content.append($data);
+
 						$this.removeClass('loading');
+
+						if($content.find('article.last').length > 0) {
+							$this.addClass('done');
+						}
 
 					},
 					error: function(jqXHR, textStatus, errorThrown) {

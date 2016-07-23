@@ -62,4 +62,8 @@
 		));
 		line-height: 0.7;
 	}
+
+	&.done {
+		display: none;
+	}
 }

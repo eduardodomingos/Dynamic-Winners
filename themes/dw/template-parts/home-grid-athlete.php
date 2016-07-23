@@ -10,7 +10,7 @@ $position = get_field('position', $post->ID );
 <?php if($is_slider):?>
 <div class="slider__item">
 <?php endif; ?>
-	<article class="card entry entry--athlete text-xs-center m-b-0">
+	<article class="card entry entry--athlete text-xs-center m-b-0 <?php echo $is_last ? 'last' : ''; ?>">
 		<div class="img-wrapper">
 			<?php if( !empty( $position ) ): ?>
 				<p class="category"><?php echo $position; ?></p>
