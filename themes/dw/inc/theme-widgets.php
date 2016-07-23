@@ -152,7 +152,7 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 		<div class="tab-content">
 		<?php
 
-		foreach( $athletes as $athlete ){ ?>
+		foreach( $athletes as $key => $athlete ){ ?>
 
 			<div class="tab-pane <?php if( $athlete['cf'] == 'players') : echo 'active'; endif; ?> " id="<?php echo $athlete['cf'] ?>" role="tabpanel">
 				<div class="container">
@@ -169,12 +169,12 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 							<div class="ajax-load-more">
 								<ul class="listing"></ul>
 								<div class="text-xs-center">
-									<button class="btn btn--load-more js-load-more" data-post-type="athlete" data-post-taxonomy="<?php echo $athlete['cf'] ?>" data-display-posts="3" data-page="1"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
+									<button class="btn btn--load-more js-load-more" data-post-type="athlete" data-post-taxonomy="<?php echo $key ?>" data-display-posts="3" data-page="1"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
 								</div><!-- text-xs-center -->
 							</div><!-- loadMoreContainer -->
 
 
-							
+
 <!--							<div class="loadMoreContainer clearfix"></div>-->
 <!--							<div class="text-xs-center">-->
 <!--								<button class="btn btn--load-more js-load-more-athletes">--><?php //esc_html_e( 'Load more', 'dw' ); ?><!--</button>-->

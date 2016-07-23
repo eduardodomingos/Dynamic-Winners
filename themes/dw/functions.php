@@ -137,12 +137,12 @@ function dw_ajax_pagination() {
 	$postType = (isset($_POST['postType'])) ? $_POST['postType'] : 'post';
 	$postTax = (isset($_POST['postTax'])) ? $_POST['postTax'] : 'tag';
 	$page = (isset($_POST['page'])) ? $_POST['page'] : 1;
-	$numPosts = (isset($_POST['numPosts'])) ? $_POST['numPosts'] : 1;
+	$numPosts= (isset($_POST['numPosts'])) ? $_POST['numPosts'] : 1;
 
-	$tax_query = ['field' => 'slug', 'taxonommy' => 'athlete_type', 'term' => $postTax];
+	$tax_query = ['field' => 'slug', 'taxonomy' => 'athlete_type', 'term' => $postTax];
 
 	$args = [
-		'post_type' => $postType,
+		'post_type' => 'athlete',
 		'page' => $page,
 		'posts_per_page' => $numPosts,
 		'tax_query' =>  array( $tax_query ),
@@ -150,7 +150,9 @@ function dw_ajax_pagination() {
 		'ignore_sticky_posts' => true
 	];
 
-
+	//var_dump($args);
+	error_log(print_r($args, true));
+	
 	$posts = new WP_Query($args);
 
 	if( ! $posts->have_posts() ) {
