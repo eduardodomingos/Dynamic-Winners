@@ -53,7 +53,7 @@
 		// Throttle callback
 		function updatePosition() {
 			var current_scroll_top = dom.$window.scrollTop();
-			console.log(current_scroll_top);
+			//console.log(current_scroll_top);
 			if( window.matchMedia('(min-width: 1024px)').matches ) {
 				if(isFixed === false) {
 					if( current_scroll_top >= 285 ) {
@@ -233,26 +233,23 @@
 			/*
 			 * LOAD POSTS AJAX
 			 */
+			var $content;
 			$('.js-load-more').click(function(e) {
 				e.preventDefault();
+				$content = $(this).parent().siblings('.loadMoreContainer');
 				var postType = $(this).data('post-type');
 				var postTax = $(this).data('post-taxonomy');
 				var numPosts = $(this).data('display-posts');
 
-				if(!$(this).hasClass('loading') && !$(this).hasClass('finished') && !$(this).hasClass('done'))  {
+				if(!$(this).hasClass('loading') && !$(this).hasClass('done'))  {
 					$(this).addClass('loading');
 					var page = $(this).data().page++
 					//console.log(page);
-					load_posts( postType, postTax, numPosts, page);
+					load_posts( $(this) , postType, postTax, numPosts, page);
 				}
 			});
 
-			function load_posts( postType, postTax, numPosts, page ) {
-				console.log(postType);
-				console.log(postTax);
-				console.log(numPosts);
-				console.log(page);
-				console.log('FDSS');
+			function load_posts( $this, postType, postTax, numPosts, page ) {
 				$.ajax({
 					url: dwjs.ajaxurl,
 					type: 'post',
@@ -268,7 +265,12 @@
 						// Fancy loading goes here
 					},
 					success: function( data ) {
-						console.log(data);
+						console.log('xxxx');
+						console.log($content);
+						$data = $(data);
+						$content.append($data);
+						$this.removeClass('loading');
+
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
 						// Error stuff here

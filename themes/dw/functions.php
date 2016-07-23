@@ -135,7 +135,7 @@ add_action( 'wp_ajax_ajax_pagination', 'dw_ajax_pagination' );
 function dw_ajax_pagination() {
 	// Get posted variables
 
-	
+
 	$postType = (isset($_POST['postType'])) ? $_POST['postType'] : 'post';
 	$postTax = (isset($_POST['postTax'])) ? $_POST['postTax'] : 'tag';
 	$page = (isset($_POST['page'])) ? $_POST['page'] : 1;
@@ -152,20 +152,25 @@ function dw_ajax_pagination() {
 		'ignore_sticky_posts' => true
 	];
 
-	//var_dump($args);
-	
+	error_log(print_r($args, true));
 
 	$posts = new WP_Query($args);
-
-	if( ! $posts->have_posts() ) {
-		get_template_part( 'template-parts/content', 'none' );
-	}
-	else {
+	if( $posts->have_posts() ) {
 		while ( $posts->have_posts() ) {
 			$posts->the_post();
-			get_template_part( 'template-parts/content', get_post_format() );
+			dynamic_get_template_part( 'template-parts/home-grid', 'athlete', array('is_slider' => false) );
 		}
 	}
+
+//	if( ! $posts->have_posts() ) {
+//		get_template_part( 'template-parts/content', 'none' );
+//	}
+//	else {
+//		while ( $posts->have_posts() ) {
+//			$posts->the_post();
+//			get_template_part( 'template-parts/content', get_post_format() );
+//		}
+//	}
 
 	die();
 }

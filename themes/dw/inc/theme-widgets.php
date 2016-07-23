@@ -166,38 +166,19 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 							wp_reset_postdata();
 							?>
 							</div><!-- slider -->
-							<div class="ajax-load-more">
-								<ul class="listing"></ul>
-								<div class="text-xs-center">
-									<button class="btn btn--load-more js-load-more" data-post-type="athlete" data-post-taxonomy="<?php echo $key ?>" data-display-posts="3" data-page="1"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
-								</div><!-- text-xs-center -->
-							</div><!-- loadMoreContainer -->
+
+							<div class="loadMoreContainer clearfix"></div>
+
+							<div class="text-xs-center">
+								<button class="btn btn--load-more js-load-more" data-post-type="athlete" data-post-taxonomy="<?php echo $key ?>" data-display-posts="3" data-page="1"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
+								<div class="loading js-loader" style="display: none; margin-bottom:40px"><span class="sr-only"><?php esc_html_e( 'Loading...', 'dw' ); ?></span></div>
+							</div>
 
 
-
-<!--							<div class="loadMoreContainer clearfix"></div>-->
-<!--							<div class="text-xs-center">-->
-<!--								<button class="btn btn--load-more js-load-more-athletes">--><?php //esc_html_e( 'Load more', 'dw' ); ?><!--</button>-->
-<!--								<div class="loading js-loader" style="display: none; margin-bottom:40px"><span class="sr-only">--><?php //esc_html_e( 'Loading...', 'dw' ); ?><!--</span></div>-->
-<!--							</div>-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-						</div>
-					</div>
-				</div>
-			</div>
-
+						</div><!-- col -->
+					</div><!-- row  -->
+				</div><!-- container -->
+			</div><!-- tab-pane -->
 		<?php
 		}
 		?>

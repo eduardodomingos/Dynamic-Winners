@@ -7,7 +7,9 @@ $thumbnail_medium = wp_get_attachment_image_src($main_image_id, 'grid-medium');
 $position = get_field('position', $post->ID );
 ?>
 
+<?php if($is_slider):?>
 <div class="slider__item">
+<?php endif; ?>
 	<article class="card entry entry--athlete text-xs-center m-b-0">
 		<div class="img-wrapper">
 			<?php if( !empty( $position ) ): ?>
@@ -22,4 +24,6 @@ $position = get_field('position', $post->ID );
 			</div><!-- dotdotdot -->
 		</div><!-- card-block -->
 	</article><!-- card -->
+<?php if($is_slider):?>
 </div><!-- slider__item -->
+<?php endif; ?>
