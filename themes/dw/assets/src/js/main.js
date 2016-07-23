@@ -241,10 +241,9 @@
 				var postTax = $(this).data('post-taxonomy');
 				var numPosts = $(this).data('display-posts');
 
-				if(!$(this).hasClass('loading') && !$(this).hasClass('done'))  {
-					$(this).addClass('loading');
+				if(!$(this).hasClass('is-loading') && !$(this).hasClass('done'))  {
+					$(this).addClass('is-loading');
 					var page = $(this).data().page++
-					//console.log(page);
 					load_posts( $(this) , postType, postTax, numPosts, page);
 				}
 			});
@@ -260,22 +259,21 @@
 						numPosts: numPosts,
 						page: page
 					},
-					//dataType   : "html",
+					dataType   : "html",
 					beforeSend : function(){
-						// Fancy loading goes here
+						$this.siblings('.js-loader').show();
 					},
 					success: function( data ) {
-
-						//console.log(data);
 						$data = $(data);
+						if(!$content.hasClass('active')) {
+							$content.addClass('active');
+						}
 						$content.append($data);
-
-						$this.removeClass('loading');
-
+						$this.removeClass('is-loading');
+						$this.siblings('.js-loader').hide();
 						if($content.find('article.last').length > 0) {
 							$this.addClass('done');
 						}
-
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
 						// Error stuff here

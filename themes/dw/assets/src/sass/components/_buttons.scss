@@ -66,4 +66,9 @@
 	&.done {
 		display: none;
 	}
+
+	&.is-loading {
+		display: none;
+	}
+
 }

@@ -167,7 +167,7 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 							?>
 							</div><!-- slider -->
 
-							<div class="loadMoreContainer clearfix"></div>
+							<div class="loadMoreContainer"></div>
 
 							<div class="text-xs-center">
 								<button class="btn btn--load-more js-load-more" data-post-type="athlete" data-post-taxonomy="<?php echo $key ?>" data-display-posts="3" data-page="1"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
