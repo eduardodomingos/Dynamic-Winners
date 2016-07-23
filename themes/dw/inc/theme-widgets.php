@@ -152,7 +152,7 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 		<div class="tab-content">
 		<?php
 
-		foreach( $athletes as $athlete ){ ?>
+		foreach( $athletes as $key => $athlete ){ ?>
 
 			<div class="tab-pane <?php if( $athlete['cf'] == 'players') : echo 'active'; endif; ?> " id="<?php echo $athlete['cf'] ?>" role="tabpanel">
 				<div class="container">
@@ -165,17 +165,20 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 							endwhile;
 							wp_reset_postdata();
 							?>
-							</div>
-							<div class="loadMoreContainer clearfix"></div>
+							</div><!-- slider -->
+
+							<div class="loadMoreContainer"></div>
+
 							<div class="text-xs-center">
-								<button class="btn btn--load-more js-load-more-athletes"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
+								<button class="btn btn--load-more js-load-more" data-post-type="athlete" data-post-taxonomy="<?php echo $key ?>" data-display-posts="3" data-page="1"><?php esc_html_e( 'Load more', 'dw' ); ?></button>
 								<div class="loading js-loader" style="display: none; margin-bottom:40px"><span class="sr-only"><?php esc_html_e( 'Loading...', 'dw' ); ?></span></div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
+
+						</div><!-- col -->
+					</div><!-- row  -->
+				</div><!-- container -->
+			</div><!-- tab-pane -->
 		<?php
 		}
 		?>

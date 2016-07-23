@@ -62,4 +62,13 @@
 		));
 		line-height: 0.7;
 	}
+
+	&.done {
+		display: none;
+	}
+
+	&.is-loading {
+		display: none;
+	}
+
 }

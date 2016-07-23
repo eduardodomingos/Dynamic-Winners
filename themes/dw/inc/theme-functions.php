@@ -69,7 +69,7 @@ function dynamic_get_homepage_services( $home_id ){
 function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 
 	$athletes = [
-		'player' =>
+		'athlete' =>
 			[
 				'cf' => 'players',
 				'posts' => array(),
@@ -89,7 +89,7 @@ function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 			]
 	];
 
-	$tax_query = ['field' => 'slug', 'taxonommy' => 'athlete_type'];
+	$tax_query = ['field' => 'slug', 'taxonomy' => 'athlete_type'];
 	$nb_posts = 12;
 
 	$args = [
@@ -108,7 +108,7 @@ function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 			$nb_posts = $nb_posts - count($highlight_athletes);
 		}
 
-		$tax_query['term'] = $tax;
+		$tax_query['terms'] = $tax;
 		$athlete_type_ids = [];
 
 		foreach( $highlight_athletes  as $highlight_athlete){
@@ -282,7 +282,7 @@ function dynamic_get_latest_news(){
 function dw_get_athlete_positions( $athlete_id = 0 ){
 
 	$athlete_id = empty( $athlete_id ) ? get_the_ID() : $athlete_id;
-	
+
 	if( empty($athlete_id) ){
 		return false;
 	}
@@ -296,7 +296,7 @@ function dw_get_athlete_positions( $athlete_id = 0 ){
 	}
 
 	return $positions;
-	 
+
 
 }
 

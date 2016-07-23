@@ -53,7 +53,7 @@
 		// Throttle callback
 		function updatePosition() {
 			var current_scroll_top = dom.$window.scrollTop();
-			console.log(current_scroll_top);
+			//console.log(current_scroll_top);
 			if( window.matchMedia('(min-width: 1024px)').matches ) {
 				if(isFixed === false) {
 					if( current_scroll_top >= 285 ) {
@@ -230,7 +230,151 @@
 			autosize($('.contact-form #inputMessage'));
 
 			// Load more athletes
-			$('#athletes .js-load-more-athletes').click(function (e) {
+			/*
+			 * LOAD POSTS AJAX
+			 */
+			var $content;
+			$('.js-load-more').click(function(e) {
+				e.preventDefault();
+				$content = $(this).parent().siblings('.loadMoreContainer');
+				var postType = $(this).data('post-type');
+				var postTax = $(this).data('post-taxonomy');
+				var numPosts = $(this).data('display-posts');
+
+				if(!$(this).hasClass('is-loading') && !$(this).hasClass('done'))  {
+					$(this).addClass('is-loading');
+					var page = $(this).data().page++
+					load_posts( $(this) , postType, postTax, numPosts, page);
+				}
+			});
+
+			function load_posts( $this, postType, postTax, numPosts, page ) {
+				$.ajax({
+					url: dwjs.ajaxurl,
+					type: 'post',
+					data: {
+						action: 'ajax_pagination',
+						postType: postType,
+						postTax: postTax,
+						numPosts: numPosts,
+						page: page
+					},
+					dataType   : "html",
+					beforeSend : function(){
+						$this.siblings('.js-loader').show();
+					},
+					success: function( data ) {
+						$data = $(data);
+						if(!$content.hasClass('active')) {
+							$content.addClass('active');
+						}
+						$content.append($data);
+						$this.removeClass('is-loading');
+						$this.siblings('.js-loader').hide();
+						if($content.find('article.last').length > 0) {
+							$this.addClass('done');
+						}
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						// Error stuff here
+					}
+				});
+			}
+
+
+
+
+
+
+
+
+
+
+
+			// var page = 0,
+			// 	$loading = false,
+			// 	$finished = false,
+			// 	$el= $('#ajax-load-more'),
+			// 	$content = $('#ajax-load-more ul'),
+			// 	$button = $content.data('button-text');
+            //
+			// $el.append('<p id="load-more" class="more"><span class="loader"></span><span class="load-more-link">'+$button+'</span></p>');
+            //
+			// //Load posts function
+			// var load_posts = function(){
+			// 	$('#load-more').addClass('loading');
+			// 	$('#load-more span.text').text("Loading...");
+            //
+			// 	$.ajax({
+			// 		url: dwjs.ajaxurl,
+			// 		type: 'post',
+			// 		data: {
+			// 			action: 'ajax_pagination',
+			// 			postType: $content.data('post-type'),
+			// 			numPosts: $content.data('display-posts'),
+			// 			pageNumber: page
+			// 		},
+			// 		dataType: 'html',
+			// 		success: function( data ) {
+			// 			$data = $('<span>'+data+'</span>');// Convert data to an object
+			// 			//alert(data);
+			// 			if(data.length > 1){
+			// 				//$data.hide();
+			// 				$content.append($data);
+			// 				$data.fadeIn(500, function(){
+			// 					$('#load-more').removeClass('loading');
+			// 					$('#load-more span.text').text($button);
+			// 					$loading = false;
+			// 				});
+			// 			} else {
+			// 				$('#load-more').addClass('done');
+			// 				$('#load-more span.text').text($button);
+			// 				$loading = false;
+			// 				$finished = true;
+			// 			}
+			// 		}
+			// 	})
+            //
+            //
+            //
+            //
+            //
+            //
+			// };
+            //
+			// $('#load-more').click(function() {
+			// 	if(!$loading && !$finished && !$(this).hasClass('done')) {
+			// 		$loading = true;
+			// 		page++;
+			// 		load_posts();
+			// 	}
+			// });
+
+
+
+
+
+
+
+
+			// $(document).on( 'click', '#athletes .js-load-more-athletes', function( event ) {
+			// 	event.preventDefault();
+			// 	$.ajax({
+			// 		url: dwjs.ajaxurl,
+			// 		type: 'post',
+			// 		data: {
+			// 			action: 'ajax_pagination'
+			// 		},
+			// 		success: function( result ) {
+			// 			alert( result );
+			// 		}
+			// 	})
+			// });
+
+
+
+
+			$('#_athletes .js-load-more-athletes').click(function (e) {
 				e.preventDefault();
 				//dom.$loadingAnimation.show();
 

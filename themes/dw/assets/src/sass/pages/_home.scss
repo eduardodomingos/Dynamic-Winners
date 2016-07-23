@@ -208,6 +208,13 @@
 		}
 
 		.loadMoreContainer {
+			display: flex;
+			flex-wrap: wrap;
+			&.active {
+				@include rem((
+					padding-top: 40px
+				));
+			}
 			.entry--athlete {
 				@include media-breakpoint-up(md) {
 					width: 165px;
