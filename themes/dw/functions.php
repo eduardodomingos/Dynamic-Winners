@@ -133,20 +133,25 @@ add_action( 'wp_ajax_nopriv_ajax_pagination', 'dw_ajax_pagination' );
 add_action( 'wp_ajax_ajax_pagination', 'dw_ajax_pagination' );
 
 function dw_ajax_pagination() {
-	// Our variables
+	// Get posted variables
 	$postType = (isset($_POST['postType'])) ? $_POST['postType'] : 'post';
-	$numPosts = (isset($_POST['numPosts'])) ? $_POST['numPosts'] : 6;
-	$page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+	$postTax = (isset($_POST['postTax'])) ? $_POST['postTax'] : 'tag';
+	$page = (isset($_POST['page'])) ? $_POST['page'] : 1;
+	$numPosts = (isset($_POST['numPosts'])) ? $_POST['numPosts'] : 1;
 
-	$args = array(
+	$tax_query = ['field' => 'slug', 'taxonommy' => 'athlete_type', 'term' => $postTax];
+
+	$args = [
 		'post_type' => $postType,
+		'page' => $page,
 		'posts_per_page' => $numPosts,
-		'paged'          => $page,
-		'order'     => 'ASC',
+		'tax_query' =>  array( $tax_query ),
 		'post_status' => 'publish',
-	);
+		'ignore_sticky_posts' => true
+	];
 
-	$posts = new WP_Query( $args );
+
+	$posts = new WP_Query($args);
 
 	if( ! $posts->have_posts() ) {
 		get_template_part( 'template-parts/content', 'none' );
@@ -158,7 +163,6 @@ function dw_ajax_pagination() {
 		}
 	}
 
-	//echo get_bloginfo( 'title' );
 	die();
 }
 

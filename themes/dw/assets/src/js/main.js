@@ -233,64 +233,117 @@
 			/*
 			 * LOAD POSTS AJAX
 			 */
-			var page = 0,
-				$loading = false,
-				$finished = false,
-				$el= $('#ajax-load-more'),
-				$content = $('#ajax-load-more ul'),
-				$button = $content.data('button-text');
+			$('.js-load-more').click(function(e) {
+				e.preventDefault();
+				var postType = $(this).data('post-type');
+				var postTax = $(this).data('post-taxonomy');
+				var numPosts = $(this).data('display-posts');
 
-			$el.append('<p id="load-more" class="more"><span class="loader"></span><span class="load-more-link">'+$button+'</span></p>');
+				if(!$(this).hasClass('loading') && !$(this).hasClass('finished') && !$(this).hasClass('done'))  {
+					$(this).addClass('loading');
+					var page = $(this).data().page++
+					//console.log(page);
+					load_posts( postType, postTax, numPosts, page);
+				}
+			});
 
-			//Load posts function
-			var load_posts = function(){
-				$('#load-more').addClass('loading');
-				$('#load-more span.text').text("Loading...");
+			function load_posts( postType, postTax, numPosts, page ) {
+				console.log(postType);
+				console.log(postTax);
+				console.log(numPosts);
+				console.log(page);
 
 				$.ajax({
 					url: dwjs.ajaxurl,
 					type: 'post',
 					data: {
 						action: 'ajax_pagination',
-						postType: $content.data('post-type'),
-						numPosts: $content.data('display-posts'),
-						pageNumber: page
+						postType: postType,
+						postTax: postTax,
+						numPosts: numPosts,
+						page: page
 					},
-					dataType: 'html',
+					dataType   : "html",
+					beforeSend : function(){
+						// Fancy loading goes here
+					},
 					success: function( data ) {
-						$data = $('<span>'+data+'</span>');// Convert data to an object
-						//alert(data);
-						if(data.length > 1){
-							//$data.hide();
-							$content.append($data);
-							$data.fadeIn(500, function(){
-								$('#load-more').removeClass('loading');
-								$('#load-more span.text').text($button);
-								$loading = false;
-							});
-						} else {
-							$('#load-more').addClass('done');
-							$('#load-more span.text').text($button);
-							$loading = false;
-							$finished = true;
-						}
+						console.log(data);
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						// Error stuff here
 					}
-				})
+				});
+			}
 
 
 
 
 
 
-			};
 
-			$('#load-more').click(function() {
-				if(!$loading && !$finished && !$(this).hasClass('done')) {
-					$loading = true;
-					page++;
-					load_posts();
-				}
-			});
+
+
+
+
+			// var page = 0,
+			// 	$loading = false,
+			// 	$finished = false,
+			// 	$el= $('#ajax-load-more'),
+			// 	$content = $('#ajax-load-more ul'),
+			// 	$button = $content.data('button-text');
+            //
+			// $el.append('<p id="load-more" class="more"><span class="loader"></span><span class="load-more-link">'+$button+'</span></p>');
+            //
+			// //Load posts function
+			// var load_posts = function(){
+			// 	$('#load-more').addClass('loading');
+			// 	$('#load-more span.text').text("Loading...");
+            //
+			// 	$.ajax({
+			// 		url: dwjs.ajaxurl,
+			// 		type: 'post',
+			// 		data: {
+			// 			action: 'ajax_pagination',
+			// 			postType: $content.data('post-type'),
+			// 			numPosts: $content.data('display-posts'),
+			// 			pageNumber: page
+			// 		},
+			// 		dataType: 'html',
+			// 		success: function( data ) {
+			// 			$data = $('<span>'+data+'</span>');// Convert data to an object
+			// 			//alert(data);
+			// 			if(data.length > 1){
+			// 				//$data.hide();
+			// 				$content.append($data);
+			// 				$data.fadeIn(500, function(){
+			// 					$('#load-more').removeClass('loading');
+			// 					$('#load-more span.text').text($button);
+			// 					$loading = false;
+			// 				});
+			// 			} else {
+			// 				$('#load-more').addClass('done');
+			// 				$('#load-more span.text').text($button);
+			// 				$loading = false;
+			// 				$finished = true;
+			// 			}
+			// 		}
+			// 	})
+            //
+            //
+            //
+            //
+            //
+            //
+			// };
+            //
+			// $('#load-more').click(function() {
+			// 	if(!$loading && !$finished && !$(this).hasClass('done')) {
+			// 		$loading = true;
+			// 		page++;
+			// 		load_posts();
+			// 	}
+			// });
 
 
 
