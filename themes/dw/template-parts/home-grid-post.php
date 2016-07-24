@@ -11,7 +11,7 @@ $thumbnail_medium = wp_get_attachment_image_src($main_image_id, 'grid-medium');
 			<?php echo dw_posted_on(); ?>
 			<h2 class="entry__title"><a href="<?php echo esc_url( get_permalink()); ?>"><?php echo get_the_title(); ?></a></h2>
 			<div class="dotdotdot">
-				<p class="entry__text card-text"><?php echo get_the_excerpt(); ?></p>
+				<p class="entry__text card-text"><?php echo the_content(); ?></p>
 			</div><!-- dotdotdot -->
 			<a href="<?php echo esc_url( get_permalink()); ?>" class="entry__read-more">Ver mais</a>
 		</div><!-- card-block -->

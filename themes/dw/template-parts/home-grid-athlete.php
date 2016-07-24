@@ -20,7 +20,7 @@ $position = dw_get_athlete_positions( $post->ID );
 		<div class="card-block">
 			<h2 class="entry__title"><a href="<?php echo get_the_permalink();?>"><?php echo get_the_title(); ?></a></h2>
 			<div class="dotdotdot">
-				<p class="entry__text card-text"><?php echo get_the_excerpt(); ?></p>
+				<p class="entry__text card-text"></p>
 			</div><!-- dotdotdot -->
 		</div><!-- card-block -->
 	</article><!-- card -->
