@@ -69,7 +69,7 @@ function dynamic_get_homepage_services( $home_id ){
 function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 
 	$athletes = [
-		'player' =>
+		'athlete' =>
 			[
 				'cf' => 'players',
 				'posts' => array(),

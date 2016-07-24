@@ -149,12 +149,13 @@ function dw_ajax_pagination() {
 		'tax_query' =>  array( $tax_query ),
 		'post_status' => 'publish',
 		'ignore_sticky_posts' => true,
-		'post__not_in' => []
+		'post__not_in' => dw_get_homepage_athletes_ids($postTax),
 	];
 
 	//error_log(print_r($args, true));
 	$is_last = false;
 	$posts = new WP_Query($args);
+
 	if( $posts->have_posts() ) {
 
 		if($page == $posts->max_num_pages) {
