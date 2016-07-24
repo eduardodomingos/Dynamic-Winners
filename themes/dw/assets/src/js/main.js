@@ -281,130 +281,6 @@
 				});
 			}
 
-
-
-
-
-
-
-
-
-
-
-			// var page = 0,
-			// 	$loading = false,
-			// 	$finished = false,
-			// 	$el= $('#ajax-load-more'),
-			// 	$content = $('#ajax-load-more ul'),
-			// 	$button = $content.data('button-text');
-            //
-			// $el.append('<p id="load-more" class="more"><span class="loader"></span><span class="load-more-link">'+$button+'</span></p>');
-            //
-			// //Load posts function
-			// var load_posts = function(){
-			// 	$('#load-more').addClass('loading');
-			// 	$('#load-more span.text').text("Loading...");
-            //
-			// 	$.ajax({
-			// 		url: dwjs.ajaxurl,
-			// 		type: 'post',
-			// 		data: {
-			// 			action: 'ajax_pagination',
-			// 			postType: $content.data('post-type'),
-			// 			numPosts: $content.data('display-posts'),
-			// 			pageNumber: page
-			// 		},
-			// 		dataType: 'html',
-			// 		success: function( data ) {
-			// 			$data = $('<span>'+data+'</span>');// Convert data to an object
-			// 			//alert(data);
-			// 			if(data.length > 1){
-			// 				//$data.hide();
-			// 				$content.append($data);
-			// 				$data.fadeIn(500, function(){
-			// 					$('#load-more').removeClass('loading');
-			// 					$('#load-more span.text').text($button);
-			// 					$loading = false;
-			// 				});
-			// 			} else {
-			// 				$('#load-more').addClass('done');
-			// 				$('#load-more span.text').text($button);
-			// 				$loading = false;
-			// 				$finished = true;
-			// 			}
-			// 		}
-			// 	})
-            //
-            //
-            //
-            //
-            //
-            //
-			// };
-            //
-			// $('#load-more').click(function() {
-			// 	if(!$loading && !$finished && !$(this).hasClass('done')) {
-			// 		$loading = true;
-			// 		page++;
-			// 		load_posts();
-			// 	}
-			// });
-
-
-
-
-
-
-
-
-			// $(document).on( 'click', '#athletes .js-load-more-athletes', function( event ) {
-			// 	event.preventDefault();
-			// 	$.ajax({
-			// 		url: dwjs.ajaxurl,
-			// 		type: 'post',
-			// 		data: {
-			// 			action: 'ajax_pagination'
-			// 		},
-			// 		success: function( result ) {
-			// 			alert( result );
-			// 		}
-			// 	})
-			// });
-
-
-
-
-			$('#_athletes .js-load-more-athletes').click(function (e) {
-				e.preventDefault();
-				//dom.$loadingAnimation.show();
-
-				var $activeTab = $('#athletes .tab-pane.active');
-				var $loading = $activeTab.find('.js-loader');
-				$loading.show();
-				var context = $activeTab.attr('id');
-				var $loadContainer = $activeTab.find('.loadMoreContainer');
-
-				var dummyHtml = '<article class="card entry entry--athlete text-xs-center m-b-0">';
-					dummyHtml += '<div class="img-wrapper">';
-					dummyHtml += '<a href="http://localhost:8888/athlete/anderson-talisca/" tabindex="0"><img alt="" srcset="http://localhost:8888/wp-content/uploads/2016/07/456702062_520x390_acf_cropped-224x168.jpg 224w, http://localhost:8888/wp-content/uploads/2016/07/456702062_520x390_acf_cropped-263x197.jpg 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid"></a>';
-					dummyHtml += '</div><!-- img-wrapper -->';
-					dummyHtml += '<div class="card-block">';
-					dummyHtml += '<h2 class="entry__title"><a href="http://localhost:8888/athlete/anderson-talisca/" tabindex="0">Anderson Talisca</a></h2>';
-					dummyHtml += '<div class="dotdotdot">';
-					dummyHtml += '<p class="entry__text card-text"></p>';
-					dummyHtml += '</div><!-- dotdotdot -->';
-					dummyHtml += '</div><!-- card-block -->';
-					dummyHtml += '</article>';
-
-				// Fake set time out simulates the response time
-				setTimeout(function(){
-					$loadContainer.append(dummyHtml);
-					$loading.hide();
-				}, 2000);
-
-			});
-
-
 			// On window resize:
 			$(window).resize(function(event){
 				dom.$homeNewsSlider.trigger('afterChange');
@@ -443,41 +319,6 @@
 			// $('#latest-posts .slider').slick({
 			// 	mobileFirst: true
 			// });
-
-			// Athlete slider
-			// $('.athlete__slider .slider-for').slick({
-			// 	slidesToShow: 1,
-			// 	slidesToScroll: 1,
-			// 	arrows: false,
-			// 	fade: true,
-			// 	asNavFor: '.athlete__slider .slider-nav'
-			// });
-
-			// $('.athlete__slider .slider-nav').slick({
-			// 	mobileFirst: true,
-			// 	slidesToShow: 1,
-			// 	slidesToScroll: 1,
-			// 	asNavFor: '.athlete__slider .slider-for',
-			// 	centerMode: false,
-			// 	focusOnSelect: true,
-			// 	responsive: [
-			// 		{
-			// 			breakpoint: 479,
-			// 			settings: {
-			// 				slidesToShow: 3,
-			// 				slidesToScroll: 1
-			// 			}
-			// 		},
-			// 		{
-			// 			breakpoint: 1023,
-			// 			settings: {
-			// 				slidesToShow: 5,
-			// 				slidesToScroll: 1
-			// 			}
-			// 		}
-			// 	]
-			// });
-
 		}
 
 
@@ -526,20 +367,54 @@
 		/*
 		 * Athlete Page Code
 		 */
-		if(dom.$body.hasClass('athlete')) {
+		if(dom.$body.hasClass('single-athlete')) {
+			// Athlete slider
+			$('.athlete__slider .slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				adaptiveHeight: true,
+				asNavFor: '.athlete__slider .slider-nav'
+			});
+
+			$('.athlete__slider .slider-nav').slick({
+				mobileFirst: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				asNavFor: '.athlete__slider .slider-for',
+				focusOnSelect: true,
+				responsive: [
+					{
+						breakpoint: 479,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 1023,
+						settings: {
+							slidesToShow: 5,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
+
 			// Gallery
-			// $('.athlete__media .slider').slick({
-			// 	mobileFirst: true,
-			// 	responsive: [
-			// 		{
-			// 			breakpoint: 1023,
-			// 			settings: {
-			// 				slidesToShow: 2,
-			// 				slidesToScroll: 2
-			// 			}
-			// 		}
-			// 	]
-			// });
+			$('.athlete__media .slider').slick({
+				mobileFirst: true,
+				responsive: [
+					{
+						breakpoint: 1023,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+						}
+					}
+				]
+			});
 		}
 	});
 

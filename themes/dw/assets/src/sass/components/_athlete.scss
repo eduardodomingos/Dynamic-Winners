@@ -4,30 +4,31 @@
 .athlete {}
 
 	.athlete__head {
+		position: relative;
 		overflow: hidden;
+		@include clearfix();
 		&,
 		a {
 			color: #fff;
 		}
-		.box-right {
-			background-color: $red;
-			position: relative;
-			@include rem((
-				padding-top: 10px,
-				padding-bottom: 10px,
-				padding-left: 10px,
-			));
-			&:before {
-				content: '';
-				display: block;
-				position: absolute;
-				width: 999em;
-				top: 0;
-				bottom: 0;
-				right: -999em;
-				background-color: $red;
+
+		.bg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: $red;
+			width: calc(100% - 172px);
+			z-index: -1;
+
+			@include media-breakpoint-up(md) {
+				width: calc(100% - 165px);
 			}
-			&:after {
+			@include media-breakpoint-up(lg) {
+				width: calc(100% - 250px);
+			}
+
+			&:before {
 				content: '';
 				position: absolute;
 				top: 0;
@@ -39,7 +40,39 @@
 				transform: skewX(-21deg);
 				z-index: -1;
 			}
+
 		}
+
+		.content {
+			float: right;
+			width: calc(100% - 172px);
+			@include rem((
+				padding-top: 10px,
+				padding-bottom: 5px,
+				padding-left: 5px,
+				padding-right: 5px,
+			));
+			@include media-breakpoint-up(md) {
+				width: calc(100% - 165px);
+				@include rem((
+					padding-top: 20px,
+					padding-bottom: 15px,
+					padding-left: 10px,
+					padding-right: 10px,
+				));
+			}
+			@include media-breakpoint-up(lg) {
+				@include make-container();
+				@include make-container-max-widths();
+				text-align: center;
+				float: none;
+				@include rem((
+					padding-left: 200px,
+					padding-right: 200px,
+				));
+			}
+		}
+
 	}
 
 		.athlete__name {
@@ -135,5 +168,14 @@
 				}
 			}
 		}
+
+		.tab-content-container {
+			@include media-breakpoint-up(lg) {
+				@include make-container();
+				@include make-container-max-widths();
+			}
+		}
+
+
 	}
 
