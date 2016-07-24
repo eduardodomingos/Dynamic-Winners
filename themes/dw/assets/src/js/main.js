@@ -43,68 +43,68 @@
 
 
 		// Throttle window scroll for performace
-		var throttled = _.throttle(updatePosition, 100);
-		dom.$window.scroll(throttled);
+		// var throttled = _.throttle(updatePosition, 100);
+		// dom.$window.scroll(throttled);
 
 		// Fix menu
-		var isFixed = false;
-		var isVisible = false;
+		// var isFixed = false;
+		// var isVisible = false;
 
 		// Throttle callback
-		function updatePosition() {
-			var current_scroll_top = dom.$window.scrollTop();
-			//console.log(current_scroll_top);
-			if( window.matchMedia('(min-width: 1024px)').matches ) {
-				if(isFixed === false) {
-					if( current_scroll_top >= 285 ) {
-						$('body').addClass('page-head-is-fixed');
-						isFixed = true;
-					}
-				}
-
-				if( isFixed === true && isVisible === false ) {
-					if( current_scroll_top < 285 ) {
-						$('body').removeClass('page-head-is-fixed');
-						isFixed = false;
-					}
-					if(current_scroll_top >= 560) {
-						$('body').addClass('page-head-is-visible');
-						isVisible = true;
-					}
-				}
-
-				if(isFixed === true && isVisible === true) {
-					if(current_scroll_top < 560) {
-						$('body').removeClass('page-head-is-visible');
-						isVisible = false;
-					}
-				}
-
-			} else {
-				if(isFixed === false) {
-					if( current_scroll_top >= 200) {
-						$('body').addClass('page-head-is-fixed');
-						isFixed = true;
-					}
-				}
-				if( isFixed === true && isVisible === false ) {
-					if( current_scroll_top < 200 ) {
-						$('body').removeClass('page-head-is-fixed');
-						isFixed = false;
-					}
-					if(current_scroll_top >= 480) {
-						$('body').addClass('page-head-is-visible');
-						isVisible = true;
-					}
-				}
-				if(isFixed === true && isVisible === true) {
-					if(current_scroll_top < 480) {
-						$('body').removeClass('page-head-is-visible');
-						isVisible = false;
-					}
-				}
-			}
-		}
+		// function updatePosition() {
+		// 	var current_scroll_top = dom.$window.scrollTop();
+		// 	//console.log(current_scroll_top);
+		// 	if( window.matchMedia('(min-width: 1024px)').matches ) {
+		// 		if(isFixed === false) {
+		// 			if( current_scroll_top >= 285 ) {
+		// 				$('body').addClass('page-head-is-fixed');
+		// 				isFixed = true;
+		// 			}
+		// 		}
+        //
+		// 		if( isFixed === true && isVisible === false ) {
+		// 			if( current_scroll_top < 285 ) {
+		// 				$('body').removeClass('page-head-is-fixed');
+		// 				isFixed = false;
+		// 			}
+		// 			if(current_scroll_top >= 560) {
+		// 				$('body').addClass('page-head-is-visible');
+		// 				isVisible = true;
+		// 			}
+		// 		}
+        //
+		// 		if(isFixed === true && isVisible === true) {
+		// 			if(current_scroll_top < 560) {
+		// 				$('body').removeClass('page-head-is-visible');
+		// 				isVisible = false;
+		// 			}
+		// 		}
+        //
+		// 	} else {
+		// 		if(isFixed === false) {
+		// 			if( current_scroll_top >= 200) {
+		// 				$('body').addClass('page-head-is-fixed');
+		// 				isFixed = true;
+		// 			}
+		// 		}
+		// 		if( isFixed === true && isVisible === false ) {
+		// 			if( current_scroll_top < 200 ) {
+		// 				$('body').removeClass('page-head-is-fixed');
+		// 				isFixed = false;
+		// 			}
+		// 			if(current_scroll_top >= 480) {
+		// 				$('body').addClass('page-head-is-visible');
+		// 				isVisible = true;
+		// 			}
+		// 		}
+		// 		if(isFixed === true && isVisible === true) {
+		// 			if(current_scroll_top < 480) {
+		// 				$('body').removeClass('page-head-is-visible');
+		// 				isVisible = false;
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 
 

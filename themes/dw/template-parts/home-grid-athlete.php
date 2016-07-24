@@ -4,7 +4,7 @@ $main_image_id = get_field('main_image');
 $thumbnail_small = wp_get_attachment_image_src($main_image_id, 'grid-small');
 $thumbnail_medium = wp_get_attachment_image_src($main_image_id, 'grid-medium');
 
-$position = dw_get_athlete_positions( $post->ID );
+$position = __(dw_get_athlete_positions( $post->ID ), 'dw');
 ?>
 
 <?php if($is_slider):?>

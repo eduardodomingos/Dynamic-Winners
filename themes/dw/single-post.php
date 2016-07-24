@@ -38,15 +38,15 @@ $nav_classes = array('prev', 'next');
 						</div><!-- col -->
 						<div class="col-md-6">
 							<header class="post__header">
-								<ul>
-								<?php 
+								<ul class="post__category">
+								<?php
 								$categories = wp_get_object_terms(get_the_ID(), 'category', array('fields' => 'names'));
 								if( !empty( $categories ) ) { ?>
 									<?php foreach( $categories as $category ) { ?>
-									<li class="post__category"><?php echo $category; ?> 
+									<li><?php echo $category; ?></li>
 								<?php } } ?>
 								</ul>
-								
+
 								<h3 class="post__title"><?php echo get_the_title(); ?></h3>
 								<?php echo dw_posted_on(); ?>
 

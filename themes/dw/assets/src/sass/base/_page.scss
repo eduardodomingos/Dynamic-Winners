@@ -2,6 +2,11 @@
     $PAGE
 \*------------------------------------*/
 
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body.home {
 	opacity: 0;
 	transition: opacity 0.5s;

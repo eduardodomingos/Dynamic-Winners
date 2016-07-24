@@ -8,57 +8,27 @@
  */
 
 get_header(); ?>
+	<section class="featured-image">
+		<div class="featured-image__overlay"></div>
+	</section>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'dw' ); ?></h1>
-				</header><!-- .page-header -->
+	<!-- PRIMARY SECTION
+        ========================================================= -->
+	<div class="band band--primary">
+		<main id="content" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-xs-center lead">
+						<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'dw' ); ?></p>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Go back home', 'dw' ); ?></a>
+					</div><!-- col -->
+				</div><!-- row -->
+			</div><!-- container -->
+		</main>
+	</div><!-- band--primary -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'dw' ); ?></p>
-
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( dw_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'dw' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'dw' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
+get_template_part( 'template-parts/singles', 'footer' );
 get_footer();
