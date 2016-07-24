@@ -260,7 +260,30 @@ function dynamic_get_before_and_after_posts(){
 
 }
 
+function dw_get_homepage_athletes_ids( $taxonomy_term ){
+	
+	$athletes_converter = [
+		'athlete' => 'players',
+		'coach' => 'managers',
+		'team' => 'teams'
+		];
 
+	$field_name = $athletes_converter[$taxonomy_term];
+	$athlete_ids = [];
+	
+	if( !empty( $field_name )){
+		
+		$home_id = dynamic_get_active_homepage();
+		$athletes = get_field($field_name, $home_id);
+		
+		foreach ($athletes as $athlete) {
+			$athlete_ids[] = $athlete->ID;
+		}
+	}
+
+	return $athlete_ids;
+
+}
 
 function dynamic_get_latest_news(){
 
