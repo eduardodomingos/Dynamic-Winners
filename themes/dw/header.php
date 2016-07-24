@@ -17,7 +17,7 @@
 		$body_class = 'page--services';
 	}
 	elseif(is_singular('athlete')) {
-		$body_class = 'page--athletes';
+		$body_class = 'page--athlete';
 	}
 
 ?>
@@ -48,7 +48,7 @@
 							<span class="tcon-menu__lines" aria-hidden="true"></span>
 							<span class="tcon-visuallyhidden"><?php esc_html_e( 'Menu', 'dw' ); ?></span>
 						</button>
-						
+
 						<div class="site-nav__list">
 							<ul>
 								<?php echo dynamic_get_nav_menu_main(); ?>

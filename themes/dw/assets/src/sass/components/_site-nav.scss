@@ -103,7 +103,7 @@
 
 
 
-			@each $page in home, news, services, athletes {
+			@each $page in home, news, services, athlete {
 
 				.page--#{$page} .site-nav__item--#{$page} a {
 					font-weight: normal;

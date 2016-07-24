@@ -172,7 +172,7 @@ function dynamic_add_manchetes_css_to_header(){
 		$css .= '}';
 
 	}
-	elseif( is_single() ){
+	elseif( is_singular('post') || is_singular('service') ){
 
 		global $post;
 
@@ -190,11 +190,11 @@ function dynamic_add_manchetes_css_to_header(){
 				),
 
 
-			'athlete' => array(
-					'mobile' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
-					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
-					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
-				)
+//			'athlete' => array(
+//					'mobile' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
+//					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
+//					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
+//				)
 		);
 
 		$post_type = $post->post_type;
@@ -298,7 +298,7 @@ function dw_get_athlete_positions( $athlete_id = 0 ){
 	else{
 		$positions = array();
 	}
-	
+
 
 	return $positions;
 
@@ -314,30 +314,30 @@ function dw_get_athlete_biography(){
 
 
 	$athlete_biography = array();
-	
+
 	$terms = wp_get_post_terms(get_the_ID(), 'athlete_type');
 	$tax = $terms[0]->slug;
-	
+
 	foreach( $fields[$tax] as $field ){
-		
+
 		if( $field == 'position'){
 			$positions = dw_get_athlete_positions();
 			if( !empty($positions)){
 				$athlete_biography[$field] = dw_get_athlete_positions();
 			}
-			
+
 		}
-		
+
 		else{
-			
+
 			$field_value= get_field($field);
 			if( ! empty($field_value) ){
 				$athlete_biography[$field] = $field_value;
 			}
-		}	
-		
+		}
+
 	}
-	
+
 	return $athlete_biography;
 
 }
@@ -386,13 +386,13 @@ add_shortcode('gallery', function($atts)
             'slider_class_name'   => '', // Optional slider css class
             'ids'                 => '', // Comma separated list of image ids
             'size'                => 'full', // Image format (could be an custom image format)
-          
+
         ), $atts);
 
     extract($attrs);
 
     // Verify if the chosen image format really exist
-    
+
 
     // Iterate over attribute array, cleanup and make the array elements JavaScript ready
     foreach( $attrs as $key => $attr )
@@ -420,7 +420,7 @@ add_shortcode('gallery', function($atts)
     }
 
     // Determine if the script has already been registered and register the script and stylesheets only once
-   
+
     // Create an empty variable for return html content
     $html_output = '';
 
@@ -434,7 +434,7 @@ add_shortcode('gallery', function($atts)
         // Get the image by media id and build the html div group with the image source, width and height
         if( $image_data = wp_get_attachment_image_src( $media_id, 'grid-medium' ) )
         {
-            $html_output .= '<div><div class="image"><img src="'.esc_url($image_data[0]).'" height="'.$image_data[0].'" width="'.$image_data[0].'" /></div></div>';
+            $html_output .= '<div class="slider__item"><div class="image"><img src="'.esc_url($image_data[0]).'" height="'.$image_data[0].'" width="'.$image_data[0].'" /></div></div>';
         }
     }
 
