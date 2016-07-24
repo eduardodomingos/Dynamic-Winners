@@ -2,13 +2,14 @@
     $404
 \*------------------------------------*/
 .error404 {
-  /* Margin bottom by footer height */
-  margin-bottom: 48px;
+	/* Fixed footer */
+	margin-bottom: 48px;
+	.page-foot {
+		position: absolute;  bottom: 0;
+		width: 100%;
+		/* Set the fixed height of the footer here */
+		height: 48px;
+	}
 }
 
-.page-foot {
-  position: absolute;  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 48px;
-}
+
