@@ -105,7 +105,7 @@
 			.card {
 				img {
 					@include rem((
-						width: 30px,
+						width: 80px,
 						min-height: 40px
 					));
 					margin: 0 auto;
@@ -116,6 +116,12 @@
 					@include rem((
 						letter-spacing: 0.5px,
 					));
+				}
+			}
+			.media-heading {
+				@include rem(font-size, 18px);
+				@include media-breakpoint-up(lg) {
+				  @include rem(font-size, 20px);
 				}
 			}
 

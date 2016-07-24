@@ -62,7 +62,7 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 								<div class="slider slider--athlete slider-nav">
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
-											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-biography.svg" alt="biography icon" class="card-img-top img-fluid">
+											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-bio-2.svg" alt="biography icon" class="card-img-top img-fluid">
 											<div class="card-block p-l-0 p-r-0">
 												<p class="card-text">Biografia</p>
 											</div>
@@ -70,7 +70,7 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 									</div><!-- slider__item -->
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
-											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-academic.svg" alt="academic icon" class="card-img-top img-fluid">
+											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-academic-2.svg" alt="academic icon" class="card-img-top img-fluid">
 											<div class="card-block p-l-0 p-r-0">
 												<p class="card-text">Formação</p>
 											</div>
@@ -78,7 +78,7 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 									</div><!-- slider__item -->
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
-											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-career.svg" alt="career icon" class="card-img-top img-fluid">
+											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-career-2.svg" alt="career icon" class="card-img-top img-fluid">
 											<div class="card-block p-l-0 p-r-0">
 												<p class="card-text">Carreira</p>
 											</div>
@@ -86,7 +86,7 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 									</div><!-- slider__item -->
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
-											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-achievments.svg" alt="achievments icon" class="card-img-top img-fluid">
+											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-history-2.svg" alt="achievments icon" class="card-img-top img-fluid">
 											<div class="card-block p-l-0 p-r-0">
 												<p class="card-text">Palmarés</p>
 											</div>
@@ -94,7 +94,7 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 									</div><!-- slider__item -->
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
-											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-managers.svg" alt="manager icon" class="card-img-top img-fluid">
+											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-managers-2.svg" alt="manager icon" class="card-img-top img-fluid">
 											<div class="card-block p-l-0 p-r-0">
 												<p class="card-text">Treinadores</p>
 											</div>
@@ -106,65 +106,65 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 										<div class="slider slider-for">
 											<div class="slider__item">
 												<div class="row band">
-													<div class="col-sm-12">
-														<div class="col-md-5 col-lg-4">
-															<div class="media hidden-sm-down">
-																<a class="media-left" href="#">
-																	<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-biography.svg" alt="biography icon">
-																</a><!-- media-left -->
-																<div class="media-body">
-																	<h4 class="media-heading">Biografia</h4>
-																</div><!-- media-body -->
-															</div><!-- media -->
+
+													<div class="col-md-5 col-lg-4">
+														<div class="media hidden-sm-down">
+															<a class="media-left" href="#">
+																<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-bio-1.svg" alt="biography icon">
+															</a><!-- media-left -->
+															<div class="media-body">
+																<h4 class="media-heading">Biografia</h4>
+															</div><!-- media-body -->
+														</div><!-- media -->
+													</div><!-- col -->
+													<div class="col-md-7 col-lg-8">
+														<div class="col-lg-6">
+															<p>Nome: <?php echo $biography['name'] ?><br>
+																<?php if( !empty( $biography['team'] ) ){ ?>
+																	Equipa: <?php echo $biography['team']; ?><br>
+																<?php } ?>
+																<?php if( isset( $biography['position'] ) ) : ?>
+																	Posição: <?php echo implode('/', $biography['position']); ?><br>
+																<?php endif; ?>
+																<?php if( !empty( $biography['birthday'] ) ){ ?>
+																Data de nascimento: <?php echo $biography['birthday']; ?></p>
+															<?php } ?>
 														</div><!-- col -->
-														<div class="col-md-7 col-lg-8">
-															<div class="col-lg-6">
-																<p>Nome: <?php echo $biography['name'] ?><br>
-																	<?php if( !empty( $biography['team'] ) ){ ?>
-																		Equipa: <?php echo $biography['team']; ?><br>
-																	<?php } ?>
-																	<?php if( isset( $biography['position'] ) ) : ?>
-																		Posição: <?php echo implode('/', $biography['position']); ?><br>
-																	<?php endif; ?>
-																	<?php if( !empty( $biography['birthday'] ) ){ ?>
-																	Data de nascimento: <?php echo $biography['birthday']; ?></p>
-																<?php } ?>
-															</div><!-- col -->
-															<div class="col-lg-6">
-																<p><?php if( !empty( $biography['origin'] ) ){ ?>
-																		Nacionalidade: <?php echo $biography['origin']; ?><br>
-																	<?php }
-																	if( !empty( $biography['height'] ) ){ ?>
-																		Altura: <?php echo $biography['height']; ?> cm<br>
-																	<?php }
-																	if( !empty( $biography['weight'] ) ){ ?>
-																	Peso: <?php echo $biography['weight']; ?> kg</p>
-																<?php } ?>
-															</div><!-- col -->
+														<div class="col-lg-6">
+															<p><?php if( !empty( $biography['origin'] ) ){ ?>
+																	Nacionalidade: <?php echo $biography['origin']; ?><br>
+																<?php }
+																if( !empty( $biography['height'] ) ){ ?>
+																	Altura: <?php echo $biography['height']; ?> cm<br>
+																<?php }
+																if( !empty( $biography['weight'] ) ){ ?>
+																Peso: <?php echo $biography['weight']; ?> kg</p>
+															<?php } ?>
 														</div><!-- col -->
 													</div><!-- col -->
+
 												</div><!-- row -->
 											</div><!-- slider__item -->
 
 											<?php foreach( $athlete_info as $field => $name ){ ?>
 											<?php if( !empty( get_field($field) ) ) : ?>
 													<div class="slider__item">
-														<div class="row">
-															<div class="col-sm-12">
-																<div class="col-md-5 col-lg-4">
-																	<div class="media hidden-sm-down">
-																		<a class="media-left" href="#">
-																			<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-academic.svg" alt="academic icon">
-																		</a><!-- media-left -->
-																		<div class="media-body">
-																			<h4 class="media-heading"><?php echo $name; ?></h4>
-																		</div><!-- media-body -->
-																	</div><!-- media -->
-																</div><!-- col -->
-																<div class="col-md-7 col-lg-8">
-																	<?php echo get_field($field); ?>
-																</div><!-- col -->
+														<div class="row band">
+
+															<div class="col-md-5 col-lg-4">
+																<div class="media hidden-sm-down">
+																	<a class="media-left" href="#">
+																		<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-academic-1.svg" alt="academic icon">
+																	</a><!-- media-left -->
+																	<div class="media-body">
+																		<h4 class="media-heading"><?php echo $name; ?></h4>
+																	</div><!-- media-body -->
+																</div><!-- media -->
 															</div><!-- col -->
+															<div class="col-md-7 col-lg-8">
+																<?php echo get_field($field); ?>
+															</div><!-- col -->
+
 														</div><!-- row -->
 													</div><!-- slider__item -->
 											<?php endif; ?>
