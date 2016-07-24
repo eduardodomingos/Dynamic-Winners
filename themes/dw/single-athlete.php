@@ -179,10 +179,13 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 				<div class="container">
 					<div class="tab-content">
 					<div class="tab-pane active" id="photos" role="tabpanel">
-						<?php the_content(); ?>
+						<?php echo get_field('athlete_gallery'); ?>
 					</div>
 					<div class="tab-pane" id="video" role="tabpanel">
-						<img alt="" srcset="http://placehold.it/224x168?text=video4:3 224w, http://placehold.it/1023x767?text=video4:3 263w" sizes="(min-width: 480px) 50vw, 100vw" class="img-fluid">
+						<?php $videos = get_field('athlete_videos'); 
+						$split  = preg_split('/\r\n|[\r\n]/', $videos);
+						//echo wp_oembed_get($video);
+						?>
 					</div>
 				</div><!-- tab-content -->
 				</div><!-- container -->
