@@ -69,7 +69,7 @@ function dynamic_get_homepage_services( $home_id ){
 function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 
 	$athletes = [
-		'athlete' =>
+		'player' =>
 			[
 				'cf' => 'players',
 				'posts' => array(),
@@ -89,40 +89,15 @@ function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 			]
 	];
 
-	$tax_query = ['field' => 'slug', 'taxonomy' => 'athlete_type'];
-	$nb_posts = 12;
-
-	$args = [
-		'post_type' => 'athlete',
-		'post_status' => 'publish',
-		'ignore_sticky_posts' => true,
-		'page' => 1
-	];
-
-
+	
 	foreach( $athletes  as $tax => $athlete_vars ){
 
 		$highlight_athletes = get_field( $athlete_vars['cf'], $home_id);
 
-		if( $page = 1 ){
-			$nb_posts = $nb_posts - count($highlight_athletes);
-		}
-
-		$tax_query['terms'] = $tax;
-		$athlete_type_ids = [];
-
-		foreach( $highlight_athletes  as $highlight_athlete){
-			$athlete_type_ids[] = $highlight_athlete->ID;
-		}
-
-		$args['post__not_in'] = $athlete_type_ids;
-		$args['tax_query'] = array( $tax_query );
-		$args['posts_per_page'] = $nb_posts;
-
-		$more_athletes = new WP_Query($args);
+		
 		$all_athletes  = new WP_Query();
 
-		$all_athletes->posts      = array_merge( $highlight_athletes, $more_athletes->posts);
+		$all_athletes->posts      =  $highlight_athletes;
 		$all_athletes->post_count = count( $all_athletes->posts );
 
 		$athletes[$tax]['posts'] = $all_athletes;
