@@ -210,7 +210,7 @@ $athlete_info = array(
 						<div class="tab-pane" id="video" role="tabpanel">
 							<?php $videos = get_field('athlete_videos');
 							$split  = preg_split('/\r\n|[\r\n]/', $videos);
-							//echo wp_oembed_get($video);
+							echo wp_oembed_get($split[0]);
 							?>
 						</div>
 					</div><!-- tab-content -->
