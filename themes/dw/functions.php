@@ -151,8 +151,7 @@ function dw_ajax_pagination() {
 		'ignore_sticky_posts' => true,
 		'post__not_in' => dw_get_homepage_athletes_ids($postTax),
 	];
-
-	//error_log(print_r($args, true));
+	
 	$is_last = false;
 	$posts = new WP_Query($args);
 
@@ -161,12 +160,12 @@ function dw_ajax_pagination() {
 		if($page == $posts->max_num_pages) {
 			$is_last = true;
 		}
-		//echo '<div class="clearfix">';
+
 		while ( $posts->have_posts() ) {
 			$posts->the_post();
 			dynamic_get_template_part( 'template-parts/home-grid', 'athlete', array('is_slider' => false, 'is_last' => $is_last ) );
 		}
-		//echo '</div>';
+
 	}
 	wp_reset_query();
 
