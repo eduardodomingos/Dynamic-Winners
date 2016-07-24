@@ -151,7 +151,7 @@ function dw_ajax_pagination() {
 		'ignore_sticky_posts' => true,
 		'post__not_in' => dw_get_homepage_athletes_ids($postTax),
 	];
-	
+
 	$is_last = false;
 	$posts = new WP_Query($args);
 
@@ -171,6 +171,28 @@ function dw_ajax_pagination() {
 
 	die();
 }
+
+function dw_login_logo() { ?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/build/img/logo-dw-black.svg);
+			background-size: 100%;
+			width: 130px;
+			height: 90px;
+		}
+	</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'dw_login_logo' );
+
+function dw_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'dw_login_logo_url' );
+
+function dw_login_logo_url_title() {
+	return 'Your Site Name and Info';
+}
+add_filter( 'login_headertitle', 'dw_login_logo_url_title' );
 
 
 
