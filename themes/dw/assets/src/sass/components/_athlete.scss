@@ -107,6 +107,10 @@
 				margin: 0 auto;
 			}
 
+			.slider-nav .slider__item {
+				cursor: pointer;
+			}
+
 			.card {
 				img {
 					@include rem((
