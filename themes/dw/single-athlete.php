@@ -102,73 +102,75 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 									</div><!-- slider__item -->
 								</div><!-- slider-nav -->
 								<div class="row">
-									<div class="col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0">
+									<div class="col-sm-12">
 										<div class="slider slider-for">
-									<div class="slider__item">
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="col-md-5 col-lg-4">
-													<div class="media">
-														<a class="media-left" href="#">
-															<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-biography.svg" alt="biography icon">
-														</a><!-- media-left -->
-														<div class="media-body">
-															<h4 class="media-heading">Biografia</h4>
-														</div><!-- media-body -->
-													</div><!-- media -->
-												</div><!-- col -->
-												<div class="col-md-7 col-lg-8">
-													<div class="col-lg-6">
-														<p>Nome: <?php echo $biography['name'] ?><br>
-															<?php if( !empty( $biography['team'] ) ){ ?>
-																Equipa: <?php echo $biography['team']; ?><br>
-															<?php } ?>
-															<?php if( isset( $biography['position'] ) ) : ?>
-																Posição: <?php echo implode('/', $biography['position']); ?><br>
-															<?php endif; ?>
-															<?php if( !empty( $biography['birthday'] ) ){ ?>
-															Data de nascimento: <?php echo $biography['birthday']; ?></p>
-														<?php } ?>
+											<div class="slider__item">
+												<div class="row band">
+													<div class="col-sm-12">
+														<div class="col-md-5 col-lg-4">
+															<div class="media hidden-sm-down">
+																<a class="media-left" href="#">
+																	<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-biography.svg" alt="biography icon">
+																</a><!-- media-left -->
+																<div class="media-body">
+																	<h4 class="media-heading">Biografia</h4>
+																</div><!-- media-body -->
+															</div><!-- media -->
+														</div><!-- col -->
+														<div class="col-md-7 col-lg-8">
+															<div class="col-lg-6">
+																<p>Nome: <?php echo $biography['name'] ?><br>
+																	<?php if( !empty( $biography['team'] ) ){ ?>
+																		Equipa: <?php echo $biography['team']; ?><br>
+																	<?php } ?>
+																	<?php if( isset( $biography['position'] ) ) : ?>
+																		Posição: <?php echo implode('/', $biography['position']); ?><br>
+																	<?php endif; ?>
+																	<?php if( !empty( $biography['birthday'] ) ){ ?>
+																	Data de nascimento: <?php echo $biography['birthday']; ?></p>
+																<?php } ?>
+															</div><!-- col -->
+															<div class="col-lg-6">
+																<p><?php if( !empty( $biography['origin'] ) ){ ?>
+																		Nacionalidade: <?php echo $biography['origin']; ?><br>
+																	<?php }
+																	if( !empty( $biography['height'] ) ){ ?>
+																		Altura: <?php echo $biography['height']; ?> cm<br>
+																	<?php }
+																	if( !empty( $biography['weight'] ) ){ ?>
+																	Peso: <?php echo $biography['weight']; ?> kg</p>
+																<?php } ?>
+															</div><!-- col -->
+														</div><!-- col -->
 													</div><!-- col -->
-													<div class="col-lg-6">
-														<p><?php if( !empty( $biography['origin'] ) ){ ?>
-																Nacionalidade: <?php echo $biography['origin']; ?><br>
-															<?php }
-															if( !empty( $biography['height'] ) ){ ?>
-																Altura: <?php echo $biography['height']; ?> cm<br>
-															<?php }
-															if( !empty( $biography['weight'] ) ){ ?>
-															Peso: <?php echo $biography['weight']; ?> kg</p>
-														<?php } ?>
-													</div><!-- col -->
-												</div><!-- col -->
-											</div><!-- col -->
-										</div><!-- row -->
-									</div><!-- slider__item -->
+												</div><!-- row -->
+											</div><!-- slider__item -->
 
-									<?php foreach( $athlete_info as $field => $name ){ ?>
-									<?php if( !empty( get_field($field) ) ) : ?>
-									<div class="slider__item">
-										<div class="row">
-											<div class="col-sm-12 col-md-4 col-lg-4 col-lg-offset-0 hidden-sm-down">
-												<div class="media">
-													<a class="media-left" href="#">
-														<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-academic.svg" alt="academic icon">
-													</a>
-													<div class="media-body">
-														<h4 class="media-heading"><?php echo $name; ?></h4>
-													</div>
-												</div>
-											</div><!-- col -->
-											<div class="col-sm-12 col-md-8 col-md-offset-4 col-lg-4 col-lg-offset-0">
-												<?php echo get_field($field); ?>
-											</div><!-- col -->
-										</div><!-- row -->
-									</div><!-- slider__item -->
-									<?php endif; ?>
-									<?php } ?>
+											<?php foreach( $athlete_info as $field => $name ){ ?>
+											<?php if( !empty( get_field($field) ) ) : ?>
+													<div class="slider__item">
+														<div class="row">
+															<div class="col-sm-12">
+																<div class="col-md-5 col-lg-4">
+																	<div class="media hidden-sm-down">
+																		<a class="media-left" href="#">
+																			<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-academic.svg" alt="academic icon">
+																		</a><!-- media-left -->
+																		<div class="media-body">
+																			<h4 class="media-heading"><?php echo $name; ?></h4>
+																		</div><!-- media-body -->
+																	</div><!-- media -->
+																</div><!-- col -->
+																<div class="col-md-7 col-lg-8">
+																	<?php echo get_field($field); ?>
+																</div><!-- col -->
+															</div><!-- col -->
+														</div><!-- row -->
+													</div><!-- slider__item -->
+											<?php endif; ?>
+											<?php } ?>
 
-								</div><!-- slider-for -->
+										</div><!-- slider-for -->
 									</div>
 								</div>
 							</div><!-- athlete__slider -->

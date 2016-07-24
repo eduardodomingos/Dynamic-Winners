@@ -383,7 +383,6 @@
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: '.athlete__slider .slider-for',
-				centerMode: false,
 				focusOnSelect: true,
 				responsive: [
 					{
