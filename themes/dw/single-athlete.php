@@ -208,10 +208,15 @@ $athlete_info = array(
 							<?php echo get_field('athlete_gallery'); ?>
 						</div>
 						<div class="tab-pane" id="video" role="tabpanel">
+							<div class"slider">
 							<?php $videos = get_field('athlete_videos');
 							$split  = preg_split('/\r\n|[\r\n]/', $videos);
-							echo wp_oembed_get($split[0]);
-							?>
+							foreach( $split as $video ){ ?>
+								<div class="slider__item">
+									<?php echo wp_oembed_get($video); ?>
+								</div>	
+							<?php } ?>
+							</div>
 						</div>
 					</div><!-- tab-content -->
 				</div><!-- container -->
