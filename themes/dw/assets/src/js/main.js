@@ -402,7 +402,7 @@
 				]
 			});
 
-			// Gallery
+			// Gallery and Videos
 			$('.athlete__media .slider').slick({
 				mobileFirst: true,
 				responsive: [

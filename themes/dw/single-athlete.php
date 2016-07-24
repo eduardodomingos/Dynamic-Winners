@@ -16,11 +16,11 @@ $biography = dw_get_athlete_biography();
 
 $athlete_id = get_the_ID();
 $athlete_info = array(
-	'formation' => array( 'name' => 'Formação', 'icon' => 'icon-academic-1' ), 
-	'career' => array( 'name' => 'Carreira', 'icon' => 'icon-career-1' ), 
-	'prizes' => array( 'name' => 'Palmarés', 'icon' => 'icon-history-1' ), 
+	'formation' => array( 'name' => 'Formação', 'icon' => 'icon-academic-1' ),
+	'career' => array( 'name' => 'Carreira', 'icon' => 'icon-career-1' ),
+	'prizes' => array( 'name' => 'Palmarés', 'icon' => 'icon-history-1' ),
 	'managers' => array( 'name' => 'Treinadores', 'icon' => 'icon-managers-1' ),
-	); 
+	);
 ?>
 
 <section class="featured-image">
@@ -172,9 +172,9 @@ $athlete_info = array(
 											<?php foreach( $athlete_info as $field => $options ){ ?>
 											<?php $field_content = get_field( $field, $athlete_id); ?>
 											<?php if( !empty( $field_content ) ) : ?>
-													<?php 
+													<?php
 													$opts = array('name' => $options['name'], 'content' => $field_content, 'icon_name' => $options['icon']);
-													
+
 													dynamic_get_template_part('template-parts/athlete', 'features', $opts); ?>
 											<?php endif; ?>
 											<?php } ?>
@@ -208,13 +208,13 @@ $athlete_info = array(
 							<?php echo get_field('athlete_gallery'); ?>
 						</div>
 						<div class="tab-pane" id="video" role="tabpanel">
-							<div class"slider">
+							<div class="slider">
 							<?php $videos = get_field('athlete_videos');
 							$split  = preg_split('/\r\n|[\r\n]/', $videos);
 							foreach( $split as $video ){ ?>
 								<div class="slider__item">
 									<?php echo wp_oembed_get($video); ?>
-								</div>	
+								</div>
 							<?php } ?>
 							</div>
 						</div>

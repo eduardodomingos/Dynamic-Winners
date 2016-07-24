@@ -120,8 +120,12 @@ $arrow-size: 40px;
 	* Images / Global Styling
 	*
 	*/
-	.slick-slide img {
+	.slick-slide img,
+	.slider__item iframe {
 		width: 100%;
+	}
+
+	.slick-slide img {
 		height: auto;
 	}
 
