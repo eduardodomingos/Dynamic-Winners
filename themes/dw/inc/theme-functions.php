@@ -290,13 +290,55 @@ function dw_get_athlete_positions( $athlete_id = 0 ){
 	$choices = $field_obj['choices'];
 
 	$positions = get_field('position', $athlete_id);
-
-	foreach( $positions as $key => $position ){
-		$positions[$key] = $choices[$position];
+	if( !empty( $positions ) ){
+		foreach( $positions as $key => $position ){
+			$positions[$key] = $choices[$position];
+		}
 	}
+	else{
+		$positions = array();
+	}
+	
 
 	return $positions;
 
+
+}
+
+
+function dw_get_athlete_biography(){
+
+	$fields = array( 'athlete' => array('name', 'birthday', 'weight', 'height', 'team', 'position', 'origin'),
+					  'coach' => array('name', 'birthday', 'weight', 'height', 'team', 'origin'),
+					  'team' => array('name', 'foundation', 'country') );
+
+
+	$athlete_biography = array();
+	
+	$terms = wp_get_post_terms(get_the_ID(), 'athlete_type');
+	$tax = $terms[0]->slug;
+	
+	foreach( $fields[$tax] as $field ){
+		
+		if( $field == 'position'){
+			$positions = dw_get_athlete_positions();
+			if( !empty($positions)){
+				$athlete_biography[$field] = dw_get_athlete_positions();
+			}
+			
+		}
+		
+		else{
+			
+			$field_value= get_field($field);
+			if( ! empty($field_value) ){
+				$athlete_biography[$field] = $field_value;
+			}
+		}	
+		
+	}
+	
+	return $athlete_biography;
 
 }
 
@@ -329,3 +371,73 @@ function dynamic_get_all_services( $posts_to_exclude = array() ){
 
 
 }
+
+
+
+
+// Remove hook for the default shortcode...
+remove_shortcode('gallery', 'gallery_shortcode');
+// .. and create a new shortcode with the default WordPress shortcode name (tag) for the gallery
+add_shortcode('gallery', function($atts)
+{
+    $attrs =
+        shortcode_atts(array(
+            'slider'              => md5(microtime().rand()), // Slider ID (is per default unique)
+            'slider_class_name'   => '', // Optional slider css class
+            'ids'                 => '', // Comma separated list of image ids
+            'size'                => 'full', // Image format (could be an custom image format)
+          
+        ), $atts);
+
+    extract($attrs);
+
+    // Verify if the chosen image format really exist
+    
+
+    // Iterate over attribute array, cleanup and make the array elements JavaScript ready
+    foreach( $attrs as $key => $attr )
+    {
+        // CamelCase the array keys
+        $new_key_name = lcfirst(str_replace(array(' ', 'Css'), array('', 'CSS'), ucwords(str_replace('_', ' ', $key))));
+
+        // Remove unnecessary array elements
+        if( in_array($key, array('size', 'ids', 'slider_class_name')) || strpos($key, '_') !== false )
+        {
+            unset($attrs[$key]);
+        }
+
+        // Fix the type before passing the array elements to JavaScript
+        if( is_numeric($attr) )
+        {
+            $attrs[$new_key_name] = (int) $attr;
+        }else if( is_bool($attr) || (strpos($attr, 'true') !== false || strpos($attr, 'false') !== false) )
+        {
+            $attrs[$new_key_name] = filter_var($attr, FILTER_VALIDATE_BOOLEAN);
+        }else if( is_int($attr) )
+        {
+            $attrs[$new_key_name] = filter_var($attr, FILTER_VALIDATE_INT);
+        }
+    }
+
+    // Determine if the script has already been registered and register the script and stylesheets only once
+   
+    // Create an empty variable for return html content
+    $html_output = '';
+
+
+    // Build the html slider structure (open)
+    $html_output .= '<div class="slider wp-slick-slider">';
+
+    // Iterate over the comma separated list of image ids and keep only the real numeric ids
+    foreach( array_filter( array_map(function($id){ return (int) $id; }, explode(',', $ids)) ) as $media_id)
+    {
+        // Get the image by media id and build the html div group with the image source, width and height
+        if( $image_data = wp_get_attachment_image_src( $media_id, 'grid-medium' ) )
+        {
+            $html_output .= '<div><div class="image"><img src="'.esc_url($image_data[0]).'" height="'.$image_data[0].'" width="'.$image_data[0].'" /></div></div>';
+        }
+    }
+
+    // Close the html slider structure and return the html output
+    return $html_output.'</div>';
+});
