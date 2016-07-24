@@ -147,7 +147,7 @@ function dynamic_add_manchetes_css_to_header(){
 		$css .= '}';
 
 	}
-	elseif( is_singular('post') || is_singular('service') ){
+	elseif( is_single() ){
 
 		global $post;
 
@@ -163,38 +163,41 @@ function dynamic_add_manchetes_css_to_header(){
 					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-services--md.jpg',
 					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-services--lg.jpg',
 				),
-
-
-//			'athlete' => array(
-//					'mobile' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
-//					'tablet' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
-//					'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-athletes--sm.jpg',
-//				)
 		);
 
 		$post_type = $post->post_type;
 
-		$mobile_photo = $background_single_photos[$post_type]['mobile'];
-		$tablet_photo = $background_single_photos[$post_type]['tablet'];
-		$fullscreen_photo = $background_single_photos[$post_type]['fullscreen'];
+		if( $post_type == 'athlete'){
+			$background_single_photos[$post_type] = array(
+					'mobile' => get_field('photo_profile_mobile', $post->ID),
+					'tablet' => get_field('photo_profile_tablet', $post->ID),
+					'fullscreen' => get_field('photo_profile_fullscreen', $post->ID),
+				);
+		}
 
-		$css .= ".featured-image {
-					background-image: url('$mobile_photo');
+		if( in_array($post_type, array_keys($background_single_photos ) ) ){
+
+			$mobile_photo = $background_single_photos[$post_type]['mobile'];
+			$tablet_photo = $background_single_photos[$post_type]['tablet'];
+			$fullscreen_photo = $background_single_photos[$post_type]['fullscreen'];
+
+			$css .= ".featured-image {
+						background-image: url('$mobile_photo');
+						}
+
+					@media (min-width: 480px) {
+						.featured-image {
+							background-image: url('$tablet_photo');
+						}
 					}
 
-				@media (min-width: 480px) {
-					.featured-image {
-						background-image: url('$tablet_photo');
-					}
-				}
+					@media (min-width: 1024px) {
+						.featured-image {
+							background-image: url('$fullscreen_photo');
+						}
+					}";
 
-				@media (min-width: 1024px) {
-					.featured-image {
-						background-image: url('$fullscreen_photo');
-					}
-				}";
-
-
+		}				
 
 	}
 	$css .=  '</style>';

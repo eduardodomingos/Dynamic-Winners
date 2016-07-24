@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.5.3" created="2016-07-24 02:41" -->
+<!-- generator="WordPress/4.5.3" created="2016-07-24 15:28" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,8 +29,8 @@
 	<title>Dynamic Winners</title>
 	<link>http://dynamic.dev</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Sun, 24 Jul 2016 02:41:44 +0000</pubDate>
-	<language></language>
+	<pubDate>Sun, 24 Jul 2016 15:28:06 +0000</pubDate>
+	<language>pt</language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://dynamic.dev</wp:base_site_url>
 	<wp:base_blog_url>http://dynamic.dev</wp:base_blog_url>
@@ -108,7 +108,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>hide_on_screen</wp:meta_key>
@@ -117,6 +117,14 @@
 		<wp:postmeta>
 			<wp:meta_key>field_5793ccea48161</wp:meta_key>
 			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5793ccea48161";s:5:"label";s:15:"Fotos de Atleta";s:4:"name";s:15:"athlete_gallery";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5794d99c23418</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5794d99c23418";s:5:"label";s:8:"Facebook";s:4:"name";s:8:"facebook";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5794d9d723419</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5794d9d723419";s:5:"label";s:9:"Instagram";s:4:"name";s:9:"instagram";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>
@@ -887,6 +895,56 @@
 		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>
 			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"athlete";s:8:"order_no";i:0;s:8:"group_no";i:2;}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Foto de perfil</title>
+		<link>http://dynamic.dev/?acf=acf_foto-de-perfil</link>
+		<pubDate>Sun, 24 Jul 2016 15:16:31 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=522</guid>
+		<wp:post_id>522</wp:post_id>
+		<wp:post_date>2016-07-24 15:16:31</wp:post_date>
+		<wp:post_date_gmt>2016-07-24 15:16:31</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_foto-de-perfil</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5794db06f7ddd</wp:meta_key>
+			<wp:meta_value><![CDATA[a:17:{s:3:"key";s:19:"field_5794db06f7ddd";s:5:"label";s:15:"Foto fullscreen";s:4:"name";s:24:"photo_profile_fullscreen";s:4:"type";s:10:"image_crop";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:9:"crop_type";s:4:"hard";s:11:"target_size";s:6:"custom";s:5:"width";s:4:"2000";s:6:"height";s:3:"667";s:12:"preview_size";s:9:"thumbnail";s:10:"force_crop";s:3:"yes";s:21:"save_in_media_library";s:3:"yes";s:11:"retina_mode";s:2:"no";s:11:"save_format";s:3:"url";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5794db4df7dde</wp:meta_key>
+			<wp:meta_value><![CDATA[a:17:{s:3:"key";s:19:"field_5794db4df7dde";s:5:"label";s:11:"Foto Tablet";s:4:"name";s:20:"photo_profile_tablet";s:4:"type";s:10:"image_crop";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:9:"crop_type";s:4:"hard";s:11:"target_size";s:6:"custom";s:5:"width";s:4:"1023";s:6:"height";s:3:"448";s:12:"preview_size";s:9:"thumbnail";s:10:"force_crop";s:3:"yes";s:21:"save_in_media_library";s:3:"yes";s:11:"retina_mode";s:2:"no";s:11:"save_format";s:3:"url";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5794db9ef7ddf</wp:meta_key>
+			<wp:meta_value><![CDATA[a:17:{s:3:"key";s:19:"field_5794db9ef7ddf";s:5:"label";s:11:"Foto Mobile";s:4:"name";s:20:"photo_profile_mobile";s:4:"type";s:10:"image_crop";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:9:"crop_type";s:4:"hard";s:11:"target_size";s:6:"custom";s:5:"width";s:3:"479";s:6:"height";s:3:"269";s:12:"preview_size";s:9:"thumbnail";s:10:"force_crop";s:3:"yes";s:21:"save_in_media_library";s:3:"yes";s:11:"retina_mode";s:2:"no";s:11:"save_format";s:3:"url";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"athlete";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>
