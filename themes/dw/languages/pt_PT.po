@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-07-24 21:28+0100\n"
-"PO-Revision-Date: 2016-07-24 21:29+0100\n"
+"POT-Creation-Date: 2016-07-24 22:52+0100\n"
+"PO-Revision-Date: 2016-07-24 22:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -22,30 +22,13 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 "X-Poedit-SearchPathExcluded-2: assets\n"
 
-# @ _s
-#: 404.php:17
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Esta página não foi encontrada."
-
-# @ _s
-#: 404.php:21
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+#: 404.php:23
+msgid "It looks like nothing was found at this location."
 msgstr ""
-"Não encontramos nada nesta localização. Sugerimos que utilize um dos links "
-"abaixo ou que tente uma pesquisa."
 
-# @ _s
-#: 404.php:33
-msgid "Most Used Categories"
-msgstr "Categorias mais usadas"
-
-# @ _s
-#: 404.php:51
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Tente procurar nos arquivos mensais. %1$s"
+#: 404.php:24
+msgid "Go back home"
+msgstr ""
 
 # @ _s
 #: comments.php:40 comments.php:61
@@ -322,6 +305,26 @@ msgstr "Continue a ler %s <span class=\"meta-nav\">&rarr;</span>"
 #: template-parts/home-grid-contacts.php:12
 msgid "Contact us"
 msgstr "Contacte-nos"
+
+# @ _s
+#~ msgid "Oops! That page can&rsquo;t be found."
+#~ msgstr "Oops! Esta página não foi encontrada."
+
+# @ _s
+#~ msgid ""
+#~ "It looks like nothing was found at this location. Maybe try one of the "
+#~ "links below or a search?"
+#~ msgstr ""
+#~ "Não encontramos nada nesta localização. Sugerimos que utilize um dos "
+#~ "links abaixo ou que tente uma pesquisa."
+
+# @ _s
+#~ msgid "Most Used Categories"
+#~ msgstr "Categorias mais usadas"
+
+# @ _s
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Tente procurar nos arquivos mensais. %1$s"
 
 # @ _s
 #~ msgctxt "comments title"
