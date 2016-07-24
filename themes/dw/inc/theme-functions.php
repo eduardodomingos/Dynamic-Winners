@@ -2,14 +2,16 @@
 
 
 function dynamic_get_template_part( $slug, $name = null, $data=array() ) {
-
-	extract( $data );
-
-	if ( $name )
+	
+	if ( $name ){
 		$file = "{$slug}-{$name}.php";
-	else
+	}
+	else{
 		$file = "{$slug}.php";
-
+	}
+	
+	extract( $data );
+	
 	include locate_template( $file );
 }
 

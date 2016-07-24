@@ -15,9 +15,13 @@ $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 $biography = dw_get_athlete_biography();
 
 $athlete_id = get_the_ID();
-$athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'prizes' => 'Palmarés', 'managers' => 'Treinadores');
+$athlete_info = array(
+	'formation' => array( 'name' => 'Formação', 'icon' => 'icon-academic-1' ), 
+	'career' => array( 'name' => 'Carreira', 'icon' => 'icon-career-1' ), 
+	'prizes' => array( 'name' => 'Palmarés', 'icon' => 'icon-history-1' ), 
+	'managers' => array( 'name' => 'Treinadores', 'icon' => 'icon-managers-1' ),
+	); 
 ?>
-
 
 <section class="featured-image">
 	<div class="featured-image__overlay"></div>
@@ -74,6 +78,8 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 											</div>
 										</div><!-- card -->
 									</div><!-- slider__item -->
+									<?php $field_content = get_field( 'formation', $athlete_id); ?>
+									<?php if( !empty( $field_content ) ) : ?>
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
 											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-academic-2.svg" alt="academic icon" class="card-img-top img-fluid">
@@ -82,6 +88,9 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 											</div>
 										</div><!-- card -->
 									</div><!-- slider__item -->
+									<?php endif; ?>
+									<?php $field_content = get_field( 'career', $athlete_id); ?>
+									<?php if( !empty( $field_content ) ) : ?>
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
 											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-career-2.svg" alt="career icon" class="card-img-top img-fluid">
@@ -90,6 +99,9 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 											</div>
 										</div><!-- card -->
 									</div><!-- slider__item -->
+									<?php endif; ?>
+									<?php $field_content = get_field( 'prizes', $athlete_id); ?>
+									<?php if( !empty( $field_content ) ) : ?>
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
 											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-history-2.svg" alt="achievments icon" class="card-img-top img-fluid">
@@ -98,6 +110,9 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 											</div>
 										</div><!-- card -->
 									</div><!-- slider__item -->
+									<?php endif; ?>
+									<?php $field_content = get_field( 'managers', $athlete_id); ?>
+									<?php if( !empty( $field_content ) ) : ?>
 									<div class="slider__item">
 										<div class="card m-b-0 text-xs-center">
 											<img src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-managers-2.svg" alt="manager icon" class="card-img-top img-fluid">
@@ -106,7 +121,9 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 											</div>
 										</div><!-- card -->
 									</div><!-- slider__item -->
+									<?php endif; ?>
 								</div><!-- slider-nav -->
+
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="slider slider-for">
@@ -152,27 +169,13 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 												</div><!-- row -->
 											</div><!-- slider__item -->
 
-											<?php foreach( $athlete_info as $field => $name ){ ?>
-											<?php if( !empty( get_field($field) ) ) : ?>
-													<div class="slider__item">
-														<div class="row band">
-
-															<div class="col-md-5 col-lg-4">
-																<div class="media hidden-sm-down">
-																	<a class="media-left" href="#">
-																		<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-academic-1.svg" alt="academic icon">
-																	</a><!-- media-left -->
-																	<div class="media-body">
-																		<h4 class="media-heading"><?php echo $name; ?></h4>
-																	</div><!-- media-body -->
-																</div><!-- media -->
-															</div><!-- col -->
-															<div class="col-md-7 col-lg-8">
-																<?php echo get_field($field); ?>
-															</div><!-- col -->
-
-														</div><!-- row -->
-													</div><!-- slider__item -->
+											<?php foreach( $athlete_info as $field => $options ){ ?>
+											<?php $field_content = get_field( $field, $athlete_id); ?>
+											<?php if( !empty( $field_content ) ) : ?>
+													<?php 
+													$opts = array('name' => $options['name'], 'content' => $field_content, 'icon_name' => $options['icon']);
+													
+													dynamic_get_template_part('template-parts/athlete', 'features', $opts); ?>
 											<?php endif; ?>
 											<?php } ?>
 
