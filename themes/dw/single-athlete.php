@@ -14,7 +14,7 @@ $thumbnail_small = wp_get_attachment_image_src($thumbnail_id, 'grid-small');
 $thumbnail_medium = wp_get_attachment_image_src($thumbnail_id, 'grid-medium');
 $biography = dw_get_athlete_biography();
 
-
+$athlete_id = get_the_ID();
 $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'prizes' => 'Palmarés', 'managers' => 'Treinadores');
 ?>
 
@@ -44,12 +44,18 @@ $athlete_info = array('formation' => 'Formação', 'career' => 'Carreira', 'priz
 						</ul>
 					<?php endif; ?>
 					<ul class="social">
-						<li class="social__item social__item--facebook-squared">
-							<a href="" class="social__link"><span class="sr-only">Facebook</span></a>
-						</li>
-						<li class="social__item social__item--instagram">
-							<a href="" class="social__link"><span class="sr-only">Instagram</span></a>
-						</li>
+						<?php $facebook = get_field('facebook', $athlete_id);
+						if( !empty( $facebook ) ) : ?>
+							<li class="social__item social__item--facebook-squared">
+								<a href="<?php echo $facebook; ?>" class="social__link"><span class="sr-only">Facebook</span></a>
+							</li>
+						<?php endif; ?>
+						<?php $instagram = get_field('instagram', $athlete_id);
+						if( !empty( $instagram ) ) : ?>
+							<li class="social__item social__item--instagram">
+								<a href="<?php echo $instagram; ?>" class="social__link"><span class="sr-only">Instagram</span></a>
+							</li>
+						<?php endif; ?>
 					</ul><!-- social -->
 				</div>
 
