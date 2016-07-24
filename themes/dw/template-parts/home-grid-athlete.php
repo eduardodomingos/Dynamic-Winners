@@ -19,9 +19,6 @@ $position = __(dw_get_athlete_positions( $post->ID ), 'dw');
 		</div><!-- img-wrapper -->
 		<div class="card-block">
 			<h2 class="entry__title"><a href="<?php echo get_the_permalink();?>"><?php echo get_the_title(); ?></a></h2>
-			<div class="dotdotdot">
-				<p class="entry__text card-text"></p>
-			</div><!-- dotdotdot -->
 		</div><!-- card-block -->
 	</article><!-- card -->
 <?php if($is_slider):?>
