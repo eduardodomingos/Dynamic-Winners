@@ -3,10 +3,12 @@
 
 		<div class="col-md-5 col-lg-4">
 			<div class="media hidden-sm-down">
-				<a class="media-left" href="#">
-					<img class="media-object" src="<?php echo get_bloginfo('template_directory') ?>/assets/build/img/<?php echo $icon_name; ?>.svg" alt="academic icon">
-				</a><!-- media-left -->
-				<div class="media-body">
+				<div class="media-left">
+					<a class="media-left" href="#">
+						<img class="media-object" src="<?php echo get_bloginfo('template_directory') ?>/assets/build/img/<?php echo $icon_name; ?>.svg" alt="academic icon">
+					</a>
+				</div><!-- media-left -->
+				<div class="media-body media-middle">
 					<h4 class="media-heading"><?php echo $name; ?></h4>
 				</div><!-- media-body -->
 			</div><!-- media -->

@@ -133,10 +133,12 @@ $athlete_info = array(
 
 													<div class="col-md-5 col-lg-4">
 														<div class="media hidden-sm-down">
-															<a class="media-left" href="#">
-																<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-bio-1.svg" alt="biography icon">
-															</a><!-- media-left -->
-															<div class="media-body">
+															<div class="media-left">
+																<a href="#">
+																	<img class="media-object" src="<?php echo get_bloginfo('template_directory');?>/assets/build/img/icon-bio-1.svg" alt="biography icon">
+																</a>
+															</div><!-- media-left -->
+															<div class="media-body media-middle">
 																<h4 class="media-heading"><?php esc_html_e( 'Biography', 'dw' ); ?></h4>
 															</div><!-- media-body -->
 														</div><!-- media -->
