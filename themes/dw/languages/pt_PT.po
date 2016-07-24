@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-07-22 12:47+0100\n"
-"PO-Revision-Date: 2016-07-22 12:49+0100\n"
+"POT-Creation-Date: 2016-07-24 21:28+0100\n"
+"PO-Revision-Date: 2016-07-24 21:29+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: esc_html_e;__;_e\n"
+"X-Poedit-KeywordsList: esc_html_e;__;_e;esc_html__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: bower_components\n"
@@ -42,23 +42,80 @@ msgid "Most Used Categories"
 msgstr "Categorias mais usadas"
 
 # @ _s
+#: 404.php:51
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente procurar nos arquivos mensais. %1$s"
+
+# @ _s
 #: comments.php:40 comments.php:61
 msgid "Comment navigation"
 msgstr "Navegação de comentários"
+
+# @ _s
+#: comments.php:43 comments.php:64
+msgid "Older Comments"
+msgstr "Comentários Anteriores"
+
+# @ _s
+#: comments.php:44 comments.php:65
+msgid "Newer Comments"
+msgstr "Comentários Recentes"
 
 # @ _s
 #: comments.php:78
 msgid "Comments are closed."
 msgstr "Comentários estão encerrados."
 
-#: header.php:37
+# @ _s
+#: functions.php:52
+msgid "Primary"
+msgstr "Primário"
+
+# @ _s
+#: functions.php:98
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: functions.php:100
+msgid "Add widgets here."
+msgstr ""
+
+#: header.php:49
 msgid "Menu"
 msgstr "Menu"
+
+#: inc/extras.php:47 inc/extras.php:48 inc/extras.php:49 inc/extras.php:50
+msgid "Share on"
+msgstr "Partilhar no"
+
+# @ _s
+#: inc/template-tags.php:46 inc/template-tags.php:52
+msgid ", "
+msgstr ","
+
+# @ _s
+#: inc/template-tags.php:48
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publicado em %1$s"
+
+# @ _s
+#: inc/template-tags.php:54
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Etiquetado como %1$s"
 
 #: inc/template-tags.php:61
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
+
+# @ _s
+#: inc/template-tags.php:68 template-parts/content-page.php:34
+#, php-format
+msgid "Edit %s"
+msgstr "Editar%s"
 
 #: inc/theme-setup.php:16
 msgid "Homepage sections"
@@ -123,7 +180,7 @@ msgstr "Atletas"
 msgid "Players"
 msgstr "Jogadores"
 
-#: inc/theme-widgets.php:141
+#: inc/theme-widgets.php:141 single-athlete.php:23 single-athlete.php:121
 msgid "Coaches"
 msgstr "Treinadores"
 
@@ -131,29 +188,95 @@ msgstr "Treinadores"
 msgid "Teams"
 msgstr "Equipas"
 
-#: inc/theme-widgets.php:171
+#: inc/theme-widgets.php:173
 msgid "Load more"
 msgstr "Carregar mais"
 
-#: inc/theme-widgets.php:172
+#: inc/theme-widgets.php:174
 msgid "Loading..."
 msgstr "A carregar…"
 
-#: inc/theme-widgets.php:193
+#: inc/theme-widgets.php:196
 msgid "Display the about section at homepage"
 msgstr ""
 
-#: inc/theme-widgets.php:194
+#: inc/theme-widgets.php:197
 msgid "Dynamic About section"
 msgstr ""
 
-#: inc/theme-widgets.php:238
+#: inc/theme-widgets.php:241
 msgid "Título:"
 msgstr ""
 
-#: inc/theme-widgets.php:243
+#: inc/theme-widgets.php:246
 msgid "Description:"
 msgstr ""
+
+# @ _s
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados da pesquisa para: %s"
+
+#: single-athlete.php:20 single-athlete.php:88
+msgid "Training"
+msgstr "Formação"
+
+#: single-athlete.php:21 single-athlete.php:99
+msgid "Career"
+msgstr "Carreira"
+
+#: single-athlete.php:22 single-athlete.php:110
+msgid "Awards"
+msgstr "Palmarés"
+
+#: single-athlete.php:78 single-athlete.php:140
+msgid "Biography"
+msgstr "Biografia"
+
+#: single-athlete.php:146
+msgid "Name"
+msgstr "Nome"
+
+#: single-athlete.php:148
+msgid "Team"
+msgstr "Equipa"
+
+#: single-athlete.php:151
+msgid "Position"
+msgstr "Posição"
+
+#: single-athlete.php:154
+msgid "Birthday"
+msgstr "Data de nascimento"
+
+#: single-athlete.php:159
+msgid "Nationality"
+msgstr "Nacionalidade"
+
+#: single-athlete.php:162
+msgid "Height"
+msgstr "Altura"
+
+#: single-athlete.php:165
+msgid "Weight"
+msgstr "Peso"
+
+#: single-athlete.php:198
+msgid "Gallery"
+msgstr "Galeria"
+
+#: single-athlete.php:201
+msgid "Video"
+msgstr "Vídeo"
+
+#: single-post.php:77 single-service.php:82
+msgid "Share"
+msgstr "Partilhar"
+
+#: single-service.php:40
+msgid "Services"
+msgstr "Serviços"
 
 # @ _s
 #: template-parts/content-none.php:14
@@ -186,6 +309,11 @@ msgstr ""
 "N\ao foi possível encontrar o que procura. Talvez uma pesquisa possa ajudar."
 
 # @ _s
+#: template-parts/content-page.php:22 template-parts/content.php:38
+msgid "Pages:"
+msgstr "Páginas:"
+
+# @ _s
 #: template-parts/content.php:33
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
@@ -196,23 +324,11 @@ msgid "Contact us"
 msgstr "Contacte-nos"
 
 # @ _s
-#~ msgid "Try looking in the monthly archives. %1$s"
-#~ msgstr "Tente procurar nos arquivos mensais. %1$s"
-
-# @ _s
 #~ msgctxt "comments title"
 #~ msgid "One thought on &ldquo;%2$s&rdquo;"
 #~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 #~ msgstr[0] "Um comentário em &ldquo;%2$s&rdquo;"
 #~ msgstr[1] "%1$s comentários em &ldquo;%2$s&rdquo;"
-
-# @ _s
-#~ msgid "Older Comments"
-#~ msgstr "Comentários Anteriores"
-
-# @ _s
-#~ msgid "Newer Comments"
-#~ msgstr "Comentários Recentes"
 
 # @ _s
 #~ msgid "https://wordpress.org/"
@@ -225,14 +341,6 @@ msgstr "Contacte-nos"
 # @ _s
 #~ msgid "Theme: %1$s by %2$s."
 #~ msgstr "Tema: %1$s por %2$s."
-
-# @ _s
-#~ msgid "Primary"
-#~ msgstr "Primário"
-
-# @ _s
-#~ msgid "Sidebar"
-#~ msgstr "Barra lateral"
 
 # @ _s
 #~ msgid "Skip to content"
@@ -249,18 +357,6 @@ msgstr "Contacte-nos"
 #~ msgstr "por %s"
 
 # @ _s
-#~ msgid ", "
-#~ msgstr ","
-
-# @ _s
-#~ msgid "Posted in %1$s"
-#~ msgstr "Publicado em %1$s"
-
-# @ _s
-#~ msgid "Tagged %1$s"
-#~ msgstr "Etiquetado como %1$s"
-
-# @ _s
 #~ msgid "Leave a comment"
 #~ msgstr "Deixe um comentário"
 
@@ -271,18 +367,6 @@ msgstr "Contacte-nos"
 # @ _s
 #~ msgid "% Comments"
 #~ msgstr "% Comentários"
-
-# @ _s
-#~ msgid "Edit %s"
-#~ msgstr "Editar%s"
-
-# @ _s
-#~ msgid "Search Results for: %s"
-#~ msgstr "Resultados da pesquisa para: %s"
-
-# @ _s
-#~ msgid "Pages:"
-#~ msgstr "Páginas:"
 
 #~ msgid "_s"
 #~ msgstr "_s"
