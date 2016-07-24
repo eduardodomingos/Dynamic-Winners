@@ -8,6 +8,4 @@
 		</div><!-- container -->
 	</footer><!-- page-foot -->
 
-	<!-- JS -->
-	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
-	<script src="js/main.min.js"></script>
+	
