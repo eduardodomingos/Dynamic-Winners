@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.5.3" created="2016-07-21 00:34" -->
+<!-- generator="WordPress/4.5.3" created="2016-07-24 02:41" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,17 +29,17 @@
 	<title>Dynamic Winners</title>
 	<link>http://dynamic.dev</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Thu, 21 Jul 2016 00:34:30 +0000</pubDate>
+	<pubDate>Sun, 24 Jul 2016 02:41:44 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://dynamic.dev</wp:base_site_url>
 	<wp:base_blog_url>http://dynamic.dev</wp:base_blog_url>
-	<wp:author><wp:author_id>1</wp:author_id><wp:author_login>root</wp:author_login><wp:author_email>preisnunes@gmail.com</wp:author_email><wp:author_display_name><![CDATA[root]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>1</wp:author_id><wp:author_login>admin</wp:author_login><wp:author_email>epcdomingos@gmail.com</wp:author_email><wp:author_display_name><![CDATA[admin]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 	<item>
 		<title>Gestão Serviços</title>
 		<link>http://dynamic.dev/?acf=acf_gestao-servicos</link>
 		<pubDate>Wed, 13 Jul 2016 23:34:34 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=12</guid>
 		<wp:post_id>12</wp:post_id>
 		<wp:post_date>2016-07-13 23:34:34</wp:post_date>
@@ -78,67 +78,17 @@
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Gestão Atletas</title>
-		<link>http://dynamic.dev/?acf=acf_gestao-atletas</link>
-		<pubDate>Wed, 13 Jul 2016 23:48:04 +0000</pubDate>
-		<dc:creator>root</dc:creator>
-		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=16</guid>
-		<wp:post_id>16</wp:post_id>
-		<wp:post_date>2016-07-13 23:48:04</wp:post_date>
-		<wp:post_date_gmt>2016-07-13 23:48:04</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_gestao-atletas</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_5786d1cb2b8a2</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5786d1cb2b8a2";s:5:"label";s:9:"Jogadores";s:4:"name";s:7:"players";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:6:"object";s:9:"post_type";a:1:{i:0;s:7:"athlete";}s:8:"taxonomy";a:1:{i:0;s:14:"athlete_type:2";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_5786d33604937</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5786d33604937";s:5:"label";s:11:"Treinadores";s:4:"name";s:8:"managers";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:6:"object";s:9:"post_type";a:1:{i:0;s:7:"athlete";}s:8:"taxonomy";a:1:{i:0;s:14:"athlete_type:3";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_5786d95a62c69</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5786d95a62c69";s:5:"label";s:7:"Equipas";s:4:"name";s:5:"teams";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:6:"object";s:9:"post_type";a:1:{i:0;s:7:"athlete";}s:8:"taxonomy";a:1:{i:0;s:14:"athlete_type:4";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"home";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Vídeos</title>
-		<link>http://dynamic.dev/?acf=acf_videos</link>
+		<title>Media Atleta</title>
+		<link>http://dynamic.dev/?acf=acf_media-atleta</link>
 		<pubDate>Thu, 14 Jul 2016 11:10:26 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=24</guid>
 		<wp:post_id>24</wp:post_id>
 		<wp:post_date>2016-07-14 11:10:26</wp:post_date>
 		<wp:post_date_gmt>2016-07-14 11:10:26</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
 		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_videos</wp:post_name>
+		<wp:post_name>acf_media-atleta</wp:post_name>
 		<wp:status>publish</wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
@@ -150,11 +100,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_578772cd9d6bd</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_578772cd9d6bd";s:5:"label";s:16:"Videos do Atleta";s:4:"name";s:14:"athlete_videos";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:4:"none";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"athlete";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_578772cd9d6bd";s:5:"label";s:16:"Videos do Atleta";s:4:"name";s:14:"athlete_videos";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:4:"none";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -168,12 +114,20 @@
 			<wp:meta_key>hide_on_screen</wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5793ccea48161</wp:meta_key>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5793ccea48161";s:5:"label";s:15:"Fotos de Atleta";s:4:"name";s:15:"athlete_gallery";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"athlete";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Posição</title>
 		<link>http://dynamic.dev/?acf=acf_posicao</link>
 		<pubDate>Thu, 14 Jul 2016 20:02:28 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=25</guid>
 		<wp:post_id>25</wp:post_id>
 		<wp:post_date>2016-07-14 20:02:28</wp:post_date>
@@ -212,12 +166,192 @@
 		</wp:postmeta>
 	</item>
 	<item>
+		<title>Contactos</title>
+		<link>http://dynamic.dev/?acf=acf_contactos</link>
+		<pubDate>Tue, 19 Jul 2016 08:50:27 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=390</guid>
+		<wp:post_id>390</wp:post_id>
+		<wp:post_date>2016-07-19 08:50:27</wp:post_date>
+		<wp:post_date_gmt>2016-07-19 08:50:27</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_contactos</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_578de99ecdfaf</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_578de99ecdfaf";s:5:"label";s:8:"Telefone";s:4:"name";s:5:"phone";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_578de9bfcdfb0</wp:meta_key>
+			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_578de9bfcdfb0";s:5:"label";s:5:"Email";s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"home";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Gestão Manchetes</title>
+		<link>http://dynamic.dev/?acf=acf_gestao-manchetes</link>
+		<pubDate>Tue, 19 Jul 2016 09:00:52 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=391</guid>
+		<wp:post_id>391</wp:post_id>
+		<wp:post_date>2016-07-19 09:00:52</wp:post_date>
+		<wp:post_date_gmt>2016-07-19 09:00:52</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_gestao-manchetes</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_578dec0a37d83</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_578dec0a37d83";s:5:"label";s:25:"Manchetes para a homepage";s:4:"name";s:18:"highlights_manager";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"return_format";s:2:"id";s:9:"post_type";a:1:{i:0;s:9:"highlight";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[acf_after_title]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"home";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Configurações</title>
+		<link>http://dynamic.dev/?acf=acf_configuracoes</link>
+		<pubDate>Tue, 19 Jul 2016 09:20:44 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=392</guid>
+		<wp:post_id>392</wp:post_id>
+		<wp:post_date>2016-07-19 09:20:44</wp:post_date>
+		<wp:post_date_gmt>2016-07-19 09:20:44</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_configuracoes</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_578df0c594e4e</wp:meta_key>
+			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_578df0c594e4e";s:5:"label";s:32:"Número de notícias na homepage";s:4:"name";s:10:"news_count";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:0:"";s:3:"max";s:0:"";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"home";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Gestão Atletas</title>
+		<link>http://dynamic.dev/?acf=acf_gestao-atletas</link>
+		<pubDate>Wed, 13 Jul 2016 23:48:04 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=16</guid>
+		<wp:post_id>402</wp:post_id>
+		<wp:post_date>2016-07-13 23:48:04</wp:post_date>
+		<wp:post_date_gmt>2016-07-13 23:48:04</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_gestao-atletas</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5786d1cb2b8a2</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5786d1cb2b8a2";s:5:"label";s:9:"Jogadores";s:4:"name";s:7:"players";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:6:"object";s:9:"post_type";a:1:{i:0;s:7:"athlete";}s:8:"taxonomy";a:1:{i:0;s:14:"athlete_type:3";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5786d33604937</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5786d33604937";s:5:"label";s:11:"Treinadores";s:4:"name";s:8:"managers";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:6:"object";s:9:"post_type";a:1:{i:0;s:7:"athlete";}s:8:"taxonomy";a:1:{i:0;s:14:"athlete_type:5";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5786d95a62c69</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5786d95a62c69";s:5:"label";s:7:"Equipas";s:4:"name";s:5:"teams";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:6:"object";s:9:"post_type";a:1:{i:0;s:7:"athlete";}s:8:"taxonomy";a:1:{i:0;s:14:"athlete_type:4";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"home";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
 		<title>Palmarés</title>
 		<link>http://dynamic.dev/?acf=acf_palmares</link>
 		<pubDate>Thu, 14 Jul 2016 20:02:55 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=26</guid>
-		<wp:post_id>26</wp:post_id>
+		<wp:post_id>403</wp:post_id>
 		<wp:post_date>2016-07-14 20:02:55</wp:post_date>
 		<wp:post_date_gmt>2016-07-14 20:02:55</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
@@ -234,7 +368,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5787efde2a0a4</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5787efde2a0a4";s:5:"label";s:9:"Palmarés";s:4:"name";s:6:"prizes";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5787efde2a0a4";s:5:"label";s:9:"Palmarés";s:4:"name";s:6:"prizes";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -257,9 +391,9 @@
 		<title>Formação</title>
 		<link>http://dynamic.dev/?acf=acf_formacao</link>
 		<pubDate>Thu, 14 Jul 2016 20:03:20 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=27</guid>
-		<wp:post_id>27</wp:post_id>
+		<wp:post_id>404</wp:post_id>
 		<wp:post_date>2016-07-14 20:03:20</wp:post_date>
 		<wp:post_date_gmt>2016-07-14 20:03:20</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
@@ -276,7 +410,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5787eff764754</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5787eff764754";s:5:"label";s:10:"Formação";s:4:"name";s:9:"formation";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5787eff764754";s:5:"label";s:10:"Formação";s:4:"name";s:9:"formation";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -299,9 +433,9 @@
 		<title>Carreira</title>
 		<link>http://dynamic.dev/?acf=acf_carreira</link>
 		<pubDate>Thu, 14 Jul 2016 20:03:50 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=28</guid>
-		<wp:post_id>28</wp:post_id>
+		<wp:post_id>405</wp:post_id>
 		<wp:post_date>2016-07-14 20:03:50</wp:post_date>
 		<wp:post_date_gmt>2016-07-14 20:03:50</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
@@ -318,7 +452,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5787f018a7fc3</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5787f018a7fc3";s:5:"label";s:8:"Carreira";s:4:"name";s:6:"carrer";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5787f018a7fc3";s:5:"label";s:8:"Carreira";s:4:"name";s:6:"carrer";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -341,9 +475,9 @@
 		<title>Fotos Manchete</title>
 		<link>http://dynamic.dev/?acf=acf_fotos-manchete</link>
 		<pubDate>Sun, 17 Jul 2016 14:15:31 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=33</guid>
-		<wp:post_id>33</wp:post_id>
+		<wp:post_id>406</wp:post_id>
 		<wp:post_date>2016-07-17 14:15:31</wp:post_date>
 		<wp:post_date_gmt>2016-07-17 14:15:31</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
@@ -391,9 +525,9 @@
 		<title>Artigo para manchete</title>
 		<link>http://dynamic.dev/?acf=acf_artigo-para-manchete</link>
 		<pubDate>Sun, 17 Jul 2016 14:33:12 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=35</guid>
-		<wp:post_id>35</wp:post_id>
+		<wp:post_id>407</wp:post_id>
 		<wp:post_date>2016-07-17 14:33:12</wp:post_date>
 		<wp:post_date_gmt>2016-07-17 14:33:12</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
@@ -430,140 +564,10 @@
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Contactos</title>
-		<link>http://dynamic.dev/?acf=acf_contactos</link>
-		<pubDate>Tue, 19 Jul 2016 08:50:27 +0000</pubDate>
-		<dc:creator>root</dc:creator>
-		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=390</guid>
-		<wp:post_id>390</wp:post_id>
-		<wp:post_date>2016-07-19 08:50:27</wp:post_date>
-		<wp:post_date_gmt>2016-07-19 08:50:27</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_contactos</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_578de99ecdfaf</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_578de99ecdfaf";s:5:"label";s:8:"Telefone";s:4:"name";s:5:"phone";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_578de9bfcdfb0</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_578de9bfcdfb0";s:5:"label";s:5:"Email";s:4:"name";s:5:"email";s:4:"type";s:5:"email";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"home";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Gestão Manchetes</title>
-		<link>http://dynamic.dev/?acf=acf_gestao-manchetes</link>
-		<pubDate>Tue, 19 Jul 2016 09:00:52 +0000</pubDate>
-		<dc:creator>root</dc:creator>
-		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=391</guid>
-		<wp:post_id>391</wp:post_id>
-		<wp:post_date>2016-07-19 09:00:52</wp:post_date>
-		<wp:post_date_gmt>2016-07-19 09:00:52</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_gestao-manchetes</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_578dec0a37d83</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_578dec0a37d83";s:5:"label";s:25:"Manchetes para a homepage";s:4:"name";s:18:"highlights_manager";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"return_format";s:2:"id";s:9:"post_type";a:1:{i:0;s:9:"highlight";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";a:1:{i:0;s:9:"post_type";}s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[acf_after_title]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"home";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Configurações</title>
-		<link>http://dynamic.dev/?acf=acf_configuracoes</link>
-		<pubDate>Tue, 19 Jul 2016 09:20:44 +0000</pubDate>
-		<dc:creator>root</dc:creator>
-		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=392</guid>
-		<wp:post_id>392</wp:post_id>
-		<wp:post_date>2016-07-19 09:20:44</wp:post_date>
-		<wp:post_date_gmt>2016-07-19 09:20:44</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_configuracoes</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_578df0c594e4e</wp:meta_key>
-			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_578df0c594e4e";s:5:"label";s:32:"Número de notícias na homepage";s:4:"name";s:10:"news_count";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:0:"";s:3:"max";s:0:"";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"home";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>Nome</title>
 		<link>http://dynamic.dev/?acf=acf_nome</link>
 		<pubDate>Wed, 20 Jul 2016 21:52:11 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=409</guid>
 		<wp:post_id>409</wp:post_id>
 		<wp:post_date>2016-07-20 21:52:11</wp:post_date>
@@ -605,7 +609,7 @@
 		<title>Equipa</title>
 		<link>http://dynamic.dev/?acf=acf_equipa</link>
 		<pubDate>Wed, 20 Jul 2016 21:53:01 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=410</guid>
 		<wp:post_id>410</wp:post_id>
 		<wp:post_date>2016-07-20 21:53:01</wp:post_date>
@@ -651,7 +655,7 @@
 		<title>Dados de nascimento</title>
 		<link>http://dynamic.dev/?acf=acf_dados-de-nascimento</link>
 		<pubDate>Wed, 20 Jul 2016 21:54:10 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=411</guid>
 		<wp:post_id>411</wp:post_id>
 		<wp:post_date>2016-07-20 21:54:10</wp:post_date>
@@ -701,7 +705,7 @@
 		<title>Dados Equipa</title>
 		<link>http://dynamic.dev/?acf=acf_dados-equipa</link>
 		<pubDate>Wed, 20 Jul 2016 21:54:58 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=412</guid>
 		<wp:post_id>412</wp:post_id>
 		<wp:post_date>2016-07-20 21:54:58</wp:post_date>
@@ -747,7 +751,7 @@
 		<title>Altura</title>
 		<link>http://dynamic.dev/?acf=acf_altura</link>
 		<pubDate>Wed, 20 Jul 2016 21:55:57 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=413</guid>
 		<wp:post_id>413</wp:post_id>
 		<wp:post_date>2016-07-20 21:55:57</wp:post_date>
@@ -793,7 +797,7 @@
 		<title>Peso</title>
 		<link>http://dynamic.dev/?acf=acf_peso</link>
 		<pubDate>Wed, 20 Jul 2016 21:56:53 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=414</guid>
 		<wp:post_id>414</wp:post_id>
 		<wp:post_date>2016-07-20 21:56:53</wp:post_date>
@@ -839,7 +843,7 @@
 		<title>Imagem Principal</title>
 		<link>http://dynamic.dev/?acf=acf_imagem-principal</link>
 		<pubDate>Wed, 20 Jul 2016 23:39:19 +0000</pubDate>
-		<dc:creator>root</dc:creator>
+		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://dynamic.dev/?post_type=acf&#038;p=415</guid>
 		<wp:post_id>415</wp:post_id>
 		<wp:post_date>2016-07-20 23:39:19</wp:post_date>
@@ -858,19 +862,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5790099660ade</wp:meta_key>
-			<wp:meta_value><![CDATA[a:17:{s:3:"key";s:19:"field_5790099660ade";s:5:"label";s:16:"Imagem Principal";s:4:"name";s:10:"main_image";s:4:"type";s:10:"image_crop";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"crop_type";s:4:"hard";s:11:"target_size";s:6:"custom";s:5:"width";s:3:"520";s:6:"height";s:3:"390";s:12:"preview_size";s:6:"medium";s:10:"force_crop";s:3:"yes";s:21:"save_in_media_library";s:3:"yes";s:11:"retina_mode";s:2:"no";s:11:"save_format";s:3:"url";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"post";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"service";s:8:"order_no";i:0;s:8:"group_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"athlete";s:8:"order_no";i:0;s:8:"group_no";i:2;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:17:{s:3:"key";s:19:"field_5790099660ade";s:5:"label";s:16:"Imagem Principal";s:4:"name";s:10:"main_image";s:4:"type";s:10:"image_crop";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"crop_type";s:4:"hard";s:11:"target_size";s:6:"custom";s:5:"width";s:3:"520";s:6:"height";s:3:"390";s:12:"preview_size";s:6:"medium";s:10:"force_crop";s:3:"yes";s:21:"save_in_media_library";s:3:"yes";s:11:"retina_mode";s:2:"no";s:11:"save_format";s:2:"id";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -883,6 +875,18 @@
 		<wp:postmeta>
 			<wp:meta_key>hide_on_screen</wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"post";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"service";s:8:"order_no";i:0;s:8:"group_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"athlete";s:8:"order_no";i:0;s:8:"group_no";i:2;}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>
