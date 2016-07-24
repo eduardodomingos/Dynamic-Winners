@@ -2,16 +2,16 @@
 
 
 function dynamic_get_template_part( $slug, $name = null, $data=array() ) {
-	
+
 	if ( $name ){
 		$file = "{$slug}-{$name}.php";
 	}
 	else{
 		$file = "{$slug}.php";
 	}
-	
+
 	extract( $data );
-	
+
 	include locate_template( $file );
 }
 
@@ -91,12 +91,12 @@ function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 			]
 	];
 
-	
+
 	foreach( $athletes  as $tax => $athlete_vars ){
 
 		$highlight_athletes = get_field( $athlete_vars['cf'], $home_id);
 
-		
+
 		$all_athletes  = new WP_Query();
 
 		$all_athletes->posts      =  $highlight_athletes;
@@ -149,6 +149,38 @@ function dynamic_add_manchetes_css_to_header(){
 		$css .= '}';
 
 	}
+
+	elseif( is_404() ){
+		$background_single_photos = array(
+			'mobile' =>  get_template_directory_uri() . '/assets/build/img/bg-blog--sm.jpg',
+			'tablet' => get_template_directory_uri() . '/assets/build/img/bg-blog--md.jpg',
+			'fullscreen' => get_template_directory_uri() . '/assets/build/img/bg-blog--lg.jpg',
+		);
+
+		$mobile_photo = $background_single_photos['mobile'];
+		$tablet_photo = $background_single_photos['tablet'];
+		$fullscreen_photo = $background_single_photos['fullscreen'];
+
+		$css .= ".featured-image {
+						background-image: url('$mobile_photo');
+						}
+
+					@media (min-width: 480px) {
+						.featured-image {
+							background-image: url('$tablet_photo');
+						}
+					}
+
+					@media (min-width: 1024px) {
+						.featured-image {
+							background-image: url('$fullscreen_photo');
+						}
+					}";
+		$css .=  '</style>';
+		echo $css;
+
+	}
+
 	elseif( is_single() ){
 
 		global $post;
@@ -199,7 +231,7 @@ function dynamic_add_manchetes_css_to_header(){
 						}
 					}";
 
-		}				
+		}
 
 	}
 	$css .=  '</style>';
@@ -241,7 +273,7 @@ function dynamic_get_before_and_after_posts(){
 }
 
 function dw_get_homepage_athletes_ids( $taxonomy_term ){
-	
+
 	$athletes_converter = [
 		'athlete' => 'players',
 		'coach' => 'managers',
@@ -250,12 +282,12 @@ function dw_get_homepage_athletes_ids( $taxonomy_term ){
 
 	$field_name = $athletes_converter[$taxonomy_term];
 	$athlete_ids = [];
-	
+
 	if( !empty( $field_name )){
-		
+
 		$home_id = dynamic_get_active_homepage();
 		$athletes = get_field($field_name, $home_id);
-		
+
 		foreach ($athletes as $athlete) {
 			$athlete_ids[] = $athlete->ID;
 		}
