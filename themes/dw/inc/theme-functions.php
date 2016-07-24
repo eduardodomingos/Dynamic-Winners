@@ -253,7 +253,7 @@ function dynamic_get_before_and_after_posts(){
 		$to_show = empty( $next ) ? 'show' : '';
 
 		$html .= '<article class="entry entry--latest prev ' . $to_show . '">' . dw_posted_on($previous->ID)
-					. '<h2 class="entry__title"><a href="'. get_the_permalink($previous->ID) .'">' . $previous->post_title . '</a></h2>
+					. '<h2 class="entry__title"><a href="'. get_the_permalink($previous->ID) .'">' . __($previous->post_title, 'dw') . '</a></h2>
 					<a href="' . get_the_permalink($previous->ID) . '" class="entry__read-more">Ver notícia</a>
 					<a href="' . get_the_permalink($previous->ID) . '" class="arrow"><i class="icon-left-open-big"></i></a>
 				</article><!-- entry -->';
@@ -261,7 +261,7 @@ function dynamic_get_before_and_after_posts(){
 
 	if( !empty( $next ) ){
 		$html .=  '<article class="entry entry--latest next show">' . dw_posted_on($next->ID)
-					. '<h2 class="entry__title">' . $next->post_title . '</h2>
+					. '<h2 class="entry__title">' . __($next->post_title, 'dw') . '</h2>
 					<a href="' . get_the_permalink($next->ID) . '" class="entry__read-more">Ver notícia</a>
 					<a href="' . get_the_permalink($next->ID) . '" class="arrow"><i class="icon-right-open-big"></i></a>
 				</article><!-- entry -->';
