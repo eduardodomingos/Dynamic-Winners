@@ -18,7 +18,7 @@
 			right: 0;
 			bottom: 0;
 			background: $red;
-			width: calc(100% - 172px);
+			width: calc(100% - 161px);
 			z-index: -1;
 
 			@include media-breakpoint-up(md) {
@@ -102,6 +102,11 @@
 	}
 
 		.athlete__slider {
+
+			.slick-track {
+				margin: 0 auto;
+			}
+
 			.card {
 				img {
 					@include rem((
@@ -180,6 +185,13 @@
 				@include make-container();
 				@include make-container-max-widths();
 			}
+		}
+
+		.slider__item {
+			@include rem((
+				margin-left: 30px,
+				margin-right: 30px
+			));
 		}
 
 

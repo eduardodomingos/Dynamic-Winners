@@ -27,7 +27,7 @@
 		z-index: 1;
 		//background-color: rgba($red, 0.8);
 		//overflow: hidden;
-		@include rem(width, 242px);
+		@include rem(width, 230px);
 		@include media-breakpoint-up(lg) {
 			@include rem(width, 380px);
 		}
