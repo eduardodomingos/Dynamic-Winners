@@ -14,7 +14,7 @@
 
 						<?php elseif(get_field('manchete_static_text', $manchete)) : ?>
 
-							<h1><?php echo get_field('manchete_static_text', $manchete)); ?></h1>
+							<h1><?php echo get_field('manchete_static_text', $manchete); ?></h1>
 
 						<?php endif; ?>
 
