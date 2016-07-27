@@ -128,7 +128,7 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 		?>
 		<div class="col-sm-12">
 			<div class="section__header">
-				<h2 class="heading"><?php esc_html_e( 'Athletes', 'dw' ); ?></h2>
+				<h2 class="heading"><?php esc_html_e( 'Clients', 'dw' ); ?></h2>
 			</div><!-- section__header -->
 		</div><!-- col -->
 				<div class="col-sm-12 col-lg-6 col-lg-offset-3">
@@ -210,7 +210,7 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 
 		<?php echo $args['before_widget']; ?>
 
-		<div class="col-sm-12 col-lg-6 col-lg-offset-3">
+		<div class="col-sm-12 col-lg-10 col-lg-offset-1">
 			<div class="section__header">
 				<h2 class="heading"><?php echo $title ?></h2>
 			</div><!-- section__header -->
