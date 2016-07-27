@@ -83,12 +83,12 @@ function dynamic_get_homepage_athletes( $home_id, $page = 1 ){
 				'posts' => array(),
 
 			],
-		'team' =>
-			[
-				'cf' => 'teams',
-				'posts' => array(),
-
-			]
+//		'team' =>
+//			[
+//				'cf' => 'teams',
+//				'posts' => array(),
+//
+//			]
 	];
 
 

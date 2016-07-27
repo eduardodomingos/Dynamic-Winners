@@ -140,9 +140,9 @@ class Dynamic_Widget_Home_Athletes extends WP_Widget {
 							<li class="nav-item">
 								<a class="nav-link" data-toggle="tab" href="#managers" role="tab"><?php esc_html_e( 'Coaches', 'dw' ); ?></a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#teams" role="tab"><?php esc_html_e( 'Teams', 'dw' ); ?></a>
-							</li>
+<!--							<li class="nav-item">-->
+<!--								<a class="nav-link" data-toggle="tab" href="#teams" role="tab">--><?php //esc_html_e( 'Teams', 'dw' ); ?><!--</a>-->
+<!--							</li>-->
 						</ul><!-- nav-tabs -->
 
 					</ul>
