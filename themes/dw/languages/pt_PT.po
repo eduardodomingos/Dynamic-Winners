@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-07-24 22:59+0100\n"
-"PO-Revision-Date: 2016-07-24 23:56+0100\n"
+"POT-Creation-Date: 2016-07-27 11:46+0100\n"
+"PO-Revision-Date: 2016-07-27 11:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -156,8 +156,8 @@ msgid "Dynamic Athlets"
 msgstr ""
 
 #: inc/theme-widgets.php:131
-msgid "Athletes"
-msgstr "Atletas"
+msgid "Clients"
+msgstr "Clientes"
 
 #: inc/theme-widgets.php:138
 msgid "Players"
@@ -213,43 +213,43 @@ msgstr "Carreira"
 msgid "Awards"
 msgstr "Palmarés"
 
-#: single-athlete.php:78 single-athlete.php:140
+#: single-athlete.php:78 single-athlete.php:142
 msgid "Biography"
 msgstr "Biografia"
 
-#: single-athlete.php:146
+#: single-athlete.php:148
 msgid "Name"
 msgstr "Nome"
 
-#: single-athlete.php:148
+#: single-athlete.php:150
 msgid "Team"
 msgstr "Equipa"
 
-#: single-athlete.php:151
+#: single-athlete.php:153
 msgid "Position"
 msgstr "Posição"
 
-#: single-athlete.php:154
+#: single-athlete.php:156
 msgid "Birthday"
 msgstr "Data de nascimento"
 
-#: single-athlete.php:159
+#: single-athlete.php:161
 msgid "Nationality"
 msgstr "Nacionalidade"
 
-#: single-athlete.php:162
+#: single-athlete.php:164
 msgid "Height"
 msgstr "Altura"
 
-#: single-athlete.php:165
+#: single-athlete.php:167
 msgid "Weight"
 msgstr "Peso"
 
-#: single-athlete.php:198
+#: single-athlete.php:200
 msgid "Gallery"
 msgstr "Galeria"
 
-#: single-athlete.php:201
+#: single-athlete.php:203
 msgid "Video"
 msgstr "Vídeo"
 
@@ -305,6 +305,9 @@ msgstr "Continue a ler %s <span class=\"meta-nav\">&rarr;</span>"
 #: template-parts/home-grid-contacts.php:12
 msgid "Contact us"
 msgstr "Contacte-nos"
+
+#~ msgid "Athletes"
+#~ msgstr "Atletas"
 
 # @ _s
 #~ msgid "Oops! That page can&rsquo;t be found."
