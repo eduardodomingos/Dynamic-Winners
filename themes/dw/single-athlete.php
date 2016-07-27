@@ -150,7 +150,7 @@ $athlete_info = array(
 																	<?php esc_html_e( 'Team', 'dw' ); ?>: <?php echo $biography['team']; ?><br>
 																<?php } ?>
 																<?php if( isset( $biography['position'] ) ) : ?>
-																	<?php esc_html_e( 'Position', 'dw' ); ?>: <?php echo implode('/', $biography['position']); ?><br>
+																	<?php esc_html_e( 'Position', 'dw' ); ?>: <?php echo implode('/', __($biography['position'], 'dw' )); ?><br>
 																<?php endif; ?>
 																<?php if( !empty( $biography['birthday'] ) ){ ?>
 																<?php esc_html_e( 'Birthday', 'dw' ); ?>: <?php echo $biography['birthday']; ?></p>
