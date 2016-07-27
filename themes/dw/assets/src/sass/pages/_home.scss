@@ -280,5 +280,10 @@
 		a {
 			color: #fff;
 		}
+
+		.social {
+			@include rem(margin-bottom, 20px);
+		}
+
 	}
 }
