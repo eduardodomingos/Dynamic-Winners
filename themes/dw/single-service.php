@@ -36,9 +36,6 @@ $thumbnail_large = wp_get_attachment_image_src($main_image_id, 'full');
 						</div><!-- col -->
 						<div class="col-md-6">
 							<header class="post__header">
-								<ul class="post__category">
-									<li>&#47; <?php esc_html_e( 'Services', 'dw' ); ?></li>
-								</ul>
 								<h3 class="post__title"><?php echo get_the_title(); ?></h3>
 								<?php echo dw_posted_on(); ?>
 							</header><!-- post-header -->
