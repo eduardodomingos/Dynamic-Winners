@@ -9,3 +9,5 @@ themes/dw/assets/build
 
 themes/dw/assets/src/js/vendors/*
 !themes/dw/assets/src/js/vendors/modernizr-custom.js
+
+themes/dw.zip
