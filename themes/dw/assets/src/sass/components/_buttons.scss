@@ -31,7 +31,36 @@
 }
 
 
+.btn--load-less {
+	background-color: transparent;
+	position: relative;
+	text-transform: uppercase;
+	@include rem((
+		font-size: 12px,
+		padding-top: 20px
+	));
 
+	@include hover-focus-active {
+		&:after {
+			bottom: 0;
+		}
+	}
+
+	&:after {
+		transition: bottom 0.2s;
+		content: '\e804';
+		font-family: $font-family-icons;
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		@include rem((
+			top: 3px,
+			font-size: 23px,
+		));
+		line-height: 0.7;
+	}
+}
 
 .btn--load-more {
 	background-color: transparent;

@@ -45,6 +45,24 @@
 		 */
 		if(dom.$body.hasClass('home')) {
 
+
+			var $btn_load_more = $('#about .btn--load-more');
+			var $btn_load_less =  $('#about .btn--load-less');
+
+			$('#about .js-view-more').click(function (e) {
+				e.preventDefault();
+				var $btn = $(this);
+				$('#about .hidden-content').slideToggle(200, function() {
+					if ($(this).is(':visible')) {
+						$btn_load_more.hide();
+						$btn_load_less.show();
+					} else {
+						$btn_load_more.show();
+						$btn_load_less.hide();
+					}
+				});
+			});
+
 			/*
 			 * Smooth scroll
 			 */
@@ -188,7 +206,7 @@
 			 * LOAD POSTS AJAX
 			 */
 			var $content;
-			$('.js-load-more').click(function(e) {
+			$('#athletes .js-load-more').click(function(e) {
 				e.preventDefault();
 				$content = $(this).parent().siblings('.loadMoreContainer');
 				var postType = $(this).data('post-type');
