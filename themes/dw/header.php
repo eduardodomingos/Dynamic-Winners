@@ -34,6 +34,13 @@
 		<![endif]-->
 
 		<?php wp_head(); ?>
+
+		<script>
+			// Picture element HTML5 shiv
+			document.createElement( "picture" );
+		</script>
+		<script src="<?php echo get_bloginfo('template_directory');?>/assets/build/js/picturefill.js" async></script>
+
 	</head>
 	<body <?php body_class($body_class); ?>>
 		<header class="page-head">
