@@ -407,7 +407,21 @@ function dynamic_get_all_services( $posts_to_exclude = array() ){
 
 }
 
+function dw_get_all_sponsors(){
+	
+	$args = [
 
+		'post_type' => 'sponsor',
+		'post_status' => 'publish',
+		'posts_per_page' => -1,
+		'orderby' => 'date'
+
+	];
+
+	$sponsors = new WP_Query( $args );
+
+	return $sponsors;
+}
 
 
 // Remove hook for the default shortcode...

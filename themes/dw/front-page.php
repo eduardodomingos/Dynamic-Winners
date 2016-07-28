@@ -22,6 +22,8 @@ get_header(); ?>
 
 </div>
 
+<?php get_template_part( 'template-parts/home-grid', 'sponsors' ); ?>
+
 <?php get_template_part( 'template-parts/home-grid', 'contacts' ); ?>
 
 <?php get_footer(); ?>
