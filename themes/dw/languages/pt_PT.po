@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-07-28 15:45+0100\n"
-"PO-Revision-Date: 2016-07-28 15:45+0100\n"
+"POT-Creation-Date: 2016-07-28 16:19+0100\n"
+"PO-Revision-Date: 2016-07-28 16:19+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -183,12 +183,24 @@ msgstr ""
 msgid "Dynamic About section"
 msgstr ""
 
-#: inc/theme-widgets.php:242
+#: inc/theme-widgets.php:223
+msgid "View More"
+msgstr "Ver Mais"
+
+#: inc/theme-widgets.php:224
+msgid "View Less"
+msgstr "Ver Menos"
+
+#: inc/theme-widgets.php:250
 msgid "Título:"
 msgstr ""
 
-#: inc/theme-widgets.php:247
+#: inc/theme-widgets.php:255
 msgid "Description:"
+msgstr ""
+
+#: inc/theme-widgets.php:260
+msgid "Description hidden:"
 msgstr ""
 
 # @ _s
