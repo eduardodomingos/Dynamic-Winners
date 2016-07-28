@@ -205,6 +205,7 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 
 		$title = $instance['title'];
 		$description = empty( $instance['description'] ) ? '' : $instance['description'];
+		$description_hidden = empty( $instance['description_hidden'] ) ? '' : $instance['description_hidden'];
 
 		?>
 
@@ -214,7 +215,14 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 			<div class="section__header">
 				<h2 class="heading"><?php echo $title ?></h2>
 			</div><!-- section__header -->
-			<p class="text-xs-center m-b-0"><?php echo $description ?></p>
+			<p class="text-xs-center"><?php echo $description ?></p>
+			<div class="hidden-content">
+				<p class="text-xs-center"><?php echo $description_hidden ?></p>
+			</div>
+			<div class="text-xs-center">
+				<button class="btn btn--load-more js-view-more"><?php _e('View More','dw'); ?></button>
+				<button class="btn btn--load-less js-view-more" style="display: none;"><?php _e('View Less','dw'); ?></button>
+			</div>
 		</div><!-- col -->
 
 
@@ -228,6 +236,7 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['description'] =  $new_instance['description'];
+		$instance['description_hidden'] =  $new_instance['description_hidden'];
 		$instance['title'] = !empty( $new_instance['title'] ) ? $new_instance['title'] : '';
 
 		return $instance;
@@ -245,6 +254,11 @@ class Dynamic_Widget_Home_About extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_name( 'description' ); ?>"><?php esc_html_e( 'Description:', 'dw'); ?></label>
 			<textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>"><?php echo esc_textarea( $instance['description'] ); ?></textarea>
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_name( 'description_hidden' ); ?>"><?php esc_html_e( 'Description hidden:', 'dw'); ?></label>
+			<textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id('description_hidden'); ?>" name="<?php echo $this->get_field_name('description_hidden'); ?>"><?php echo esc_textarea( $instance['description_hidden'] ); ?></textarea>
 		</p>
 
 
