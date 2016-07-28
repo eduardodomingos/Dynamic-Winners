@@ -10,7 +10,7 @@ $gps = get_field('gps', $home_id );
 <section id="contacts" class="band section">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-lg-8 col-lg-offset-2">
+			<div class="col-sm-12">
 				<div class="section__header">
 					<h2 class="heading"><?php esc_html_e( 'Contact us', 'dw' ); ?></h2>
 				</div><!-- section__header -->
