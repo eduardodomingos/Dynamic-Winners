@@ -6,6 +6,7 @@
 		"sass",
 		"postcss",
 		"concat:js",
+		"uglify",
 		"watch"
 	]
 }
