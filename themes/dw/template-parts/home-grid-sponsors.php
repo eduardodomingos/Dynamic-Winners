@@ -10,18 +10,19 @@
 				<div class="section__header">
 					<h2 class="heading"><?php esc_html_e( 'Partners', 'dw' ); ?></h2>
 				</div><!-- section__header -->
-				<div class="slider">
-					<div class="slider__item">
+				<div class="slider slider--sponsors">
 						<?php while( $sponsors->have_posts() ) : $sponsors->the_post(); ?>
-							<?php $logo_src = wp_get_attachment_image_url( get_post_thumbnail_id( get_the_ID(), 'full' ) ); 
+							<?php $logo_src = wp_get_attachment_image_url( get_post_thumbnail_id( get_the_ID()) , 'full'  );
 								//error_log( print_r( $logo_src))
 							?>
-							<a href="<?php echo get_field('sponsor_link', get_the_ID()); ?>"><img src="<?php echo $logo_src ?>" alt="" /><?php the_title(); ?></a>
-						<?php 
+							<div class="slider__item">
+								<a href="<?php echo get_field('sponsor_link', get_the_ID()); ?>"><img src="<?php echo $logo_src ?>" alt="<?php __(the_title() , 'dw');?>" class="img-fluid"/></a>
+							</div><!-- slider__item -->
+						<?php
 						endwhile;
 						wp_reset_postdata();
 						?>
-					</div><!-- slider__item -->
+
 				</div><!-- slider -->
 			</div><!-- col -->
 		</div><!-- row -->
