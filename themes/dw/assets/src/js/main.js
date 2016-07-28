@@ -103,6 +103,7 @@
 			dom.$homePartnersSlider.slick({
 				mobileFirst: true,
 				dots: true,
+				arrows: false,
 				responsive: [
 					{
 						breakpoint: 479,
