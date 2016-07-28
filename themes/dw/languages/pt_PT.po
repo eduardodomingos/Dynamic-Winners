@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-07-27 11:46+0100\n"
-"PO-Revision-Date: 2016-07-27 11:46+0100\n"
+"POT-Creation-Date: 2016-07-28 15:45+0100\n"
+"PO-Revision-Date: 2016-07-28 15:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -64,7 +64,7 @@ msgstr "Barra lateral"
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:49
+#: header.php:56
 msgid "Menu"
 msgstr "Menu"
 
@@ -167,10 +167,6 @@ msgstr "Jogadores"
 msgid "Coaches"
 msgstr "Treinadores"
 
-#: inc/theme-widgets.php:144
-msgid "Teams"
-msgstr "Equipas"
-
 #: inc/theme-widgets.php:173
 msgid "Load more"
 msgstr "Carregar mais"
@@ -187,11 +183,11 @@ msgstr ""
 msgid "Dynamic About section"
 msgstr ""
 
-#: inc/theme-widgets.php:241
+#: inc/theme-widgets.php:242
 msgid "Título:"
 msgstr ""
 
-#: inc/theme-widgets.php:246
+#: inc/theme-widgets.php:247
 msgid "Description:"
 msgstr ""
 
@@ -253,13 +249,9 @@ msgstr "Galeria"
 msgid "Video"
 msgstr "Vídeo"
 
-#: single-post.php:77 single-service.php:82
+#: single-post.php:68 single-service.php:79
 msgid "Share"
 msgstr "Partilhar"
-
-#: single-service.php:40
-msgid "Services"
-msgstr "Serviços"
 
 # @ _s
 #: template-parts/content-none.php:14
@@ -302,9 +294,19 @@ msgstr "Páginas:"
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Continue a ler %s <span class=\"meta-nav\">&rarr;</span>"
 
-#: template-parts/home-grid-contacts.php:12
+#: template-parts/home-grid-contacts.php:15
 msgid "Contact us"
 msgstr "Contacte-nos"
+
+#: template-parts/home-grid-sponsors.php:11
+msgid "Partners"
+msgstr "Parceiros"
+
+#~ msgid "Teams"
+#~ msgstr "Equipas"
+
+#~ msgid "Services"
+#~ msgstr "Serviços"
 
 #~ msgid "Athletes"
 #~ msgstr "Atletas"
