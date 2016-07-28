@@ -21,7 +21,9 @@
 			$menuToggleIcon:			$('.site-nav__toggle'),
 			$siteNav:					$('.site-nav'),
 			$siteNavList:				$('.site-nav__list'),
-			$siteNavListList:			$('.site-nav__list ul')
+			$siteNavListList:			$('.site-nav__list ul'),
+			$aboutBtnLoadMore:			$('.home #about .btn--load-more'),
+			$aboutBtnLoadLess:			$('.home #about .btn--load-less')
 		};
 
 		/*
@@ -45,20 +47,18 @@
 		 */
 		if(dom.$body.hasClass('home')) {
 
-
-			var $btn_load_more = $('#about .btn--load-more');
-			var $btn_load_less =  $('#about .btn--load-less');
-
+			/*
+			 * About View More/Less
+			 */
 			$('#about .js-view-more').click(function (e) {
 				e.preventDefault();
-				var $btn = $(this);
 				$('#about .hidden-content').slideToggle(200, function() {
 					if ($(this).is(':visible')) {
-						$btn_load_more.hide();
-						$btn_load_less.show();
+						dom.$aboutBtnLoadMore.hide();
+						dom.$aboutBtnLoadLess.show();
 					} else {
-						$btn_load_more.show();
-						$btn_load_less.hide();
+						dom.$aboutBtnLoadMore.show();
+						dom.$aboutBtnLoadLess.hide();
 					}
 				});
 			});
