@@ -256,21 +256,57 @@ $arrow-size: 40px;
 			));
 		}
 	}
+}
 
-	//@include media-breakpoint-up(lg) {
-	//	.slick-slide {
-	//		@include rem((
-	//			margin-left: 33px,
-	//			margin-right: 33px
-	//		));
-	//	}
-	//	.slick-list {
-	//		@include rem((
-	//			margin-left: -33px,
-	//			margin-right: -33px
-	//		));
-	//	}
+/**
+* Sponsor slider specific style
+* This slider appears on the home page
+*/
+.slider--sponsors {
+	@include rem((
+		margin-top: 45px,
+		margin-bottom: 45px
+	));
+
+	.slick-dots {
+		@include rem(margin-top, 25px);
+	}
+
+	.slick-track{
+		display: flex;
+	}
+
+	.slick-slide{
+		display: flex;
+		height: auto;
+		align-items: center;
+	}
+
+    //
+	//.slick-slide::before {
+	//	content: '';
+	//	display: inline-block;
+	//	height: 100%;
+	//	vertical-align: middle;
+	//}
+    //
+	//.slick-slide a {
+	//	vertical-align: middle;
+	//	display: inline-block;
 	//}
 
-
+	@include media-breakpoint-up(md) {
+		.slick-slide {
+			@include rem((
+				margin-left: 12px,
+				margin-right: 12px
+			));
+		}
+		.slick-list {
+			@include rem((
+				margin-left: -12px,
+				margin-right: -12px
+			));
+		}
+	}
 }
