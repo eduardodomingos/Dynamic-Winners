@@ -1,7 +1,8 @@
 module.exports = {
 	options: {
 		processors: [
-			require('autoprefixer')({browsers: 'last 2 versions'})
+			require('autoprefixer')({browsers: 'last 5 versions'}),
+			require('cssnano')() // minify the result
 		]
 	},
 	dist: {
