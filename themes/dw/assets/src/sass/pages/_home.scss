@@ -272,9 +272,11 @@
 
 		@include media-breakpoint-up(md) {
 			background: url('../img/bg-contacts--md.jpg') #061524 center bottom no-repeat;
+			background-size: cover;
 		}
 		@include media-breakpoint-up(lg) {
 			background: url('../img/bg-contacts--lg.jpg') #061524 center bottom no-repeat fixed;
+			background-size: cover;
 		}
 		&,
 		a {
