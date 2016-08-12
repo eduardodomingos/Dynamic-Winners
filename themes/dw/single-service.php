@@ -60,7 +60,7 @@ $thumbnail_large = wp_get_attachment_image_src($main_image_id, 'full');
 									<div class="slider__item">
 										<article class="entry entry--latest">
 											<h2 class="entry__title"><a href="<?php echo  get_the_permalink(); ?>"><?php the_title(); ?></a></h2>
-											<a href="<?php echo  get_the_permalink(); ?>" class="entry__read-more">Ver mais</a>
+											<a href="<?php echo  get_the_permalink(); ?>" class="entry__read-more"><?php _e('View More','dw'); ?></a>
 										</article><!-- entry -->
 									</div><!-- slider__item -->
 								<?php

@@ -13,7 +13,7 @@ $thumbnail_medium = wp_get_attachment_image_src($main_image_id, 'grid-medium');
 			<div class="dotdotdot">
 				<p class="entry__text card-text"><?php echo the_content(); ?></p>
 			</div><!-- dotdotdot -->
-			<a href="<?php echo esc_url( get_permalink()); ?>" class="entry__read-more">Ver mais</a>
+			<a href="<?php echo esc_url( get_permalink()); ?>" class="entry__read-more"><?php _e('View More','dw'); ?></a>
 		</div><!-- card-block -->
 	</article><!-- card -->
 </div><!-- slider__item -->

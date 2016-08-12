@@ -5,7 +5,7 @@
 			<div class="dotdotdot">
 				<p class="entry__text card-text"><?php the_content(); ?></p>
 			</div><!-- dotdotdot -->
-			<a href="<?php echo get_the_permalink(); ?>" class="entry__read-more">Ver mais</a>
+			<a href="<?php echo get_the_permalink(); ?>" class="entry__read-more"><?php _e('View More','dw'); ?></a>
 		</div><!-- card-block -->
 	</article><!-- card -->
 </div><!-- slider__item -->

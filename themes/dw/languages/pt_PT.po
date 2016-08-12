@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-07-28 16:19+0100\n"
-"PO-Revision-Date: 2016-07-28 16:19+0100\n"
+"POT-Creation-Date: 2016-08-01 17:44+0100\n"
+"PO-Revision-Date: 2016-08-01 17:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -100,6 +100,10 @@ msgstr ""
 msgid "Edit %s"
 msgstr "Editar%s"
 
+#: inc/theme-functions.php:265 single.php:57
+msgid "View Post"
+msgstr "Ver Notícia"
+
 #: inc/theme-setup.php:16
 msgid "Homepage sections"
 msgstr ""
@@ -163,7 +167,7 @@ msgstr "Clientes"
 msgid "Players"
 msgstr "Jogadores"
 
-#: inc/theme-widgets.php:141 single-athlete.php:23 single-athlete.php:121
+#: inc/theme-widgets.php:141 single-athlete.php:23 single-athlete.php:119
 msgid "Coaches"
 msgstr "Treinadores"
 
@@ -183,7 +187,8 @@ msgstr ""
 msgid "Dynamic About section"
 msgstr ""
 
-#: inc/theme-widgets.php:223
+#: inc/theme-widgets.php:223 single-service.php:63
+#: template-parts/home-grid-post.php:16 template-parts/home-grid-service.php:8
 msgid "View More"
 msgstr "Ver Mais"
 
@@ -209,55 +214,55 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Resultados da pesquisa para: %s"
 
-#: single-athlete.php:20 single-athlete.php:88
+#: single-athlete.php:20 single-athlete.php:86
 msgid "Training"
 msgstr "Formação"
 
-#: single-athlete.php:21 single-athlete.php:99
+#: single-athlete.php:21 single-athlete.php:97
 msgid "Career"
 msgstr "Carreira"
 
-#: single-athlete.php:22 single-athlete.php:110
+#: single-athlete.php:22 single-athlete.php:108
 msgid "Awards"
 msgstr "Palmarés"
 
-#: single-athlete.php:78 single-athlete.php:142
+#: single-athlete.php:76 single-athlete.php:140
 msgid "Biography"
 msgstr "Biografia"
 
-#: single-athlete.php:148
+#: single-athlete.php:146
 msgid "Name"
 msgstr "Nome"
 
-#: single-athlete.php:150
+#: single-athlete.php:148
 msgid "Team"
 msgstr "Equipa"
 
-#: single-athlete.php:153
+#: single-athlete.php:151
 msgid "Position"
 msgstr "Posição"
 
-#: single-athlete.php:156
+#: single-athlete.php:154
 msgid "Birthday"
 msgstr "Data de nascimento"
 
-#: single-athlete.php:161
+#: single-athlete.php:159
 msgid "Nationality"
 msgstr "Nacionalidade"
 
-#: single-athlete.php:164
+#: single-athlete.php:162
 msgid "Height"
 msgstr "Altura"
 
-#: single-athlete.php:167
+#: single-athlete.php:165
 msgid "Weight"
 msgstr "Peso"
 
-#: single-athlete.php:200
+#: single-athlete.php:198
 msgid "Gallery"
 msgstr "Galeria"
 
-#: single-athlete.php:203
+#: single-athlete.php:201
 msgid "Video"
 msgstr "Vídeo"
 

@@ -82,9 +82,8 @@
 		}
 
 		background-image: url('../img/bg-home--sm.jpg');  /* [2] */
-		background-color:  #db000f;
-		background-position: center -120px;
-		background-attachment: fixed;
+		background-color: #eb0000;
+		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: 100%;
 
@@ -92,7 +91,7 @@
 			// Medium screens
 			background-image: url('../img/bg-home--md.jpg');  /* [2] */
 			background-position: center top;
-			background-color:  #db000f;
+			//background-color:  #eb0000;
 		}
 		@include media-breakpoint-up(lg) {
 			// Large screens

@@ -43,9 +43,7 @@ $athlete_info = array(
 					<h1 class="athlete__name"><?php echo get_field('name'); ?></h1>
 					<?php if( isset($biography['position']  ) ) : ?>
 						<ul class="athlete__main-features">
-							<?php foreach( $biography['position'] as $position ){ ?>
-								<li><?php echo $position; ?></li>
-							<?php } ?>
+							<li><?php echo implode(' / ', __($biography['position'], 'dw' )); ?></li>
 						</ul>
 					<?php endif; ?>
 					<ul class="social">
